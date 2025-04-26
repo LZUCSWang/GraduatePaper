@@ -1,0 +1,279 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{chapin2013global}
+F.~S. Chapin, O.~E. Sala, E.~Huber-Sannwald, Global biodiversity in a changing
+  environment: scenarios for the 21st century, Vol. 152, Springer Science \&
+  Business Media, 2013.
+
+\bibitem{reynolds2005grasslands}
+S.~Reynolds, J.~Frame, Grasslands: developments, opportunities, perspectives,
+  Science Publishers, 2005.
+
+\bibitem{reinermann2020remote}
+S.~Reinermann, S.~Asam, C.~Kuenzer, Remote sensing of grassland production and
+  management--a review, Remote Sensing 12~(12) (2020) 1949.
+
+\bibitem{dass2018grasslands}
+P.~Dass, B.~Z. Houlton, Y.~Wang, D.~Warlind, Grasslands may be more reliable
+  carbon sinks than forests in {C}alifornia, Environmental Research Letters
+  13~(7) (2018) 074027.
+
+\bibitem{gibson2009grasses}
+D.~J. Gibson, Grasses and grassland ecology, Oxford University Press, 2009.
+
+\bibitem{steffen2015planetary}
+W.~Steffen, K.~Richardson, J.~Rockstr{\"o}m, S.~E. Cornell, I.~Fetzer, E.~M.
+  Bennett, R.~Biggs, S.~R. Carpenter, W.~De~Vries, C.~A. De~Wit, et~al.,
+  Planetary boundaries: Guiding human development on a changing planet, Science
+  347~(6223) (2015) 1259855.
+
+\bibitem{torok2021present}
+P.~T{\"o}r{\"o}k, L.~A. Brudvig, J.~Kollmann, J.~N~Price,
+  B.~T{\'o}thm{\'e}r{\'e}sz, The present and future of grassland restoration,
+  Restoration Ecology 29 (2021) e13378.
+
+\bibitem{mohan2021uav}
+M.~Mohan, G.~Richardson, G.~Gopan, M.~M. Aghai, S.~Bajaj, G.~Galgamuwa,
+  M.~Vastaranta, P.~S.~P. Arachchige, L.~Amor{\'o}s, A.~P.~D. Corte, et~al.,
+  {UAV}-supported forest regeneration: Current trends, challenges and
+  implications, Remote Sensing 13~(13) (2021) 2596.
+
+\bibitem{yang2020adaptive}
+M.-D. Yang, J.~G. Boubin, H.~P. Tsai, H.-H. Tseng, Y.-C. Hsu, C.~C. Stewart,
+  Adaptive autonomous {UAV} scouting for rice lodging assessment using edge
+  computing with deep learning edanet, Computers and Electronics in Agriculture
+  179 (2020) 105817.
+
+\bibitem{sun2018unmanned}
+Y.~Sun, S.~Yi, F.~Hou, Unmanned aerial vehicle methods makes species
+  composition monitoring easier in grasslands, Ecological Indicators 95 (2018)
+  825--830.
+
+\bibitem{blackburn2021monitoring}
+R.~C. Blackburn, N.~A. Barber, A.~K. Farrell, R.~Buscaglia, H.~P. Jones,
+  Monitoring ecological characteristics of a tallgrass prairie using an
+  unmanned aerial vehicle, Restoration Ecology 29 (2021) e13339.
+
+\bibitem{buters2019seed}
+T.~Buters, D.~Belton, A.~Cross, Seed and seedling detection using unmanned
+  aerial vehicles and automated image classification in the monitoring of
+  ecological recovery, Drones 3~(3) (2019) 53.
+
+\bibitem{libran2020unmanned}
+F.~Libr{\'a}n-Embid, F.~Klaus, T.~Tscharntke, I.~Grass, Unmanned aerial
+  vehicles for biodiversity-friendly agricultural landscapes-a systematic
+  review, Science of the Total Environment 732 (2020) 139204.
+
+\bibitem{xiang2019mini}
+T.-Z. Xiang, G.-S. Xia, L.~Zhang, Mini-unmanned aerial vehicle-based remote
+  sensing: techniques, applications, and prospects, IEEE Geoscience and Remote
+  Sensing Magazine 7~(3) (2019) 29--63.
+
+\bibitem{huang2004cooperative}
+X.~Huang, Cooperative optimization for solving large scale combinatorial
+  problems, in: Theory and Algorithms for Cooperative Systems, World
+  Scientific, 2004, pp. 117--156.
+
+\bibitem{renzi2014review}
+C.~Renzi, F.~Leali, M.~Cavazzuti, A.~O. Andrisano, A review on artificial
+  intelligence applications to the optimal design of dedicated and
+  reconfigurable manufacturing systems, The International Journal of Advanced
+  Manufacturing Technology 72~(1) (2014) 403--418.
+
+\bibitem{baluja1994population}
+S.~Baluja, Population-based incremental learning. a method for integrating
+  genetic search based function optimization and competitive learning, Tech.
+  rep., Carnegie-Mellon Univ Pittsburgh Pa Dept Of Computer Science (1994).
+
+\bibitem{pedersen2017robotic}
+S.~M. Pedersen, S.~Fountas, C.~G. S{\o}rensen, F.~K. Van~Evert, B.~S.
+  Blackmore, Robotic seeding: Economic perspectives, in: Precision Agriculture:
+  Technology and Economic Perspectives, Springer, 2017, pp. 167--179.
+
+\bibitem{elliott2016potential}
+S.~Elliott, The potential for automating assisted natural regeneration of
+  tropical forest ecosystems, Biotropica 48~(6) (2016) 825--833.
+
+\bibitem{huang2020design}
+X.~Huang, S.~Zhang, C.~Luo, W.~Li, Y.~Liao, Design and experimentation of an
+  aerial seeding system for rapeseed based on an air-assisted centralized
+  metering device and a multi-rotor crop protection {UAV}, Applied Sciences
+  10~(24) (2020) 8854.
+
+\bibitem{faiccal2017adaptive}
+B.~S. Fai{\c{c}}al, H.~Freitas, P.~H. Gomes, L.~Y. Mano, G.~Pessin, A.~C.
+  de~Carvalho, B.~Krishnamachari, J.~Ueyama, An adaptive approach for
+  {UAV}-based pesticide spraying in dynamic environments, Computers and
+  Electronics in Agriculture 138 (2017) 210--223.
+
+\bibitem{guo2021spraying}
+Y.~Guo, C.~Liu, M.~Coombes, Spraying coverage path planning for agriculture
+  unmanned aerial vehicles, in: 2021 26th International Conference on
+  Automation and Computing (ICAC), IEEE, 2021, pp. 1--6.
+
+\bibitem{vasisht2017farmbeats}
+D.~Vasisht, Z.~Kapetanovic, J.~Won, X.~Jin, R.~Chandra, S.~Sinha, A.~Kapoor,
+  M.~Sudarshan, S.~Stratman, Farmbeats: An {IoT} platform for data-driven
+  agriculture, in: 14th {USENIX} Symposium on Networked Systems Design and
+  Implementation {NSDI} 17, 2017, pp. 515--529.
+
+\bibitem{palomino2019towards}
+D.~Palomino-Suarez, A.~P{\'e}rez-Ruiz, Towards automatic {UAV} path planning in
+  agriculture oversight activities, in: Proceedings of the Latin American
+  Congress on Automation and Robotics, Springer, 2019, pp. 22--30.
+
+\bibitem{shivgan2020energy}
+R.~Shivgan, Z.~Dong, Energy-efficient drone coverage path planning using
+  genetic algorithm, in: 2020 IEEE 21st International Conference on High
+  Performance Switching and Routing (HPSR), IEEE, 2020, pp. 1--6.
+
+\bibitem{rossello2021information}
+N.~B. Rossello, R.~F. Carpio, A.~Gasparri, E.~Garone, Information-driven path
+  planning for {UAV} with limited autonomy in large-scale field monitoring,
+  IEEE Transactions on Automation Science and Engineering 19~(3) (2022)
+  2450--2460.
+
+\bibitem{aggarwal2020path}
+S.~Aggarwal, N.~Kumar, Path planning techniques for unmanned aerial vehicles: A
+  review, solutions, and challenges, Computer Communications 149 (2020)
+  270--299.
+
+\bibitem{basiri2022survey}
+A.~Basiri, V.~Mariani, G.~Silano, M.~Aatif, L.~Iannelli, L.~Glielmo, A survey
+  on the application of path-planning algorithms for multi-rotor {UAVs} in
+  precision agriculture, The Journal of Navigation (2022) 1--20.
+
+\bibitem{shen2009two}
+Z.~Shen, M.~M. Dessouky, F.~Ord{\'o}{\~n}ez, A two-stage vehicle routing model
+  for large-scale bioterrorism emergencies, Networks: An International Journal
+  54~(4) (2009) 255--269.
+
+\bibitem{li2010inexact}
+W.~Li, Y.~Li, C.~Li, G.~Huang, An inexact two-stage water management model for
+  planning agricultural irrigation under uncertainty, Agricultural Water
+  Management 97~(11) (2010) 1905--1914.
+
+\bibitem{azadeh2019two}
+S.~S. Azadeh, M.~Bierlaire, M.~Maknoon, A two-stage route optimization
+  algorithm for light aircraft transport systems, Transportation Research Part
+  C: Emerging Technologies 100 (2019) 259--273.
+
+\bibitem{maini2019cooperative}
+P.~Maini, K.~Sundar, M.~Singh, S.~Rathinam, P.~Sujit, Cooperative
+  aerial--ground vehicle route planning with fuel constraints for coverage
+  applications, IEEE Transactions on Aerospace and Electronic Systems 55~(6)
+  (2019) 3016--3028.
+
+\bibitem{rajan2022routing}
+S.~Rajan, K.~Sundar, N.~Gautam, Routing problem for unmanned aerial vehicle
+  patrolling missions\u2014a progressive hedging algorithm, Computers \&
+  Operations Research (2022) 105702.
+
+\bibitem{colson2007overview}
+B.~Colson, P.~Marcotte, G.~Savard, An overview of bilevel optimization, Annals
+  of Operations Research 153~(1) (2007) 235--256.
+
+\bibitem{angelo2015study}
+J.~S. Angelo, H.~J. Barbosa, A study on the use of heuristics to solve a
+  bilevel programming problem, International Transactions in Operational
+  Research 22~(5) (2015) 861--882.
+
+\bibitem{sinha2017review}
+A.~Sinha, P.~Malo, K.~Deb, A review on bilevel optimization: from classical to
+  evolutionary approaches and applications, IEEE Transactions on Evolutionary
+  Computation 22~(2) (2017) 276--295.
+
+\bibitem{gann2019international}
+G.~D. Gann, T.~McDonald, B.~Walder, J.~Aronson, C.~R. Nelson, J.~Jonson, J.~G.
+  Hallett, C.~Eisenberg, M.~R. Guariguata, J.~Liu, et~al., International
+  principles and standards for the practice of ecological restoration,
+  Restoration Ecology 27 (2019) S1--S46.
+
+\bibitem{dorling2016vehicle}
+K.~Dorling, J.~Heinrichs, G.~G. Messier, S.~Magierowski, Vehicle routing
+  problems for drone delivery, IEEE Transactions on Systems, Man, and
+  Cybernetics: Systems 47~(1) (2016) 70--85.
+
+\bibitem{klaus2017enriching}
+V.~H. Klaus, D.~Sch{\"a}fer, T.~Kleinebecker, M.~Fischer, D.~Prati,
+  N.~H{\"o}lzel, Enriching plant diversity in grasslands by large-scale
+  experimental sward disturbance and seed addition along gradients of land-use
+  intensity, Journal of Plant Ecology 10~(4) (2017) 581--591.
+
+\bibitem{bai2020long}
+Y.~Bai, L.~Ma, A.~A. Degen, M.~K. Rafiq, Y.~Kuzyakov, J.~Zhao, R.~Zhang,
+  T.~Zhang, W.~Wang, X.~Li, et~al., Long-term active restoration of extremely
+  degraded alpine grassland accelerated turnover and increased stability of
+  soil carbon, Global Change Biology 26~(12) (2020) 7217--7228.
+
+\bibitem{freitag2021restoration}
+M.~Freitag, V.~H. Klaus, R.~Bolliger, U.~Hamer, T.~Kleinebecker, D.~Prati,
+  D.~Sch{\"a}fer, N.~H{\"o}lzel, Restoration of plant diversity in permanent
+  grassland by seeding: Assessing the limiting factors along land-use
+  gradients, Journal of Applied Ecology 58~(8) (2021) 1681--1692.
+
+\bibitem{resch2022long}
+M.~C. Resch, M.~Sch{\"u}tz, R.~Ochoa-Hueso, N.~Buchmann, B.~Frey, U.~Graf,
+  W.~H. van~der Putten, S.~Zimmermann, A.~C. Risch, Long-term recovery of
+  above-and belowground interactions in restored grasslands after topsoil
+  removal and seed addition, Journal of Applied Ecology.
+
+\bibitem{chiang2019impact}
+W.-C. Chiang, Y.~Li, J.~Shang, T.~L. Urban, Impact of drone delivery on
+  sustainability and cost: Realizing the {UAV} potential through vehicle
+  routing optimization, Applied Energy 242 (2019) 1164--1175.
+
+\bibitem{kellerer2004multidimensional}
+H.~Kellerer, U.~Pferschy, D.~Pisinger, Multidimensional knapsack problems, in:
+  Knapsack Problems, Springer, 2004, pp. 235--283.
+
+\bibitem{braysy2005vehicle}
+O.~Br{\"a}ysy, M.~Gendreau, Vehicle routing problem with time windows, {Part
+  I}: Route construction and local search algorithms, Transportation Science
+  39~(1) (2005) 104--118.
+
+\bibitem{liu2021memetic}
+S.~Liu, K.~Tang, X.~Yao, Memetic search for vehicle routing with simultaneous
+  pickup-delivery and time windows, Swarm and Evolutionary Computation (2021)
+  100927.
+
+\bibitem{fleszar2021branch}
+K.~Fleszar, A branch-and-bound algorithm for the quadratic multiple knapsack
+  problem, European Journal of Operational Research.
+
+\bibitem{fidanova2021multiple}
+S.~Fidanova, Multiple knapsack problem, in: Ant Colony Optimization and
+  Applications, Springer, 2021, pp. 9--18.
+
+\bibitem{rezoug2018guided}
+A.~Rezoug, M.~Bader-El-Den, D.~Boughaci, Guided genetic algorithm for the
+  multidimensional knapsack problem, Memetic Computing 10~(1) (2018) 29--42.
+
+\bibitem{jiao2017estimation}
+D.~Jiao, L.~Ke, W.~Yang, J.~Li, An estimation of distribution algorithm based
+  dynamic clustering approach for wireless sensor networks, Wireless Personal
+  Communications 97~(3) (2017) 4697--4727.
+
+\bibitem{wang2012effective}
+L.~Wang, S.-y. Wang, Y.~Xu, An effective hybrid {EDA}-based algorithm for
+  solving multidimensional knapsack problem, Expert Systems with Applications
+  39~(5) (2012) 5593--5599.
+
+\bibitem{lourencco2003iterated}
+H.~R. Louren{\c{c}}o, O.~C. Martin, T.~St{\"u}tzle, Iterated local search, in:
+  Handbook of Metaheuristics, Springer, 2003, pp. 320--353.
+
+\bibitem{OR-Tools}
+Google, {OR-Tools}, \url{https://developers.google.com/optimization} (2021).
+
+\bibitem{yang2015path}
+P.~Yang, K.~Tang, J.~A. Lozano, X.~Cao, Path planning for single unmanned
+  aerial vehicle by separately evolving waypoints, IEEE Transactions on
+  Robotics 31~(5) (2015) 1130--1146.
+
+\end{thebibliography}

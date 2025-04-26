@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'çè´¤ä¹-320210931221.blg'
+[56] biber:340> INFO - === 六 4月 26, 2025, 17:41:07
+[142] Biber.pm:419> INFO - Reading './王贤义-320210931221.bcf'
+[205] Biber.pm:979> INFO - Found 14 citekeys in bib section 0
+[214] Biber.pm:4419> INFO - Processing section 0
+[221] Biber.pm:4610> INFO - Looking for bibtex file 'database.bib' for section 0
+[223] bibtex.pm:1713> INFO - LaTeX decoding ...
+[240] bibtex.pm:1519> INFO - Found BibTeX data source 'database.bib'
+[447] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[447] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[447] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[447] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[457] bbl.pm:660> INFO - Writing 'çè´¤ä¹-320210931221.bbl' with encoding 'UTF-8'
+[464] bbl.pm:763> INFO - Output to çè´¤ä¹-320210931221.bbl

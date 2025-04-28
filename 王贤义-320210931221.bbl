@@ -19,117 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{chapin2013global}{book}{}
-      \name{author}{3}{}{%
-        {{hash=dd8f0fb699863394c4693f5042a84a06}{%
-           family={Chapin},
-           familyi={C\bibinitperiod},
-           given={F\bibnamedelima Stuart},
-           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=f7eb10395445c3d151542b044e2a353f}{%
-           family={Sala},
-           familyi={S\bibinitperiod},
-           given={Osvaldo\bibnamedelima E},
-           giveni={O\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=e579e369cc2c5960a954101fc3a8c35b}{%
-           family={Huber-Sannwald},
-           familyi={H\bibinithyphendelim S\bibinitperiod},
-           given={Elisabeth},
-           giveni={E\bibinitperiod}}}%
-      }
-      \name{namea}{3}{}{%
-        {{hash=dd8f0fb699863394c4693f5042a84a06}{%
-           family={Chapin},
-           familyi={C\bibinitperiod},
-           given={F\bibnamedelima Stuart},
-           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=f7eb10395445c3d151542b044e2a353f}{%
-           family={Sala},
-           familyi={S\bibinitperiod},
-           given={Osvaldo\bibnamedelima E},
-           giveni={O\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-        {{hash=e579e369cc2c5960a954101fc3a8c35b}{%
-           family={Huber-Sannwald},
-           familyi={H\bibinithyphendelim S\bibinitperiod},
-           given={Elisabeth},
-           giveni={E\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{publisher}{1}{%
-        {Springer Science \& Business Media}%
-      }
-      \strng{namehash}{ad4855559a0d8ccbc47e915dd613d202}
-      \strng{fullhash}{1688a280ba5481cca9ba6be3a0166d80}
-      \strng{bibnamehash}{1688a280ba5481cca9ba6be3a0166d80}
-      \strng{authorbibnamehash}{1688a280ba5481cca9ba6be3a0166d80}
-      \strng{authornamehash}{ad4855559a0d8ccbc47e915dd613d202}
-      \strng{authorfullhash}{1688a280ba5481cca9ba6be3a0166d80}
-      \strng{nameabibnamehash}{1688a280ba5481cca9ba6be3a0166d80}
-      \strng{nameanamehash}{ad4855559a0d8ccbc47e915dd613d202}
-      \strng{nameafullhash}{1688a280ba5481cca9ba6be3a0166d80}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Global biodiversity in a changing environment: scenarios for the 21st century}
-      \field{usera}{M}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{volume}{152}
-      \field{year}{2013}
-      \field{dateera}{ce}
-      \keyw{chapin2013global}
-    \endentry
-    \entry{gibson2009grasses}{book}{}
-      \name{author}{1}{}{%
-        {{hash=b8a6ed352b4c2bafc75b3fae608d23c0}{%
-           family={Gibson},
-           familyi={G\bibinitperiod},
-           given={David\bibnamedelima J},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \name{namea}{1}{}{%
-        {{hash=b8a6ed352b4c2bafc75b3fae608d23c0}{%
-           family={Gibson},
-           familyi={G\bibinitperiod},
-           given={David\bibnamedelima J},
-           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{publisher}{1}{%
-        {Oxford University Press}%
-      }
-      \strng{namehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \strng{fullhash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \strng{bibnamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \strng{authorbibnamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \strng{authornamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \strng{authorfullhash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \strng{nameabibnamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \strng{nameanamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \strng{nameafullhash}{b8a6ed352b4c2bafc75b3fae608d23c0}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Grasses and grassland ecology}
-      \field{usera}{M}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{year}{2009}
-      \field{dateera}{ce}
-      \keyw{gibson2009grasses}
-    \endentry
     \entry{gann2019international}{article}{}
       \true{moreauthor}
       \true{morelabelname}
@@ -250,8 +139,8 @@
       \strng{nameabibnamehash}{72e33149845f10021faa89d2c3861ea0}
       \strng{nameanamehash}{1ca9d96a491d86d2f127ec0aa9cfa3f6}
       \strng{nameafullhash}{acec3d3b993822562603d919b2aeb586}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Restoration Ecology. 27 (S1): S1-S46.}
@@ -330,8 +219,8 @@
       \strng{nameabibnamehash}{ed1aff564625fc4eaf4f776ca7ccd39f}
       \strng{nameanamehash}{c490efabf640841010bb3e3897291b1b}
       \strng{nameafullhash}{64475d8a94bb9d93e0e392432bd88cf5}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics: Systems}
@@ -430,8 +319,8 @@
       \strng{nameabibnamehash}{f01c937b4c8a140db983c8a5a302f9d0}
       \strng{nameanamehash}{fadbc948c78dafed4523693eff79befe}
       \strng{nameafullhash}{0f855868db001c69386238749b9fb245}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Plant Ecology}
@@ -510,8 +399,8 @@
       \strng{nameabibnamehash}{ce964aec4b2632093ee4d8304f4ef366}
       \strng{nameanamehash}{93f92f7c6f29f83c99c65ed5f7e99656}
       \strng{nameafullhash}{64b171d5b30ffd0c808068d70efdad2f}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Memetic Computing}
@@ -626,8 +515,8 @@
       \strng{nameabibnamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
       \strng{nameanamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
       \strng{nameafullhash}{cb26e47f6b8133865271fc8483132297}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
@@ -690,8 +579,8 @@
       \strng{nameabibnamehash}{a442a9bbb26362f27b11afa1b7ac9582}
       \strng{nameanamehash}{832d19b6ecbaa1d465342fe676ffb29a}
       \strng{nameafullhash}{a442a9bbb26362f27b11afa1b7ac9582}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
@@ -744,8 +633,8 @@
       \strng{nameabibnamehash}{1fbfbd339443c7d8f9e2571903642e27}
       \strng{nameanamehash}{68fa7015a50e356c314b348ecb8dc935}
       \strng{nameafullhash}{1fbfbd339443c7d8f9e2571903642e27}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2103.03012}
@@ -817,8 +706,8 @@
       \strng{nameabibnamehash}{8ac4799f24755bc6f8a5e620366640f7}
       \strng{nameanamehash}{176c86aa36fab51e81d033c2d8ea8cbe}
       \strng{nameafullhash}{6b36fd87902dbca910efbc0f913a7749}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
@@ -864,8 +753,8 @@
       \strng{nameabibnamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
       \strng{nameanamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
       \strng{nameafullhash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Machine learning}

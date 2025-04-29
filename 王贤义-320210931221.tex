@@ -254,7 +254,7 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures/Restored-Areas.pdf}
+	\includegraphics[width=0.7\textwidth]{figures/多无人机修复退化区域实例.png}
 	\caption{无人机草原修复区域示意图。图中展示了待修复区域的分布情况，每个圆点代表一个待修复区域，区域大小和颜色深浅表示其退化程度和面积。}
 	\label{fig:restored-areas}
 \end{figure}
@@ -462,6 +462,8 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 具体而言，解码器的输入有：静态特征、动态特征、访问的上一个结点的隐藏特征。开始时上一个结点的隐藏特征初始化为全零向量，之后每次决策出下一个待修复区域及修复面积后，对解码器输入的动态元素及掩码进行更新以剔除不可行结点及修复方案。
 
+
+
 \begin{equation}
 	rm^{i}, h_{gru}^{i} =
 	\left\{
@@ -531,47 +533,122 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 模型的具体训练过程如下算法$3$所示。算法通过在每个$epoch$内随机生成实例用于对网络进行训练与验证。通过指针网络的自回归性质构造性地得到当前策略下实例的解，并将其作为下一次网络的输入直至得到完整的解。根据公式计算得到相应的优势函数值后，通过$Adam$（$adaptive$ $moment$ $estimation$）优化器\cite{kingma2014adam}对$Actor$-$Critic$网络进行参数更新，其中基线函数$b(s)$为$Critic$网络对当前实例估计的奖励值。
 
-%\vspace{-0.10in}
-\begin{algorithm}[h]
-	\begin{algorithmic}[1]
-		\caption{Actor-Critic 网络训练算法} \label{alg:actor_critic}
-		\Require Actor-Critic 网络所有参数 $\theta_c$、$\theta_e$，学习率 $\alpha$，训练回合数 $N_{epoch}$，训练集大小 $B_T$，验证集大小 $B_V$，训练批次 $B$，训练序列长度 $L$，训练序列面积上限 $area_{max}$ 及 $area_{min}$
-		\Ensure 收敛的神经网络参数 $\theta_c$、$\theta_e$
+% %\vspace{-0.10in}
+% \begin{algorithm}[h]
+% 	\begin{algorithmic}[1]
+% 		\caption{Actor-Critic 网络训练算法} \label{alg:actor_critic}
+% 		\Require Actor-Critic 网络所有参数 $\theta_c$、$\theta_e$，学习率 $\alpha$，训练回合数 $N_{epoch}$，训练集大小 $B_T$，验证集大小 $B_V$，训练批次 $B$，训练序列长度 $L$，训练序列面积上限 $area_{max}$ 及 $area_{min}$
+% 		\Ensure 收敛的神经网络参数 $\theta_c$、$\theta_e$
 
-		\State $i_{epoch} \leftarrow 0$
-		\While{$i_{epoch} < N_{epoch}$}
-		\State 随机生成规模为 $B_T$ 的训练集 $train\_set$ 及规模为 $B_V$ 的验证集 $valid\_set$，将训练集分割为 $\lceil \frac{B_T}{B} \rceil$ 份
-		\State $t_e \leftarrow 0$
-		\For{$t_e$ to $\lceil \frac{B_T}{B} \rceil$}
-		\State 取训练集中第 $t_e$ 份作为 $T_{data}$
-		\State $i_{steps} \leftarrow 0$
-		\State Initial(mask) \Comment{初始化 mask 掩码}
-		\State Initial(resolution) \Comment{初始化解的存储空间}
-		\While{$i_{steps} < L$}
-		\State $(ptr, area) \leftarrow \text{Actor}(T_{data})$ \Comment{Actor 网络输出部分解}
-		\While{Mask(ptr, area, mask)}
-		\State $(ptr, area) \leftarrow \text{Actor}(T_{data})$ \Comment{屏蔽求解过程中非法的解}
-		\EndWhile
-		\State Update(mask)
-		\State Update(resolution, $(ptr, area)$)
-		\State $i_{steps} \leftarrow i_{steps} + 1$
-		\EndWhile
-		\State $R \leftarrow \text{Reward}(resolution, T_{data})$ \Comment{根据公式计算当前策略获得的奖励值}
-		\State $b \leftarrow \text{Critic}(T_{data})$ \Comment{根据公式计算 Critic 网络的基线估计值}
-		\State $A \leftarrow \|R - b\|_2^2$ \Comment{计算优势函数值}
-		\State $\nabla\theta \leftarrow \text{Loss}(resolution, A)$ \Comment{计算网络梯度}
-		\State $\theta, \theta_e \leftarrow \text{Adam}(\theta, \theta_e, \alpha, \nabla\theta)$
+% 		\State $i_{epoch} \leftarrow 0$
+% 		\While{$i_{epoch} < N_{epoch}$}
+% 		\State 随机生成规模为 $B_T$ 的训练集 $train\_set$ 及规模为 $B_V$ 的验证集 $valid\_set$，将训练集分割为 $\lceil \frac{B_T}{B} \rceil$ 份
+% 		\State $t_e \leftarrow 0$
+% 		\For{$t_e$ to $\lceil \frac{B_T}{B} \rceil$}
+% 		\State 取训练集中第 $t_e$ 份作为 $T_{data}$
+% 		\State $i_{steps} \leftarrow 0$
+% 		\State Initial(mask) \Comment{初始化 mask 掩码}
+% 		\State Initial(resolution) \Comment{初始化解的存储空间}
+% 		\While{$i_{steps} < L$}
+% 		\State $(ptr, area) \leftarrow \text{Actor}(T_{data})$ \Comment{Actor 网络输出部分解}
+% 		\While{Mask(ptr, area, mask)}
+% 		\State $(ptr, area) \leftarrow \text{Actor}(T_{data})$ \Comment{屏蔽求解过程中非法的解}
+% 		\EndWhile
+% 		\State Update(mask)
+% 		\State Update(resolution, $(ptr, area)$)
+% 		\State $i_{steps} \leftarrow i_{steps} + 1$
+% 		\EndWhile
+% 		\State $R \leftarrow \text{Reward}(resolution, T_{data})$ \Comment{根据公式计算当前策略获得的奖励值}
+% 		\State $b \leftarrow \text{Critic}(T_{data})$ \Comment{根据公式计算 Critic 网络的基线估计值}
+% 		\State $A \leftarrow \|R - b\|_2^2$ \Comment{计算优势函数值}
+% 		\State $\nabla\theta \leftarrow \text{Loss}(resolution, A)$ \Comment{计算网络梯度}
+% 		\State $\theta, \theta_e \leftarrow \text{Adam}(\theta, \theta_e, \alpha, \nabla\theta)$
+% 		\EndFor
+
+% 		\If{$i_{epoch} == 0$}
+% 		\State $\theta^* \leftarrow \theta$
+% 		\Else
+% 		\If{$\text{Reward}(\text{Valid}(\theta, valid\_set)) > \text{Reward}(\text{Valid}(\theta^*, valid\_set))$}
+% 		\State $\theta^* \leftarrow \theta$
+% 		\EndIf
+% 		\EndIf
+% 		\State $i_{epoch} \leftarrow i_{epoch} + 1$
+% 		\EndWhile
+% 	\end{algorithmic}
+% \end{algorithm}
+
+
+\begin{algorithm}[h] \begin{algorithmic}[1] \caption{Attention Model Training Algorithm for GRP} \label{alg:grp_training} \Require $\theta \in \Theta$ (model parameters), $d_e \in \mathbb{N}$ (embedding dimension), $d_h \in \mathbb{N}$ (hidden dimension), $n_{layers} \in \mathbb{N}$ (encoder layers), $n_{heads} \in \mathbb{N}$ (attention heads), $\alpha \in \mathbb{R}^{+}$ (learning rate), $N_{epoch} \in \mathbb{N}$ (training epochs), $B \in \mathbb{N}$ (batch size), $G_{size} \in \mathbb{N}$ (graph size), $B_{type} \in {\text{None}, \text{Exponential}, \text{Critic}, \text{Rollout}}$ (baseline type) \Ensure $\theta^* \in \Theta$ (optimal parameters)
+		\State $M_{\theta} \leftarrow \text{InitializeModel}(d_e, d_h, n_{layers}, n_{heads}, \theta)$
+		\State $B_{model} \leftarrow \text{InitializeBaseline}(B_{type})$
+		\State $\mathcal{O} \leftarrow \text{Adam}(\{M_{\theta}, B_{model}\}, \alpha)$
+		\State $\mathcal{S} \leftarrow \text{LRScheduler}(\alpha)$
+		\State $\mathcal{D}_{val} \leftarrow \{x_i\}_{i=1}^{val\_size}$ \Comment{Generate validation dataset}
+
+		\State $R_{best} \leftarrow -\infty$ \Comment{Best reward tracker}
+		\For{$e = 0$ \textbf{to} $N_{epoch} - 1$}
+		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{Generate training dataset}
+		\State $\{\mathcal{B}_j\}_{j=1}^{n_B} \leftarrow \text{BatchSplit}(\mathcal{D}_{train}, B)$ where $n_B = \lceil\frac{|\mathcal{D}_{train}|}{B}\rceil$
+		\State $M_{\theta} \leftarrow M_{\theta}.\text{train}()$ \Comment{Set model to training mode}
+		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"sampling"}$
+
+		\For{$\mathcal{B} \in \{\mathcal{B}_j\}_{j=1}^{n_B}$}
+		\State $(x, b_v) \leftarrow B_{model}.\text{unwrap\_batch}(\mathcal{B})$
+		\State $x \leftarrow x.\text{to}(\text{device})$, $b_v \leftarrow b_v.\text{to}(\text{device})$ if $b_v \neq \text{None}$ else $\text{None}$
+
+		\State \textcolor{blue}{// Forward pass}
+		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C \in \mathbb{R}^{B}$: costs, $\log p \in \mathbb{R}^{B \times L}$: log-probabilities}
+		\State $r \leftarrow -C$ \Comment{$r \in \mathbb{R}^{B}$: rewards}
+
+		\State \textcolor{blue}{// Extract GRP-specific metrics}
+		\If{$\text{problem\_type} = \text{"grp"}$}
+		\State $A_{repair} \leftarrow \begin{cases}
+				x.\text{total\_repair\_area} & \text{if exists}                 \\
+				-C / \alpha_{r}              & \text{otherwise (approximation)}
+			\end{cases}$
+		\EndIf
+
+		\State \textcolor{blue}{// Evaluate baseline value}
+		\State $(b_v, \mathcal{L}_{b}) \leftarrow \begin{cases}
+				B_{model}.\text{eval}(x, C) & \text{if } b_v = \text{None} \\
+				(b_v, 0)                    & \text{otherwise}
+			\end{cases}$
+
+		\State \textcolor{blue}{// Compute REINFORCE loss}
+		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$ \Comment{REINFORCE loss}
+		\State $\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}$ \Comment{Total loss}
+
+		\State \textcolor{blue}{// Backpropagation and parameter update}
+		\State $\nabla\theta \leftarrow \mathbf{0}$ \Comment{Zero gradients}
+		\State $\nabla\theta \leftarrow \nabla_{\theta}\mathcal{L}$ \Comment{Compute gradients}
+		\State $\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})$ \Comment{Clip gradient norm}
+		\State $\nabla\theta \leftarrow \begin{cases}
+				0            & \text{if } \nabla\theta \in \{\text{NaN}, \pm\infty\} \\
+				\nabla\theta & \text{otherwise}
+			\end{cases}$ \Comment{Fix invalid gradients}
+		\State $\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)$ \Comment{Update parameters}
 		\EndFor
 
-		\If{$i_{epoch} == 0$}
-		\State $\theta^* \leftarrow \theta$
-		\Else
-		\If{$\text{Reward}(\text{Valid}(\theta, valid\_set)) > \text{Reward}(\text{Valid}(\theta^*, valid\_set))$}
-		\State $\theta^* \leftarrow \theta$
+		\State \textcolor{blue}{// Validation phase}
+		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"greedy"}$
+		\State $M_{\theta} \leftarrow M_{\theta}.\text{eval}()$
+		\State $C_{val} \leftarrow \text{Evaluate}(M_{\theta}, \mathcal{D}_{val})$ \Comment{$C_{val} \in \mathbb{R}^{|\mathcal{D}_{val}|}$}
+		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{Average reward}
+
+		\State $B_{model} \leftarrow B_{model}.\text{epoch\_callback}(M_{\theta}, e)$ \Comment{Update baseline}
+		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{Update learning rate}
+
+		\If{$e \bmod k_{save} = 0 \lor e = N_{epoch} - 1$}
+		\State $\text{SaveCheckpoint}(\theta, \mathcal{O}, B_{model}, e)$
 		\EndIf
+
+		\If{$e = 0 \lor \bar{r} > R_{best}$}
+		\State $\theta^* \leftarrow \theta$
+		\State $R_{best} \leftarrow \bar{r}$
 		\EndIf
-		\State $i_{epoch} \leftarrow i_{epoch} + 1$
-		\EndWhile
+		\EndFor
+
+		\State \Return $\theta^*$
 	\end{algorithmic}
 \end{algorithm}
 

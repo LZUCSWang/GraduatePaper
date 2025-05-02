@@ -136,7 +136,9 @@
 %英文摘要
 \EnAbstract{This paper investigates the problem of maximizing restoration area through multi-UAV coordination in grassland rehabilitation. Grassland ecosystems play a crucial role in maintaining
 	biodiversity and ecological balance, but grassland degradation has become increasingly serious in
-	recent years. To address the inefficiency of traditional restoration methods in large-scale environments, we propose a deep reinforcement learning-based optimization method for multi-UAV cooperative grassland restoration. We first model the grassland to be restored as a complete undirected
+	recent years. To address the inefficiency of traditional restoration methods in large-scale environments, this research proposes a deep reinforcement learning-based optimization method for multi-UAV cooperative grassland restoration.
+
+	We first model the grassland to be restored as a complete undirected
 	graph, where each node represents a restoration area with information on location coordinates,
 	degradation degree, and area size. Considering the energy consumption models of UAVs during
 	flight, seeding, and aerial photography, as well as the dynamic impact of seed weight on energy
@@ -144,11 +146,13 @@
 	encoder to extract static environmental features and dynamic UAV status features, combined with a
 	pointer network as an autoregressive decoder to construct solution schemes. By designing a reward
 	function that accounts for energy constraints and applying the Actor-Critic algorithm for training,
-	the model can autonomously learn optimal restoration strategies. On this basis, we also design a
+	the model can autonomously learn optimal restoration strategies.
+
+	On this basis, we also design a
 	multi-UAV coordination scheduling algorithm that dynamically adjusts restoration maps through
 	a ground information center that integrates information from all UAVs, maximizing restoration
 	efficiency. Experimental results show that compared with traditional optimization methods, our
-	proposed algorithm demonstrates superior performance in grassland restoration scenarios of various scales, with restoration area improvements of up to 40%, providing an efficient and intelligent
+	proposed algorithm demonstrates superior performance in grassland restoration scenarios of various scales, with restoration area improvements of up to 40\%, providing an efficient and intelligent
 	technical solution for grassland ecological restoration.}{UAV coordination; grassland restoration; area maximization; deep reinforcement learning; Transformer; pointer network; Actor-Critic algorithm}
 
 %生成目录
@@ -378,13 +382,13 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 可以观察到，优化问题 \eqref{GRP} 是一个多变量组合优化问题，因为其可行解集在二进制变量 $x_{ij}$ 和整数变量 $\sigma_i$ 上是离散的。因此，传统优化方法难以直接求解该问题。通过进一步分析，我们发现以下特征：首先，恢复区域的面积和每个区域的播种量会因无人机服务顺序（即飞行轨迹）的不同而变化；其次，这些参数又会反过来影响无人机的后续飞行轨迹。简而言之，无人机轨迹设计、恢复区域面积和播种量三者紧密耦合。若直接求解优化问题 \eqref{GRP}，这三者将被单独生成，导致其依赖关系被不合理忽略。因此，有效求解该问题面临两大挑战。
 
-\chapter{算法求解思路}
+% \chapter{算法求解思路}
 
-\section{基于神经网络的无人机草原修复策略优化}
+% \section{基于神经网络的无人机草原修复策略优化}
 
-对于序列决策问题，基于迭代搜索的启发式方法往往能取得能取得较优的效果\cite{feng2015memes}。然而，启发式方法受限于过长的求解时间，同时在一个待修复草原实例下的结果无法迁移，在面对多个待修复草原实例时求解时间往往难以接受。相较之下，神经网络方法以其离线训练、在线决策，泛化能力极强的特性，在面对规模不同、分布各异的序列决策问题时仍然能在极短时间得出较优解,且无需重复训练，因而在组合优化领域广受关注[3]。因此，我们首先提出以单无人机作为智能体，构建深度神经网络模型，利用强化学习方法进行训练，试图学习出一个合理的草原修复策略，以大大节省问题的求解时间。
+% 对于序列决策问题，基于迭代搜索的启发式方法往往能取得能取得较优的效果\cite{feng2015memes}。然而，启发式方法受限于过长的求解时间，同时在一个待修复草原实例下的结果无法迁移，在面对多个待修复草原实例时求解时间往往难以接受。相较之下，神经网络方法以其离线训练、在线决策，泛化能力极强的特性，在面对规模不同、分布各异的序列决策问题时仍然能在极短时间得出较优解,且无需重复训练，因而在组合优化领域广受关注[3]。因此，我们首先提出以单无人机作为智能体，构建深度神经网络模型，利用强化学习方法进行训练，试图学习出一个合理的草原修复策略，以大大节省问题的求解时间。
 
-我们采用强化学习方法相关概念，将无人机视作智能体，其与待修复草原环境的交互过程建模为一个马尔可夫决策过程，如下图所示。智能体的策略建模为神经网络，在与环境的交互中不断收集数据，网络模型通过强化学习Actor-Critic算法进行训练，目标是学习到一个策略$\pi_\theta(a|s)$($\theta$为神经网络参数)使得草原修复面积最大化。
+% 我们采用强化学习方法相关概念，将无人机视作智能体，其与待修复草原环境的交互过程建模为一个马尔可夫决策过程，如下图所示。智能体的策略建模为神经网络，在与环境的交互中不断收集数据，网络模型通过强化学习Actor-Critic算法进行训练，目标是学习到一个策略$\pi_\theta(a|s)$($\theta$为神经网络参数)使得草原修复面积最大化。
 
 \chapter{基于强化学习的最优修复方案}
 
@@ -578,26 +582,61 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 % \end{algorithm}
 
 
-\begin{algorithm}[h] \begin{algorithmic}[1] \caption{Attention Model Training Algorithm for GRP} \label{alg:grp_training} \Require $\theta \in \Theta$ (model parameters), $d_e \in \mathbb{N}$ (embedding dimension), $d_h \in \mathbb{N}$ (hidden dimension), $n_{layers} \in \mathbb{N}$ (encoder layers), $n_{heads} \in \mathbb{N}$ (attention heads), $\alpha \in \mathbb{R}^{+}$ (learning rate), $N_{epoch} \in \mathbb{N}$ (training epochs), $B \in \mathbb{N}$ (batch size), $G_{size} \in \mathbb{N}$ (graph size), $B_{type} \in {\text{None}, \text{Exponential}, \text{Critic}, \text{Rollout}}$ (baseline type) \Ensure $\theta^* \in \Theta$ (optimal parameters)
+\begin{algorithm}[h]
+	\begin{algorithmic}[1]
+		\caption{Main Training Procedure for GRP}
+		\label{alg:grp_main_training}
+		\Require $\theta \in \Theta$ (model parameters), $d_e \in \mathbb{N}$ (embedding dimension), $d_h \in \mathbb{N}$ (hidden dimension), $n_{layers} \in \mathbb{N}$ (encoder layers), $n_{heads} \in \mathbb{N}$ (attention heads), $\alpha \in \mathbb{R}^{+}$ (learning rate), $N_{epoch} \in \mathbb{N}$ (training epochs), $B \in \mathbb{N}$ (batch size), $G_{size} \in \mathbb{N}$ (graph size)
+		\Ensure $\theta^* \in \Theta$ (optimal parameters)
 		\State $M_{\theta} \leftarrow \text{InitializeModel}(d_e, d_h, n_{layers}, n_{heads}, \theta)$
-		\State $B_{model} \leftarrow \text{InitializeBaseline}(B_{type})$
+		\State $B_{model} \leftarrow \text{InitializeBaseline}()$
 		\State $\mathcal{O} \leftarrow \text{Adam}(\{M_{\theta}, B_{model}\}, \alpha)$
 		\State $\mathcal{S} \leftarrow \text{LRScheduler}(\alpha)$
 		\State $\mathcal{D}_{val} \leftarrow \{x_i\}_{i=1}^{val\_size}$ \Comment{Generate validation dataset}
-
 		\State $R_{best} \leftarrow -\infty$ \Comment{Best reward tracker}
 		\For{$e = 0$ \textbf{to} $N_{epoch} - 1$}
-		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{Generate training dataset}
-		\State $\{\mathcal{B}_j\}_{j=1}^{n_B} \leftarrow \text{BatchSplit}(\mathcal{D}_{train}, B)$ where $n_B = \lceil\frac{|\mathcal{D}_{train}|}{B}\rceil$
+		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{Generate training instances}
+		\State $\{\mathcal{B}_j\}_{j=1}^{n_B} \leftarrow \text{BatchSplit}(\mathcal{D}_{train}, B)$
 		\State $M_{\theta} \leftarrow M_{\theta}.\text{train}()$ \Comment{Set model to training mode}
-		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"sampling"}$
 
 		\For{$\mathcal{B} \in \{\mathcal{B}_j\}_{j=1}^{n_B}$}
+		\State $\theta \leftarrow \text{TrainBatch}(M_{\theta}, B_{model}, \mathcal{O}, \mathcal{B})$ \Comment{Algorithm 2}
+		\EndFor
+
+		\State \textcolor{blue}{// Validation phase}
+		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"greedy"}$
+		\State $M_{\theta} \leftarrow M_{\theta}.\text{eval}()$
+		\State $C_{val} \leftarrow \text{Evaluate}(M_{\theta}, \mathcal{D}_{val})$
+		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{Average reward}
+
+		\State $B_{model} \leftarrow B_{model}.\text{epoch\_callback}(M_{\theta}, e)$
+		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{Update learning rate}
+
+		\If{$e \bmod k_{save} = 0 \lor e = N_{epoch} - 1$}
+		\State $\text{SaveCheckpoint}(\theta, \mathcal{O}, B_{model}, e)$
+		\EndIf
+
+		\If{$e = 0 \lor \bar{r} > R_{best}$}
+		\State $\theta^* \leftarrow \theta$ \Comment{Save best model parameters}
+		\State $R_{best} \leftarrow \bar{r}$
+		\EndIf
+		\EndFor
+		\State \Return $\theta^*$
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[h]
+	\begin{algorithmic}[1]
+		\caption{TrainBatch Subroutine for GRP}
+		\label{alg:grp_batch_training}
+		\Require $M_{\theta}$ (model), $B_{model}$ (baseline model), $\mathcal{O}$ (optimizer), $\mathcal{B}$ (batch data)
+		\Ensure Updated model parameters $\theta$
+
 		\State $(x, b_v) \leftarrow B_{model}.\text{unwrap\_batch}(\mathcal{B})$
 		\State $x \leftarrow x.\text{to}(\text{device})$, $b_v \leftarrow b_v.\text{to}(\text{device})$ if $b_v \neq \text{None}$ else $\text{None}$
 
 		\State \textcolor{blue}{// Forward pass}
-		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C \in \mathbb{R}^{B}$: costs, $\log p \in \mathbb{R}^{B \times L}$: log-probabilities}
+		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C$: costs, $\log p$: log-probabilities}
 		\State $r \leftarrow -C$ \Comment{$r \in \mathbb{R}^{B}$: rewards}
 
 		\State \textcolor{blue}{// Extract GRP-specific metrics}
@@ -615,40 +654,15 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 			\end{cases}$
 
 		\State \textcolor{blue}{// Compute REINFORCE loss}
-		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$ \Comment{REINFORCE loss}
+		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$
 		\State $\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}$ \Comment{Total loss}
 
 		\State \textcolor{blue}{// Backpropagation and parameter update}
 		\State $\nabla\theta \leftarrow \mathbf{0}$ \Comment{Zero gradients}
 		\State $\nabla\theta \leftarrow \nabla_{\theta}\mathcal{L}$ \Comment{Compute gradients}
 		\State $\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})$ \Comment{Clip gradient norm}
-		\State $\nabla\theta \leftarrow \begin{cases}
-				0            & \text{if } \nabla\theta \in \{\text{NaN}, \pm\infty\} \\
-				\nabla\theta & \text{otherwise}
-			\end{cases}$ \Comment{Fix invalid gradients}
 		\State $\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)$ \Comment{Update parameters}
-		\EndFor
-
-		\State \textcolor{blue}{// Validation phase}
-		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"greedy"}$
-		\State $M_{\theta} \leftarrow M_{\theta}.\text{eval}()$
-		\State $C_{val} \leftarrow \text{Evaluate}(M_{\theta}, \mathcal{D}_{val})$ \Comment{$C_{val} \in \mathbb{R}^{|\mathcal{D}_{val}|}$}
-		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{Average reward}
-
-		\State $B_{model} \leftarrow B_{model}.\text{epoch\_callback}(M_{\theta}, e)$ \Comment{Update baseline}
-		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{Update learning rate}
-
-		\If{$e \bmod k_{save} = 0 \lor e = N_{epoch} - 1$}
-		\State $\text{SaveCheckpoint}(\theta, \mathcal{O}, B_{model}, e)$
-		\EndIf
-
-		\If{$e = 0 \lor \bar{r} > R_{best}$}
-		\State $\theta^* \leftarrow \theta$
-		\State $R_{best} \leftarrow \bar{r}$
-		\EndIf
-		\EndFor
-
-		\State \Return $\theta^*$
+		\State \Return $\theta$
 	\end{algorithmic}
 \end{algorithm}
 

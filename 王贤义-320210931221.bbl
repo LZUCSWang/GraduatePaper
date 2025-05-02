@@ -20,13 +20,11 @@
 \refsection{0}
   \datalist[entry]{none/global//global/global}
     \entry{gann2019international}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{10}{}{%
+      \name{author}{16}{}{%
         {{hash=53801dda030dd6de38a50a7eda6dc5c3}{%
            family={Gann},
            familyi={G\bibinitperiod},
-           given={George\bibnamedelima D},
+           given={George\bibnamedelima D.},
            giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
         {{hash=c9c151ebb8eb1f91c01d8cd85347ecc4}{%
            family={McDonald},
@@ -46,7 +44,7 @@
         {{hash=53e88d2377daa7a823fb69e9ee652e8c}{%
            family={Nelson},
            familyi={N\bibinitperiod},
-           given={Cara\bibnamedelima R},
+           given={Cara\bibnamedelima R.},
            giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
         {{hash=5b2725f53052930a89914294ef66b349}{%
            family={Jonson},
@@ -56,7 +54,7 @@
         {{hash=24c11533ae1c43e55f768e3be2cda6b5}{%
            family={Hallett},
            familyi={H\bibinitperiod},
-           given={James\bibnamedelima G},
+           given={James\bibnamedelima G.},
            giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
         {{hash=1d168a3d903c820f0432cc7d3a62deec}{%
            family={Eisenberg},
@@ -66,20 +64,49 @@
         {{hash=e0d9a6af189937e649b8f4af924712fa}{%
            family={Guariguata},
            familyi={G\bibinitperiod},
-           given={Manuel\bibnamedelima R},
+           given={Manuel\bibnamedelima R.},
            giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
         {{hash=a64bf793e2ee5becaf1629d61cf05a13}{%
            family={Liu},
            familyi={L\bibinitperiod},
            given={Junguo},
            giveni={J\bibinitperiod}}}%
+        {{hash=14fb0009d9bf0872638c060a6dfab423}{%
+           family={Hua},
+           familyi={H\bibinitperiod},
+           given={Fangyuan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c94101ac1969388f003b48e81aa8661c}{%
+           family={Echeverría},
+           familyi={E\bibinitperiod},
+           given={Cristian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=202afe5e67ee5ce4e219de9e31b0cda0}{%
+           family={Gonzales},
+           familyi={G\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod}}}%
+        {{hash=778f4dc0ede5bd9ad998e79db6879e68}{%
+           family={Shaw},
+           familyi={S\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7a6240a7bdcc5daa1fa9704535055241}{%
+           family={Decleer},
+           familyi={D\bibinitperiod},
+           given={Kris},
+           giveni={K\bibinitperiod}}}%
+        {{hash=86b94e65cd3abb680782b4d081fc08c2}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={Kingsley\bibnamedelima W.},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
       }
-      \true{morenamea}
-      \name{namea}{10}{}{%
+      \name{namea}{16}{}{%
         {{hash=53801dda030dd6de38a50a7eda6dc5c3}{%
            family={Gann},
            familyi={G\bibinitperiod},
-           given={George\bibnamedelima D},
+           given={George\bibnamedelima D.},
            giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
         {{hash=c9c151ebb8eb1f91c01d8cd85347ecc4}{%
            family={McDonald},
@@ -99,7 +126,7 @@
         {{hash=53e88d2377daa7a823fb69e9ee652e8c}{%
            family={Nelson},
            familyi={N\bibinitperiod},
-           given={Cara\bibnamedelima R},
+           given={Cara\bibnamedelima R.},
            giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
         {{hash=5b2725f53052930a89914294ef66b349}{%
            family={Jonson},
@@ -109,7 +136,7 @@
         {{hash=24c11533ae1c43e55f768e3be2cda6b5}{%
            family={Hallett},
            familyi={H\bibinitperiod},
-           given={James\bibnamedelima G},
+           given={James\bibnamedelima G.},
            giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
         {{hash=1d168a3d903c820f0432cc7d3a62deec}{%
            family={Eisenberg},
@@ -119,44 +146,86 @@
         {{hash=e0d9a6af189937e649b8f4af924712fa}{%
            family={Guariguata},
            familyi={G\bibinitperiod},
-           given={Manuel\bibnamedelima R},
+           given={Manuel\bibnamedelima R.},
            giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
         {{hash=a64bf793e2ee5becaf1629d61cf05a13}{%
            family={Liu},
            familyi={L\bibinitperiod},
            given={Junguo},
            giveni={J\bibinitperiod}}}%
+        {{hash=14fb0009d9bf0872638c060a6dfab423}{%
+           family={Hua},
+           familyi={H\bibinitperiod},
+           given={Fangyuan},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c94101ac1969388f003b48e81aa8661c}{%
+           family={Echeverría},
+           familyi={E\bibinitperiod},
+           given={Cristian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=202afe5e67ee5ce4e219de9e31b0cda0}{%
+           family={Gonzales},
+           familyi={G\bibinitperiod},
+           given={Emily},
+           giveni={E\bibinitperiod}}}%
+        {{hash=778f4dc0ede5bd9ad998e79db6879e68}{%
+           family={Shaw},
+           familyi={S\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7a6240a7bdcc5daa1fa9704535055241}{%
+           family={Decleer},
+           familyi={D\bibinitperiod},
+           given={Kris},
+           giveni={K\bibinitperiod}}}%
+        {{hash=86b94e65cd3abb680782b4d081fc08c2}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={Kingsley\bibnamedelima W.},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {english}%
       }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
       \strng{namehash}{1ca9d96a491d86d2f127ec0aa9cfa3f6}
-      \strng{fullhash}{acec3d3b993822562603d919b2aeb586}
+      \strng{fullhash}{a93d45481c82a147f7d0dd8a088df6c6}
       \strng{bibnamehash}{72e33149845f10021faa89d2c3861ea0}
       \strng{authorbibnamehash}{72e33149845f10021faa89d2c3861ea0}
       \strng{authornamehash}{1ca9d96a491d86d2f127ec0aa9cfa3f6}
-      \strng{authorfullhash}{acec3d3b993822562603d919b2aeb586}
+      \strng{authorfullhash}{a93d45481c82a147f7d0dd8a088df6c6}
       \strng{nameabibnamehash}{72e33149845f10021faa89d2c3861ea0}
       \strng{nameanamehash}{1ca9d96a491d86d2f127ec0aa9cfa3f6}
-      \strng{nameafullhash}{acec3d3b993822562603d919b2aeb586}
+      \strng{nameafullhash}{a93d45481c82a147f7d0dd8a088df6c6}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Restoration Ecology. 27 (S1): S1-S46.}
+      \field{issn}{1526-100X}
+      \field{journaltitle}{Restoration Ecology}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
+      \field{month}{9}
       \field{number}{S1}
-      \field{title}{International principles and standards for the practice of ecological restoration}
+      \field{title}{International principles and standards for the practice of ecological restoration. Second edition}
       \field{usera}{J}
       \field{userd}{english}
       \field{userf}{english}
       \field{volume}{27}
       \field{year}{2019}
       \field{dateera}{ce}
-      \field{pages}{S1\bibrangedash S46}
-      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1111/rec.13035
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1111/rec.13035
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1111/rec.13035
+      \endverb
       \keyw{gann2019international}
     \endentry
     \entry{dorling2016vehicle}{article}{}
@@ -339,85 +408,6 @@
       \range{pages}{11}
       \keyw{klaus2017enriching}
     \endentry
-    \entry{feng2015memes}{article}{}
-      \name{author}{4}{}{%
-        {{hash=cb755bee69000df3845c5ddfb760b090}{%
-           family={Feng},
-           familyi={F\bibinitperiod},
-           given={Liang},
-           giveni={L\bibinitperiod}}}%
-        {{hash=3da15e59c78ba32cb39f54b427a8b8bc}{%
-           family={Ong},
-           familyi={O\bibinitperiod},
-           given={Yew-Soon},
-           giveni={Y\bibinithyphendelim S\bibinitperiod}}}%
-        {{hash=f319d89688aae0e18ccd3a023e521b4f}{%
-           family={Tan},
-           familyi={T\bibinitperiod},
-           given={Ah-Hwee},
-           giveni={A\bibinithyphendelim H\bibinitperiod}}}%
-        {{hash=269eb55145a9b3c53191157aab6a7c59}{%
-           family={Tsang},
-           familyi={T\bibinitperiod},
-           given={Ivor\bibnamedelima W},
-           giveni={I\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \name{namea}{4}{}{%
-        {{hash=cb755bee69000df3845c5ddfb760b090}{%
-           family={Feng},
-           familyi={F\bibinitperiod},
-           given={Liang},
-           giveni={L\bibinitperiod}}}%
-        {{hash=3da15e59c78ba32cb39f54b427a8b8bc}{%
-           family={Ong},
-           familyi={O\bibinitperiod},
-           given={Yew-Soon},
-           giveni={Y\bibinithyphendelim S\bibinitperiod}}}%
-        {{hash=f319d89688aae0e18ccd3a023e521b4f}{%
-           family={Tan},
-           familyi={T\bibinitperiod},
-           given={Ah-Hwee},
-           giveni={A\bibinithyphendelim H\bibinitperiod}}}%
-        {{hash=269eb55145a9b3c53191157aab6a7c59}{%
-           family={Tsang},
-           familyi={T\bibinitperiod},
-           given={Ivor\bibnamedelima W},
-           giveni={I\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{93f92f7c6f29f83c99c65ed5f7e99656}
-      \strng{fullhash}{64b171d5b30ffd0c808068d70efdad2f}
-      \strng{bibnamehash}{ce964aec4b2632093ee4d8304f4ef366}
-      \strng{authorbibnamehash}{ce964aec4b2632093ee4d8304f4ef366}
-      \strng{authornamehash}{93f92f7c6f29f83c99c65ed5f7e99656}
-      \strng{authorfullhash}{64b171d5b30ffd0c808068d70efdad2f}
-      \strng{nameabibnamehash}{ce964aec4b2632093ee4d8304f4ef366}
-      \strng{nameanamehash}{93f92f7c6f29f83c99c65ed5f7e99656}
-      \strng{nameafullhash}{64b171d5b30ffd0c808068d70efdad2f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Memetic Computing}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Memes as building blocks: a case study on evolutionary optimization+ transfer learning for routing problems}
-      \field{usera}{J}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{volume}{7}
-      \field{year}{2015}
-      \field{dateera}{ce}
-      \field{pages}{159\bibrangedash 180}
-      \range{pages}{22}
-      \keyw{feng2015memes}
-    \endentry
     \entry{vaswani2017attention}{article}{}
       \name{author}{8}{}{%
         {{hash=7f28e84700536646dd6620a0db07ad09}{%
@@ -515,8 +505,8 @@
       \strng{nameabibnamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
       \strng{nameanamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
       \strng{nameafullhash}{cb26e47f6b8133865271fc8483132297}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
@@ -579,8 +569,8 @@
       \strng{nameabibnamehash}{a442a9bbb26362f27b11afa1b7ac9582}
       \strng{nameanamehash}{832d19b6ecbaa1d465342fe676ffb29a}
       \strng{nameafullhash}{a442a9bbb26362f27b11afa1b7ac9582}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
@@ -633,8 +623,8 @@
       \strng{nameabibnamehash}{1fbfbd339443c7d8f9e2571903642e27}
       \strng{nameanamehash}{68fa7015a50e356c314b348ecb8dc935}
       \strng{nameafullhash}{1fbfbd339443c7d8f9e2571903642e27}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2103.03012}
@@ -706,8 +696,8 @@
       \strng{nameabibnamehash}{8ac4799f24755bc6f8a5e620366640f7}
       \strng{nameanamehash}{176c86aa36fab51e81d033c2d8ea8cbe}
       \strng{nameafullhash}{6b36fd87902dbca910efbc0f913a7749}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
@@ -753,8 +743,8 @@
       \strng{nameabibnamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
       \strng{nameanamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
       \strng{nameafullhash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Machine learning}
@@ -809,8 +799,8 @@
       \strng{nameabibnamehash}{a09df9f123146b8e2c7f1134c9496932}
       \strng{nameanamehash}{0018e09b9f142d15c9693e18a17bdf3f}
       \strng{nameafullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1412.6980}

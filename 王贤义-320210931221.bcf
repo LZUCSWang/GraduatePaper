@@ -2928,15 +2928,14 @@
     <bcf:citekey order="1" intorder="1">gann2019international</bcf:citekey>
     <bcf:citekey order="2" intorder="1">dorling2016vehicle</bcf:citekey>
     <bcf:citekey order="3" intorder="1">klaus2017enriching</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">feng2015memes</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">vaswani2017attention</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">vinyals2015pointer</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">bresson2021transformer</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">sutton1999policy</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">williams1992simple</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">kingma2014adam</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">aggarwal2020path</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">JIAO2024108084</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">vaswani2017attention</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">vinyals2015pointer</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">bresson2021transformer</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">sutton1999policy</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">williams1992simple</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">kingma2014adam</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">aggarwal2020path</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">JIAO2024108084</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

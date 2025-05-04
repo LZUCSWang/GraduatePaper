@@ -19,6 +19,2722 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{chapin2013global}{book}{}
+      \name{author}{3}{}{%
+        {{hash=dd8f0fb699863394c4693f5042a84a06}{%
+           family={Chapin},
+           familyi={C\bibinitperiod},
+           given={F\bibnamedelima Stuart},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f7eb10395445c3d151542b044e2a353f}{%
+           family={Sala},
+           familyi={S\bibinitperiod},
+           given={Osvaldo\bibnamedelima E},
+           giveni={O\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e579e369cc2c5960a954101fc3a8c35b}{%
+           family={Huber-Sannwald},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={Elisabeth},
+           giveni={E\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=dd8f0fb699863394c4693f5042a84a06}{%
+           family={Chapin},
+           familyi={C\bibinitperiod},
+           given={F\bibnamedelima Stuart},
+           giveni={F\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f7eb10395445c3d151542b044e2a353f}{%
+           family={Sala},
+           familyi={S\bibinitperiod},
+           given={Osvaldo\bibnamedelima E},
+           giveni={O\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e579e369cc2c5960a954101fc3a8c35b}{%
+           family={Huber-Sannwald},
+           familyi={H\bibinithyphendelim S\bibinitperiod},
+           given={Elisabeth},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{ad4855559a0d8ccbc47e915dd613d202}
+      \strng{fullhash}{1688a280ba5481cca9ba6be3a0166d80}
+      \strng{bibnamehash}{1688a280ba5481cca9ba6be3a0166d80}
+      \strng{authorbibnamehash}{1688a280ba5481cca9ba6be3a0166d80}
+      \strng{authornamehash}{ad4855559a0d8ccbc47e915dd613d202}
+      \strng{authorfullhash}{1688a280ba5481cca9ba6be3a0166d80}
+      \strng{nameabibnamehash}{1688a280ba5481cca9ba6be3a0166d80}
+      \strng{nameanamehash}{ad4855559a0d8ccbc47e915dd613d202}
+      \strng{nameafullhash}{1688a280ba5481cca9ba6be3a0166d80}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Global biodiversity in a changing environment: scenarios for the 21st century}
+      \field{usera}{M}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{152}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \keyw{chapin2013global}
+    \endentry
+    \entry{gibson2009grasses}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b8a6ed352b4c2bafc75b3fae608d23c0}{%
+           family={Gibson},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=b8a6ed352b4c2bafc75b3fae608d23c0}{%
+           family={Gibson},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \strng{fullhash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \strng{bibnamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \strng{authorbibnamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \strng{authornamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \strng{authorfullhash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \strng{nameabibnamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \strng{nameanamehash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \strng{nameafullhash}{b8a6ed352b4c2bafc75b3fae608d23c0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Grasses and grassland ecology}
+      \field{usera}{M}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \keyw{gibson2009grasses}
+    \endentry
+    \entry{bai2020long}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=08bb98eb39a06d370925f97c54be6938}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=99b9a60607967ccae4682a367cc91dde}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2753bb5e1650de83397f15459f8f7dd8}{%
+           family={Degen},
+           familyi={D\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=62c072fcb594e34932e53b37eab4c2db}{%
+           family={Rafiq},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=26c05b9be8960bed59f42e33bbdbaacb}{%
+           family={Kuzyakov},
+           familyi={K\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=326e7e67b0b4605a06b13d7b7d37ab75}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=528b0708ec1bf9b1677b35261fac82bf}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6987c26bf5f9b6e119893b5d925c7b8c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8c0d8d495d30364a6fdc14d3ee19f5b7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=c9a3728dcc2397d1bab78a791b51779b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \true{morenamea}
+      \name{namea}{10}{}{%
+        {{hash=08bb98eb39a06d370925f97c54be6938}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=99b9a60607967ccae4682a367cc91dde}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2753bb5e1650de83397f15459f8f7dd8}{%
+           family={Degen},
+           familyi={D\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=62c072fcb594e34932e53b37eab4c2db}{%
+           family={Rafiq},
+           familyi={R\bibinitperiod},
+           given={M.\bibnamedelimi K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=26c05b9be8960bed59f42e33bbdbaacb}{%
+           family={Kuzyakov},
+           familyi={K\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=326e7e67b0b4605a06b13d7b7d37ab75}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=528b0708ec1bf9b1677b35261fac82bf}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=6987c26bf5f9b6e119893b5d925c7b8c}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8c0d8d495d30364a6fdc14d3ee19f5b7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=c9a3728dcc2397d1bab78a791b51779b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{dcf94b7ba13e16c29543a27ebc7a0663}
+      \strng{fullhash}{8f06ddc6a2bd3f96a5ad0e8be878cd99}
+      \strng{bibnamehash}{52258758382efe384da2bfeb1adf8e0e}
+      \strng{authorbibnamehash}{52258758382efe384da2bfeb1adf8e0e}
+      \strng{authornamehash}{dcf94b7ba13e16c29543a27ebc7a0663}
+      \strng{authorfullhash}{8f06ddc6a2bd3f96a5ad0e8be878cd99}
+      \strng{nameabibnamehash}{52258758382efe384da2bfeb1adf8e0e}
+      \strng{nameanamehash}{dcf94b7ba13e16c29543a27ebc7a0663}
+      \strng{nameafullhash}{8f06ddc6a2bd3f96a5ad0e8be878cd99}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Global Change Biology}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{12}
+      \field{title}{Long-term active restoration of extremely degraded alpine grassland accelerated turnover and increased stability of soil carbon}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{26}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{7217\bibrangedash 7228}
+      \range{pages}{12}
+      \keyw{bai2020long}
+    \endentry
+    \entry{freitag2021restoration}{article}{}
+      \name{author}{8}{}{%
+        {{hash=f77b82ba1573fd09cf200d456d82ec3d}{%
+           family={Freitag},
+           familyi={F\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bdccbc1ba330b4bdb9a6f71801ca1cdf}{%
+           family={Klaus},
+           familyi={K\bibinitperiod},
+           given={V.\bibnamedelimi H.},
+           giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=5680cbe73ee9e1b250bcf02095d37ae3}{%
+           family={Bolliger},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0f4277271df5791627cc5f0e05f0bf3f}{%
+           family={Hamer},
+           familyi={H\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=ac7b71ab035b9542c470cb1036c055f4}{%
+           family={Kleinebecker},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=beaf77f96106a9ec5792d0c2d7301ce5}{%
+           family={Prati},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=66fc4f7a28d50f5e96eb08e913f72947}{%
+           family={Schäfer},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ef512fe988872b0f6d5285da95f122d9}{%
+           family={Hölzel},
+           familyi={H\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{namea}{8}{}{%
+        {{hash=f77b82ba1573fd09cf200d456d82ec3d}{%
+           family={Freitag},
+           familyi={F\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bdccbc1ba330b4bdb9a6f71801ca1cdf}{%
+           family={Klaus},
+           familyi={K\bibinitperiod},
+           given={V.\bibnamedelimi H.},
+           giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=5680cbe73ee9e1b250bcf02095d37ae3}{%
+           family={Bolliger},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=0f4277271df5791627cc5f0e05f0bf3f}{%
+           family={Hamer},
+           familyi={H\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=ac7b71ab035b9542c470cb1036c055f4}{%
+           family={Kleinebecker},
+           familyi={K\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=beaf77f96106a9ec5792d0c2d7301ce5}{%
+           family={Prati},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=66fc4f7a28d50f5e96eb08e913f72947}{%
+           family={Schäfer},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ef512fe988872b0f6d5285da95f122d9}{%
+           family={Hölzel},
+           familyi={H\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{1878d8ea7dbd54348aaf35b8a5916fa5}
+      \strng{fullhash}{d873b414a64b06a09e9d4e19d8d496e2}
+      \strng{bibnamehash}{dd6d051f7ffc8a82da50c35e89ef6751}
+      \strng{authorbibnamehash}{dd6d051f7ffc8a82da50c35e89ef6751}
+      \strng{authornamehash}{1878d8ea7dbd54348aaf35b8a5916fa5}
+      \strng{authorfullhash}{d873b414a64b06a09e9d4e19d8d496e2}
+      \strng{nameabibnamehash}{dd6d051f7ffc8a82da50c35e89ef6751}
+      \strng{nameanamehash}{1878d8ea7dbd54348aaf35b8a5916fa5}
+      \strng{nameafullhash}{d873b414a64b06a09e9d4e19d8d496e2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Ecology}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{8}
+      \field{title}{Restoration of plant diversity in permanent grassland by seeding: Assessing the limiting factors along land-use gradients}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{58}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{1681\bibrangedash 1692}
+      \range{pages}{12}
+      \keyw{freitag2021restoration}
+    \endentry
+    \entry{reinermann2020remote}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4817caca61900312bae9ef8b56e868cd}{%
+           family={Reinermann},
+           familyi={R\bibinitperiod},
+           given={Sophie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3ef7cc764d7bd9808d9e9f0e6375f7b1}{%
+           family={Asam},
+           familyi={A\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=215f37483a6db1e62f1ae27dcb385172}{%
+           family={Kuenzer},
+           familyi={K\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=4817caca61900312bae9ef8b56e868cd}{%
+           family={Reinermann},
+           familyi={R\bibinitperiod},
+           given={Sophie},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3ef7cc764d7bd9808d9e9f0e6375f7b1}{%
+           family={Asam},
+           familyi={A\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=215f37483a6db1e62f1ae27dcb385172}{%
+           family={Kuenzer},
+           familyi={K\bibinitperiod},
+           given={Claudia},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{4ef6d09062ae8c8fc94f415e28a311a3}
+      \strng{fullhash}{ccb77fd0ed930e650e27f238e3099cbd}
+      \strng{bibnamehash}{ccb77fd0ed930e650e27f238e3099cbd}
+      \strng{authorbibnamehash}{ccb77fd0ed930e650e27f238e3099cbd}
+      \strng{authornamehash}{4ef6d09062ae8c8fc94f415e28a311a3}
+      \strng{authorfullhash}{ccb77fd0ed930e650e27f238e3099cbd}
+      \strng{nameabibnamehash}{ccb77fd0ed930e650e27f238e3099cbd}
+      \strng{nameanamehash}{4ef6d09062ae8c8fc94f415e28a311a3}
+      \strng{nameafullhash}{ccb77fd0ed930e650e27f238e3099cbd}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Grasslands cover one third of the earth’s terrestrial surface and are mainly used for livestock production. The usage type, use intensity and condition of grasslands are often unclear. Remote sensing enables the analysis of grassland production and management on large spatial scales and with high temporal resolution. Despite growing numbers of studies in the field, remote sensing applications in grassland biomes are underrepresented in literature and less streamlined compared to other vegetation types. By reviewing articles within research on satellite-based remote sensing of grassland production traits and management, we describe and evaluate methods and results and reveal spatial and temporal patterns of existing work. In addition, we highlight research gaps and suggest research opportunities. The focus is on managed grasslands and pastures and special emphasize is given to the assessment of studies on grazing intensity and mowing detection based on earth observation data. Grazing and mowing highly influence the production and ecology of grassland and are major grassland management types. In total, 253 research articles were reviewed. The majority of these studies focused on grassland production traits and only 80 articles were about grassland management and use intensity. While the remote sensing-based analysis of grassland production heavily relied on empirical relationships between ground-truth and satellite data or radiation transfer models, the used methods to detect and investigate grassland management differed. In addition, this review identified that studies on grassland production traits with satellite data often lacked including spatial management information into the analyses. Studies focusing on grassland management and use intensity mostly investigated rather small study areas with homogeneous intensity levels among the grassland parcels. Combining grassland production estimations with management information, while accounting for the variability among grasslands, is recommended to facilitate the development of large-scale continuous monitoring and remote sensing grassland products, which have been rare thus far.}
+      \field{issn}{2072-4292}
+      \field{journaltitle}{Remote Sensing}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{12}
+      \field{title}{Remote Sensing of Grassland Production and Management—A Review}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{12}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.3390/rs12121949
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2072-4292/12/12/1949
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2072-4292/12/12/1949
+      \endverb
+      \keyw{reinermann2020remote}
+    \endentry
+    \entry{dass2018grasslands}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7117443f9ff68de1b079cb7b9a7ff9c8}{%
+           family={Dass},
+           familyi={D\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f976a3ed015831866e687b3b996a0362}{%
+           family={Houlton},
+           familyi={H\bibinitperiod},
+           given={B.\bibnamedelimi Z.},
+           giveni={B\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=61ad10c626e1d641e0b1d7b5f48d3233}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0bc7805137bc0f645949578f1056f46a}{%
+           family={Warlind},
+           familyi={W\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=7117443f9ff68de1b079cb7b9a7ff9c8}{%
+           family={Dass},
+           familyi={D\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f976a3ed015831866e687b3b996a0362}{%
+           family={Houlton},
+           familyi={H\bibinitperiod},
+           given={B.\bibnamedelimi Z.},
+           giveni={B\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=61ad10c626e1d641e0b1d7b5f48d3233}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0bc7805137bc0f645949578f1056f46a}{%
+           family={Warlind},
+           familyi={W\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{049c7ac025ddb09147bd1605716efe3e}
+      \strng{fullhash}{dd4d434370ea0f6974e218dd44af0972}
+      \strng{bibnamehash}{a59ec07de42f0e28b016220c1e0a34e0}
+      \strng{authorbibnamehash}{a59ec07de42f0e28b016220c1e0a34e0}
+      \strng{authornamehash}{049c7ac025ddb09147bd1605716efe3e}
+      \strng{authorfullhash}{dd4d434370ea0f6974e218dd44af0972}
+      \strng{nameabibnamehash}{a59ec07de42f0e28b016220c1e0a34e0}
+      \strng{nameanamehash}{049c7ac025ddb09147bd1605716efe3e}
+      \strng{nameafullhash}{dd4d434370ea0f6974e218dd44af0972}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Environmental Research Letters}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{7}
+      \field{title}{Grasslands may be more reliable carbon sinks than forests in {C}alifornia}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{13}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{074027}
+      \range{pages}{1}
+      \keyw{dass2018grasslands}
+    \endentry
+    \entry{steffen2015planetary}{article}{}
+      \name{author}{18}{}{%
+        {{hash=c73a2896f09b80b3df3ade10d957b068}{%
+           family={Steffen},
+           familyi={S\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e8ad313d664bf91685f3dc86695a4fe8}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod}}}%
+        {{hash=766784023e0685b7d79290821742de70}{%
+           family={Rockström},
+           familyi={R\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=88a0cb4c657f687a3d28f463552ec500}{%
+           family={Cornell},
+           familyi={C\bibinitperiod},
+           given={Sarah\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c5b90a5421862046feb84986124e4e42}{%
+           family={Fetzer},
+           familyi={F\bibinitperiod},
+           given={Ingo},
+           giveni={I\bibinitperiod}}}%
+        {{hash=8c2ebdbe3b98a25f3e28d6c44b250497}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Elena\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9d99df8ec757f6dbfde9cdd4a5ff631b}{%
+           family={Biggs},
+           familyi={B\bibinitperiod},
+           given={Reinette},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c1fd2baa8d75981b7b3c44aff66b9bec}{%
+           family={Carpenter},
+           familyi={C\bibinitperiod},
+           given={Stephen\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=2b328f626aa7b01d814f32f10c69814a}{%
+           family={Vries},
+           familyi={V\bibinitperiod},
+           given={Wim},
+           giveni={W\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=0da9ebfe2bc9c13cd9776e2dee4306dd}{%
+           family={Wit},
+           familyi={W\bibinitperiod},
+           given={Cynthia\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=33396b38f27fa7e13c6e1581623ba37c}{%
+           family={Folke},
+           familyi={F\bibinitperiod},
+           given={Carl},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c11db5c4be271629294141b7b4996b33}{%
+           family={Gerten},
+           familyi={G\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+        {{hash=858288fa0089559cacb30207cd743ab3}{%
+           family={Heinke},
+           familyi={H\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=99f99a8fffbb3d8671430015f8b3ae91}{%
+           family={Mace},
+           familyi={M\bibinitperiod},
+           given={Georgina\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1683cdad1d943eba604b35fc6678a9f5}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Linn\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=74f1b9d5e2b1a974a62cbf91a26e5c49}{%
+           family={Ramanathan},
+           familyi={R\bibinitperiod},
+           given={Veerabhadran},
+           giveni={V\bibinitperiod}}}%
+        {{hash=673c311bc8475dfceb9058bbd20509cc}{%
+           family={Reyers},
+           familyi={R\bibinitperiod},
+           given={Belinda},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4242e6820684f9cf77ff47f78276127b}{%
+           family={Sörlin},
+           familyi={S\bibinitperiod},
+           given={Sverker},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{18}{}{%
+        {{hash=c73a2896f09b80b3df3ade10d957b068}{%
+           family={Steffen},
+           familyi={S\bibinitperiod},
+           given={Will},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e8ad313d664bf91685f3dc86695a4fe8}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod}}}%
+        {{hash=766784023e0685b7d79290821742de70}{%
+           family={Rockström},
+           familyi={R\bibinitperiod},
+           given={Johan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=88a0cb4c657f687a3d28f463552ec500}{%
+           family={Cornell},
+           familyi={C\bibinitperiod},
+           given={Sarah\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c5b90a5421862046feb84986124e4e42}{%
+           family={Fetzer},
+           familyi={F\bibinitperiod},
+           given={Ingo},
+           giveni={I\bibinitperiod}}}%
+        {{hash=8c2ebdbe3b98a25f3e28d6c44b250497}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Elena\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=9d99df8ec757f6dbfde9cdd4a5ff631b}{%
+           family={Biggs},
+           familyi={B\bibinitperiod},
+           given={Reinette},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c1fd2baa8d75981b7b3c44aff66b9bec}{%
+           family={Carpenter},
+           familyi={C\bibinitperiod},
+           given={Stephen\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=2b328f626aa7b01d814f32f10c69814a}{%
+           family={Vries},
+           familyi={V\bibinitperiod},
+           given={Wim},
+           giveni={W\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=0da9ebfe2bc9c13cd9776e2dee4306dd}{%
+           family={Wit},
+           familyi={W\bibinitperiod},
+           given={Cynthia\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{hash=33396b38f27fa7e13c6e1581623ba37c}{%
+           family={Folke},
+           familyi={F\bibinitperiod},
+           given={Carl},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c11db5c4be271629294141b7b4996b33}{%
+           family={Gerten},
+           familyi={G\bibinitperiod},
+           given={Dieter},
+           giveni={D\bibinitperiod}}}%
+        {{hash=858288fa0089559cacb30207cd743ab3}{%
+           family={Heinke},
+           familyi={H\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=99f99a8fffbb3d8671430015f8b3ae91}{%
+           family={Mace},
+           familyi={M\bibinitperiod},
+           given={Georgina\bibnamedelima M.},
+           giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=1683cdad1d943eba604b35fc6678a9f5}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Linn\bibnamedelima M.},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=74f1b9d5e2b1a974a62cbf91a26e5c49}{%
+           family={Ramanathan},
+           familyi={R\bibinitperiod},
+           given={Veerabhadran},
+           giveni={V\bibinitperiod}}}%
+        {{hash=673c311bc8475dfceb9058bbd20509cc}{%
+           family={Reyers},
+           familyi={R\bibinitperiod},
+           given={Belinda},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4242e6820684f9cf77ff47f78276127b}{%
+           family={Sörlin},
+           familyi={S\bibinitperiod},
+           given={Sverker},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{0b93ea8885f0525c43cab25fff216c47}
+      \strng{fullhash}{84613ca8147fbbb14923f026bfc6d07b}
+      \strng{bibnamehash}{b811623ee501f7f3ca07881aac27cc57}
+      \strng{authorbibnamehash}{b811623ee501f7f3ca07881aac27cc57}
+      \strng{authornamehash}{0b93ea8885f0525c43cab25fff216c47}
+      \strng{authorfullhash}{84613ca8147fbbb14923f026bfc6d07b}
+      \strng{nameabibnamehash}{b811623ee501f7f3ca07881aac27cc57}
+      \strng{nameanamehash}{0b93ea8885f0525c43cab25fff216c47}
+      \strng{nameafullhash}{84613ca8147fbbb14923f026bfc6d07b}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The planetary boundary (PB) concept, introduced in 2009, aimed to define the environmental limits within which humanity can safely operate. This approach has proved influential in global sustainability policy development. Steffen et al. provide an updated and extended analysis of the PB framework. Of the original nine proposed boundaries, they identify three (including climate change) that might push the Earth system into a new state if crossed and that also have a pervasive influence on the remaining boundaries. They also develop the PB framework so that it can be applied usefully in a regional context. Science, this issue 10.1126/science.1259855 Developments in the planetary boundaries concept provide a framework to support global sustainability. The planetary boundaries framework defines a safe operating space for humanity based on the intrinsic biophysical processes that regulate the stability of the Earth system. Here, we revise and update the planetary boundary framework, with a focus on the underpinning biophysical science, based on targeted input from expert research communities and on more general scientific advances over the past 5 years. Several of the boundaries now have a two-tier approach, reflecting the importance of cross-scale interactions and the regional-level heterogeneity of the processes that underpin the boundaries. Two core boundaries—climate change and biosphere integrity—have been identified, each of which has the potential on its own to drive the Earth system into a new state should they be substantially and persistently transgressed.}
+      \field{journaltitle}{Science}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6223}
+      \field{title}{Planetary boundaries: Guiding human development on a changing planet}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{347}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{1259855}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1126/science.1259855
+      \endverb
+      \verb{eprint}
+      \verb https://www.science.org/doi/pdf/10.1126/science.1259855
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/abs/10.1126/science.1259855
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/abs/10.1126/science.1259855
+      \endverb
+      \keyw{steffen2015planetary}
+    \endentry
+    \entry{nex2014uav}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0c0f37d1e406b5bfd03d5d25cc983d49}{%
+           family={Nex},
+           familyi={N\bibinitperiod},
+           given={F.C.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=71b3d3ae8ecea8c869a19a9d354aa740}{%
+           family={Remondino},
+           familyi={R\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=0c0f37d1e406b5bfd03d5d25cc983d49}{%
+           family={Nex},
+           familyi={N\bibinitperiod},
+           given={F.C.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=71b3d3ae8ecea8c869a19a9d354aa740}{%
+           family={Remondino},
+           familyi={R\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{be781b8a1c9511062bc3bc43e3ce852d}
+      \strng{fullhash}{857ee225d99e87937b786d91da557165}
+      \strng{bibnamehash}{857ee225d99e87937b786d91da557165}
+      \strng{authorbibnamehash}{857ee225d99e87937b786d91da557165}
+      \strng{authornamehash}{be781b8a1c9511062bc3bc43e3ce852d}
+      \strng{authorfullhash}{857ee225d99e87937b786d91da557165}
+      \strng{nameabibnamehash}{857ee225d99e87937b786d91da557165}
+      \strng{nameanamehash}{be781b8a1c9511062bc3bc43e3ce852d}
+      \strng{nameafullhash}{857ee225d99e87937b786d91da557165}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1866-9298}
+      \field{journaltitle}{Applied geomatics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{1}
+      \field{title}{UAV for 3D mapping applications : a review}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{6}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{1--1\bibrangedash 2015}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/s12518-013-0120-x
+      \endverb
+      \keyw{ADLIB-ART-4811}
+    \endentry
+    \entry{mohan2021uav}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=1aec1ded717193607e67d20a72717b3d}{%
+           family={Mohan},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=65e882ec0dd6720976402386ea06317f}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b906584fbedcaa95ae768f833eb1ee5e}{%
+           family={Gopan},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8190413242d8d8326fac42cdc60a1ac8}{%
+           family={Aghai},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f42096a0b97a824f8ec3daa6db669d34}{%
+           family={Bajaj},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9f3f16525b071dbb0e76cdb1783c1e8d}{%
+           family={Galgamuwa},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d0132423f868550409b46a1abd2f24dd}{%
+           family={Vastaranta},
+           familyi={V\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4239a3f62e4429dee4f5478d0d131c9d}{%
+           family={Arachchige},
+           familyi={A\bibinitperiod},
+           given={P.\bibnamedelimi S.\bibnamedelimi P.},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=71b75fce8928c6367a41bee14c51d60c}{%
+           family={Amorós},
+           familyi={A\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f04e0747d19a02990d8a039c70e69607}{%
+           family={Corte},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi P.\bibnamedelimi D.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \true{morenamea}
+      \name{namea}{10}{}{%
+        {{hash=1aec1ded717193607e67d20a72717b3d}{%
+           family={Mohan},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=65e882ec0dd6720976402386ea06317f}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b906584fbedcaa95ae768f833eb1ee5e}{%
+           family={Gopan},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8190413242d8d8326fac42cdc60a1ac8}{%
+           family={Aghai},
+           familyi={A\bibinitperiod},
+           given={M.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f42096a0b97a824f8ec3daa6db669d34}{%
+           family={Bajaj},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9f3f16525b071dbb0e76cdb1783c1e8d}{%
+           family={Galgamuwa},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=d0132423f868550409b46a1abd2f24dd}{%
+           family={Vastaranta},
+           familyi={V\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4239a3f62e4429dee4f5478d0d131c9d}{%
+           family={Arachchige},
+           familyi={A\bibinitperiod},
+           given={P.\bibnamedelimi S.\bibnamedelimi P.},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=71b75fce8928c6367a41bee14c51d60c}{%
+           family={Amorós},
+           familyi={A\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=f04e0747d19a02990d8a039c70e69607}{%
+           family={Corte},
+           familyi={C\bibinitperiod},
+           given={A.\bibnamedelimi P.\bibnamedelimi D.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{ecc1f1b0fbbfc787c6b914dca5bbafef}
+      \strng{fullhash}{174f74301bddddf96370574a15675750}
+      \strng{bibnamehash}{0733c6a5c0416d29fb38cd12441bda4b}
+      \strng{authorbibnamehash}{0733c6a5c0416d29fb38cd12441bda4b}
+      \strng{authornamehash}{ecc1f1b0fbbfc787c6b914dca5bbafef}
+      \strng{authorfullhash}{174f74301bddddf96370574a15675750}
+      \strng{nameabibnamehash}{0733c6a5c0416d29fb38cd12441bda4b}
+      \strng{nameanamehash}{ecc1f1b0fbbfc787c6b914dca5bbafef}
+      \strng{nameafullhash}{174f74301bddddf96370574a15675750}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Remote Sensing}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{13}
+      \field{title}{{UAV}-supported forest regeneration: Current trends, challenges and implications}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{13}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{2596}
+      \range{pages}{1}
+      \keyw{mohan2021uav}
+    \endentry
+    \entry{sun2018unmanned}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c67619924cd2ecb1e99e1432d09d6dbd}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=458f1f1786e06521945b79be36b37d18}{%
+           family={Yi},
+           familyi={Y\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=131ce090f9adc128ae77de0c731dbcd4}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=c67619924cd2ecb1e99e1432d09d6dbd}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=458f1f1786e06521945b79be36b37d18}{%
+           family={Yi},
+           familyi={Y\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=131ce090f9adc128ae77de0c731dbcd4}{%
+           family={Hou},
+           familyi={H\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{7c0c6a3bfa83825e292a7f6fe762ed03}
+      \strng{fullhash}{ae906db3890af48bbe3d7d84e336d162}
+      \strng{bibnamehash}{ae906db3890af48bbe3d7d84e336d162}
+      \strng{authorbibnamehash}{ae906db3890af48bbe3d7d84e336d162}
+      \strng{authornamehash}{7c0c6a3bfa83825e292a7f6fe762ed03}
+      \strng{authorfullhash}{ae906db3890af48bbe3d7d84e336d162}
+      \strng{nameabibnamehash}{ae906db3890af48bbe3d7d84e336d162}
+      \strng{nameanamehash}{7c0c6a3bfa83825e292a7f6fe762ed03}
+      \strng{nameafullhash}{ae906db3890af48bbe3d7d84e336d162}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecological Indicators}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Unmanned aerial vehicle methods makes species composition monitoring easier in grasslands}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{95}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{825\bibrangedash 830}
+      \range{pages}{6}
+      \keyw{sun2018unmanned}
+    \endentry
+    \entry{zeng2017energy}{article}{}
+      \name{author}{2}{}{%
+        {{hash=eeb1ba32a79977b191ab560499454e9e}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0672466dc7c3a8cec050e5ac091fd0ac}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=eeb1ba32a79977b191ab560499454e9e}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Yong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=0672466dc7c3a8cec050e5ac091fd0ac}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{e8497c7ccf4ffb8f2ff49fc06a863005}
+      \strng{fullhash}{fa57656e5d8d64e798e41c2482308401}
+      \strng{bibnamehash}{fa57656e5d8d64e798e41c2482308401}
+      \strng{authorbibnamehash}{fa57656e5d8d64e798e41c2482308401}
+      \strng{authornamehash}{e8497c7ccf4ffb8f2ff49fc06a863005}
+      \strng{authorfullhash}{fa57656e5d8d64e798e41c2482308401}
+      \strng{nameabibnamehash}{fa57656e5d8d64e798e41c2482308401}
+      \strng{nameanamehash}{e8497c7ccf4ffb8f2ff49fc06a863005}
+      \strng{nameafullhash}{fa57656e5d8d64e798e41c2482308401}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Wireless Communications}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{Energy-Efficient UAV Communication With Trajectory Optimization}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{16}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{3747\bibrangedash 3760}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/TWC.2017.2688328
+      \endverb
+      \keyw{Energy consumption;Wireless communication;Unmanned aerial vehicles;Propulsion;Trajectory optimization;Acceleration;UAV communication;energy efficiency;trajectory optimization;sequential convex optimization}
+    \endentry
+    \entry{faiccal2017adaptive}{article}{}
+      \name{author}{8}{}{%
+        {{hash=32cf5a3046ddc76c291648f7941b2680}{%
+           family={Faiçal},
+           familyi={F\bibinitperiod},
+           given={B.\bibnamedelimi S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3e367dd61ce36e1e1256db24de6db8ad}{%
+           family={Freitas},
+           familyi={F\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c83359707d6292f0708b7a19f7d04ac3}{%
+           family={Gomes},
+           familyi={G\bibinitperiod},
+           given={P.\bibnamedelimi H.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=0204dddeb3a84263c1688acd64119620}{%
+           family={Mano},
+           familyi={M\bibinitperiod},
+           given={L.\bibnamedelimi Y.},
+           giveni={L\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=de16f9901974a5f4622a20808c22085a}{%
+           family={Pessin},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=787636a2d2712390bb333907b9c52f29}{%
+           family={de\bibnamedelima Carvalho},
+           familyi={d\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={A.\bibnamedelimi C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=21a21d7336936c217cd63c128b524722}{%
+           family={Krishnamachari},
+           familyi={K\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9e183a1fb54f0ad577d23e0db7ab6bca}{%
+           family={Ueyama},
+           familyi={U\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{namea}{8}{}{%
+        {{hash=32cf5a3046ddc76c291648f7941b2680}{%
+           family={Faiçal},
+           familyi={F\bibinitperiod},
+           given={B.\bibnamedelimi S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3e367dd61ce36e1e1256db24de6db8ad}{%
+           family={Freitas},
+           familyi={F\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c83359707d6292f0708b7a19f7d04ac3}{%
+           family={Gomes},
+           familyi={G\bibinitperiod},
+           given={P.\bibnamedelimi H.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=0204dddeb3a84263c1688acd64119620}{%
+           family={Mano},
+           familyi={M\bibinitperiod},
+           given={L.\bibnamedelimi Y.},
+           giveni={L\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=de16f9901974a5f4622a20808c22085a}{%
+           family={Pessin},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=787636a2d2712390bb333907b9c52f29}{%
+           family={de\bibnamedelima Carvalho},
+           familyi={d\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={A.\bibnamedelimi C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=21a21d7336936c217cd63c128b524722}{%
+           family={Krishnamachari},
+           familyi={K\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=9e183a1fb54f0ad577d23e0db7ab6bca}{%
+           family={Ueyama},
+           familyi={U\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{1b0d95180fcefe648bc04b9dc6b13ff9}
+      \strng{fullhash}{3f5f131a1d53a6cb3df2c3d36754845f}
+      \strng{bibnamehash}{5164fc072061070644f99b7bd9f850ac}
+      \strng{authorbibnamehash}{5164fc072061070644f99b7bd9f850ac}
+      \strng{authornamehash}{1b0d95180fcefe648bc04b9dc6b13ff9}
+      \strng{authorfullhash}{3f5f131a1d53a6cb3df2c3d36754845f}
+      \strng{nameabibnamehash}{5164fc072061070644f99b7bd9f850ac}
+      \strng{nameanamehash}{1b0d95180fcefe648bc04b9dc6b13ff9}
+      \strng{nameafullhash}{3f5f131a1d53a6cb3df2c3d36754845f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers and Electronics in Agriculture}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{An adaptive approach for {UAV}-based pesticide spraying in dynamic environments}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{138}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{210\bibrangedash 223}
+      \range{pages}{14}
+      \keyw{faiccal2017adaptive}
+    \endentry
+    \entry{shivgan2020energy}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=91b522cc654a85ee84eab4f51a848764}{%
+           family={Shivgan},
+           familyi={S\bibinitperiod},
+           given={Rutuja},
+           giveni={R\bibinitperiod}}}%
+        {{hash=10a8c96046b1a1849108bb216c52a653}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Ziqian},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=91b522cc654a85ee84eab4f51a848764}{%
+           family={Shivgan},
+           familyi={S\bibinitperiod},
+           given={Rutuja},
+           giveni={R\bibinitperiod}}}%
+        {{hash=10a8c96046b1a1849108bb216c52a653}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Ziqian},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{a3cc8562fa17bfd6afd04c81b6da9359}
+      \strng{fullhash}{acc26ae16902bb662a211576c11c39e0}
+      \strng{bibnamehash}{acc26ae16902bb662a211576c11c39e0}
+      \strng{authorbibnamehash}{acc26ae16902bb662a211576c11c39e0}
+      \strng{authornamehash}{a3cc8562fa17bfd6afd04c81b6da9359}
+      \strng{authorfullhash}{acc26ae16902bb662a211576c11c39e0}
+      \strng{nameabibnamehash}{acc26ae16902bb662a211576c11c39e0}
+      \strng{nameanamehash}{a3cc8562fa17bfd6afd04c81b6da9359}
+      \strng{nameafullhash}{acc26ae16902bb662a211576c11c39e0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 IEEE 21st International Conference on High Performance Switching and Routing (HPSR)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Energy-Efficient Drone Coverage Path Planning using Genetic Algorithm}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/HPSR48589.2020.9098989
+      \endverb
+      \keyw{Drones;Energy consumption;Path planning;Genetic algorithms;Acceleration;Task analysis;Unmanned Aerial Vehicles;Energy model;Path planning;traveling salesman problem;Optimization;Genetic algorithm}
+    \endentry
+    \entry{rajan2022routing}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3cf0b4780ee1b12d6e1febdb1ca336ff}{%
+           family={Rajan},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9efc4f879d5d1bd8bbe37af703a6863f}{%
+           family={Sundar},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d95283ec139045fd762c9d9193ccf90a}{%
+           family={Gautam},
+           familyi={G\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=3cf0b4780ee1b12d6e1febdb1ca336ff}{%
+           family={Rajan},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9efc4f879d5d1bd8bbe37af703a6863f}{%
+           family={Sundar},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d95283ec139045fd762c9d9193ccf90a}{%
+           family={Gautam},
+           familyi={G\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{3667aa5c2147b25f4b98c21c89fb2e03}
+      \strng{fullhash}{6948fd3717f32ee9d3101acb1dd39361}
+      \strng{bibnamehash}{6948fd3717f32ee9d3101acb1dd39361}
+      \strng{authorbibnamehash}{6948fd3717f32ee9d3101acb1dd39361}
+      \strng{authornamehash}{3667aa5c2147b25f4b98c21c89fb2e03}
+      \strng{authorfullhash}{6948fd3717f32ee9d3101acb1dd39361}
+      \strng{nameabibnamehash}{6948fd3717f32ee9d3101acb1dd39361}
+      \strng{nameanamehash}{3667aa5c2147b25f4b98c21c89fb2e03}
+      \strng{nameafullhash}{6948fd3717f32ee9d3101acb1dd39361}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers \& Operations Research}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Routing problem for unmanned aerial vehicle patrolling missions—a progressive hedging algorithm}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{105702}
+      \range{pages}{1}
+      \keyw{rajan2022routing}
+    \endentry
+    \entry{yang2015path}{article}{}
+      \name{author}{4}{}{%
+        {{hash=cf33bcda2a93f993c5124cf26991a0f6}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=eb316aa56e34ed37ee8b0b308f3c1f77}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=329871e755c009209d6cb3833e4bf39a}{%
+           family={Lozano},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=02bf1528889bd5dcf953ee5d6cf31a6b}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=cf33bcda2a93f993c5124cf26991a0f6}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=eb316aa56e34ed37ee8b0b308f3c1f77}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=329871e755c009209d6cb3833e4bf39a}{%
+           family={Lozano},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=02bf1528889bd5dcf953ee5d6cf31a6b}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{27b6d101378d95dbe1cbdfc7156cd6dc}
+      \strng{fullhash}{f5e59441c176acd8a6ffd98ca6c08f3a}
+      \strng{bibnamehash}{81c53b34c7a39606ca9c0c4c35d55c9b}
+      \strng{authorbibnamehash}{81c53b34c7a39606ca9c0c4c35d55c9b}
+      \strng{authornamehash}{27b6d101378d95dbe1cbdfc7156cd6dc}
+      \strng{authorfullhash}{f5e59441c176acd8a6ffd98ca6c08f3a}
+      \strng{nameabibnamehash}{81c53b34c7a39606ca9c0c4c35d55c9b}
+      \strng{nameanamehash}{27b6d101378d95dbe1cbdfc7156cd6dc}
+      \strng{nameafullhash}{f5e59441c176acd8a6ffd98ca6c08f3a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Robotics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{5}
+      \field{title}{Path planning for single unmanned aerial vehicle by separately evolving waypoints}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{31}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{1130\bibrangedash 1146}
+      \range{pages}{17}
+      \keyw{yang2015path}
+    \endentry
+    \entry{guo2021spraying}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=cdfee844c95f916f2619a26fab25991b}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=fda8a6476fa840f1f86a595e38f1212a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=69b3294645be4b02dd8bee500c2ccb66}{%
+           family={Coombes},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=cdfee844c95f916f2619a26fab25991b}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=fda8a6476fa840f1f86a595e38f1212a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=69b3294645be4b02dd8bee500c2ccb66}{%
+           family={Coombes},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{1f417b2035eec64f5143fa5d8fd92b80}
+      \strng{fullhash}{47f0eaa40cd537f3b90b12598d88cfbc}
+      \strng{bibnamehash}{47f0eaa40cd537f3b90b12598d88cfbc}
+      \strng{authorbibnamehash}{47f0eaa40cd537f3b90b12598d88cfbc}
+      \strng{authornamehash}{1f417b2035eec64f5143fa5d8fd92b80}
+      \strng{authorfullhash}{47f0eaa40cd537f3b90b12598d88cfbc}
+      \strng{nameabibnamehash}{47f0eaa40cd537f3b90b12598d88cfbc}
+      \strng{nameanamehash}{1f417b2035eec64f5143fa5d8fd92b80}
+      \strng{nameafullhash}{47f0eaa40cd537f3b90b12598d88cfbc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2021 26th International Conference on Automation and Computing (ICAC)}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Spraying coverage path planning for agriculture unmanned aerial vehicles}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \keyw{guo2021spraying}
+    \endentry
+    \entry{renzi2014review}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7f26354c297e05fb340f57e0704f253a}{%
+           family={Renzi},
+           familyi={R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=34cddb4860138e9a90fa4dddd095515b}{%
+           family={Leali},
+           familyi={L\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=376bf0163dc36ada9b17ddb3c01b56ef}{%
+           family={Cavazzuti},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fea4cb7c245d9c7b5be11ec80064658c}{%
+           family={Andrisano},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi O.},
+           giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=7f26354c297e05fb340f57e0704f253a}{%
+           family={Renzi},
+           familyi={R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=34cddb4860138e9a90fa4dddd095515b}{%
+           family={Leali},
+           familyi={L\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=376bf0163dc36ada9b17ddb3c01b56ef}{%
+           family={Cavazzuti},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fea4cb7c245d9c7b5be11ec80064658c}{%
+           family={Andrisano},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi O.},
+           giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{f97d5e3e73ea26511d905ec3b5411ad2}
+      \strng{fullhash}{bbd77c58b4bca0156b4dbbaf1632dc6e}
+      \strng{bibnamehash}{1e8171925dd0ad94e880460c26d5a207}
+      \strng{authorbibnamehash}{1e8171925dd0ad94e880460c26d5a207}
+      \strng{authornamehash}{f97d5e3e73ea26511d905ec3b5411ad2}
+      \strng{authorfullhash}{bbd77c58b4bca0156b4dbbaf1632dc6e}
+      \strng{nameabibnamehash}{1e8171925dd0ad94e880460c26d5a207}
+      \strng{nameanamehash}{f97d5e3e73ea26511d905ec3b5411ad2}
+      \strng{nameafullhash}{bbd77c58b4bca0156b4dbbaf1632dc6e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The International Journal of Advanced Manufacturing Technology}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{1}
+      \field{title}{A review on artificial intelligence applications to the optimal design of dedicated and reconfigurable manufacturing systems}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{72}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{pages}{403\bibrangedash 418}
+      \range{pages}{16}
+      \keyw{renzi2014review}
+    \endentry
+    \entry{elliott2016potential}{article}{}
+      \name{author}{1}{}{%
+        {{hash=776ff3f9470c5993e80a0d506208bf30}{%
+           family={Elliott},
+           familyi={E\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=776ff3f9470c5993e80a0d506208bf30}{%
+           family={Elliott},
+           familyi={E\bibinitperiod},
+           given={Stephen},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{776ff3f9470c5993e80a0d506208bf30}
+      \strng{fullhash}{776ff3f9470c5993e80a0d506208bf30}
+      \strng{bibnamehash}{776ff3f9470c5993e80a0d506208bf30}
+      \strng{authorbibnamehash}{776ff3f9470c5993e80a0d506208bf30}
+      \strng{authornamehash}{776ff3f9470c5993e80a0d506208bf30}
+      \strng{authorfullhash}{776ff3f9470c5993e80a0d506208bf30}
+      \strng{nameabibnamehash}{776ff3f9470c5993e80a0d506208bf30}
+      \strng{nameanamehash}{776ff3f9470c5993e80a0d506208bf30}
+      \strng{nameafullhash}{776ff3f9470c5993e80a0d506208bf30}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biotropica}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{The potential for automating assisted natural regeneration of tropical forest ecosystems}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{48}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{pages}{825\bibrangedash 833}
+      \range{pages}{9}
+      \keyw{elliott2016potential}
+    \endentry
+    \entry{pedersen2017robotic}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d9cee21c957b5758a0ca19d2b661fef2}{%
+           family={Pedersen},
+           familyi={P\bibinitperiod},
+           given={S{ø}ren\bibnamedelima Marcus},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=8d5c071944625318c742d90b4a1fe58b}{%
+           family={Fountas},
+           familyi={F\bibinitperiod},
+           given={Spyros},
+           giveni={S\bibinitperiod}}}%
+        {{hash=73cf29606401f029f44381a9507a3452}{%
+           family={S{ø}rensen},
+           familyi={S\bibinitperiod},
+           given={Claus\bibnamedelima G},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=d6f465f49330c011f067db4b8cff8770}{%
+           family={Van\bibnamedelima Evert},
+           familyi={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Frits\bibnamedelima K},
+           giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=2ab777a8c2dfff8a98978222b563f9a2}{%
+           family={Blackmore},
+           familyi={B\bibinitperiod},
+           given={B\bibnamedelima Simon},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=d9cee21c957b5758a0ca19d2b661fef2}{%
+           family={Pedersen},
+           familyi={P\bibinitperiod},
+           given={S{ø}ren\bibnamedelima Marcus},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=8d5c071944625318c742d90b4a1fe58b}{%
+           family={Fountas},
+           familyi={F\bibinitperiod},
+           given={Spyros},
+           giveni={S\bibinitperiod}}}%
+        {{hash=73cf29606401f029f44381a9507a3452}{%
+           family={S{ø}rensen},
+           familyi={S\bibinitperiod},
+           given={Claus\bibnamedelima G},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=d6f465f49330c011f067db4b8cff8770}{%
+           family={Van\bibnamedelima Evert},
+           familyi={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Frits\bibnamedelima K},
+           giveni={F\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=2ab777a8c2dfff8a98978222b563f9a2}{%
+           family={Blackmore},
+           familyi={B\bibinitperiod},
+           given={B\bibnamedelima Simon},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{313742f500035683cc58f10f93c909ae}
+      \strng{fullhash}{e1614d5d7e920481e468e07db493e910}
+      \strng{bibnamehash}{11d10c4279d2063df637edaf589230da}
+      \strng{authorbibnamehash}{11d10c4279d2063df637edaf589230da}
+      \strng{authornamehash}{313742f500035683cc58f10f93c909ae}
+      \strng{authorfullhash}{e1614d5d7e920481e468e07db493e910}
+      \strng{nameabibnamehash}{11d10c4279d2063df637edaf589230da}
+      \strng{nameanamehash}{313742f500035683cc58f10f93c909ae}
+      \strng{nameafullhash}{e1614d5d7e920481e468e07db493e910}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Precision Agriculture: Technology and Economic Perspectives}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Robotic seeding: Economic perspectives}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{167\bibrangedash 179}
+      \range{pages}{13}
+      \keyw{pedersen2017robotic}
+    \endentry
+    \entry{huang2020design}{article}{}
+      \name{author}{5}{}{%
+        {{hash=69bde46f0f23be6adf890512ea5ad88a}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Xiaomao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a3739bbe1787246c16692bfb043543a2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shun},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e66fe01dd4776c86482742e0fe6dffe6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chengming},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7789f08d48a6f026afe2ab3361184692}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wencheng},
+           giveni={W\bibinitperiod}}}%
+        {{hash=3f4fbec67420a44f91870855a368c8db}{%
+           family={Liao},
+           familyi={L\bibinitperiod},
+           given={Yitao},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=69bde46f0f23be6adf890512ea5ad88a}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Xiaomao},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a3739bbe1787246c16692bfb043543a2}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shun},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e66fe01dd4776c86482742e0fe6dffe6}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Chengming},
+           giveni={C\bibinitperiod}}}%
+        {{hash=7789f08d48a6f026afe2ab3361184692}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wencheng},
+           giveni={W\bibinitperiod}}}%
+        {{hash=3f4fbec67420a44f91870855a368c8db}{%
+           family={Liao},
+           familyi={L\bibinitperiod},
+           given={Yitao},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{842231f6fac2bbb31648759582c79734}
+      \strng{fullhash}{d3ba0f8a3c056d8a9c9d2e0597df5a09}
+      \strng{bibnamehash}{83a5e104ec4ee17d75b3e4ea4681fc29}
+      \strng{authorbibnamehash}{83a5e104ec4ee17d75b3e4ea4681fc29}
+      \strng{authornamehash}{842231f6fac2bbb31648759582c79734}
+      \strng{authorfullhash}{d3ba0f8a3c056d8a9c9d2e0597df5a09}
+      \strng{nameabibnamehash}{83a5e104ec4ee17d75b3e4ea4681fc29}
+      \strng{nameanamehash}{842231f6fac2bbb31648759582c79734}
+      \strng{nameafullhash}{d3ba0f8a3c056d8a9c9d2e0597df5a09}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To improve the overall mechanization level of rapeseed production in China, especially in some hilly regions where ground machinery cannot enter the fields or can only enter with very low economic benefits, a special aerial seeding system for rapeseed based on a miniature air-assisted centralized metering device was designed and tested in this study. Unlike existing commercial aerial seeding systems, the proposed seed meter was a miniaturized version derived from the traditional air-feeding seed meter on ground planters. The new version contained a redesigned seed feeding component to overcome problems of serious air backflow to the seed box and difficult seed feeding after miniaturization. Three groups of experiments were designed and conducted to optimize the parameters of the seed meter and test its performance. Results from the orthogonal experiment showed that the seed feeding component performed best when the seed layer thickness was 45 mm, the rotational speed of the gear disc was 45 r/min, and the airflow pressure was 2450 Pa. Results from the static workbench test showed that the designed seeding system had a maximum average total sowing efficiency of 537.17 g/min, with the maximum values of the stability variation coefficient of total seeding rate (seven ports) and the consistency variation coefficient between each port was 2.37\% and 4.89\%, respectively. Field tests further proved that the designed aerial seeding system could work stably, uniformly, and efficiently, so that the agronomic requirements of rape crop planting could be well met.}
+      \field{issn}{2076-3417}
+      \field{journaltitle}{Applied Sciences}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{24}
+      \field{title}{Design and Experimentation of an Aerial Seeding System for Rapeseed Based on an Air-Assisted Centralized Metering Device and a Multi-Rotor Crop Protection UAV}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{10}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.3390/app10248854
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3417/10/24/8854
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3417/10/24/8854
+      \endverb
+      \keyw{huang2020design}
+    \endentry
+    \entry{vasisht2017farmbeats}{inproceedings}{}
+      \name{author}{9}{}{%
+        {{hash=52cbf52d86e13d64615d861505e53bc8}{%
+           family={Vasisht},
+           familyi={V\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9fcf0059d629e012e38ab70f03616dfe}{%
+           family={Kapetanovic},
+           familyi={K\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=132f0688d5516465cf061b4c44bef665}{%
+           family={Won},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9d8d8ef928bef49525b91636c1ad80cc}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a93430d7bd57bd6a567d42f96da89f9f}{%
+           family={Chandra},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d09c49cb24214d31880837040cd30414}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed0c8bfff48934e701b42796a78e5653}{%
+           family={Kapoor},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cc7d63b64deca2deebeec5a0e1c35ab2}{%
+           family={Sudarshan},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1ddcc511fb54892d15faaa5682abd5dc}{%
+           family={Stratman},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{namea}{9}{}{%
+        {{hash=52cbf52d86e13d64615d861505e53bc8}{%
+           family={Vasisht},
+           familyi={V\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9fcf0059d629e012e38ab70f03616dfe}{%
+           family={Kapetanovic},
+           familyi={K\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=132f0688d5516465cf061b4c44bef665}{%
+           family={Won},
+           familyi={W\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9d8d8ef928bef49525b91636c1ad80cc}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a93430d7bd57bd6a567d42f96da89f9f}{%
+           family={Chandra},
+           familyi={C\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d09c49cb24214d31880837040cd30414}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed0c8bfff48934e701b42796a78e5653}{%
+           family={Kapoor},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cc7d63b64deca2deebeec5a0e1c35ab2}{%
+           family={Sudarshan},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1ddcc511fb54892d15faaa5682abd5dc}{%
+           family={Stratman},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{3045fe37e7e9d6cfa5ce188abb40251f}
+      \strng{fullhash}{edd28c4696c190a7f51506c291d8174d}
+      \strng{bibnamehash}{f1bda06367799a638bee774fb1d3f979}
+      \strng{authorbibnamehash}{f1bda06367799a638bee774fb1d3f979}
+      \strng{authornamehash}{3045fe37e7e9d6cfa5ce188abb40251f}
+      \strng{authorfullhash}{edd28c4696c190a7f51506c291d8174d}
+      \strng{nameabibnamehash}{f1bda06367799a638bee774fb1d3f979}
+      \strng{nameanamehash}{3045fe37e7e9d6cfa5ce188abb40251f}
+      \strng{nameafullhash}{edd28c4696c190a7f51506c291d8174d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{14th {USENIX} Symposium on Networked Systems Design and Implementation {NSDI} 17}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Farmbeats: An {IoT} platform for data-driven agriculture}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{pages}{515\bibrangedash 529}
+      \range{pages}{15}
+      \keyw{vasisht2017farmbeats}
+    \endentry
+    \entry{palomino2019towards}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=494d6db124ead6521d05ac1c0b12adaf}{%
+           family={Palomino-Suarez},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d67045ae097edcbe6d6724e057a98a3c}{%
+           family={Pérez-Ruiz},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=494d6db124ead6521d05ac1c0b12adaf}{%
+           family={Palomino-Suarez},
+           familyi={P\bibinithyphendelim S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d67045ae097edcbe6d6724e057a98a3c}{%
+           family={Pérez-Ruiz},
+           familyi={P\bibinithyphendelim R\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{869583e248e3a8e76d8ad72f1a500680}
+      \strng{fullhash}{8b0270ead395d30e2a43b958e59091f1}
+      \strng{bibnamehash}{8b0270ead395d30e2a43b958e59091f1}
+      \strng{authorbibnamehash}{8b0270ead395d30e2a43b958e59091f1}
+      \strng{authornamehash}{869583e248e3a8e76d8ad72f1a500680}
+      \strng{authorfullhash}{8b0270ead395d30e2a43b958e59091f1}
+      \strng{nameabibnamehash}{8b0270ead395d30e2a43b958e59091f1}
+      \strng{nameanamehash}{869583e248e3a8e76d8ad72f1a500680}
+      \strng{nameafullhash}{8b0270ead395d30e2a43b958e59091f1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Latin American Congress on Automation and Robotics}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Towards automatic {UAV} path planning in agriculture oversight activities}
+      \field{usera}{C}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{22\bibrangedash 30}
+      \range{pages}{9}
+      \keyw{palomino2019towards}
+    \endentry
+    \entry{rossello2021information}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1a99f29bf8d6cc86be05a516a49c9eba}{%
+           family={Bono\bibnamedelima Rossello},
+           familyi={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7e9ace18793e8e581a440f38e7f52433}{%
+           family={Carpio},
+           familyi={C\bibinitperiod},
+           given={Renzo\bibnamedelima Fabrizio},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=a5dfa46074969cd7c2ba055414e11ee3}{%
+           family={Gasparri},
+           familyi={G\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8f9ba8ee280a4cf1a12ba2c5d2fb5b65}{%
+           family={Garone},
+           familyi={G\bibinitperiod},
+           given={Emanuele},
+           giveni={E\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=1a99f29bf8d6cc86be05a516a49c9eba}{%
+           family={Bono\bibnamedelima Rossello},
+           familyi={B\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7e9ace18793e8e581a440f38e7f52433}{%
+           family={Carpio},
+           familyi={C\bibinitperiod},
+           given={Renzo\bibnamedelima Fabrizio},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=a5dfa46074969cd7c2ba055414e11ee3}{%
+           family={Gasparri},
+           familyi={G\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8f9ba8ee280a4cf1a12ba2c5d2fb5b65}{%
+           family={Garone},
+           familyi={G\bibinitperiod},
+           given={Emanuele},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{85fec8d45d7eabf7cd66e054910a2166}
+      \strng{fullhash}{ac0f8396958841f630c034939c4aae40}
+      \strng{bibnamehash}{d0303d614fd92dfe67bdd3d56f0c11df}
+      \strng{authorbibnamehash}{d0303d614fd92dfe67bdd3d56f0c11df}
+      \strng{authornamehash}{85fec8d45d7eabf7cd66e054910a2166}
+      \strng{authorfullhash}{ac0f8396958841f630c034939c4aae40}
+      \strng{nameabibnamehash}{d0303d614fd92dfe67bdd3d56f0c11df}
+      \strng{nameanamehash}{85fec8d45d7eabf7cd66e054910a2166}
+      \strng{nameafullhash}{ac0f8396958841f630c034939c4aae40}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Automation Science and Engineering}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{3}
+      \field{title}{Information-Driven Path Planning for UAV With Limited Autonomy in Large-Scale Field Monitoring}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{19}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{2450\bibrangedash 2460}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/TASE.2021.3085365
+      \endverb
+      \keyw{Monitoring;Sensors;Time measurement;Path planning;Estimation;Area measurement;Vehicle dynamics;Kalman filter;optimization;path planning;unmanned aerial vehicles (UAVs)}
+    \endentry
+    \entry{feng2015memes}{article}{}
+      \name{author}{4}{}{%
+        {{hash=cb755bee69000df3845c5ddfb760b090}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3da15e59c78ba32cb39f54b427a8b8bc}{%
+           family={Ong},
+           familyi={O\bibinitperiod},
+           given={Yew-Soon},
+           giveni={Y\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=f319d89688aae0e18ccd3a023e521b4f}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Ah-Hwee},
+           giveni={A\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=269eb55145a9b3c53191157aab6a7c59}{%
+           family={Tsang},
+           familyi={T\bibinitperiod},
+           given={Ivor\bibnamedelima W},
+           giveni={I\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=cb755bee69000df3845c5ddfb760b090}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3da15e59c78ba32cb39f54b427a8b8bc}{%
+           family={Ong},
+           familyi={O\bibinitperiod},
+           given={Yew-Soon},
+           giveni={Y\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=f319d89688aae0e18ccd3a023e521b4f}{%
+           family={Tan},
+           familyi={T\bibinitperiod},
+           given={Ah-Hwee},
+           giveni={A\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=269eb55145a9b3c53191157aab6a7c59}{%
+           family={Tsang},
+           familyi={T\bibinitperiod},
+           given={Ivor\bibnamedelima W},
+           giveni={I\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{93f92f7c6f29f83c99c65ed5f7e99656}
+      \strng{fullhash}{64b171d5b30ffd0c808068d70efdad2f}
+      \strng{bibnamehash}{ce964aec4b2632093ee4d8304f4ef366}
+      \strng{authorbibnamehash}{ce964aec4b2632093ee4d8304f4ef366}
+      \strng{authornamehash}{93f92f7c6f29f83c99c65ed5f7e99656}
+      \strng{authorfullhash}{64b171d5b30ffd0c808068d70efdad2f}
+      \strng{nameabibnamehash}{ce964aec4b2632093ee4d8304f4ef366}
+      \strng{nameanamehash}{93f92f7c6f29f83c99c65ed5f7e99656}
+      \strng{nameafullhash}{64b171d5b30ffd0c808068d70efdad2f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Memetic Computing}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Memes as building blocks: a case study on evolutionary optimization+ transfer learning for routing problems}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{7}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{159\bibrangedash 180}
+      \range{pages}{22}
+      \keyw{feng2015memes}
+    \endentry
+    \entry{colson2007overview}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0c03c7bfe5e0688db8b33756f850d7b9}{%
+           family={Colson},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=74fada3af59a7e1331206137efbd8f10}{%
+           family={Marcotte},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=676ffbbf95635aab4532db0b19153145}{%
+           family={Savard},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=0c03c7bfe5e0688db8b33756f850d7b9}{%
+           family={Colson},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=74fada3af59a7e1331206137efbd8f10}{%
+           family={Marcotte},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=676ffbbf95635aab4532db0b19153145}{%
+           family={Savard},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{70610a4963fd2b484c580baff066a18d}
+      \strng{fullhash}{fecde02e117ccdbf8d178d500f295019}
+      \strng{bibnamehash}{fecde02e117ccdbf8d178d500f295019}
+      \strng{authorbibnamehash}{fecde02e117ccdbf8d178d500f295019}
+      \strng{authornamehash}{70610a4963fd2b484c580baff066a18d}
+      \strng{authorfullhash}{fecde02e117ccdbf8d178d500f295019}
+      \strng{nameabibnamehash}{fecde02e117ccdbf8d178d500f295019}
+      \strng{nameanamehash}{70610a4963fd2b484c580baff066a18d}
+      \strng{nameafullhash}{fecde02e117ccdbf8d178d500f295019}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of Operations Research}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{1}
+      \field{title}{An overview of bilevel optimization}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{153}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \field{pages}{235\bibrangedash 256}
+      \range{pages}{22}
+      \keyw{colson2007overview}
+    \endentry
+    \entry{huang2004cooperative}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=bf1afb45a50313a87b61c9f7a08f8989}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=bf1afb45a50313a87b61c9f7a08f8989}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific}%
+      }
+      \strng{namehash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \strng{fullhash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \strng{bibnamehash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \strng{authorbibnamehash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \strng{authornamehash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \strng{authorfullhash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \strng{nameabibnamehash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \strng{nameanamehash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \strng{nameafullhash}{bf1afb45a50313a87b61c9f7a08f8989}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Theory and Algorithms for Cooperative Systems}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Cooperative optimization for solving large scale combinatorial problems}
+      \field{usera}{G}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{pages}{117\bibrangedash 156}
+      \range{pages}{40}
+      \keyw{huang2004cooperative}
+    \endentry
+    \entry{shen2009two}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4ba52098c4705ea68250225f235287b8}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Zhihong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=be54f1ed99545580886322f1d22bd2dd}{%
+           family={Dessouky},
+           familyi={D\bibinitperiod},
+           given={Maged\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=57e38e30a3ed24b66f7ffa25102231b0}{%
+           family={Ordóñez},
+           familyi={O\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=4ba52098c4705ea68250225f235287b8}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Zhihong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=be54f1ed99545580886322f1d22bd2dd}{%
+           family={Dessouky},
+           familyi={D\bibinitperiod},
+           given={Maged\bibnamedelima M.},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=57e38e30a3ed24b66f7ffa25102231b0}{%
+           family={Ordóñez},
+           familyi={O\bibinitperiod},
+           given={Fernando},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{c4d2a945febced9eeccd531240b60329}
+      \strng{fullhash}{7f43b718b1f22e831fa9004a05fc1f6b}
+      \strng{bibnamehash}{7f43b718b1f22e831fa9004a05fc1f6b}
+      \strng{authorbibnamehash}{7f43b718b1f22e831fa9004a05fc1f6b}
+      \strng{authornamehash}{c4d2a945febced9eeccd531240b60329}
+      \strng{authorfullhash}{7f43b718b1f22e831fa9004a05fc1f6b}
+      \strng{nameabibnamehash}{7f43b718b1f22e831fa9004a05fc1f6b}
+      \strng{nameanamehash}{c4d2a945febced9eeccd531240b60329}
+      \strng{nameafullhash}{7f43b718b1f22e831fa9004a05fc1f6b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract In this article, we are interested in routing vehicles to service a large-scale bioterrorism emergency. We describe the specifics of routing vehicles in such a large-scale emergency and decompose the problem into two stages: a planning stage and an operational stage. In the planning stage, we generate the routes well in advance of any emergency. In the operational stage, we take into account the planned routes and the information revealed at the time of the emergency, to decide the delivery quantity and any adjustments to the routes. We propose mathematical formulations and solution approaches for both stages. Lastly, we demonstrate the effectiveness of our formulations and solution procedures in developing robust routes through numerical experiments. © 2009 Wiley Periodicals, Inc. NETWORKS, 2009}
+      \field{journaltitle}{Networks}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{4}
+      \field{title}{A two-stage vehicle routing model for large-scale bioterrorism emergencies}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{54}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{pages}{255\bibrangedash 269}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.1002/net.20337
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/net.20337
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20337
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20337
+      \endverb
+      \keyw{vehiclerouting problem,uncertainty,tabu search heuristic,recourse strategies}
+    \endentry
+    \entry{li2010inexact}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6e5b0e6cca2615e3baa1c9fd08a1f208}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=444cc243ef3de697c31925adfc0fd72f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Y.P.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=06a9f335b3ea8be2aabf9a87a013e3b8}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={C.H.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=13f2838d5445cee4f6ed0bef7a2bf366}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={G.H.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \name{namea}{4}{}{%
+        {{hash=6e5b0e6cca2615e3baa1c9fd08a1f208}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=444cc243ef3de697c31925adfc0fd72f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Y.P.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=06a9f335b3ea8be2aabf9a87a013e3b8}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={C.H.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=13f2838d5445cee4f6ed0bef7a2bf366}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={G.H.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{3108a65fd9ec6c0b84b02f9e23355849}
+      \strng{fullhash}{74707e393dc2f5d853bc474f7e68176d}
+      \strng{bibnamehash}{269955e5e80db590b3932e1e00af46a4}
+      \strng{authorbibnamehash}{269955e5e80db590b3932e1e00af46a4}
+      \strng{authornamehash}{3108a65fd9ec6c0b84b02f9e23355849}
+      \strng{authorfullhash}{74707e393dc2f5d853bc474f7e68176d}
+      \strng{nameabibnamehash}{269955e5e80db590b3932e1e00af46a4}
+      \strng{nameanamehash}{3108a65fd9ec6c0b84b02f9e23355849}
+      \strng{nameafullhash}{74707e393dc2f5d853bc474f7e68176d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this study, an inexact two-stage water management (ITWM) model is developed for planning agricultural irrigation in the Zhangweinan River Basin, China. The ITWM model is derived from the incorporation of interval-parameter programming (IPP) within a two-stage stochastic programming (TSP) framework. It can reflect not only uncertainties expressed as probability distributions but also interval numbers. Moreover, it can provide an effective linkage between conflicting economic benefits and the associated penalties attributed to the violation of the predefined policies. Four decision scenarios associated with different water-resources management policies are examined. Targeted incomes, recourse costs, and net system benefits under different scenarios are analyzed, which indicates that different policies for agricultural irrigation targets correspond to different water shortages and surplus, and thus lead to varied system benefit and system-failure risk. The results are valuable for supporting the adjustment or justification of the existing irrigation patterns and identify a desired water-allocation plan for agricultural irrigation under uncertainty.}
+      \field{issn}{0378-3774}
+      \field{journaltitle}{Agricultural Water Management}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{11}
+      \field{title}{An inexact two-stage water management model for planning agricultural irrigation under uncertainty}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{97}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{pages}{1905\bibrangedash 1914}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.agwat.2010.07.005
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0378377410002362
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0378377410002362
+      \endverb
+      \keyw{Agricultural water,Inexact,Management,Policy analysis,Stochastic programming,Uncertainty}
+    \endentry
+    \entry{azadeh2019two}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0b595a1f69a6de2e52ccfb8b52625ba9}{%
+           family={{Sharif Azadeh}},
+           familyi={S\bibinitperiod},
+           given={Sh.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=735042338456328a8a439d5587e95329}{%
+           family={Bierlaire},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=23aa85fc3831db4ed233d0881f289384}{%
+           family={Maknoon},
+           familyi={M\bibinitperiod},
+           given={M.Y.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=0b595a1f69a6de2e52ccfb8b52625ba9}{%
+           family={{Sharif Azadeh}},
+           familyi={S\bibinitperiod},
+           given={Sh.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=735042338456328a8a439d5587e95329}{%
+           family={Bierlaire},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=23aa85fc3831db4ed233d0881f289384}{%
+           family={Maknoon},
+           familyi={M\bibinitperiod},
+           given={M.Y.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{84565bd1101bfed2feba3e1e2a81289a}
+      \strng{fullhash}{8823235ef5dc7c12655850661e2bdc3e}
+      \strng{bibnamehash}{8823235ef5dc7c12655850661e2bdc3e}
+      \strng{authorbibnamehash}{8823235ef5dc7c12655850661e2bdc3e}
+      \strng{authornamehash}{84565bd1101bfed2feba3e1e2a81289a}
+      \strng{authorfullhash}{8823235ef5dc7c12655850661e2bdc3e}
+      \strng{nameabibnamehash}{8823235ef5dc7c12655850661e2bdc3e}
+      \strng{nameanamehash}{84565bd1101bfed2feba3e1e2a81289a}
+      \strng{nameafullhash}{8823235ef5dc7c12655850661e2bdc3e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents a route optimization algorithm for light aircraft operating under visual flight rules. The problem aims at finding a minimum-duration, collision-free route in three spatial dimensions with possible aircraft maneuvers. The optimal route takes into account the aircraft kinodynamic characteristics and its interaction with external wind. A data processing approach is presented to recast the flying environment as a series of polyhedrons based on which a mixed-integer linear model is formulated. A two-stage route optimization model is then introduced to solve real-life instances. Computational experiments depict the efficiency of this approach.}
+      \field{issn}{0968-090X}
+      \field{journaltitle}{Transportation Research Part C: Emerging Technologies}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{A two-stage route optimization algorithm for light aircraft transport systems}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{100}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{259\bibrangedash 273}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.trc.2019.01.028
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0968090X18311628
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0968090X18311628
+      \endverb
+      \keyw{Route optimization,Light aircraft,MILP,Heuristic,Obstacle avoidance}
+    \endentry
+    \entry{maini2019cooperative}{article}{}
+      \name{author}{5}{}{%
+        {{hash=4032c60b0e9c5c9d76890281ccb1ebfa}{%
+           family={Maini},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9efc4f879d5d1bd8bbe37af703a6863f}{%
+           family={Sundar},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=804237a4343b0803e007d06a54a6fa3e}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9abbbdce35319d8efa6dedafe50be7a9}{%
+           family={Rathinam},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6a000c319d33d6a2d9a345c6a48a9d97}{%
+           family={Sujit},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=4032c60b0e9c5c9d76890281ccb1ebfa}{%
+           family={Maini},
+           familyi={M\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=9efc4f879d5d1bd8bbe37af703a6863f}{%
+           family={Sundar},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=804237a4343b0803e007d06a54a6fa3e}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9abbbdce35319d8efa6dedafe50be7a9}{%
+           family={Rathinam},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6a000c319d33d6a2d9a345c6a48a9d97}{%
+           family={Sujit},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{219c50f4afa936dc64bfc8b48034ae6e}
+      \strng{fullhash}{7cb394849353a1033ae1ff16b8c9a11e}
+      \strng{bibnamehash}{d0250248347fdd45882f87dfdbaa1165}
+      \strng{authorbibnamehash}{d0250248347fdd45882f87dfdbaa1165}
+      \strng{authornamehash}{219c50f4afa936dc64bfc8b48034ae6e}
+      \strng{authorfullhash}{7cb394849353a1033ae1ff16b8c9a11e}
+      \strng{nameabibnamehash}{d0250248347fdd45882f87dfdbaa1165}
+      \strng{nameanamehash}{219c50f4afa936dc64bfc8b48034ae6e}
+      \strng{nameafullhash}{7cb394849353a1033ae1ff16b8c9a11e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Aerospace and Electronic Systems}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{6}
+      \field{title}{Cooperative aerial–ground vehicle route planning with fuel constraints for coverage applications}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{55}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{3016\bibrangedash 3028}
+      \range{pages}{13}
+      \keyw{maini2019cooperative}
+    \endentry
+    \entry{angelo2015study}{article}{}
+      \name{author}{2}{}{%
+        {{hash=48109b67d6b231af90aff52b612f36db}{%
+           family={Angelo},
+           familyi={A\bibinitperiod},
+           given={Jaqueline\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c0112c1f0b3818aa09af79a24e163172}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Helio\bibnamedelimb J.\bibnamedelimi C.},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \name{namea}{2}{}{%
+        {{hash=48109b67d6b231af90aff52b612f36db}{%
+           family={Angelo},
+           familyi={A\bibinitperiod},
+           given={Jaqueline\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c0112c1f0b3818aa09af79a24e163172}{%
+           family={Barbosa},
+           familyi={B\bibinitperiod},
+           given={Helio\bibnamedelimb J.\bibnamedelimi C.},
+           giveni={H\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{241d6977be51e502a6afca49e88dbcaa}
+      \strng{fullhash}{3584eb618055b4bd64db4d8a83b49a9f}
+      \strng{bibnamehash}{3584eb618055b4bd64db4d8a83b49a9f}
+      \strng{authorbibnamehash}{3584eb618055b4bd64db4d8a83b49a9f}
+      \strng{authornamehash}{241d6977be51e502a6afca49e88dbcaa}
+      \strng{authorfullhash}{3584eb618055b4bd64db4d8a83b49a9f}
+      \strng{nameabibnamehash}{3584eb618055b4bd64db4d8a83b49a9f}
+      \strng{nameanamehash}{241d6977be51e502a6afca49e88dbcaa}
+      \strng{nameafullhash}{3584eb618055b4bd64db4d8a83b49a9f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract The bilevel programming problem is characterized as an optimization problem that has another optimization problem in its constraints. The leader in the upper level and the follower in the lower level are hierarchically related where the leader's decisions affect both the follower's payoff function and allowable actions, and vice versa. One difficulty that arises in solving bilevel problems is that unless a solution is optimal for the lower level problem, it cannot be feasible for the overall problem. This suggests that approximate methods could not be used for solving the lower level problem, as they do not guarantee that the optimal solution is actually found. However, from the practical point of view near-optimal solutions are often acceptable, especially when the lower level problem is too costly to be exactly solved thus rendering the use of exact methods impractical. In this paper, we study the impact of using an approximate method in the lower level problem, discussing how near-optimal solutions on the lower level can affect the upper level objective function values. This study considers a bilevel production-distribution planning problem that is solved by two intelligent heuristics hierarchically related: ant colony optimization for solving the upper level problem, and differential evolution method to solve the lower level problem.}
+      \field{journaltitle}{International Transactions in Operational Research}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{5}
+      \field{title}{A study on the use of heuristics to solve a bilevel programming problem}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{22}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{861\bibrangedash 882}
+      \range{pages}{22}
+      \verb{doi}
+      \verb https://doi.org/10.1111/itor.12153
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/itor.12153
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12153
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12153
+      \endverb
+      \keyw{bilevel optimization,ant-colony optimization,differential evolution}
+    \endentry
+    \entry{sinha2017review}{article}{}
+      \name{author}{3}{}{%
+        {{hash=668efb83666c0ef5971bdff6e2f8b5c0}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Ankur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8bafe15c788d2e611aec6337d49a3385}{%
+           family={Malo},
+           familyi={M\bibinitperiod},
+           given={Pekka},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b11d1da0cc2920eef235d484e6b858ef}{%
+           family={Deb},
+           familyi={D\bibinitperiod},
+           given={Kalyanmoy},
+           giveni={K\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=668efb83666c0ef5971bdff6e2f8b5c0}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Ankur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8bafe15c788d2e611aec6337d49a3385}{%
+           family={Malo},
+           familyi={M\bibinitperiod},
+           given={Pekka},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b11d1da0cc2920eef235d484e6b858ef}{%
+           family={Deb},
+           familyi={D\bibinitperiod},
+           given={Kalyanmoy},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{17eaa0b5a4e3935561b28ab06eb10d50}
+      \strng{fullhash}{a3dbd9707a8d0618b7e0bd17bef2d589}
+      \strng{bibnamehash}{a3dbd9707a8d0618b7e0bd17bef2d589}
+      \strng{authorbibnamehash}{a3dbd9707a8d0618b7e0bd17bef2d589}
+      \strng{authornamehash}{17eaa0b5a4e3935561b28ab06eb10d50}
+      \strng{authorfullhash}{a3dbd9707a8d0618b7e0bd17bef2d589}
+      \strng{nameabibnamehash}{a3dbd9707a8d0618b7e0bd17bef2d589}
+      \strng{nameanamehash}{17eaa0b5a4e3935561b28ab06eb10d50}
+      \strng{nameafullhash}{a3dbd9707a8d0618b7e0bd17bef2d589}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bilevel optimization is defined as a mathematical program, where an optimization problem contains another optimization problem as a constraint. These problems have received significant attention from the mathematical programming community. Only limited work exists on bilevel problems using evolutionary computation techniques; however, recently there has been an increasing interest due to the proliferation of practical applications and the potential of evolutionary algorithms in tackling these problems. This paper provides a comprehensive review on bilevel optimization from the basic principles to solution strategies; both classical and evolutionary. A number of potential application problems are also discussed. To offer the readers insights on the prominent developments in the field of bilevel optimization, we have performed an automated text-analysis of an extended list of papers published on bilevel optimization to date. This paper should motivate evolutionary computation researchers to pay more attention to this practical yet challenging area.}
+      \field{issn}{1941-0026}
+      \field{journaltitle}{IEEE Transactions on Evolutionary Computation}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{month}{4}
+      \field{number}{2}
+      \field{title}{A Review on Bilevel Optimization: From Classical to Evolutionary Approaches and Applications}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{22}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{276\bibrangedash 295}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1109/TEVC.2017.2712906
+      \endverb
+      \keyw{Evolutionary computation;Decision making;Linear programming;Programming;Fertilizers;Mathematical programming;Bilevel optimization;evolutionary algorithms;Stackelberg games}
+    \endentry
     \entry{gann2019international}{article}{}
       \name{author}{16}{}{%
         {{hash=53801dda030dd6de38a50a7eda6dc5c3}{%
@@ -199,8 +2915,8 @@
       \strng{nameabibnamehash}{72e33149845f10021faa89d2c3861ea0}
       \strng{nameanamehash}{1ca9d96a491d86d2f127ec0aa9cfa3f6}
       \strng{nameafullhash}{a93d45481c82a147f7d0dd8a088df6c6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1526-100X}
@@ -228,6 +2944,92 @@
       \endverb
       \keyw{gann2019international}
     \endentry
+    \entry{blackburn2021monitoring}{article}{}
+      \name{author}{5}{}{%
+        {{hash=d40c7a31184701540db0e13c6066e266}{%
+           family={Blackburn},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2acd7ac4e5c5712ad87383162883836c}{%
+           family={Barber},
+           familyi={B\bibinitperiod},
+           given={N.\bibnamedelimi A.},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2b35db904d80f3aa7b8fbec753f0724c}{%
+           family={Farrell},
+           familyi={F\bibinitperiod},
+           given={A.\bibnamedelimi K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=2c91a30e7b63b3bbe3b568c97ef079c1}{%
+           family={Buscaglia},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b867150a52d688df245d54be6189f31c}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={H.\bibnamedelimi P.},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \name{namea}{5}{}{%
+        {{hash=d40c7a31184701540db0e13c6066e266}{%
+           family={Blackburn},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2acd7ac4e5c5712ad87383162883836c}{%
+           family={Barber},
+           familyi={B\bibinitperiod},
+           given={N.\bibnamedelimi A.},
+           giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2b35db904d80f3aa7b8fbec753f0724c}{%
+           family={Farrell},
+           familyi={F\bibinitperiod},
+           given={A.\bibnamedelimi K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=2c91a30e7b63b3bbe3b568c97ef079c1}{%
+           family={Buscaglia},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b867150a52d688df245d54be6189f31c}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={H.\bibnamedelimi P.},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{3d6f149180330d519d123e62b183f914}
+      \strng{fullhash}{896574de1766d489f7db94bb14ec38e9}
+      \strng{bibnamehash}{cb541ce9258305ae2cf62044d2251b47}
+      \strng{authorbibnamehash}{cb541ce9258305ae2cf62044d2251b47}
+      \strng{authornamehash}{3d6f149180330d519d123e62b183f914}
+      \strng{authorfullhash}{896574de1766d489f7db94bb14ec38e9}
+      \strng{nameabibnamehash}{cb541ce9258305ae2cf62044d2251b47}
+      \strng{nameanamehash}{3d6f149180330d519d123e62b183f914}
+      \strng{nameafullhash}{896574de1766d489f7db94bb14ec38e9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Restoration Ecology}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{title}{Monitoring ecological characteristics of a tallgrass prairie using an unmanned aerial vehicle}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{29}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{pages}{e13339}
+      \range{pages}{-1}
+      \keyw{blackburn2021monitoring}
+    \endentry
     \entry{dorling2016vehicle}{article}{}
       \name{author}{4}{}{%
         {{hash=f24afed654a5e4e2593ec3f8ac427c08}{%
@@ -243,7 +3045,7 @@
         {{hash=e46f9ef2ff23f18cea2589e2db12cf96}{%
            family={Messier},
            familyi={M\bibinitperiod},
-           given={Geoffrey\bibnamedelima G},
+           given={Geoffrey\bibnamedelima G.},
            giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
         {{hash=a09838f8aa91401650f4196973b71a6f}{%
            family={Magierowski},
@@ -265,7 +3067,7 @@
         {{hash=e46f9ef2ff23f18cea2589e2db12cf96}{%
            family={Messier},
            familyi={M\bibinitperiod},
-           given={Geoffrey\bibnamedelima G},
+           given={Geoffrey\bibnamedelima G.},
            giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
         {{hash=a09838f8aa91401650f4196973b71a6f}{%
            family={Magierowski},
@@ -276,9 +3078,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{publisher}{1}{%
-        {IEEE}%
-      }
       \strng{namehash}{c490efabf640841010bb3e3897291b1b}
       \strng{fullhash}{64475d8a94bb9d93e0e392432bd88cf5}
       \strng{bibnamehash}{ed1aff564625fc4eaf4f776ca7ccd39f}
@@ -288,8 +3087,8 @@
       \strng{nameabibnamehash}{ed1aff564625fc4eaf4f776ca7ccd39f}
       \strng{nameanamehash}{c490efabf640841010bb3e3897291b1b}
       \strng{nameafullhash}{64475d8a94bb9d93e0e392432bd88cf5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Systems, Man, and Cybernetics: Systems}
@@ -297,23 +3096,93 @@
       \field{languageid}{english}
       \field{lansortorder}{4}
       \field{number}{1}
-      \field{title}{Vehicle routing problems for drone delivery}
+      \field{title}{Vehicle Routing Problems for Drone Delivery}
       \field{usera}{J}
       \field{userd}{english}
       \field{userf}{english}
       \field{volume}{47}
-      \field{year}{2016}
+      \field{year}{2017}
       \field{dateera}{ce}
       \field{pages}{70\bibrangedash 85}
       \range{pages}{16}
-      \keyw{dorling2016vehicle}
+      \verb{doi}
+      \verb 10.1109/TSMC.2016.2582745
+      \endverb
+      \keyw{Vehicles;Batteries;Energy consumption;Payloads;Vehicle routing;Companies;Emergency services;Delivery;drone;heuristic;mixed integer program (MIP);simulated annealing (SA);traveling salesman problem (TSP);unmanned aerial vehicle (UAV);vehicle routing problem (VRP)}
+    \endentry
+    \entry{buters2019seed}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e3006c56fc6567f8fbd109ac2386fe05}{%
+           family={Buters},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4320cc7478d828ad60c48114f98d40b3}{%
+           family={Belton},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e91f845186d19780274f6158f0fc1056}{%
+           family={Cross},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \name{namea}{3}{}{%
+        {{hash=e3006c56fc6567f8fbd109ac2386fe05}{%
+           family={Buters},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4320cc7478d828ad60c48114f98d40b3}{%
+           family={Belton},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=e91f845186d19780274f6158f0fc1056}{%
+           family={Cross},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{221f7a5cd701a5c3a94e44f7a5d5a54d}
+      \strng{fullhash}{a4582c6f4c443f14300fff4e74d4f76f}
+      \strng{bibnamehash}{a4582c6f4c443f14300fff4e74d4f76f}
+      \strng{authorbibnamehash}{a4582c6f4c443f14300fff4e74d4f76f}
+      \strng{authornamehash}{221f7a5cd701a5c3a94e44f7a5d5a54d}
+      \strng{authorfullhash}{a4582c6f4c443f14300fff4e74d4f76f}
+      \strng{nameabibnamehash}{a4582c6f4c443f14300fff4e74d4f76f}
+      \strng{nameanamehash}{221f7a5cd701a5c3a94e44f7a5d5a54d}
+      \strng{nameafullhash}{a4582c6f4c443f14300fff4e74d4f76f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Drones}
+      \field{langid}{english}
+      \field{languageid}{english}
+      \field{lansortorder}{4}
+      \field{number}{3}
+      \field{title}{Seed and seedling detection using unmanned aerial vehicles and automated image classification in the monitoring of ecological recovery}
+      \field{usera}{J}
+      \field{userd}{english}
+      \field{userf}{english}
+      \field{volume}{3}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{53}
+      \range{pages}{1}
+      \keyw{buters2019seed}
     \endentry
     \entry{klaus2017enriching}{article}{}
       \name{author}{6}{}{%
         {{hash=af7a7cbb26865d8b57799a79585b9792}{%
            family={Klaus},
            familyi={K\bibinitperiod},
-           given={Valentin\bibnamedelima H},
+           given={Valentin\bibnamedelima H.},
            giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
         {{hash=fed36836011d3b0fb716d8c3c666876f}{%
            family={Schäfer},
@@ -345,7 +3214,7 @@
         {{hash=af7a7cbb26865d8b57799a79585b9792}{%
            family={Klaus},
            familyi={K\bibinitperiod},
-           given={Valentin\bibnamedelima H},
+           given={Valentin\bibnamedelima H.},
            giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
         {{hash=fed36836011d3b0fb716d8c3c666876f}{%
            family={Schäfer},
@@ -376,9 +3245,6 @@
       \list{language}{1}{%
         {english}%
       }
-      \list{publisher}{1}{%
-        {Oxford University Press UK}%
-      }
       \strng{namehash}{fadbc948c78dafed4523693eff79befe}
       \strng{fullhash}{0f855868db001c69386238749b9fb245}
       \strng{bibnamehash}{f01c937b4c8a140db983c8a5a302f9d0}
@@ -388,27 +3254,42 @@
       \strng{nameabibnamehash}{f01c937b4c8a140db983c8a5a302f9d0}
       \strng{nameanamehash}{fadbc948c78dafed4523693eff79befe}
       \strng{nameafullhash}{0f855868db001c69386238749b9fb245}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{abstract}{The relationship between biodiversity and ecosystem functioning is among the most active areas of ecological research. Furthermore, enhancing the diversity of degraded ecosystems is a major goal in applied restoration ecology. In grasslands, many species may be locally absent due to dispersal or microsite limitation and may therefore profit from mechanical disturbance of the resident vegetation. We established a seed addition and disturbance experiment across several grassland sites of different land use to test whether plant diversity can be increased in these grasslands. Additionally, the experiment will allow us testing the consequences of increased plant diversity for ecosystem processes and for the diversity of other taxa in real-world ecosystems. Here, we present details of the experimental design and report results from the first vegetation survey 1 year after disturbance and seed addition. Moreover, we tested whether the effects of seed addition and disturbance varied among grassland depending on their land use or pre-disturbance plant diversity.A full-factorial experiment was installed in 73 grasslands in three regions across Germany. Grasslands were under regular agricultural use, but varied in the type and the intensity of management, thereby representing the range of management typical for large parts of Central Europe. The disturbance treatment consisted of disturbing the top 10cm of the sward using a rotavator or rotary harrow. Seed addition consisted of sowing a high-diversity seed mixture of regional plant species. These species were all regionally present, but often locally absent, depending on the resident vegetation composition and richness of each grassland.Seven months after sward disturbance, respective plots had significantly increased in bare soil, seedling species richness and number of seedlings. Seed addition had increased plant species richness, but only in combination with sward disturbance. The increase in species richness, when both seed addition and disturbance was applied, was higher at high land-use intensity and low resident diversity. Thus, we show that at least the early recruitment of many species is possible also at high land-use intensity, indicating the potential to restore and enhance biodiversity of species-poor agricultural grasslands. Our newly established experiment provides a unique platform for broad-scale research on the land-use dependence of future trajectories of vegetation diversity and composition and their effects on ecosystem functioning.}
+      \field{issn}{1752-9921}
       \field{journaltitle}{Journal of Plant Ecology}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
+      \field{month}{06}
       \field{number}{4}
       \field{title}{Enriching plant diversity in grasslands by large-scale experimental sward disturbance and seed addition along gradients of land-use intensity}
       \field{usera}{J}
       \field{userd}{english}
       \field{userf}{english}
       \field{volume}{10}
-      \field{year}{2017}
+      \field{year}{2016}
       \field{dateera}{ce}
       \field{pages}{581\bibrangedash 591}
       \range{pages}{11}
+      \verb{doi}
+      \verb 10.1093/jpe/rtw062
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/jpe/article-pdf/10/4/581/19287948/rtw062.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/jpe/rtw062
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/jpe/rtw062
+      \endverb
       \keyw{klaus2017enriching}
     \endentry
-    \entry{vaswani2017attention}{article}{}
+    \entry{vaswani2017attention}{inproceedings}{}
       \name{author}{8}{}{%
         {{hash=7f28e84700536646dd6620a0db07ad09}{%
            family={Vaswani},
@@ -443,13 +3324,50 @@
         {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
            family={Kaiser},
            familyi={K\bibinitperiod},
-           given={{Ł}ukasz},
+           given={Łukasz},
            giveni={Ł\bibinitperiod}}}%
         {{hash=95595a0fefb86187cbc36e551017d332}{%
            family={Polosukhin},
            familyi={P\bibinitperiod},
            given={Illia},
            giveni={I\bibinitperiod}}}%
+      }
+      \name{editor}{7}{}{%
+        {{hash=e7e74de725116358b68a6e890c026145}{%
+           family={Guyon},
+           familyi={G\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=3b118a9660c18913c6d05d3bcfae41a3}{%
+           family={Luxburg},
+           familyi={L\bibinitperiod},
+           given={U.\bibnamedelimi Von},
+           giveni={U\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=9b411b6c9cefdde16ffea77ecf612142}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=1444141e07dd9549dbb4b8530fe4ec15}{%
+           family={Wallach},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f3857e15544199442f3d4fb2cf6645b4}{%
+           family={Fergus},
+           familyi={F\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c73f06e2fc98c9b0bf52eb5fdce61943}{%
+           family={Vishwanathan},
+           familyi={V\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=36b98b7ab533936cf1b5716148de704f}{%
+           family={Garnett},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
       }
       \name{namea}{8}{}{%
         {{hash=7f28e84700536646dd6620a0db07ad09}{%
@@ -485,7 +3403,7 @@
         {{hash=540fcd72e1fa4bbed46604f4e6cff817}{%
            family={Kaiser},
            familyi={K\bibinitperiod},
-           given={{Ł}ukasz},
+           given={Łukasz},
            giveni={Ł\bibinitperiod}}}%
         {{hash=95595a0fefb86187cbc36e551017d332}{%
            family={Polosukhin},
@@ -496,12 +3414,18 @@
       \list{language}{1}{%
         {english}%
       }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
       \strng{namehash}{ee273ab30cfb889666f8c4d806eb9ce7}
       \strng{fullhash}{cb26e47f6b8133865271fc8483132297}
       \strng{bibnamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
       \strng{authorbibnamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
       \strng{authornamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
       \strng{authorfullhash}{cb26e47f6b8133865271fc8483132297}
+      \strng{editorbibnamehash}{8107ce890771c5f95589bcad654d491d}
+      \strng{editornamehash}{7cffda9a379be8eb9063eee4eb0f58b3}
+      \strng{editorfullhash}{1564f811a39f09a7400a11284c987926}
       \strng{nameabibnamehash}{7cc810834e9ba19dd5f8b0a37be3172d}
       \strng{nameanamehash}{ee273ab30cfb889666f8c4d806eb9ce7}
       \strng{nameafullhash}{cb26e47f6b8133865271fc8483132297}
@@ -509,20 +3433,27 @@
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Advances in neural information processing systems}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
-      \field{title}{Attention is all you need}
-      \field{usera}{J}
+      \field{title}{Attention is All you Need}
+      \field{usera}{C}
+      \field{userc}{english}
       \field{userd}{english}
       \field{userf}{french}
       \field{volume}{30}
       \field{year}{2017}
       \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf
+      \endverb
       \keyw{vaswani2017attention}
     \endentry
-    \entry{vinyals2015pointer}{article}{}
+    \entry{vinyals2015pointer}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=494b568c5dc85ba8f3f409635f9c5f25}{%
            family={Vinyals},
@@ -539,6 +3470,33 @@
            familyi={J\bibinitperiod},
            given={Navdeep},
            giveni={N\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=c294bbcb0687bdb5113cc4c4cd6ebad3}{%
+           family={Cortes},
+           familyi={C\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5fa5574879f8e77bee73db4442b005f7}{%
+           family={Lawrence},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=98056d9ddecda0076a31a183e3e69326}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0ef91066dee98e654f9aebd57da00647}{%
+           family={Sugiyama},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=36b98b7ab533936cf1b5716148de704f}{%
+           family={Garnett},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
       }
       \name{namea}{3}{}{%
         {{hash=494b568c5dc85ba8f3f409635f9c5f25}{%
@@ -560,30 +3518,43 @@
       \list{language}{1}{%
         {english}%
       }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
       \strng{namehash}{832d19b6ecbaa1d465342fe676ffb29a}
       \strng{fullhash}{a442a9bbb26362f27b11afa1b7ac9582}
       \strng{bibnamehash}{a442a9bbb26362f27b11afa1b7ac9582}
       \strng{authorbibnamehash}{a442a9bbb26362f27b11afa1b7ac9582}
       \strng{authornamehash}{832d19b6ecbaa1d465342fe676ffb29a}
       \strng{authorfullhash}{a442a9bbb26362f27b11afa1b7ac9582}
+      \strng{editorbibnamehash}{793fcba69f8992e9ba3eee3158927ba8}
+      \strng{editornamehash}{f981a0b37ac43bd0fc3784cbcce306be}
+      \strng{editorfullhash}{95e40444732d7905041fa015b18cfa44}
       \strng{nameabibnamehash}{a442a9bbb26362f27b11afa1b7ac9582}
       \strng{nameanamehash}{832d19b6ecbaa1d465342fe676ffb29a}
       \strng{nameafullhash}{a442a9bbb26362f27b11afa1b7ac9582}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Advances in neural information processing systems}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
       \field{langid}{english}
       \field{languageid}{english}
       \field{lansortorder}{4}
-      \field{title}{Pointer networks}
-      \field{usera}{J}
+      \field{title}{Pointer Networks}
+      \field{usera}{C}
+      \field{userc}{english}
       \field{userd}{english}
       \field{userf}{english}
       \field{volume}{28}
       \field{year}{2015}
       \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2015/file/29921001f2f04bd3baee84a12e98098f-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2015/file/29921001f2f04bd3baee84a12e98098f-Paper.pdf
+      \endverb
       \keyw{vinyals2015pointer}
     \endentry
     \entry{bresson2021transformer}{article}{}
@@ -623,8 +3594,8 @@
       \strng{nameabibnamehash}{1fbfbd339443c7d8f9e2571903642e27}
       \strng{nameanamehash}{68fa7015a50e356c314b348ecb8dc935}
       \strng{nameafullhash}{1fbfbd339443c7d8f9e2571903642e27}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2103.03012}
@@ -638,182 +3609,6 @@
       \field{year}{2021}
       \field{dateera}{ce}
       \keyw{bresson2021transformer}
-    \endentry
-    \entry{sutton1999policy}{article}{}
-      \name{author}{4}{}{%
-        {{hash=eb920e5277d3d5fd0903f3cd41e11871}{%
-           family={Sutton},
-           familyi={S\bibinitperiod},
-           given={Richard\bibnamedelima S},
-           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=09a4af5c985fc9a46727803f19cd8272}{%
-           family={McAllester},
-           familyi={M\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=74d941c38e5affcd359ed5814815805f}{%
-           family={Singh},
-           familyi={S\bibinitperiod},
-           given={Satinder},
-           giveni={S\bibinitperiod}}}%
-        {{hash=ad31daafb6eb6186dd51ffeae5196ec0}{%
-           family={Mansour},
-           familyi={M\bibinitperiod},
-           given={Yishay},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \name{namea}{4}{}{%
-        {{hash=eb920e5277d3d5fd0903f3cd41e11871}{%
-           family={Sutton},
-           familyi={S\bibinitperiod},
-           given={Richard\bibnamedelima S},
-           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=09a4af5c985fc9a46727803f19cd8272}{%
-           family={McAllester},
-           familyi={M\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=74d941c38e5affcd359ed5814815805f}{%
-           family={Singh},
-           familyi={S\bibinitperiod},
-           given={Satinder},
-           giveni={S\bibinitperiod}}}%
-        {{hash=ad31daafb6eb6186dd51ffeae5196ec0}{%
-           family={Mansour},
-           familyi={M\bibinitperiod},
-           given={Yishay},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{176c86aa36fab51e81d033c2d8ea8cbe}
-      \strng{fullhash}{6b36fd87902dbca910efbc0f913a7749}
-      \strng{bibnamehash}{8ac4799f24755bc6f8a5e620366640f7}
-      \strng{authorbibnamehash}{8ac4799f24755bc6f8a5e620366640f7}
-      \strng{authornamehash}{176c86aa36fab51e81d033c2d8ea8cbe}
-      \strng{authorfullhash}{6b36fd87902dbca910efbc0f913a7749}
-      \strng{nameabibnamehash}{8ac4799f24755bc6f8a5e620366640f7}
-      \strng{nameanamehash}{176c86aa36fab51e81d033c2d8ea8cbe}
-      \strng{nameafullhash}{6b36fd87902dbca910efbc0f913a7749}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Advances in neural information processing systems}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Policy gradient methods for reinforcement learning with function approximation}
-      \field{usera}{J}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{volume}{12}
-      \field{year}{1999}
-      \field{dateera}{ce}
-      \keyw{sutton1999policy}
-    \endentry
-    \entry{williams1992simple}{article}{}
-      \name{author}{1}{}{%
-        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
-           family={Williams},
-           familyi={W\bibinitperiod},
-           given={Ronald\bibnamedelima J},
-           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \name{namea}{1}{}{%
-        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
-           family={Williams},
-           familyi={W\bibinitperiod},
-           given={Ronald\bibnamedelima J},
-           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \strng{fullhash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \strng{bibnamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \strng{authorbibnamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \strng{authornamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \strng{authorfullhash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \strng{nameabibnamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \strng{nameanamehash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \strng{nameafullhash}{6cbc29ad7fd57ffdb9ed4728418fd988}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Machine learning}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Simple statistical gradient-following algorithms for connectionist reinforcement learning}
-      \field{usera}{J}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{volume}{8}
-      \field{year}{1992}
-      \field{dateera}{ce}
-      \field{pages}{229\bibrangedash 256}
-      \range{pages}{28}
-      \keyw{williams1992simple}
-    \endentry
-    \entry{kingma2014adam}{article}{}
-      \name{author}{2}{}{%
-        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
-           family={Kingma},
-           familyi={K\bibinitperiod},
-           given={Diederik\bibnamedelima P},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
-           family={Ba},
-           familyi={B\bibinitperiod},
-           given={Jimmy},
-           giveni={J\bibinitperiod}}}%
-      }
-      \name{namea}{2}{}{%
-        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
-           family={Kingma},
-           familyi={K\bibinitperiod},
-           given={Diederik\bibnamedelima P},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
-           family={Ba},
-           familyi={B\bibinitperiod},
-           given={Jimmy},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {english}%
-      }
-      \strng{namehash}{0018e09b9f142d15c9693e18a17bdf3f}
-      \strng{fullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{bibnamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{authornamehash}{0018e09b9f142d15c9693e18a17bdf3f}
-      \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{nameabibnamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{nameanamehash}{0018e09b9f142d15c9693e18a17bdf3f}
-      \strng{nameafullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{arXiv preprint arXiv:1412.6980}
-      \field{langid}{english}
-      \field{languageid}{english}
-      \field{lansortorder}{4}
-      \field{title}{Adam: A method for stochastic optimization}
-      \field{usera}{J}
-      \field{userd}{english}
-      \field{userf}{english}
-      \field{year}{2014}
-      \field{dateera}{ce}
-      \keyw{kingma2014adam}
     \endentry
     \entry{aggarwal2020path}{article}{}
       \name{author}{2}{}{%
@@ -855,8 +3650,8 @@
       \strng{nameabibnamehash}{162b491395a03702d98121683fe5823d}
       \strng{nameanamehash}{b1f12b81d0142fb262813de0d3ee6ec1}
       \strng{nameafullhash}{162b491395a03702d98121683fe5823d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer communications}
@@ -961,8 +3756,8 @@
       \strng{nameabibnamehash}{fd5bec418128777c0c166f7e56248122}
       \strng{nameanamehash}{824a7736f2469ff0cae916871ed6b93b}
       \strng{nameafullhash}{9b7d4c80e4a7806735834d00fc207a7c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Grassland restoration is a crucial method for preventing ecological degradation in grasslands. Unmanned Aerial Vehicles (UAVs) offer a promising solution to reduce extensive human labor and enhance restoration efficiency, given their fully automatic capabilities, yet their full potential remains exploited. This paper progresses this emerging technology for planning the grassland restoration. We undertake the first attempt to mathematically model the UAV-enabled restoration process as the maximization of restoration areas problem (MRAP). This model considers factors including limited UAV battery energy, grass seed weight, the number of restored areas, and their sizes. The MRAP is a composite problem involving trajectory design and area allocation, which are highly coupled and conflicting. Consequently, it requires solving two NP-hard subproblems: the variant Traveling Salesman Problem (TSP) and the Multidimensional Knapsack Problem (MKP) simultaneously. To address this complex problem, we introduce a novel cooperative memetic algorithm. The algorithm integrates an efficient heuristic algorithm, variant population-based incremental learning (PBIL), and a maximum-residual-energy-based local search (MRELS) strategy, referred to as CHAPBILM. The algorithm solves the two subproblems interlacedly by leveraging the interdependencies and inherent knowledge between them. The simulation results demonstrate that CHAPBILM successfully solves the MRAP on multiple instances in a near-optimal way. It also confirms the conflicts between trajectory design and area allocation. The effectiveness of CHAPBILM is further supported by comparisons with traditional optimization methods that do not exploit the interdependencies between the two subproblems. The proposed model and solution have the potential to be extended to other complex optimization problems in ecological protection and precision agriculture.}

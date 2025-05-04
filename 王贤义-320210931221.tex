@@ -5,6 +5,8 @@
 \documentclass[AutoFakeBold]{LZUThesis}
 \usepackage{multirow}  % 支持表格行合并
 \usepackage{booktabs}
+\usepackage{svg}
+
 \begin{document}
 %=====%
 %
@@ -185,63 +187,32 @@
 
 \section{研究背景与意义}
 
-草原生态系统在全球环境保护和可持续发展中发挥着至关重要的作用。草原不仅是陆
-地生态系统的重要组成部分，其面积约占全球陆地总面积的 26\% 至 40\%[1]，还承担着防风
-固沙、涵养水源、调节气候、美化环境和维持生物多样性等多重生态功能[2]。然而，近年
-来，受人类活动和气候变化的双重影响，全球草原退化问题日益严重，表现为植被覆盖率
-下降、土壤沙化、水资源减少等多方面的生态失衡。这不仅削弱了草原的生态服务功能，还
-对畜牧业生产和区域经济发展造成了不利影响。因此，如何高效、精准地实施草原修复措
-施，以恢复其生态功能，成为当前环境治理领域亟待解决的问题之一。
+草原生态系统在全球环境保护和可持续发展中发挥着至关重要的作用。作为陆地生态系统的重要组成部分，草原面积约占全球陆地总面积的 26\% 至 40\%\cite{chapin2013global}，承担着防风固沙、涵养水源、调节气候、美化环境和维持生物多样性等多重生态功能\cite{gibson2009grasses}。然而，近年来，全球草原退化问题日益严重，主要受到人类活动和气候变化的双重影响，表现为植被覆盖率下降、土壤沙化、水资源减少等多方面的生态失衡\cite{bai2020long}。这些退化不仅削弱了草原的生态服务功能，还对畜牧业生产和区域经济发展造成了不利影响。因此，高效、精准地实施草原修复措施，以恢复其生态功能，已成为当前环境治理领域亟待解决的关键问题之一\cite{freitag2021restoration}。
 
-草原生态系统的健康关系到全球气候变化的缓解、生物多样性的维护以及区域经济的
-可持续发展。研究表明，草原作为重要的碳汇，在碳循环和气候调节方面具有不可替代的
-作用[3]。同时，草原退化导致的生态系统服务功能下降，对农牧业生产和当地居民生计产
-生了严重影响。因此，开展草原生态修复研究，不仅具有重要的环境保护意义，也具有显
-著的社会经济价值。
+草原生态系统的健康状况直接关系到全球气候变化的缓解、生物多样性的维护以及区域经济的可持续发展。研究表明，草原作为重要的碳汇，在碳循环和气候调节方面具有不可替代的作用\cite{reinermann2020remote,dass2018grasslands}。同时，草原退化导致的生态系统服务功能下降，也对农牧业生产和当地居民生计产生了严重影响。因此，开展草原生态修复研究不仅具有重要的环境保护意义，也具有显著的社会经济价值。
 
-目前，草原修复的传统方法主要依赖人工植被恢复、机械作业及无人机喷洒草籽等方
-式。然而，传统人工方法通常耗费大量人力物力，且难以在大范围草原环境下进行高效修
-复。而机械化手段虽然提高了作业效率，但在复杂地形和偏远区域的应用受到一定限制。近
-年来，无人机（Unmanned Aerial Vehicles, UAV）技术的快速发展为草原修复提供了一种全
-新的解决方案。无人机凭借其机动性强、作业成本低、可远程操作等优势，在草原生态监
-测、病虫害防治和生态修复等领域得到了广泛应用[4]。然而，由于无人机受电池续航能力、
-载荷能力和复杂地形影响，在实际修复任务中仍面临诸多挑战，例如如何在有限的能量和
-时间内覆盖更大的修复区域，以及如何优化无人机的路径规划以提高修复效率等问题。
+在草原修复方法方面，传统手段主要依赖人工植被恢复、机械作业及定点喷洒草籽等方式。这些传统人工方法通常耗费大量人力物力，且难以在大范围草原环境下进行高效修复。机械化手段虽然提高了作业效率，但在复杂地形和偏远区域的应用受到诸多限制。近年来，无人机（Unmanned Aerial Vehicles, UAV）技术的快速发展为草原修复提供了一种全新的解决方案。无人机凭借其机动性强、作业成本低、可远程操作等优势，在草原生态监测、病虫害防治和生态修复等领域得到了广泛应用\cite{steffen2015planetary}。然而，无人机在实际修复任务中仍面临诸多挑战，主要受到电池续航能力、载荷能力和复杂地形的限制。特别是如何在有限的能量和时间内覆盖更大的修复区域，以及如何优化无人机的路径规划以提高修复效率，成为亟需解决的技术难题。
 
 \section{国内外研究现状}
 
-在无人机辅助草原修复领域，国内外研究主要集中在两个方面：无人机技术在生态监
-测与修复中的应用，以及无人机路径优化与任务分配算法研究。
-在无人机技术应用方面，国际上众多研究团队已将无人机用于森林、草原等生态系统
-的监测和管理。Nex 等人[5]综述了无人机在三维地图绘制和环境监测中的应用，指出无人
-机在获取高分辨率影像和数据方面具有显著优势。Zeng 等人[6]研究了能量效率优化的无人
-机通信系统，提出了基于轨迹优化的方法，为无人机在能源受限条件下的任务执行提供了
-新思路。国内研究也取得了一定进展，特别是在无人机播种、喷洒和生态监测等领域，但多数仍处于实验阶段，缺乏系统的理论指导和算法支持。
+在无人机辅助草原修复领域，国内外研究主要集中在两方面：无人机技术在生态监测与修复中的应用，以及路径优化与任务分配算法研究。国际上，Nex等人\cite{nex2014uav}综述了无人机在三维地图绘制和环境监测的应用优势，Mohan等人\cite{mohan2021uav}和Sun等人\cite{sun2018unmanned}将无人机技术应用于森林、草原等生态系统监测。Zeng等人\cite{zeng2017energy}针对能量效率问题，研究了基于轨迹优化的无人机通信系统，为能源受限条件下的任务执行提供了新思路。
 
-在路径优化方面，现有研究主要集中在无人机路径规划和任务分配算法上。典型的方法
-包括基于旅行商问题（Traveling Salesman Problem, TSP）和定向问题（Orienteering Problem,
-OP）的路径规划算法，这些方法试图通过最优路径搜索来减少无人机的飞行距离，从而提
-高修复任务的执行效率[7]。Rossello 等人[8]提出了一种基于信息驱动的路径规划方法，适用
-于大规模场地监测的有限自主性无人机，但主要针对监测而非修复任务。然而，这些方法
-在面对动态环境、复杂地形和多目标任务时仍然存在一定的局限性[9]。例如，传统路径规
-划方法通常基于静态环境进行优化，而草原修复任务往往受到风速、温度、地形等动态因
-素的影响，导致实际应用中的路径规划效果与理论计算存在偏差。此外，单架无人机的作
-业能力有限，难以满足大规模草原修复的需求，因此，多无人机协同作业成为提高修复效
-率的重要研究方向[10]。
+国内无人机技术在草原修复中也取得一定进展，特别是在播种、喷洒\cite{faiccal2017adaptive}和生态监测等应用场景。路径优化方面，传统方法主要基于旅行商问题和定向问题\cite{shivgan2020energy}，通过最优路径搜索减少飞行距离，提高执行效率。针对无人机巡逻、覆盖等任务，研究者提出了多种优化算法\cite{rajan2022routing,yang2015path,guo2021spraying}。人工智能方法虽在制造系统优化等领域有广泛应用\cite{renzi2014review}，但在草原修复领域的应用尚待深入探索。
 
-在多无人机协同方面，尽管已有一些研究探索了多无人机系统的协同控制和任务分配，
-但专门针对草原修复的多无人机协同优化研究仍较为缺乏。特别是考虑无人机能量约束、
-播种动态负载变化以及修复面积最大化等多重目标的综合优化问题，仍有待深入研究。此
-外，针对草原复杂环境下的多无人机协同决策与智能优化，现有方法普遍缺乏足够的适应
-性和灵活性。
+在无人机播种系统方面，Elliott\cite{elliott2016potential}探索了低成本无人机在热带森林生态系统中通过空中播种实现加速自然再生的可能性。Pedersen等人\cite{pedersen2017robotic}则利用无人机创建再播种地图，而非直接用于作物生产。Huang等人\cite{huang2020design}提出了一种特殊的油菜籽无人机播种系统，采用微型气助式集中计量装置，提高了播种效率与精度。Faiccal等人\cite{faiccal2017adaptive}开发了一种能自适应规划飞行路线的系统，确保精确将农药沉积在目标区域。Guo等人\cite{guo2021spraying}提出了喷洒无人机的喷雾分布模型和覆盖路径规划方法，仿真结果显示了其有效性。然而，这些研究主要基于规则田地地图，且未充分考虑无人机的能量消耗，也很少将路径规划与播种任务结合考虑，可能与实际应用场景存在差异。
+
+在无人机路径规划研究中，研究者主要关注高效区域覆盖算法以延长无人机作业时间。Vasisht等人\cite{vasisht2017farmbeats}设计了一种新颖的路径规划算法，充分利用风力辅助加速和减速，延长无人机操作时间并最小化覆盖给定区域所需的时间。Palomino等人\cite{palomino2019towards}提出了与路径规划过程相关的自动化工作流算法，该算法不仅能识别工作空间，还能在农业监督活动中处理路径规划。Shivgan等人\cite{shivgan2020energy}研究了无人机在环境传感和测量应用中完成任务的路径规划问题，将问题建模为旅行商问题(TSP)，通过优化无人机能量来处理无人机的飞行时间限制。Rossello等人\cite{rossello2021information}为精准农业开发了一种新型路径规划算法，覆盖大规模区域，考虑了飞行时间约束并最大化系统状态的估计质量，将问题建模为特殊的定向问题(OP)，即混合整数半定规划(MISDP)，通过启发式算法求解。
+
+智能优化算法方面，Feng等人探索了进化优化与迁移学习在复杂路径问题中的应用\cite{feng2015memes}，Rossello等人提出了基于信息驱动的路径规划方法\cite{rossello2021information}。多层次优化方法被用于任务分配与路径优化\cite{colson2007overview}，协同优化与分布式智能算法则应用于大规模组合优化问题\cite{huang2004cooperative}。
+
+在两阶段优化方法研究方面，Shen等人\cite{shen2009two}考虑了大规模生物恐怖主义紧急情况下的两阶段车辆路径问题。Li等人\cite{li2010inexact}开发了一个不精确两阶段水管理模型，用于在不确定条件下规划农业灌溉。Azadeh等人\cite{azadeh2019two}提出了一种两阶段路径优化方法，限制飞行边界并减少轻型飞机运输系统中的变量和约束数量。Maini等人\cite{maini2019cooperative}设计了一种两阶段策略，为覆盖应用中燃料约束下的协同空中-地面车辆路径规划问题寻找高效解决方案。Rajan等人\cite{rajan2022routing}为数据收集任务场景中的无人机路径规划问题制定了两阶段随机规划模型。虽然上述研究主要采用两阶段方法处理路径规划问题，但大多数研究仅根据问题过程将其机械分解为两个单独解决的阶段，而没有考虑它们之间的耦合关系。
+
+此外，双层规划问题\cite{colson2007overview}是另一种两阶段优化问题。无人机草原修复问题与双层规划问题相关，它考虑了优化问题两个阶段之间的耦合关系。Angelo等人\cite{angelo2015study}研究了双层生产-分配规划问题。Sinha等人\cite{sinha2017review}全面回顾了从基本原理到解决方案的双层优化，包括经典和进化方法。然而，这些方法难以直接解决本研究中的问题，因为它们未考虑无人机草原修复问题的特定特性。
+
+然而，传统方法在面对动态环境、复杂地形和多目标任务时仍存局限性\cite{gann2019international}，通常基于静态环境优化，而实际应用常受风速、温度、地形等因素影响\cite{blackburn2021monitoring}。单架无人机作业能力有限，难以满足大规模修复需求，因此多无人机协同作业成为提高效率的重要研究方向\cite{dorling2016vehicle,maini2019cooperative}。虽已有研究探索多无人机系统的协同控制\cite{buters2019seed}，但专门针对草原修复的多无人机协同优化研究仍较缺乏，特别是考虑能量约束、播种动态负载变化及修复面积最大化等多重目标的综合优化问题。
+
 \section{研究内容}
-为了进一步提升无人机在草原修复任务中的适应性和执行效率，本文提出了一种基于
-强化学习的多无人机协同草原修复优化模型。该模型首先利用强化学习方法训练单架无人
-机的智能决策能力，使其能够在复杂环境中自主学习最优的修复策略。然后，在单架无人
-机智能化的基础上，构建多无人机协同作业的优化框架，使得多架无人机能够在有限的能
-源约束下，通过最优的任务分配和路径优化策略，实现修复覆盖面积的最大化。通过强化
-学习算法的自适应优化能力，该方法能够在动态环境下不断调整无人机的修复策略，从而
-提高整体任务的灵活性和适应性。
+本文旨在解决草原生态修复过程中面临的高效率覆盖与资源有限的矛盾问题。针对传统修复方法在大规模、复杂地形下的局限性，提出了一种基于深度强化学习的多无人机协同草原修复优化模型。研究采用"单机智能、多机协同"的分层设计思路：首先，利用强化学习算法训练单架无人机在复杂环境中的智能决策能力，使其能够自主学习并优化修复策略；其次，在此基础上构建多无人机协同作业的优化框架，实现在能源有限约束下的任务动态分配与路径协同优化。这种层次化的智能决策架构不仅能够根据草原退化状况、地形特征和无人机状态自适应调整修复策略，还能在多无人机间建立高效的信息交互与任务协调机制，从而在最大化修复面积的同时，提高了系统对复杂动态环境的适应性和鲁棒性。
 % \section{二级标题}
 
 % 绪论其实也可以有二级标题，要不然，论文要求：“包括毕业论文（设计）的研究目的、意义、范围、研究设想、方法、实验设计、选题依据等；还包括毕业论文（设计）研究领域的历史回顾，文献追溯，理论分析等内容”全部写成一堆不成？
@@ -258,7 +229,7 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.7\textwidth]{figures/多无人机修复退化区域实例.png}
+	\includesvg[width=1\textwidth]{figures/多无人机修复退化区域实例.svg}
 	\caption{无人机草原修复区域示意图。图中展示了待修复区域的分布情况，每个圆点代表一个待修复区域，区域大小和颜色深浅表示其退化程度和面积。}
 	\label{fig:restored-areas}
 \end{figure}
@@ -271,7 +242,6 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 	P(\bar{q}_{ij}) = (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}},
 	%\end{small}
 \end{equation}
-
 其中，$M = W + m$，$W$ 表示无人机框架重量，$m$ 表示其电池重量。$q_{ij}$ 表示无人机当前载荷重量（草籽重量），$g$ 为标准重力加速度，$\rho$ 表示空气密度，$\zeta$ 表示无人机旋转叶片盘面积，$h$ 表示无人机旋翼数量，上述参数单位均参考国际单位制标准。为简化问题，我们假设无人机在待修复区域间以固定高度、恒定速度飞行，同时忽略不同天气条件对无人机飞行的影响，如温度、风力、雨量和沙尘暴等。此外，考虑到无人机能量的限制，我们假设所有草原上的退化区域均可在一次修复过程中由一架无人机修复 (无论是否完全修复)。
 
 
@@ -299,7 +269,6 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 		E_f =  \sum^N_{i=0}\sum^N_{j \neq i} e^f_{ij} d_{ij} x_{ij},
 	\end{scriptsize}
 \end{equation}
-
 其中，$e^f_{ij}$ 表示无人机的飞行单位距离的能耗，与无人机在待修复区域 $v_i$ 和 $v_j$ 之间携带的种子重量 $\bar{q}_{ij}$ 相关，可由公式 (1) 实时计算得出。$\bar{q}_{ij}$ 表示从待修复区域 $v_i$ 和 $v_j$ 中无人机携带的草种重量，满足以下条件：
 
 \begin{equation} \label{remained-weight}
@@ -322,7 +291,6 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 		E_s = \sum^N_{i = 1}\sum^N_{j \neq i}\sigma_i e_i x_{ij},
 	\end{small}
 \end{equation}
-
 其中，二元 $0-1$ 变量 $x_{ij}$ 用于确定无人机是否将对待修复区域 $v_j$ 进行修复。
 
 \subsection{无人机拍照能耗}
@@ -334,16 +302,15 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 		E_{ap} = e_{ap}\sum^N_{i=1}\sum^N_{j \neq i} x_{ij}\sigma_i,
 	\end{scriptsize}
 \end{equation}
-
 其中，$e_{ap}$ 表示无人机在 $\sigma_i$ 个被修复的单位圆中航拍所消耗的能量。
 
-\section{1.2 优化目标}
+\section{优化目标}
 
 由于能量有限，无人机在一次修复过程中无法修复草原上所有的退化区域。因此，我们的目标是通过无人机技术尽可能多地修复草原的退化面积，即优化目标为：
 
 \begin{equation} \label{maximize-the-sum}
 	\begin{small}
-		C = \sum^N_{i=1}\sigma_i,
+		C = \sum^N_{i=1}\sigma_i
 	\end{small}
 \end{equation}
 
@@ -356,18 +323,29 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 	\begin{align}
 		\max_{x_{ij},\sigma_i} \quad & C = \sum^N_{i = 1}\sum^N_{j \neq i} x_{ij}\sigma_i                                                                                                          \\
 		\emph{s.t.} \quad            & \sum^N_{i = 1}\sum^N_{j \neq i}\sigma_i e_i x_{ij} + e_{ap}\sum^N_{i=1}\sum^N_{j \neq i} x_{ij}\sigma_i \nonumber                                           \\
-		                             & + \sum^N_{i=0}\sum^N_{j \neq i} (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}} x_{ij} d_{ij} \leq E_{max}, \label{energy-constraint} \\
-		                             & \sum^N_{i=1, i\neq j} \sigma_i q_i x_{ij} \leq Q, \forall j \in V_a,\label{total-load}                                                                      \\
-		                             & \sum^N_{j=0, i\neq j}\bar{q}_{ji} -  \sum^N_{j=0, i\neq j}\bar{q}_{ij} = \sigma_i q_i, \label{carry-load} \quad \forall i \in V_a,                          \\
-		                             & \bar{q}_{ij} \leq Q x_{ij}, \quad \forall (i,j) \in A, \label{load}                                                                                         \\
-		                             & \sum^N_{i=0, i\neq j} x_{ij} = \sum^N_{j=0,i\neq j} x_{ij} = 1, \quad \forall i,j \in V_a, \label{enter-point}                                              \\
-		                             & \sum^N_{j=1} x_{0j} = \sum^N_{j=1} x_{j0} = 1, \label{start-point}                                                                                          \\
-		                             & x_{ij} \in \{0,1\}, \label{binary-variable}                                                                                                                 \\
-		                             & 1 \leq \sigma_i \leq c_i, \label{area-constraint}                                                                                                           \\
-		                             & \bar{q}_{ij} \geq 0. \label{flight-weight}
+									 & + \sum^N_{i=0}\sum^N_{j \neq i} (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}} x_{ij} d_{ij} \leq E_{max}, \label{energy-constraint} \\
+									 & \sum^N_{i=1, i\neq j} \sigma_i q_i x_{ij} \leq Q, \forall j \in V_a,\label{total-load}                                                                      \\
+									 & \sum^N_{j=0, i\neq j}\bar{q}_{ji} -  \sum^N_{j=0, i\neq j}\bar{q}_{ij} = \sigma_i q_i, \label{carry-load} \quad \forall i \in V_a,                          \\
+									 & \bar{q}_{ij} \leq Q x_{ij}, \quad \forall (i,j) \in A, \label{load}                                                                                         \\
+									 & \sum^N_{i=0, i\neq j} x_{ij} = \sum^N_{j=0,i\neq j} x_{ij} = 1, \quad \forall i,j \in V_a, \label{enter-point}                                              \\
+									 & \sum^N_{j=1} x_{0j} = \sum^N_{j=1} x_{j0} = 1, \label{start-point}                                                                                          \\
+									 & x_{ij} \in \{0,1\}, \label{binary-variable}                                                                                                                 \\
+									 & 1 \leq \sigma_i \leq c_i, \label{area-constraint}                                                                                                           \\
+									 & \bar{q}_{ij} \geq 0. \label{flight-weight}
 	\end{align}
 	%\end{small}
 \end{subequations}
+
+上述优化模型中，约束条件\eqref{energy-constraint}确保无人机在一次调度周期内的能量消耗不超过其最大能量容量$E_{max}$。约束\eqref{total-load}保证无人机携带的草种重量$Q$必须在无人机返回基站前全部播撒完毕。约束\eqref{carry-load}表示无人机在服务完一个修复区域后草种重量的减少，并与该区域的需求修复面积相匹配，同时消除任何非法的子回路。约束\eqref{load}保证修复区域$v_j$的草种需求不超过无人机携带的剩余草种重量。约束\eqref{enter-point}确保无人机最多进入每个修复区域一次，并在播种后离开该区域。约束\eqref{start-point}保证无人机的路径始于并终于基站。约束\eqref{binary-variable}确保二元变量取整数值。约束\eqref{area-constraint}确保待修复的单位圆数量不超过其最大区域。约束\eqref{flight-weight}为非负性约束。综合而言，该问题是一个多变量组合优化问题，变量包括二元变量$x_{ij}$和整数变量$\sigma_i$，因此直接使用传统优化方法求解较为困难。
+
+
+\section{本章小结}
+
+本章建立了多无人机协同草原修复面积最大化的数学模型。首先，我们将待修复草原建模为一个完全无向图，节点代表待修复区域，包含位置坐标、退化程度和可修复面积等属性。我们详细分析了无人机能量消耗的三个主要组成部分：飞行能耗、播种能耗和航拍能耗，并建立了相应的数学表达式。特别地，我们考虑了无人机载重动态变化对飞行能耗的影响，使模型更加贴近实际应用场景。
+
+在能量约束条件下，我们以修复面积最大化为优化目标，形成了一个多变量组合优化问题。该问题的主要挑战在于飞行路径设计、修复面积大小和播种量三者之间存在紧密耦合关系，使得传统优化方法难以直接求解。无人机在服务完一个修复区域后草种重量的减少会影响后续飞行能耗，而飞行能耗又直接限制了可访问的区域数量和修复面积，形成了复杂的相互依赖关系。
+
+通过本章的建模工作，我们为后续基于强化学习的求解方法奠定了理论基础，明确了问题的边界条件、变量关系和优化方向，为多无人机草原修复系统设计提供了数学依据。
 
 % Constraints \eqref{energy-constraint} ensure that the energy consumption in a scheduling cycle of UAV cannot exceed its energy capacity $E_{max}$. Constraints \eqref{total-load} impose that the weight of the grass seeds $Q$ carried by UAV must be sowed before the UAV returns to the base station. Constraints \eqref{carry-load} indicate the reduced weight of grass seeds for UAV after it severs a restored area and equaling the demanded restored area, and also eliminate any illegal subrours. Constraints \eqref{load} guarantee that the demanded grass seeds at the restored area $v_j$ cannot exceed the weight of remaining grass seeds carried by the UAV. Constraints \eqref{enter-point}
 % ensure that the UAV enters each restored area at most once and leaves the restored area after seeding.
@@ -377,18 +355,6 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 % We can observe that the optimization problem \eqref{GRP} is a multi-variable combinatorial optimization problem, since the set of feasible solutions is discrete in terms of the binary variable $x_{ij}$ and the integer variable $\sigma_i$.
 % Therefore, it is difficult to directly solve the optimization problem \eqref{GRP} by using the traditional optimization methods. By further analyzing the optimization problem \eqref{GRP}, we can find the following characteristics. First, the size of restoration areas and the amount of seeding in each restored area may vary with different service order by UAV depending on the UAV's flight trajectory. Second, the size of restoration areas and the amount of seeding in each restored area will affect the next flight trajectory of UAV. In brief, the trajectory design of UAV, the size of restoration areas, and the amount of seeding are closely coupled. If the optimization problem \eqref{GRP} is solved directly, the trajectory design of UAV, the size of restoration areas, and the amount of seeding are generated separately, resulting in that their dependence is ignored unreasonably. Therefore, there exist two challenges for solving effectively the optimization problem \eqref{GRP}.
-
-约束条件 \eqref{energy-constraint} 确保无人机在调度周期内的能耗不超过其最大能量容量 $E_{max}$。约束条件 \eqref{total-load} 要求无人机携带的草种重量 $Q$ 必须在返回基站前完成播种。约束条件 \eqref{carry-load} 规定了无人机在服务恢复区域后草种重量的减少量（等于该区域的需求量），同时消除了任何非法子路径。约束条件 \eqref{load} 保证恢复区域 $v_j$ 所需的草种重量不超过无人机当前携带的剩余草种重量。约束条件 \eqref{enter-point} 确保无人机最多进入每个恢复区域一次，并在播种后离开。约束条件 \eqref{start-point} 要求无人机的路径必须从基站出发并最终返回基站。约束条件 \eqref{binary-variable} 保证二进制变量取整数值。约束条件 \eqref{area-constraint} 规定待恢复的单位圆形区域数量不得超过其最大面积限制。约束条件 \eqref{flight-weight} 则为非负性限制。
-
-可以观察到，优化问题 \eqref{GRP} 是一个多变量组合优化问题，因为其可行解集在二进制变量 $x_{ij}$ 和整数变量 $\sigma_i$ 上是离散的。因此，传统优化方法难以直接求解该问题。通过进一步分析，我们发现以下特征：首先，恢复区域的面积和每个区域的播种量会因无人机服务顺序（即飞行轨迹）的不同而变化；其次，这些参数又会反过来影响无人机的后续飞行轨迹。简而言之，无人机轨迹设计、恢复区域面积和播种量三者紧密耦合。若直接求解优化问题 \eqref{GRP}，这三者将被单独生成，导致其依赖关系被不合理忽略。因此，有效求解该问题面临两大挑战。
-
-% \chapter{算法求解思路}
-
-% \section{基于神经网络的无人机草原修复策略优化}
-
-% 对于序列决策问题，基于迭代搜索的启发式方法往往能取得能取得较优的效果\cite{feng2015memes}。然而，启发式方法受限于过长的求解时间，同时在一个待修复草原实例下的结果无法迁移，在面对多个待修复草原实例时求解时间往往难以接受。相较之下，神经网络方法以其离线训练、在线决策，泛化能力极强的特性，在面对规模不同、分布各异的序列决策问题时仍然能在极短时间得出较优解,且无需重复训练，因而在组合优化领域广受关注[3]。因此，我们首先提出以单无人机作为智能体，构建深度神经网络模型，利用强化学习方法进行训练，试图学习出一个合理的草原修复策略，以大大节省问题的求解时间。
-
-% 我们采用强化学习方法相关概念，将无人机视作智能体，其与待修复草原环境的交互过程建模为一个马尔可夫决策过程，如下图所示。智能体的策略建模为神经网络，在与环境的交互中不断收集数据，网络模型通过强化学习Actor-Critic算法进行训练，目标是学习到一个策略$\pi_\theta(a|s)$($\theta$为神经网络参数)使得草原修复面积最大化。
 
 \chapter{基于强化学习的最优修复方案}
 
@@ -430,23 +396,28 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 	\end{array}\right.
 	\label{eq:12}
 \end{equation}
-
 上式中，$\alpha_p$, $\alpha_r$为修正系数，$l_i$为第$i$个区域的退化程度，$Pel$为控制无人机能量约束的惩罚项。通过引入$(l_i-0.3)$作为权重因子，模型可以优先修复退化程度更高的区域，从而实现对草原生态健康状况的精准干预。同时为了加快模型收敛速度，我们将不符合无人机能量约束时的惩罚项设置为其从起点到返回地面中心经历的路径长度，以确保在模型收敛的前期尽可能获得的解路径长度较短、符合能量约束，并在此前提下进行修复面积的决策。
 
 \section{神经网络模型构建}
 
 对于序列决策问题，编码器-解码器模型\cite{vaswani2017attention}作为最经典的神经网络模型结构之一，取得了优异的效果。我们采用稍加修改的经典的Tranformer作为编码器，指针网络\cite{vinyals2015pointer}作为自回归解码器以实现构造式求解。
 
-\subsection{特征提取}
+\subsection{特征提取与模型架构}
 
-我们对待求解的待修复草原模型提取两部分特征，即待修复区域的坐标、退化程度等静态特征，及无人机自身剩余能量、剩余重量等动态特征。静态、动态元素使用各自Transformer作为特征提取器。其中动态元素在构造解的过程中不断变化，需要结合部分解进行循环编码-解码，从而模拟无人机求解过程中负载动态变化的过程，更好地利用无人机当前信息作出更合理的决策。
+我们对待求解的待修复草原模型提取两部分特征：待修复区域的坐标、退化程度等静态特征，及无人机自身剩余能量、剩余重量等动态特征。模型参数用 $\theta \in \Theta$ 表示，包含编码器和解码器的所有可学习参数。
 
-\subsection{编码器}
+模型初始化过程如算法\ref{alg:grp_main_training}的第1-2行所示：
+\begin{equation}
+	M_{\theta} \leftarrow \text{InitializeModel}(d_e, d_h, n_{layers}, n_{heads}, \theta),
+\end{equation}
+其中，$d_e$ 为嵌入维度，$d_h$ 为隐藏层维度，$n_{layers}$ 为编码器层数，$n_{heads}$ 为注意力头数量。同时，我们初始化基线模型 $B_{model}$ 用于估计值函数，支持Actor-Critic算法的训练。
 
-参考了Bresson\cite{bresson2021transformer}等人的方法。编码器结构如图3所示，由$L$层堆叠而成，采取BatchNorm归一化，公式可表示为：
+\subsection{编码器结构}
+
+参考了Bresson\cite{bresson2021transformer}等人的方法，编码器由 $n_{layers}$ 层Transformer层堆叠而成，采用BatchNorm归一化，表示为：
 
 \begin{equation}
-	h^{l=0} = h^{in} W^{in} \in \mathbb{R}^{n \times d}
+	h^{l=0} = h^{in} W^{in} \in \mathbb{R}^{n \times d_e}
 	\label{eq:13a}
 \end{equation}
 
@@ -460,28 +431,23 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 	\label{eq:13c}
 \end{equation}
 
-\subsection{解码器}
+编码器同时处理静态环境特征和动态无人机状态特征，生成用于解码器的上下文表示。
 
-自回归解码器的作用是循环解码以逐步实现解的构造。首先输入静态、动态编码器的输出作为输入，通过注意力机制选择出第一个结点，然后利用循环神经网络学习已选择的结点信息更新解嵌入，再通过注意力机制选择下一个待修复区域及修复面积，以此类推直至所有结点[14]。
+\subsection{解码器结构}
 
-具体而言，解码器的输入有：静态特征、动态特征、访问的上一个结点的隐藏特征。开始时上一个结点的隐藏特征初始化为全零向量，之后每次决策出下一个待修复区域及修复面积后，对解码器输入的动态元素及掩码进行更新以剔除不可行结点及修复方案。
-
-
+自回归解码器通过循环解码逐步构造解决方案。解码器接收编码器的输出，其工作流程为：
 
 \begin{equation}
 	rm^{i}, h_{gru}^{i} =
 	\left\{
 	\begin{array}{ll}
-		GRU(h_{0}^{i}, 0)               & i = 0 \\
-		GRU(h_{i-1}^{i}, h_{gru}^{i-1}) & i > 0
+		\text{GRU}(h_{0}^{i}, 0)               & i = 0 \\
+		\text{GRU}(h_{i-1}^{i}, h_{gru}^{i-1}) & i > 0,
 	\end{array}
 	\right.
 	\label{eq:14}
 \end{equation}
-
-其中，$0$为全零向量，$GRU$(gated recurrent unit)为循环神经网络更新解嵌入，$h_i^{i-1}$为上一轮选择结点的结点嵌入。
-
-自回归解码器接收上述输入后，先对所有输入做一次自注意力以进一步聚集所有结点的嵌入，而后通过两次线性聚合层得到当前修复地图的全局信息上下文并将其与当前局部信息相结合，以得出各个到达待修复区域$i$修复相应大小区域$a_i$的概率$p(i|s_i)$(二维)。同时，我们需要将解码器输出的概率进行一次掩码操作以过滤掉所有之前以到达过的待修复区域及各修复区域中不合法的修复面积方案。
+其中，$0$为全零向量，GRU(gated recurrent unit)为循环神经网络更新解嵌入。解码器通过注意力机制选择下一个待修复区域及修复面积：
 
 \begin{equation}
 	h_{p}^{l=i} = \text{Attention}(\text{static}, \text{dynamic}^{i}, mn^{i})
@@ -502,87 +468,15 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 	\label{eq:15c}
 \end{equation}
 
-其中，$W_q,W_k\in\mathbb{R}^{d\times d}$为可学习参数矩阵。我们通过掩码设置$\mu_i=-\infty$以避免重复选择结点，每次选择对应结点(即待修复区域)及修复面积后，对解码器输入的动态元素及掩码进行更新以剔除不可行结点及修复方案。
-
-\section{模型训练}
-对于建立的单无人机修复模型，我们采用强化学习Actor-Critic算法\cite{sutton1999policy}进行梯度更新。模型中作为主体的Actor网络用于近似草原修复过程中的策略概率函数p(π|s)，记其网络参数为θ，则网络的待优化目标可表示为：
+在模型前向传播中，如算法\ref{alg:grp_batch_training}第4行所示，解码器生成成本值 $C$ 和对数概率 $\log p$：
 
 \begin{equation}
-	J(\theta \mid s) = \mathbb{E}_{t \sim p_{\theta(\cdot | V)}} R(\pi \mid s)
-	\label{eq:16}
+	(C, \log p) \leftarrow M_{\theta}(x),
 \end{equation}
+其中 $C$ 表示当前策略的成本（负奖励），$\log p$ 表示选择各动作的对数概率。
 
-我们参考了Williams等的方法\cite{williams1992simple}，将上述策略梯度函数表示为：
-
-\begin{align}
-	\nabla_{\theta}J(\theta \mid s)
-	 & = \mathbb{E}_{t \sim p_{\theta}(\cdot \mid s)} \left[(R(\pi \mid s) - b(s)) \nabla_{\theta} \ln p_{\theta}(\pi \mid s)\right] \label{eq:17a} \\
-	 & = \mathbb{E}_{t \sim p_{\theta}(\cdot \mid s)} \left[A(\pi \mid s) \nabla_{\theta} \ln p_{\theta}(\pi \mid s)\right] \label{eq:17b}
-\end{align}
-其中，$R(\pi|s)$代表草原修复过程中计算得的奖励值；动作概率$p_\theta(\pi|s)$代表Actor网络在草原修复过程中每次自回归时选择修复区域及修复面积大小的概率；$b(s)$为REINFORCE算法[17]中的基线函数，即Critic网络输出的估计值；$A(\pi|s)=R(\pi|s)-b(s)$为优势函数，表示在状态$s$下策略$\pi$的优劣，乘以$\nabla_\theta\ln p_\theta(\pi|s)$，表示若优势函数$A(\pi|s)$为正数则增大概率，若为负数则减小概率。
-
-若设训练的图批次大小为$B$，每张图中点集大小为$L$，每次训练都按照策略函数$p_\theta(\pi|s)$从各图中抽取一组可能的解，则Actor网络梯度可近似为：
-
-\begin{equation}
-	\nabla_{\theta} J(\theta \mid s) \approx \frac{1}{B} \sum_{i=1}^{B} \sum_{j=1}^{L} \left[ A(\pi_j \mid s_j) \nabla_{\theta} \ln p_{\theta}(\pi_j \mid s_j) \right]
-	\label{eq:18}
-\end{equation}
-
-将Critic网络参数设为$\theta_c$,则Critic网络优化目标可近似为:
-
-\begin{equation}
-	L(s) = \frac{1}{B} \sum_{i=1}^{B} \left( R(V_i) - R_w(V_i) \right)^2
-	\label{eq:19}
-\end{equation}
-
-模型的具体训练过程如下算法$3$所示。算法通过在每个$epoch$内随机生成实例用于对网络进行训练与验证。通过指针网络的自回归性质构造性地得到当前策略下实例的解，并将其作为下一次网络的输入直至得到完整的解。根据公式计算得到相应的优势函数值后，通过$Adam$（$adaptive$ $moment$ $estimation$）优化器\cite{kingma2014adam}对$Actor$-$Critic$网络进行参数更新，其中基线函数$b(s)$为$Critic$网络对当前实例估计的奖励值。
-
-% %\vspace{-0.10in}
-% \begin{algorithm}[h]
-% 	\begin{algorithmic}[1]
-% 		\caption{Actor-Critic 网络训练算法} \label{alg:actor_critic}
-% 		\Require Actor-Critic 网络所有参数 $\theta_c$、$\theta_e$，学习率 $\alpha$，训练回合数 $N_{epoch}$，训练集大小 $B_T$，验证集大小 $B_V$，训练批次 $B$，训练序列长度 $L$，训练序列面积上限 $area_{max}$ 及 $area_{min}$
-% 		\Ensure 收敛的神经网络参数 $\theta_c$、$\theta_e$
-
-% 		\State $i_{epoch} \leftarrow 0$
-% 		\While{$i_{epoch} < N_{epoch}$}
-% 		\State 随机生成规模为 $B_T$ 的训练集 $train\_set$ 及规模为 $B_V$ 的验证集 $valid\_set$，将训练集分割为 $\lceil \frac{B_T}{B} \rceil$ 份
-% 		\State $t_e \leftarrow 0$
-% 		\For{$t_e$ to $\lceil \frac{B_T}{B} \rceil$}
-% 		\State 取训练集中第 $t_e$ 份作为 $T_{data}$
-% 		\State $i_{steps} \leftarrow 0$
-% 		\State Initial(mask) \Comment{初始化 mask 掩码}
-% 		\State Initial(resolution) \Comment{初始化解的存储空间}
-% 		\While{$i_{steps} < L$}
-% 		\State $(ptr, area) \leftarrow \text{Actor}(T_{data})$ \Comment{Actor 网络输出部分解}
-% 		\While{Mask(ptr, area, mask)}
-% 		\State $(ptr, area) \leftarrow \text{Actor}(T_{data})$ \Comment{屏蔽求解过程中非法的解}
-% 		\EndWhile
-% 		\State Update(mask)
-% 		\State Update(resolution, $(ptr, area)$)
-% 		\State $i_{steps} \leftarrow i_{steps} + 1$
-% 		\EndWhile
-% 		\State $R \leftarrow \text{Reward}(resolution, T_{data})$ \Comment{根据公式计算当前策略获得的奖励值}
-% 		\State $b \leftarrow \text{Critic}(T_{data})$ \Comment{根据公式计算 Critic 网络的基线估计值}
-% 		\State $A \leftarrow \|R - b\|_2^2$ \Comment{计算优势函数值}
-% 		\State $\nabla\theta \leftarrow \text{Loss}(resolution, A)$ \Comment{计算网络梯度}
-% 		\State $\theta, \theta_e \leftarrow \text{Adam}(\theta, \theta_e, \alpha, \nabla\theta)$
-% 		\EndFor
-
-% 		\If{$i_{epoch} == 0$}
-% 		\State $\theta^* \leftarrow \theta$
-% 		\Else
-% 		\If{$\text{Reward}(\text{Valid}(\theta, valid\_set)) > \text{Reward}(\text{Valid}(\theta^*, valid\_set))$}
-% 		\State $\theta^* \leftarrow \theta$
-% 		\EndIf
-% 		\EndIf
-% 		\State $i_{epoch} \leftarrow i_{epoch} + 1$
-% 		\EndWhile
-% 	\end{algorithmic}
-% \end{algorithm}
-
-
-\begin{algorithm}[h]
+\subsection{训练流程}
+\begin{algorithm}[H]
 	\begin{algorithmic}[1]
 		\caption{Main Training Procedure for GRP}
 		\label{alg:grp_main_training}
@@ -592,32 +486,31 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 		\State $B_{model} \leftarrow \text{InitializeBaseline}()$
 		\State $\mathcal{O} \leftarrow \text{Adam}(\{M_{\theta}, B_{model}\}, \alpha)$
 		\State $\mathcal{S} \leftarrow \text{LRScheduler}(\alpha)$
-		\State $\mathcal{D}_{val} \leftarrow \{x_i\}_{i=1}^{val\_size}$ \Comment{Generate validation dataset}
-		\State $R_{best} \leftarrow -\infty$ \Comment{Best reward tracker}
+		\State $\mathcal{D}_{val} \leftarrow \{x_i\}_{i=1}^{val\_size}$ \Comment{生成验证数据集}
+		\State $R_{best} \leftarrow -\infty$ \Comment{最佳奖励追踪器}
 		\For{$e = 0$ \textbf{to} $N_{epoch} - 1$}
-		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{Generate training instances}
+		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{生成训练实例}
 		\State $\{\mathcal{B}_j\}_{j=1}^{n_B} \leftarrow \text{BatchSplit}(\mathcal{D}_{train}, B)$
-		\State $M_{\theta} \leftarrow M_{\theta}.\text{train}()$ \Comment{Set model to training mode}
+		\State $M_{\theta} \leftarrow M_{\theta}.\text{train}()$ \Comment{设置模型为训练模式}
 
 		\For{$\mathcal{B} \in \{\mathcal{B}_j\}_{j=1}^{n_B}$}
-		\State $\theta \leftarrow \text{TrainBatch}(M_{\theta}, B_{model}, \mathcal{O}, \mathcal{B})$ \Comment{Algorithm 2}
+		\State $\theta \leftarrow \text{TrainBatch}(M_{\theta}, B_{model}, \mathcal{O}, \mathcal{B})$ \Comment{算法2}
 		\EndFor
 
-		\State \textcolor{blue}{// Validation phase}
 		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"greedy"}$
 		\State $M_{\theta} \leftarrow M_{\theta}.\text{eval}()$
 		\State $C_{val} \leftarrow \text{Evaluate}(M_{\theta}, \mathcal{D}_{val})$
-		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{Average reward}
+		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{平均奖励}
 
 		\State $B_{model} \leftarrow B_{model}.\text{epoch\_callback}(M_{\theta}, e)$
-		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{Update learning rate}
+		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{更新学习率}
 
 		\If{$e \bmod k_{save} = 0 \lor e = N_{epoch} - 1$}
 		\State $\text{SaveCheckpoint}(\theta, \mathcal{O}, B_{model}, e)$
 		\EndIf
 
 		\If{$e = 0 \lor \bar{r} > R_{best}$}
-		\State $\theta^* \leftarrow \theta$ \Comment{Save best model parameters}
+		\State $\theta^* \leftarrow \theta$ \Comment{保存最佳模型参数}
 		\State $R_{best} \leftarrow \bar{r}$
 		\EndIf
 		\EndFor
@@ -625,7 +518,7 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 	\end{algorithmic}
 \end{algorithm}
 
-\begin{algorithm}[h]
+\begin{algorithm}[H]
 	\begin{algorithmic}[1]
 		\caption{TrainBatch Subroutine for GRP}
 		\label{alg:grp_batch_training}
@@ -635,55 +528,183 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 		\State $(x, b_v) \leftarrow B_{model}.\text{unwrap\_batch}(\mathcal{B})$
 		\State $x \leftarrow x.\text{to}(\text{device})$, $b_v \leftarrow b_v.\text{to}(\text{device})$ if $b_v \neq \text{None}$ else $\text{None}$
 
-		\State \textcolor{blue}{// Forward pass}
-		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C$: costs, $\log p$: log-probabilities}
-		\State $r \leftarrow -C$ \Comment{$r \in \mathbb{R}^{B}$: rewards}
+		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C$：成本，$\log p$：对数概率}
+		\State $r \leftarrow -C$ \Comment{$r \in \mathbb{R}^{B}$：奖励}
 
-		\State \textcolor{blue}{// Extract GRP-specific metrics}
 		\If{$\text{problem\_type} = \text{"grp"}$}
 		\State $A_{repair} \leftarrow \begin{cases}
 				x.\text{total\_repair\_area} & \text{if exists}                 \\
-				-C / \alpha_{r}              & \text{otherwise (approximation)}
+				-C / \alpha_{r}              & \text{否则（近似值）}
 			\end{cases}$
 		\EndIf
 
-		\State \textcolor{blue}{// Evaluate baseline value}
 		\State $(b_v, \mathcal{L}_{b}) \leftarrow \begin{cases}
 				B_{model}.\text{eval}(x, C) & \text{if } b_v = \text{None} \\
 				(b_v, 0)                    & \text{otherwise}
 			\end{cases}$
 
-		\State \textcolor{blue}{// Compute REINFORCE loss}
 		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$
-		\State $\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}$ \Comment{Total loss}
+		\State $\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}$ \Comment{总损失}
 
-		\State \textcolor{blue}{// Backpropagation and parameter update}
-		\State $\nabla\theta \leftarrow \mathbf{0}$ \Comment{Zero gradients}
-		\State $\nabla\theta \leftarrow \nabla_{\theta}\mathcal{L}$ \Comment{Compute gradients}
-		\State $\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})$ \Comment{Clip gradient norm}
-		\State $\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)$ \Comment{Update parameters}
+		\State $\nabla\theta \leftarrow \mathbf{0}$ \Comment{梯度清零}
+		\State $\nabla\theta \leftarrow \nabla_{\theta}\mathcal{L}$ \Comment{计算梯度}
+		\State $\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})$ \Comment{裁剪梯度范数}
+		\State $\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)$ \Comment{更新参数}
 		\State \Return $\theta$
 	\end{algorithmic}
 \end{algorithm}
 
+我们采用算法\ref{alg:grp_main_training}和\ref{alg:grp_batch_training}所示的训练流程，将Actor-Critic方法与梯度下降相结合。训练过程中使用Adam优化器，并结合学习率调度器动态调整学习率：
+
+\begin{equation}
+	\mathcal{O} \leftarrow \text{Adam}(\{M_{\theta}, B_{model}\}, \alpha)
+\end{equation}
+
+每个训练周期中，我们生成训练和验证数据集，并进行批次训练。在算法\ref{alg:grp_batch_training}中，策略梯度损失计算如下：
+
+\begin{equation}
+	\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i,
+\end{equation}
+其中，$b_{v,i}$ 为基线模型对状态价值的估计，$(C_i - b_{v,i})$ 构成优势函数，用于指导策略更新方向。总损失函数包括策略梯度损失和基线损失：
+
+\begin{equation}
+	\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}
+\end{equation}
+
+参数更新通过梯度下降完成，并应用梯度裁剪以确保训练稳定性：
+
+\begin{equation}
+	\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})
+\end{equation}
+
+\begin{equation}
+	\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)
+\end{equation}
+
+训练过程中，我们保存性能最佳的模型参数 $\theta^*$，以便后续使用。模型评估采用贪婪解码策略，计算验证集上的平均奖励作为评估指标：
+
+\begin{equation}
+	\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}
+\end{equation}
+
+通过这种训练流程，模型能够逐步学习优化多无人机草原修复的策略，实现修复面积最大化的目标。
+
+\section{本章小结}
+
+本章详细介绍了基于深度强化学习的草原修复面积最大化方法。我们首先将多无人机草原修复问题建模为马尔可夫决策过程，定义了状态空间、动作空间、状态转移函数、策略函数和奖励函数。特别地，设计了兼顾能量约束与退化程度的奖励函数，使模型能够优先修复更为严重的区域，同时确保满足能源限制。
+
+基于马尔可夫决策过程框架，我们构建了一种基于Transformer编码器与指针网络解码器的神经网络架构。该架构充分利用Transformer的注意力机制提取静态环境特征和动态无人机状态特征，并通过自回归解码器动态构建无人机修复方案。在模型训练方面，采用Actor-Critic算法结合梯度下降方法，设计了有效的批次训练流程和参数更新策略，使模型能够逐步学习优化复杂的修复决策。
+
+神经网络模型的关键创新在于其能够自适应处理动态变化的环境状态和无人机能源约束，无需人为设计启发式规则，通过端到端的学习实现复杂决策的优化。通过将无人机播种后的重量变化与后续飞行能耗的关系纳入考虑，模型能够更精确地评估不同修复策略的能源消耗，从而最大化总修复面积。
+
+本章提出的强化学习方法为解决多无人机草原修复这一复杂组合优化问题提供了一种高效、灵活的解决方案，为后续章节中的多无人机协同调度奠定了理论和算法基础。
+
 \chapter{多无人机协同调度算法}
 
-假设各无人机每轮巡航所携带的种子数量相同，在修复过程中无人机自身重量因种子播撒而减轻，因而导致其能飞行能耗变化，无人机已知自身修复地图的详细信息(退化区域的数量及区域位置、退化程度及待修复面积等退化区域信息)，距离计算采用二维平面内的欧式距离公式。
+\section{协同修复问题描述}
 
-本文考虑了一种多无人机协同调度算法，该算法通过单个无人机的局部信息和中心汇总的全局信息来实现多个无人机之间的协同。在算法的输入部分，除了对参数进行设定外，本文还需要为每架无人机初始化修复地图$M$及记录无人机信息的状态集$S$。$M$中涵盖了每架无人机的待修复任务点，每个任务点包含有任务点编号、坐标的位置、退化程度以及可修复面积；$S$中则记录无人机当前的位置、剩余能量、已访问序列和已修复面积。同时，为了模拟无人机与地面中心交互的先后顺序，我们引入信号量这一机制以确保无人机与地面中心交流的通畅，该信号量定义为无人机在当前修复地图下最先完成首个待修复区域目标的时间，故其与无人机前往下一个区域的飞行时间与修复时间直接相关。
+在多无人机协同草原修复问题中，假设各无人机每轮巡航所携带的种子数量相同，表示为：
 
-而在算法的输出部分，算法结束后应由中心对无人机状态集合$S$进行汇总，输出各无人机的访问序列、修复面积及剩余能量，以便对算法进行分析。
+\begin{equation}
+	Q_u = Q, \quad \forall u \in U,
+\end{equation}
+其中，$U$ 表示无人机集合，$Q$ 为初始携带种子重量。在修复过程中，无人机自身重量因种子播撒而减轻，导致飞行能耗动态变化。每架无人机已知自身修复地图的详细信息，包括退化区域数量、位置坐标、退化程度及待修复面积等信息。任意两点间距离采用二维平面内的欧式距离计算：
 
-简而言之，该设计的多无人机协同算法主要思想是动态调整无人机修复地图，通过适应度函数 $\Theta(uav,M_u)$（如最短路径函数等）在修复过程中结合无人机自身位置等信息再分配地图以期望得到一个更好的结果。
+\begin{equation}
+	d(v_i, v_j) = \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}
+\end{equation}
 
-无人机从地面控制中心出发，其初始修复地图可按照K-means等聚类方法划分，首先前往修复地图中适应度函数最小（如距离）的结点。随后，各无人机以当前位置为出发点，按照修复地图进行第一次最优路径规划；并计算该方案下，去除完成本路径及返航的飞行能耗、在剩余各点(包含当前点)进行信息收集的能耗及修复一单位面积所需要的能耗后，本机修复的面积。此处要特别说明，无人机在路径规划中通过循环确保得出的解一定符合能力约束要求，即按照某一路径规划方案，依次访问每个点，并完成信息采集与至少1单位面积的修复工作后，仍然剩余的能量大于0。
+\section{协同调度机制}
 
-无人机记录本次的规划方案，并将当前的修复地图、自身位置、修复面积等信息上报中心。中心汇总各无人机的修复地图得到全局修复地图，剔除其中每个无人机当前所在点；中心依次遍历地图中各点，根据已知信息，结合适应度函数 $\Theta(uav,M_u)$ 寻找与其最适合的无人机，并将该点加入对应无人机的新地图中。完成地图更新后，中心将新地图下发给各无人机。信号量最大的无人机以当前位置为出发点，按照调整过的新修复地图进行第二次最优路径规划，并计算该方案下的修复面积。对本次的规划方案做好记录后，并将第二次规划中的修复面积等信息上报中心。中心汇总上报信息，计算第二次的多机体系总修复面积；中心将两次修复面积进行比较，若第一次大于等于第二次，则新地图作废，反之，用新地图替代旧地图；中心将最终决策下达各无人机。无人机根据中心决策判断是否更新地图，并选择地图对应的剩余能量和规划方案。信号量最大的无人机在当前点完成信息采集和面积修复工作后，按照规划方案前往下一个点，并将当前点加入已访问序列，同时更新自身信号量。
+本文提出的多无人机协同调度算法通过局部信息与全局信息相结合的方式实现协同。对于每架无人机，我们定义：
 
-重复上述决策过程，当某架无人机的修复地图为空时，该无人机返回中心，并在此后不再参与无人机群同中心的交互；当全局修复地图为空时(全部无人机返航)，该算法结束。
+\begin{equation}
+	M_u = \{v_1, v_2, ..., v_n\}, \quad \forall u \in U,
+\end{equation}
+其中，$M_u$ 为无人机 $u$ 的修复地图，包含 $n$ 个待修复区域。每个区域 $v_i$ 表示为四元组：
+
+\begin{equation}
+	v_i = (id_i, (x_i, y_i), l_i, a_i), \quad i \in \{1,2,...,n\},
+\end{equation}
+其中，$id_i$ 为区域编号，$(x_i, y_i)$ 为坐标位置，$l_i$ 为退化程度，$a_i$ 为可修复面积。
+
+无人机状态集 $S_u$ 定义为：
+
+\begin{equation}
+	S_u = (p_u, E_u^{rem}, V_u^{vis}, A_u^{rep}), \quad \forall u \in U,
+\end{equation}
+其中，$p_u$ 表示无人机当前位置，$E_u^{rem}$ 为剩余能量，$V_u^{vis}$ 为已访问序列，$A_u^{rep}$ 为已修复面积。
+
+为模拟无人机与地面中心交互顺序，引入信号量 $P_u$ 表示无人机完成首个待修复区域的时间：
+
+\begin{equation}
+	P_u = \frac{d(p_u, v_i^{next})}{v} + \frac{a_i^{rep}}{r},
+\end{equation}
+其中，$v$ 为无人机飞行速度，$r$ 为单位时间内可修复面积，$v_i^{next}$ 为下一个待修复区域。
+
+\section{动态地图更新}
+
+本文设计的多无人机协同算法核心在于动态调整修复地图，通过适应度函数 $\Theta(u,v_i)$ 评估无人机 $u$ 与待修复区域 $v_i$ 的匹配度：
+
+\begin{equation}
+	\Theta(u,v_i) = \alpha \cdot d(p_u, v_i) + \beta \cdot \frac{1}{l_i} + \gamma \cdot \frac{1}{a_i},
+\end{equation}
+其中，$\alpha$、$\beta$、$\gamma$ 为权重系数，分别调节距离、退化程度和修复面积对适应度的影响。
+
+多无人机协同调度过程可分为以下几个关键步骤：
+
+1. 初始地图分配：使用 K-means 等聚类方法将待修复区域分配给各无人机，形成初始修复地图 $M_u^0$。
+
+2. 第一次路径规划：各无人机以当前位置为起点，计算最优路径及修复面积：
+
+\begin{equation}
+	(P_u^1, A_u^1) = \arg\max_{P \in \mathcal{P}(M_u)} \sum_{v_i \in P} a_i^{rep},
+\end{equation}
+其中，$\mathcal{P}(M_u)$ 表示满足能量约束的所有可行路径集合，$a_i^{rep}$ 为在点 $v_i$ 的修复面积。
+
+3. 地图动态更新：地面中心根据各无人机当前状态，更新全局修复地图：
+
+\begin{equation}
+	M_u^{tmp} = \{v_i | v_i \in M^{global}, u = \arg\min_{u' \in U} \Theta(u',v_i)\}
+\end{equation}
+
+4. 第二次路径规划：无人机基于更新后的地图再次规划路径，并计算修复面积 $A_u^2$。
+
+5. 地图选择决策：比较两次规划的总修复面积，选择更优方案：
+
+\begin{equation}
+	M_u =
+	\begin{cases}
+		M_u^{tmp}, & \text{if } \sum_{u \in U} A_u^2 \geq \sum_{u \in U} A_u^1 \\
+		M_u, & \text{otherwise}
+	\end{cases}
+\end{equation}
+
+\section{决策与执行流程}
+
+无人机根据信号量优先级依次执行决策。对于信号量最小的无人机 $u^*$：
+
+\begin{equation}
+	u^* = \arg\min_{u \in U} P_u
+\end{equation}
+
+该无人机在当前位置完成修复任务后，前往下一个待修复区域：
+
+\begin{equation}
+	v_i^{next} = \arg\min_{v_i \in M_{u^*}} \Theta(u^*,v_i)
+\end{equation}
+
+同时更新状态信息：
+
+\begin{equation}
+	S_{u^*} = (v_i^{next}, E_{u^*}^{rem} - E_{flight} - E_{repair}, V_{u^*}^{vis} \cup \{v_i^{curr}\}, A_{u^*}^{rep} + a_i^{rep}),
+\end{equation}
+其中，$E_{flight}$ 为飞行能耗，$E_{repair}$ 为修复能耗，$v_i^{curr}$ 为当前位置。
+
+当某架无人机的修复地图为空时，该无人机返回地面中心；当全局修复地图为空时，算法结束。完整的多无人机协同调度算法如算法 \ref{alg:multi_uav_scheduling} 所示。
 
 \begin{algorithm}[H]
-	\caption{多元人机协同调度算法}
+	\caption{多无人机协同调度算法}
 	\label{alg:multi_uav_scheduling}
 	\begin{algorithmic}[1]
 		\Require 参数序列 $Parms$，无人机修复地图集合 $M_u$，无人机状态集合 $S_u$
@@ -715,7 +736,15 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 		\State $\text{FlyToPoint}(P_u^0)$ \Comment{无人机返回起点}
 	\end{algorithmic}
 \end{algorithm}
+\section{本章小结}
 
+本章提出了一种面向多无人机协同草原修复的调度算法，通过地面信息中心和无人机间的动态交互实现高效协同。我们首先对协同修复问题进行了形式化描述，将每架无人机视为一个独立决策主体，同时通过共享信息实现群体协同。其次，设计了基于适应度函数的动态地图分配机制，根据无人机当前位置、区域退化程度和可修复面积等多维因素优化资源分配。
+
+协同调度的核心创新在于采用了"两次规划一次选择"的决策模式：无人机首先基于当前地图进行路径规划，然后通过地面中心交换信息并更新全局修复地图，再次规划路径后比较两次规划结果，选择修复面积更大的方案执行。这种机制使得系统能够根据实时状态动态调整任务分配，平衡了局部优化与全局效益。
+
+通过信号量机制控制无人机决策优先级，算法确保了多无人机系统的有序运行，避免了资源冲突和重复修复。同时，适应度函数的设计兼顾了距离、退化程度和修复面积三个关键因素，使得任务分配更加合理，提高了整体修复效率。
+
+本章提出的多无人机协同调度算法有效解决了草原修复中的复杂任务分配和资源优化问题，为第五章的实验验证奠定了理论和算法基础。该方法不仅提升了修复面积，还优化了能源利用效率，展现出在大规模草原生态修复任务中的应用潜力。
 
 \chapter{实验与分析}
 本部分我们展示了一些仿真实验的具体配置与结果。
@@ -797,14 +826,14 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/actor_loss_curve.pdf}
+	\includesvg[width=1\textwidth]{figures/actor_loss_curve.svg}
 	\caption{深度强化学习训练过程中的损失函数变化}
 	\label{fig:training_loss_curve}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/avg_repair_area_curve.pdf}
+	\includesvg[width=1\textwidth]{figures/avg_repair_area_curve.svg}
 	\caption{深度强化学习训练过程中的修复面积变化}
 	\label{fig:training_reward_curve}
 \end{figure}
@@ -812,7 +841,7 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 如图\ref{fig:training_loss_curve}所示，该图展示了深度强化学习模型在训练过程中的损失函数随迭代轮数的变化趋势，可以看出损失值整体呈下降趋势，表明模型逐步收敛。从曲线可观察到，当训练步数达到约500000步后，损失函数趋于稳定，波动范围显著减小，表明模型已基本收敛。图\ref{fig:training_reward_curve}展示了训练过程中平均修复面积的变化曲线，随着训练的进行，平均修复面积逐步提升，说明模型的决策能力不断增强，能够获得更优的修复方案。同样，在约500000步后，修复面积也达到相对稳定状态，进一步证实了模型的有效收敛。这两个图共同验证了所提出深度强化学习方法在多无人机草原修复任务中的有效性和收敛性。
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.99\textwidth]{figures/RL_combined_uav_routes.pdf}
+	\includesvg[width=0.99\textwidth]{figures/RL_combined_uav_routes.svg}
 	\caption{基于深度强化学习的多无人机草原修复路径规划}
 	\label{fig:RL_combined_uav_routes}
 \end{figure}
@@ -821,7 +850,7 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.99\textwidth]{figures/ILS_combined_uav_routes.pdf}
+	\includesvg[width=0.99\textwidth]{figures/ILS_combined_uav_routes.svg}
 	\caption{基于迭代局部搜索的多无人机草原修复路径规划}
 	\label{fig:ILS_combined_uav_routes}
 \end{figure}
@@ -831,14 +860,14 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 通过对比两种方法的路径规划结果可以发现，深度强化学习方法在多无人机协同草原修复任务中表现出更强的自适应能力和优化效果，能够更好地协调任务分配和路径规划，提高修复效率和能量利用率。表\ref{tab:combined_comparison}进一步量化了两种方法在路径长度和修复面积上的性能差异。
 \begin{table}[H]
 	\centering
-	\caption{路径长度与修复面积对比（SA 与 DRL）}
+	\caption{路径长度与修复面积对比（CHAPBILM 与 DRL）}
 	\small
 	\setlength{\tabcolsep}{3.5pt}
 	\begin{tabular}{cccc ccc ccc}
 		\toprule
 		区域数                 & 草原边长                 & 无人机数 &  & \multicolumn{3}{c}{路径长度} & \multicolumn{3}{c}{修复面积}                                       \\
 		\cmidrule(lr){5-7} \cmidrule(lr){8-10}
-		                    &                      &      &  & DRL                      & SA                       & Gap(\%) & DRL    & SA     & Gap(\%) \\
+		                    &                      &      &  & DRL                      & CHAPBILM                       & Gap(\%) & DRL    & CHAPBILM     & Gap(\%) \\
 		\midrule
 		\multirow{9}{*}{60} & \multirow{3}{*}{500} & 4    &  & 9396.35                  & 12648.21                 & -25.68  & 267.00 & 194.00 & 37.63   \\
 		                    &                      & 6    &  & 21348.69                 & 19110.48                 & 11.71   & 258.00 & 205.00 & 25.85   \\
@@ -872,7 +901,13 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 
 % Required packages: \usepackage{booktabs}, \usepackage{float}, \usepackage{multirow}
 
+\section{本章小结}
 
+本章通过仿真实验验证了所提出的基于深度强化学习和多无人机协同调度的草原修复方法的有效性。首先，我们详细介绍了实验硬件与软件配置、实例设置以及各项参数，确保实验结果的可重复性和可靠性。在算法对比中，我们选择了先进的协同启发式与概率模型学习算法(CHAPBILM)作为基准，进行多维度性能对比。
+
+实验结果表明，深度强化学习方法能够有效地学习解决多无人机草原修复问题，从训练损失曲线和修复面积变化曲线可以清晰地看出模型的收敛过程。通过可视化对比分析，我们发现基于深度强化学习的路径规划方案明显优于传统迭代局部搜索方法，表现为更少的路径交叉、更合理的区域分配和更均衡的任务负载。
+
+定量分析结果显示，深度强化学习方法在多数测试场景下均优于对比算法。在路径长度方面，可实现最高40\%的路径缩短；在修复面积方面，提升幅度普遍在15\%以上，最高可达56\%。特别是在无人机数量较少或区域分布密集时，深度强化学习方法表现出更强的自适应能力和优化效果。综合实验结果证明，本文提出的方法在路径优化和面积最大化两个方面均具有显著优势，为草原生态修复提供了高效可行的技术方案。
 \chapter{总结与展望}
 
 \section{总结}
@@ -883,335 +918,6 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 \section{展望}
 在仿真结果与分析部分，由于项目时间限制，其中仍有众多方面可以值得扩展研究。例如：在给定的参数范围内，选择更多的启发式算法作为对比算法，从而能对控制算法的性能有更公正的评估。或在本文提出的控制算法框架下，通过控制变量法改变草场规模、无人机初始能量 $E_{max}$ 等参数多次训练神经网络，而后通过大量的随机模拟取最佳、最差及平均等指标，来探讨算法的稳定性。
 
-% \label{sub:国际三线表格}
-% \begin{table}[H]
-% 	\centering
-% 	\caption{二硫化钼纳米管参数}
-% 	\begin{tabular}{cccccc} % 控制表格的格式，可以是l,c,r
-% 		\toprule
-% 		参数 & m  & n  & \tabincell{c}{太长了                     \\换行一下\\原子数}  & 内径 & 长度\\
-% 		\midrule
-% 		数值 & 15 & 15 & 2880              & 2.3014nm & 9.95nm \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\label{tbl_mos2_nanotube}
-% \end{table}
-
-% 这个注意，有多少列，后面就要有多少个c \footnote{否则会报错：Extra alignment tab has been changed to cr.有什么报错百度一下一般就找到了},这个c表示这一列居中(center)，靠左的话：l，右：r;
-
-% 那个label后面的名字自己取，但是不能有重复，是为了引用，比如这样，表格\ref{tbl_mos2_nanotube}，方程、图片也是这样引用的，好处是，中间加一个表格导致这个表格的序号变了也没事，你不用再去修改其他地方的引用
-
-% \begin{lstlisting}[language = tex]
-% \begin{table}[H]
-%     \centering
-%     \caption{二硫化钼纳米管参数}
-%     \begin{tabular}{cccccc} % 控制表格的格式，可以是l,c,r
-%     \toprule
-%     参数& m & n & 原子数  & 内径 & 长度\\
-%     \midrule
-%     数值 & 15 & 15  & 2880 & 2.3014nm & 9.95nm \\
-%     \bottomrule
-%     \end{tabular}
-%     \label{tbl_mos2_nanotube}
-% \end{table}
-% \end{lstlisting}
-
-% \subsection{换页表格}
-
-% 我是真的没想到有的人表格居然这么长，竟然能有三页。。。。
-
-
-% \begin{longtable}{cccccc} % 控制表格的格式，可以是l,c,r
-% 	\caption{二硫化钼纳米管参数}\label{tbl_mos2_nanotube2} \\
-% 	\toprule
-% 	参数   & m  & n  & 原子数  & 内径       & 长度         \\
-% 	\midrule
-% 	数值   & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值1  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值2  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值3  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值4  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值5  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值6  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值7  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值8  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值9  & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值10 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值11 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值12 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值13 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值14 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值15 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值16 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值17 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值18 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值19 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	数值20 & 15 & 15 & 2880 & 2.3014nm & 9.95nm     \\
-% 	\bottomrule
-% \end{longtable}
-
-
-
-% % subsection 国际三线表格 (end)
-
-
-% \subsection{字体}
-% \label{sub:字体}
-
-% \begin{table}[H]
-% 	\centering
-% 	\caption{字体}
-% 	\begin{tabular}{ccccccc} % 控制表格的格式
-% 		\toprule
-% 		名称 & 加粗           & 倾斜           & 宋体           & 仿宋             & 黑体          \\
-% 		\midrule
-% 		显示 & \textbf{兰朵儿} & \textit{兰朵儿} & \songti{兰朵儿} & \fangsong{兰朵儿} & \heiti{兰朵儿} \\
-% 		显示 & \textbf{ldr} & \textit{ldr} & \songti{ldr} & \fangsong{ldr} & \heiti{ldr} \\
-% 		\bottomrule
-% 	\end{tabular}
-% 	\label{tbl_font}
-% \end{table}
-% 发现没，中文斜体没有效果的，你可以自定义，这个自己百度吧；中文加粗已经解决了该问题，注意这个文件第四行，开启伪加粗（2020.5.18），可以用bfserie或者textbf但是注意，win上bfserie效果好一些，mac上textbf好一些
-
-% 关于英文新罗马字体的说明：
-% 在windows上，引用mathptmx包，正文、公式中的英文就会变成新罗马（Times New Roman）字体，但是mac系统上，没有任何效果，还是默认的罗马字体（和Times New Roman很相似，QR两个单词区分明显），所以我在2.1.3以及之后的模板中加入了以下两个命令：
-
-% \begin{lstlisting}[language = tex]
-% \RequirePackage{mathptmx} %加入这条命令会导致花体，mathcal和mathscr完全相同，正常mathcal会花的轻一些。
-% \RequirePackage{fontspec} %这一条在windows可有可无，效果相同，但是mac上必须。
-% \end{lstlisting}
-
-% 但是mathptmx会导致花体，mathcal和mathscr完全相同，正常mathcal会花的轻一些。
-
-
-% % subsection 常用的 (end)
-
-
-
-
-% 这一句代表这个图片宽度为一行文本宽度的$\frac{3}{10}$
-% \begin{lstlisting}[language = tex]
-% width=0.3\textwidth
-% \end{lstlisting}
-
-
-
-% % subsection 图_并列排 (end)
-
-
-% \subsection{公式}
-% \label{sub:公式}
-% 所有的符号都要用美元符号包裹\$，需要用到某一个但是不知道，直接百度，基本上都有
-% \begin{table}[H]
-% 	\centering
-% 	\caption{公式}
-% 	\begin{tabular}{cccccccccc} % 控制表格的格式
-% 		\toprule
-% 		名称 & 分数            & 下角标   & 上角标   & 矢量         & 根号            & 希腊字母     & 点乘      & 叉乘       & 矢量        \\
-% 		\midrule
-% 		显示 & $\frac{1}{2}$ & $O_2$ & $a^2$ & $\vec{AB}$ & $\sqrt[2]{3}$ & $\theta$ & $\cdot$ & $\times$ & $\vec{a}$ \\
-
-% 		\bottomrule
-% 	\end{tabular}
-% 	\label{tbl_gs}
-% \end{table}
-
-% 但是有时候我们只是正文中想用$MoS_2$，它竟然斜体，不想斜体，我写了个命令，这样用\eqrm{MoS_2}，正的吧，常用的命令可以自定义
-
-% \subsection{公式加粗、斜体、字体}
-
-% 公式、字母加粗、字体问题
-
-% \begin{itemize}
-% 	\item[1.] 正文 \qquad \quad AHEMoS$\alpha \beta$
-% 	\item[2.] 公式 \qquad \quad $AHEMoS \alpha \beta$
-% 	\item[3.] mathbf \qquad $\mathbf{AHEMoS\alpha \beta}$
-% 	\item[4.] boldsymbol $\boldsymbol{AHEMoS\alpha \beta}$
-% 	\item[5.] mathbb \qquad $\mathbb{AHEMoS\alpha \beta}$
-% 	      % \item [5. bm] $\bm{AHEMoS\alpha \beta}$
-% \end{itemize}
-
-% 这个加粗、斜体、英文字体（含正文和公式内字体），有不同的处理方式，在 .cls 模板文件文件搜索 bm 查看详细说明
-
-% \subsection{一些特殊符号}
-
-% \begin{itemize}
-% 	\item 普朗克常量 hslash ：$\hslash$
-% 	\item 普朗克常量 hbar ：$\hbar$
-% 	\item 花体 mathscr ：$\mathscr{ABCFR}$
-% 	\item 花体 mathcal ：$\mathcal{ABCFR}$
-% 	\item Fraktur字母 ：$\mathfrak{ABCFR}$
-% \end{itemize}
-
-
-
-% % subsection 公式 (end)
-
-% \subsection{左边大括号}
-% \label{sub:左边大括号}
-
-% \begin{equation}
-% 	\left\{
-% 	\begin{array}{rcl}
-% 		\vec{e_1} & = \frac{3a}{2} \vec{i} + \frac{\sqrt{3a}}{2} \vec{j} \\
-% 		\vec{e_2} & = \frac{3a}{2} \vec{i} - \frac{\sqrt{3a}}{2} \vec{j}
-% 	\end{array}
-% 	\right.
-% 	\label{e1e2}
-% \end{equation}
-
-% 注意后面有个方程的编号，如果想取消，把上下的两个$equation$改成$equation*$
-
-% \begin{equation*}
-% 	\left\{
-% 	\begin{array}{rcl}
-% 		\vec{e_1} & = \frac{3a}{2} \vec{i} + \frac{\sqrt{3a}}{2} \vec{j} \\
-% 		\vec{e_2} & = \frac{3a}{2} \vec{i} - \frac{\sqrt{3a}}{2} \vec{j}
-% 	\end{array}
-% 	\right.
-% 	\label{e1e2_2}
-% \end{equation*}
-
-% % subsection 左边大括号 (end)
-
-% \subsection{复杂公式}
-% \label{sub:复杂公式}
-% 不会输出的符号，请百度，啥都有
-
-% \begin{equation}
-% 	\hat{HQR}=\frac{\epsilon}{2}\hat{\sigma}_{z}-\frac{\Delta}{2}\hat{\sigma}_{x}+\sum_{k}\omega_{k}\hat{b}_{k}^{\dagger}\hat{b}_{k}+\sum_{k}\frac{g_{k}}{2}\hat{\sigma}_{z}(\hat{b}_{k}+\hat{b}_{k}^{\dagger})\label{eq:sbm}
-% \end{equation}
-
-% % subsection 复杂公式 (end)
-
-
-% \subsection{等号对齐站}
-% \label{sub:等号对齐站}
-
-% 主要是用这个aligned放在了方程的环境里，等号前面\&控制对齐，每一行后面双斜杠换行
-
-% \begin{equation}
-% 	\begin{aligned}
-% 		\vec{CH} & = m\cdot \vec{e_1} + n\cdot \vec{e_2}                          \\
-% 		         & = \frac{3(m+n)a}{2} \vec{i} + \frac{\sqrt{3}(m-n)a}{2} \vec{j}
-% 	\end{aligned}
-% 	\label{ch}
-% \end{equation}
-
-% % subsection 等号对齐站 (end)
-
-% \subsection{矩阵乘法}
-% \label{sub:矩阵乘法}
-
-% 其实就是几个array组合
-
-% \begin{equation}
-% 	\left[
-% 		\begin{array}{c}
-% 			x' \\
-% 			y' \\
-% 		\end{array}
-% 		\right]=
-% 	\left[
-% 		\begin{array}{cc}
-% 			cos \theta   & sin \theta \\
-% 			- sin \theta & cos \theta
-% 		\end{array}
-% 		\right]
-% 	\cdot
-% 	\left[
-% 		\begin{array}{c}
-% 			x \\
-% 			y \\
-% 		\end{array}
-% 		\right]
-% \end{equation}
-% % subsection 矩阵乘法 (end)
-
-
-
-% \subsection{附页代码}
-% \label{sub:附页代码}
-% 可以在LZUThesis.clc里面修改代码格式
-
-% java代码
-% \begin{lstlisting}[language = java]
-%     System.out.print("兰朵儿")
-%     // 试一下中文注释
-% \end{lstlisting}
-
-
-% tex代码
-% \begin{lstlisting}[language = tex]
-%     width=0.3\textwidth
-%     % 注释
-% \end{lstlisting}
-
-% python代码
-% \begin{lstlisting}[language = python]
-%     print("兰朵儿")
-%     # 注释
-% \end{lstlisting}
-
-% matlab代码有专门的库，但是没必要高亮太多，而且中文适配有问题，直接按照下面这个就可以
-% \begin{lstlisting}[language = matlab]
-%     display("兰朵儿")
-%     % 注释
-% \end{lstlisting}
-
-% % subsection 附页代码 (end)
-
-% 伪代码
-
-
-
-% \subsection{参考文献}
-% \label{sub:参考文献}
-
-% 建议以 web of science 或者文献官网导出的bib为准，请不要使用百度学术、谷歌学术的bib，错误很多，\cite{partl2016, tenne1992polyhedral, tussyadiah2015hotels}。
-% 测试不同情况：
-
-% \begin{itemize}
-% 	\item 原本科模板\cite{partl2016}
-% 	\item 中文“等”测试\cite{partl2021}
-% 	\item 大写字母测试\cite{partl2022-2}
-% 	\item 连接符号测试\cite{partl2022-3}
-% 	\item 中文空格测试\cite{partl2022}
-% 	\item 连续显示\cite{partl2021,partl2022-2,partl2022-3}
-% 	\item 右上角\cite{partl2016,partl2021,partl2022-2}
-% 	\item 中文参考文献 \cite{李刚2006基于动态光谱的脉搏血氧测量精度分析}
-% 	\item 标题中特殊符号，bib中双层大括号即可 \cite{PhysRevLett.108.024101}
-% 	\item 更多测试（zotero导出）\cite{huangInvestigationThermalRectification2024, wanModulatingThermalConductivity2024, wuThermalRectificationAsymmetric2024, xiaoMOFNanozymemediatedAcetylcholinesterasefree2024}
-% \end{itemize}
-
-
-% 具体怎么用可以百度，我这里告诉你什么可以用，但是具体的，建议百度，更靠谱一些。
-
-
-% 有参考文献时，编译要经过4步，直接 xelatex --> biber --> xelatex --> xelatex，不然很多问题，vscode配置以后很方便，以下内容放在设置中，重新打开vscode即可，注意命令后面不包含.tex，而是直接 xelatex template 和 biber template
-
-% 修改后可以参考文献自动生成中文等字符\cite{partl2021}\cite{partl2022}\cite{partl2022-2}，引用网络资源时链接格式规范化\cite{intelnewsroomIntelUnveils12th2021,wilsonHistoryDevelopmentParallel1994}。
-
-
-% % subsection 参考文献 (end)
-
-% % section 图标等常用的教程 (end)
-
-% \subsection{引用图、表、公式、章节}
-
-% 为什么要引用？不直接写数字？因为图表顺序变化时，引用的地方会自动变化。每次更加新引用，请四步走编译
-
-% 引用的地方加label，自己写个名字，可以是中文，然后引用的地方如下：
-
-% 如图\ref{fig_ldr}所示
-
-% 如公式\eqref{e1e2}所示，会自动带括号
-
-% 如表\ref{tbl_gs}所示
-
-% 在\ref{sub:参考文献}中已经提及
-
-% % \input{test.tex}
 
 %论文后部
 \backmatter
@@ -1232,6 +938,10 @@ OP）的路径规划算法，这些方法试图通过最优路径搜索来减少
 在毕业论文完成之际，我想向所有在我学习和研究过程中给予帮助和支持的人表达我诚挚的感谢。
 
 首先，我要衷心感谢我的导师焦栋斌教授。在整个研究过程中，焦老师以其渊博的学识、严谨的治学态度和敏锐的科研洞察力给予我悉心指导。他不仅在学术上为我提供了宝贵的建议和方向，而且在科研思维和方法论上也给了我深刻的启发。没有焦老师的悉心指导和鼓励，我难以完成这项研究工作。
+
+特别感谢学长袁雨辰、刘波和王凌宇，本研究工作是在他们先前研究的基础上进行的改进和拓展。他们的开创性工作为我提供了重要的理论基础和技术支持，使我能够站在巨人的肩膀上继续探索。感谢他们在我研究过程中给予的宝贵建议、经验分享和无私帮助。
+
+感谢课题组的其他成员。我们的头脑风暴和技术讨论不仅促进了研究的顺利进行，也让我对问题有了更加深入的理解。
 
 感谢信息科学与工程学院的各位老师，在我本科学习期间传授知识、培养能力，为我打下了坚实的专业基础。特别感谢参与我论文评审和答辩的各位老师，您们的建议和意见使我的论文更加完善。
 

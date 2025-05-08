@@ -6,6 +6,6 @@
 \addvspace {10.0pt}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces 深度强化学习训练过程中的损失函数变化}}{19}{figure.caption.10}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces 深度强化学习训练过程中的修复面积变化}}{19}{figure.caption.11}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 基于深度强化学习的多无人机草原修复路径规划}}{20}{figure.caption.12}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 基于迭代局部搜索的多无人机草原修复路径规划}}{21}{figure.caption.13}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 基于深度强化学习的多无人机草原修复的最优路径规划图}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 基于迭代局部搜索的多无人机草原修复的最优路径规划图}}{21}{figure.caption.13}%
 \addvspace {10.0pt}

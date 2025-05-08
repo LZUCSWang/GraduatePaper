@@ -310,10 +310,9 @@
 
 \begin{equation} \label{maximize-weighted-sum}
 	\begin{small}
-		C = \sum_{i=1}^{N} (l_i + 0.7) \cdot \sigma_i
+		C = \sum_{i=1}^{N} (l_i + 0.7) \cdot \sigma_i,
 	\end{small}
 \end{equation}
-
 其中，$l_i$ 表示第 $i$ 个区域的退化程度，$\sigma_i$ 为无人机在该区域修复的面积，$(l_i - 0.3)$ 作为权重因子。这样设计的原因在于，单纯最大化修复面积会导致模型难以收敛且忽略生态优先级，通过引入退化程度权重，能够引导模型优先修复生态状况更差的区域，提高整体修复的生态效益和模型收敛速度。
 
 \section{数学模型}

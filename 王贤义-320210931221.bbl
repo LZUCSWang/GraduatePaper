@@ -767,15 +767,6 @@
       \verb{doi}
       \verb 10.1126/science.1259855
       \endverb
-      \verb{eprint}
-      \verb https://www.science.org/doi/pdf/10.1126/science.1259855
-      \endverb
-      \verb{urlraw}
-      \verb https://www.science.org/doi/abs/10.1126/science.1259855
-      \endverb
-      \verb{url}
-      \verb https://www.science.org/doi/abs/10.1126/science.1259855
-      \endverb
       \keyw{steffen2015planetary}
     \endentry
     \entry{nex2014uav}{article}{}
@@ -2329,9 +2320,6 @@
       \verb{doi}
       \verb https://doi.org/10.1002/net.20337
       \endverb
-      \verb{eprint}
-      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1002/net.20337
-      \endverb
       \verb{urlraw}
       \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/net.20337
       \endverb
@@ -2633,7 +2621,6 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Abstract The bilevel programming problem is characterized as an optimization problem that has another optimization problem in its constraints. The leader in the upper level and the follower in the lower level are hierarchically related where the leader's decisions affect both the follower's payoff function and allowable actions, and vice versa. One difficulty that arises in solving bilevel problems is that unless a solution is optimal for the lower level problem, it cannot be feasible for the overall problem. This suggests that approximate methods could not be used for solving the lower level problem, as they do not guarantee that the optimal solution is actually found. However, from the practical point of view near-optimal solutions are often acceptable, especially when the lower level problem is too costly to be exactly solved thus rendering the use of exact methods impractical. In this paper, we study the impact of using an approximate method in the lower level problem, discussing how near-optimal solutions on the lower level can affect the upper level objective function values. This study considers a bilevel production-distribution planning problem that is solved by two intelligent heuristics hierarchically related: ant colony optimization for solving the upper level problem, and differential evolution method to solve the lower level problem.}
       \field{journaltitle}{International Transactions in Operational Research}
       \field{langid}{english}
       \field{languageid}{english}
@@ -2648,18 +2635,6 @@
       \field{dateera}{ce}
       \field{pages}{861\bibrangedash 882}
       \range{pages}{22}
-      \verb{doi}
-      \verb https://doi.org/10.1111/itor.12153
-      \endverb
-      \verb{eprint}
-      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/itor.12153
-      \endverb
-      \verb{urlraw}
-      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12153
-      \endverb
-      \verb{url}
-      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/itor.12153
-      \endverb
       \keyw{bilevel optimization,ant-colony optimization,differential evolution}
     \endentry
     \entry{sinha2017review}{article}{}
@@ -3277,15 +3252,6 @@
       \range{pages}{11}
       \verb{doi}
       \verb 10.1093/jpe/rtw062
-      \endverb
-      \verb{eprint}
-      \verb https://academic.oup.com/jpe/article-pdf/10/4/581/19287948/rtw062.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1093/jpe/rtw062
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1093/jpe/rtw062
       \endverb
       \keyw{klaus2017enriching}
     \endentry

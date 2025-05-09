@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.3.25)  8 MAY 2025 21:08
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023/Debian) (preloaded format=xelatex 2025.3.25)  9 MAY 2025 09:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1371,12 +1371,12 @@ File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 LaTeX Warning: Unused global option(s):
     [AutoFakeBold].
 
-(./王贤义-320210931221.aux)
+No file 王贤义-320210931221.aux.
 \openout1 = `王贤义-320210931221.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 10.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 10.
- (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlntxmi.fd
+(/usr/share/texlive/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
 LaTeX Font Info:    ... okay on input line 10.
@@ -1473,13 +1473,15 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Info: Command `\dddot' is already robust on input line 10.
 LaTeX Info: Command `\ddddot' is already robust on input line 10.
 Package hyperref Info: Link coloring OFF on input line 10.
-(./王贤义-320210931221.out) (./王贤义-320210931221.out)
 \@outlinefile=\write5
 \openout5 = `王贤义-320210931221.out'.
 
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: XeTeX detected.
@@ -1489,10 +1491,12 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `王贤义-320210931221.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file '王贤义-320210931221.bbl' found.
- (./王贤义-320210931221.bbl)
+Package biblatex Info: ... file '王贤义-320210931221.bbl' not found.
+
+No file 王贤义-320210931221.bbl.
 Package biblatex Info: Reference section=0 on input line 10.
 Package biblatex Info: Reference segment=0 on input line 10.
+(|'inkscape' -V )
 File: figures/lzu2020.png Graphic file (type bmp)
 <figures/lzu2020.png>
 
@@ -1643,44 +1647,210 @@ Overfull \hbox (2.25609pt too wide) in paragraph at lines 158--159
 
 [2
 
-] (./王贤义-320210931221.toc [3
-
-
-])
+]
+No file 王贤义-320210931221.toc.
 \tf@toc=\write6
 \openout6 = `王贤义-320210931221.toc'.
 
- [4] (./王贤义-320210931221.lof)
+[3
+
+
+]
+No file 王贤义-320210931221.lof.
 \tf@lof=\write7
 \openout7 = `王贤义-320210931221.lof'.
 
- [5
+[4
 
 
-] (./王贤义-320210931221.lot)
+]
+No file 王贤义-320210931221.lot.
 \tf@lot=\write8
 \openout8 = `王贤义-320210931221.lot'.
 
- [6
+[5
 
 
 ]
 第一章
+
+LaTeX Warning: Citation 'chapin2013global' on page 1 undefined on input line 190.
+
+
+LaTeX Warning: Citation 'gibson2009grasses' on page 1 undefined on input line 190.
+
+
+LaTeX Warning: Citation 'bai2020long' on page 1 undefined on input line 190.
+
+
+LaTeX Warning: Citation 'freitag2021restoration' on page 1 undefined on input line 190.
+
+
+LaTeX Warning: Citation 'reinermann2020remote' on page 1 undefined on input line 192.
+
+
+LaTeX Warning: Citation 'dass2018grasslands' on page 1 undefined on input line 192.
+
+
+LaTeX Warning: Citation 'steffen2015planetary' on page 1 undefined on input line 194.
+
+
+LaTeX Warning: Citation 'nex2014uav' on page 1 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'mohan2021uav' on page 1 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'sun2018unmanned' on page 1 undefined on input line 198.
+
+
+LaTeX Warning: Citation 'zeng2017energy' on page 1 undefined on input line 198.
+
+
+Overfull \hbox (0.93498pt too wide) in paragraph at lines 198--199
+\TU/FandolSong-Regular(0)/m/n/12 在 三 维 地 图 绘 制 和 环 境 监 测 的 应 用 优 势，| \T1/ptm/m/n/12 Mo-han \TU/FandolSong-Regular(0)/m/n/12 等 人$[]$和 \T1/ptm/m/n/12 Sun \TU/FandolSong-Regular(0)/m/n/12 等 人$[]$将
+ []
+
+
+LaTeX Warning: Citation 'faiccal2017adaptive' on page 1 undefined on input line 200.
+
+
+LaTeX Warning: Citation 'shivgan2020energy' on page 1 undefined on input line 200.
+
+
+LaTeX Warning: Citation 'rajan2022routing' on page 1 undefined on input line 200.
+
+
+LaTeX Warning: Citation 'yang2015path' on page 1 undefined on input line 200.
+
+
+LaTeX Warning: Citation 'guo2021spraying' on page 1 undefined on input line 200.
+
+
+LaTeX Warning: Citation 'renzi2014review' on page 1 undefined on input line 200.
+
+
+Overfull \hbox (14.41856pt too wide) in paragraph at lines 200--201
+\TU/FandolSong-Regular(0)/m/n/12 生 态 监 测 等 应 用 场 景。|  路 径 优 化 方 面，|  传 统 方 法 主 要 基 于 旅 行 商 问 题 和 定 向 问 题$[]$，|
+ []
+
 [1
 
 
 ]
-Overfull \hbox (1.66609pt too wide) in paragraph at lines 206--207
+
+LaTeX Warning: Citation 'elliott2016potential' on page 2 undefined on input line 202.
+
+
+LaTeX Warning: Citation 'pedersen2017robotic' on page 2 undefined on input line 202.
+
+
+LaTeX Warning: Citation 'huang2020design' on page 2 undefined on input line 202.
+
+
+LaTeX Warning: Citation 'faiccal2017adaptive' on page 2 undefined on input line 202.
+
+
+LaTeX Warning: Citation 'guo2021spraying' on page 2 undefined on input line 202.
+
+
+LaTeX Warning: Citation 'vasisht2017farmbeats' on page 2 undefined on input line 204.
+
+
+LaTeX Warning: Citation 'palomino2019towards' on page 2 undefined on input line 204.
+
+
+LaTeX Warning: Citation 'shivgan2020energy' on page 2 undefined on input line 204.
+
+
+LaTeX Warning: Citation 'rossello2021information' on page 2 undefined on input line 204.
+
+
+Overfull \hbox (10.16449pt too wide) in paragraph at lines 204--205
+\TU/FandolSong-Regular(0)/m/n/12 速，|  延 长 无 人 机 操 作 时 间 并 最 小 化 覆 盖 给 定 区 域 所 需 的 时 间。| \T1/ptm/m/n/12 Palomino \TU/FandolSong-Regular(0)/m/n/12 等 人$[]$提
+ []
+
+
+LaTeX Warning: Citation 'feng2015memes' on page 2 undefined on input line 206.
+
+
+LaTeX Warning: Citation 'rossello2021information' on page 2 undefined on input line 206.
+
+
+LaTeX Warning: Citation 'colson2007overview' on page 2 undefined on input line 206.
+
+
+LaTeX Warning: Citation 'huang2004cooperative' on page 2 undefined on input line 206.
+
+
+Overfull \hbox (46.63376pt too wide) in paragraph at lines 206--207
 []\TU/FandolSong-Regular(0)/m/n/12 智 能 优 化 算 法 方 面，| \T1/ptm/m/n/12 Feng \TU/FandolSong-Regular(0)/m/n/12 等 人 探 索 了 进 化 优 化 与 迁 移 学 习 在 复 杂 路 径 问 题 中 的 应 用$[]$，|
  []
 
-[2] [3]
+
+LaTeX Warning: Citation 'shen2009two' on page 2 undefined on input line 208.
+
+
+LaTeX Warning: Citation 'li2010inexact' on page 2 undefined on input line 208.
+
+
+LaTeX Warning: Citation 'azadeh2019two' on page 2 undefined on input line 208.
+
+
+LaTeX Warning: Citation 'maini2019cooperative' on page 2 undefined on input line 208.
+
+
+LaTeX Warning: Citation 'rajan2022routing' on page 2 undefined on input line 208.
+
+
+LaTeX Warning: Citation 'colson2007overview' on page 2 undefined on input line 210.
+
+
+LaTeX Warning: Citation 'angelo2015study' on page 2 undefined on input line 210.
+
+
+LaTeX Warning: Citation 'sinha2017review' on page 2 undefined on input line 210.
+
+
+Overfull \hbox (3.22241pt too wide) in paragraph at lines 210--211
+\TU/FandolSong-Regular(0)/m/n/12 双 层 规 划 问 题 相 关，|  它 考 虑 了 优 化 问 题 两 个 阶 段 之 间 的 耦 合 关 系。| \T1/ptm/m/n/12 An-gelo \TU/FandolSong-Regular(0)/m/n/12 等 人$[]$研
+ []
+
+[2]
+
+LaTeX Warning: Citation 'gann2019international' on page 3 undefined on input line 212.
+
+
+LaTeX Warning: Citation 'blackburn2021monitoring' on page 3 undefined on input line 212.
+
+
+LaTeX Warning: Citation 'dorling2016vehicle' on page 3 undefined on input line 212.
+
+
+LaTeX Warning: Citation 'maini2019cooperative' on page 3 undefined on input line 212.
+
+
+LaTeX Warning: Citation 'buters2019seed' on page 3 undefined on input line 212.
+
+
+Overfull \hbox (3.6712pt too wide) in paragraph at lines 212--213
+[]\TU/FandolSong-Regular(0)/m/n/12 然 而，|  传 统 方 法 在 面 对 动 态 环 境、|  复 杂 地 形 和 多 目 标 任 务 时 仍 存 局 限 性$[]$，|
+ []
+
+[3]
 第二章
+
+LaTeX Warning: Citation 'gann2019international' on page 4 undefined on input line 228.
+
 Package svg Info: Last page of `./svg-inkscape/多无人机修复退化区域实例_svg-tex.pdf' is 1 on input line 232.
 (./svg-inkscape/多无人机修复退化区域实例_svg-tex.pdf_tex
 File: ./svg-inkscape/多无人机修复退化区域实例_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/多无人机修复退化区域实例_svg-tex.pdf, page 1>
-) [4
+)
+
+LaTeX Warning: Citation 'dorling2016vehicle' on page 4 undefined on input line 237.
+
+[4
 
 ]
 
@@ -1692,6 +1862,9 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 275.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 280.
 
+
+LaTeX Warning: Citation 'klaus2017enriching' on page 5 undefined on input line 287.
+
 [5]
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 290.
@@ -1702,127 +1875,295 @@ LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 301.
 
 LaTeX Font Warning: Command \small invalid in math mode on input line 312.
 
-[6] [7]
+[6]
+
+LaTeX Warning: Reference `energy-constraint' on page 7 undefined on input line 341.
+
+
+LaTeX Warning: Reference `total-load' on page 7 undefined on input line 341.
+
+
+LaTeX Warning: Reference `carry-load' on page 7 undefined on input line 341.
+
+
+LaTeX Warning: Reference `load' on page 7 undefined on input line 341.
+
+
+LaTeX Warning: Reference `enter-point' on page 7 undefined on input line 341.
+
+
+LaTeX Warning: Reference `start-point' on page 7 undefined on input line 341.
+
+
+LaTeX Warning: Reference `binary-variable' on page 7 undefined on input line 341.
+
+
+LaTeX Warning: Reference `area-constraint' on page 7 undefined on input line 341.
+
+
+LaTeX Warning: Reference `flight-weight' on page 7 undefined on input line 341.
+
+[7]
 第三章
 
-Overfull \hbox (11.06007pt too wide) in paragraph at lines 366--367
+Overfull \hbox (11.06007pt too wide) in paragraph at lines 367--368
 \TU/FandolSong-Regular(0)/m/n/12 程 度 等 各 项 信 息。|  各 点 以 $\OML/ntxmi/m/it/12 v[]$ \TU/FandolSong-Regular(0)/m/n/12 为 起 始 点 按 照 某 种 策 略 $\OML/ntxmi/m/it/12 $\TU/FandolSong-Regular(0)/m/n/12 ，|  逐 渐 完 善 部 分 解 $\LMS/ntxsy/m/n/12 f¹\OML/ntxmi/m/it/12 v[]; a[]\LMS/ntxsy/m/n/12 º\OML/ntxmi/m/it/12 ; \LMS/ntxsy/m/n/12 ¹\OML/ntxmi/m/it/12 v[]; a[]\LMS/ntxsy/m/n/12 ºg[]$\TU/FandolSong-Regular(0)/m/n/12 。|
  []
 
 [8
 
-] [9]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 477.
- [10] [11] [12] [13]
+]
+
+LaTeX Warning: Citation 'vaswani2017attention' on page 9 undefined on input line 400.
+
+
+LaTeX Warning: Citation 'vinyals2015pointer' on page 9 undefined on input line 400.
+
+
+LaTeX Warning: Reference `alg:grp_main_training' on page 9 undefined on input line 406.
+
+
+LaTeX Warning: Citation 'bresson2021transformer' on page 9 undefined on input line 414.
+
+[9]
+
+LaTeX Warning: Reference `alg:grp_batch_training' on page 10 undefined on input line 468.
+
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 478.
+[10] [11]
+
+LaTeX Warning: Reference `alg:grp_main_training' on page 12 undefined on input line 630.
+
+
+LaTeX Warning: Reference `alg:grp_batch_training' on page 12 undefined on input line 630.
+
+
+LaTeX Warning: Reference `alg:grp_batch_training' on page 12 undefined on input line 636.
+
+[12] [13]
 第四章
 [14
 
-] [15] [16]
+] [15]
+
+LaTeX Warning: Reference `alg:multi_uav_scheduling' on page 16 undefined on input line 770.
+
+[16]
 第五章
+
+LaTeX Warning: Reference `tbl_instance_setting' on page 17 undefined on input line 864.
+
+
+LaTeX Warning: Citation 'aggarwal2020path' on page 17 undefined on input line 885.
+
 [17
 
 ]
-Package svg Info: Last page of `./svg-inkscape/actor_loss_curve_svg-tex.pdf' is 1 on input line 921.
- (./svg-inkscape/actor_loss_curve_svg-tex.pdf_tex
+
+LaTeX Warning: Citation 'JIAO2024108084' on page 18 undefined on input line 887.
+
+Package svg Info: Last page of `./svg-inkscape/actor_loss_curve_svg-tex.pdf' is 1 on input line 925.
+(./svg-inkscape/actor_loss_curve_svg-tex.pdf_tex
 File: ./svg-inkscape/actor_loss_curve_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/actor_loss_curve_svg-tex.pdf, page 1>
 ) [18]
-Package svg Info: Last page of `./svg-inkscape/avg_repair_area_curve_svg-tex.pdf' is 1 on input line 928.
+Package svg Info: Last page of `./svg-inkscape/avg_repair_area_curve_svg-tex.pdf' is 1 on input line 932.
  (./svg-inkscape/avg_repair_area_curve_svg-tex.pdf_tex
 File: ./svg-inkscape/avg_repair_area_curve_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/avg_repair_area_curve_svg-tex.pdf, page 1>
 )
-Package svg Info: Last page of `./svg-inkscape/RL_combined_uav_routes_svg-tex.pdf' is 1 on input line 936.
- (./svg-inkscape/RL_combined_uav_routes_svg-tex.pdf_tex
+
+LaTeX Warning: Reference `fig:training_loss_curve' on page 19 undefined on input line 937.
+
+
+LaTeX Warning: Reference `fig:training_reward_curve' on page 19 undefined on input line 937.
+
+Package svg Info: Last page of `./svg-inkscape/RL_combined_uav_routes_svg-tex.pdf' is 1 on input line 940.
+(./svg-inkscape/RL_combined_uav_routes_svg-tex.pdf_tex
 File: ./svg-inkscape/RL_combined_uav_routes_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/RL_combined_uav_routes_svg-tex.pdf, page 1>
 ) [19]
-Package svg Info: Last page of `./svg-inkscape/ILS_combined_uav_routes_svg-tex.pdf' is 1 on input line 945.
- (./svg-inkscape/ILS_combined_uav_routes_svg-tex.pdf_tex
+
+LaTeX Warning: Reference `fig:RL_combined_uav_routes' on page 20 undefined on input line 945.
+
+Package svg Info: Last page of `./svg-inkscape/ILS_combined_uav_routes_svg-tex.pdf' is 1 on input line 949.
+(./svg-inkscape/ILS_combined_uav_routes_svg-tex.pdf_tex
 File: ./svg-inkscape/ILS_combined_uav_routes_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/ILS_combined_uav_routes_svg-tex.pdf, page 1>
 ) [20]
+
+LaTeX Warning: Reference `fig:ILS_combined_uav_routes' on page 21 undefined on input line 954.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 958.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 962.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 958.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 962.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.1> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 958.
- [21] [22]
-第六章
-[23
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 962.
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:964: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.964 ...n{3}{c}{路径长度} & \multicolumn{3}{c}{修复面积}}
+                                                   \\
+I'm guessing that you meant to end an alignment here.
 
-]
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \cr.
+\reserved@c ->\ifnum 0=`{}\fi \cr 
+                                  
+l.965 		\cmidrule
+                 (lr){5-7}\cmidrule(lr){8-10}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
-(fontspec)                Script "CJK".
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \noalign.
+\cmidrule ->\noalign 
+                     {\ifnum 0=`}\fi \@ifnextchar [{\@cmidrule }{\@cmidrule ...
+l.965 		\cmidrule
+                 (lr){5-7}\cmidrule(lr){8-10}
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1015.
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
-(fontspec)             'FandolFang-Regular' with options
-(fontspec)             [Script={CJK},Extension={.otf},AutoFakeBold={4}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[FandolFang-Regular.otf]/OT:language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-(fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->"[FandolFang-Regular.otf]/OT:language=dflt;embolden=4;"
-(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
- [24
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-] [25] [26] [27]
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Package fontspec Warning: Font "FandolFang-Regular" does not contain requested
-(fontspec)                Script "CJK".
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-[28
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced alignment tab character &.
+\@gtempa ->\multispan \@cmidla &
+                                \multispan \@cmidlb \unskip \hskip \cmrkern@...
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \omit.
+\multispan ->\omit 
+                   \@multispan 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-]
-File: figures/signature.pdf Graphic file (type pdf)
-<use figures/signature.pdf>
-File: figures/signature.pdf Graphic file (type pdf)
-<use figures/signature.pdf>
-\tf@thm=\write9
-\openout9 = `王贤义-320210931221.thm'.
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
- [29
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-] 
-enddocument/afterlastpage: lastpage setting LastPage.
-(./王贤义-320210931221.aux)
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2022/08/05>
- ***********
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \span.
+\sp@n ->\span 
+              \omit \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \omit.
+\sp@n ->\span \omit 
+                    \advance \@multicnt \m@ne 
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.36998pt have occurred.
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \cr.
+<recently read> \cr 
+                    
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
 
-Package rerunfilecheck Info: File `王贤义-320210931221.out' has not changed.
-(rerunfilecheck)             Checksum: E50CD5F1F126EB02F74C35BF185F14BA;4350.
-Package logreq Info: Writing requests to '王贤义-320210931221.run.xml'.
-\openout1 = `王贤义-320210931221.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 39139 strings out of 474878
- 805314 string characters out of 5762516
- 1950627 words of memory out of 5000000
- 60491 multiletter control sequences out of 15000+600000
- 702584 words of font info for 319 fonts, out of 8000000 for 9000
- 1348 hyphenation exceptions out of 8191
- 107i,16n,111p,3332b,6753s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on 王贤义-320210931221.pdf (37 pages).
+/home/stu_wxy/本科生毕业论文/王贤义-320210931221.tex:965: Misplaced \noalign.
+\@@@cmidrule ...\ifnum 0=`{\fi }\@gtempa \noalign 
+                                                  {\ifnum 0=`}\fi \futurenon...
+l.965 		\cmidrule(lr){5-7}
+                          \cmidrule(lr){8-10}
+I expect to see \noalign only after the \cr of
+an alignmen

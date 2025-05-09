@@ -310,9 +310,10 @@
 
 \begin{equation} \label{maximize-weighted-sum}
 	\begin{small}
-		C = \sum_{i=1}^{N} (l_i + 0.7) \cdot \sigma_i,
+		C = \sum_{i=1}^{N} (l_i + 0.7) \cdot \sigma_i
 	\end{small}
 \end{equation}
+
 其中，$l_i$ 表示第 $i$ 个区域的退化程度，$\sigma_i$ 为无人机在该区域修复的面积，$(l_i - 0.3)$ 作为权重因子。这样设计的原因在于，单纯最大化修复面积会导致模型难以收敛且忽略生态优先级，通过引入退化程度权重，能够引导模型优先修复生态状况更差的区域，提高整体修复的生态效益和模型收敛速度。
 
 \section{数学模型}
@@ -324,15 +325,15 @@
 	\begin{align}
 		\max_{x_{ij},\sigma_i} \quad & C = \sum^N_{i = 1}\sum^N_{j \neq i} x_{ij}\sigma_i                                                                                                          \\
 		\emph{s.t.} \quad            & \sum^N_{i = 1}\sum^N_{j \neq i}\sigma_i e_i x_{ij} + e_{ap}\sum^N_{i=1}\sum^N_{j \neq i} x_{ij}\sigma_i \nonumber                                           \\
-									 & + \sum^N_{i=0}\sum^N_{j \neq i} (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}} x_{ij} d_{ij} \leq E_{max}, \label{energy-constraint} \\
-									 & \sum^N_{i=1, i\neq j} \sigma_i q_i x_{ij} \leq Q, \forall j \in V_a,\label{total-load}                                                                      \\
-									 & \sum^N_{j=0, i\neq j}\bar{q}_{ji} -  \sum^N_{j=0, i\neq j}\bar{q}_{ij} = \sigma_i q_i, \label{carry-load} \quad \forall i \in V_a,                          \\
-									 & \bar{q}_{ij} \leq Q x_{ij}, \quad \forall (i,j) \in A, \label{load}                                                                                         \\
-									 & \sum^N_{i=0, i\neq j} x_{ij} = \sum^N_{j=0,i\neq j} x_{ij} = 1, \quad \forall i,j \in V_a, \label{enter-point}                                              \\
-									 & \sum^N_{j=1} x_{0j} = \sum^N_{j=1} x_{j0} = 1, \label{start-point}                                                                                          \\
-									 & x_{ij} \in \{0,1\}, \label{binary-variable}                                                                                                                 \\
-									 & 1 \leq \sigma_i \leq c_i, \label{area-constraint}                                                                                                           \\
-									 & \bar{q}_{ij} \geq 0. \label{flight-weight}
+		                             & + \sum^N_{i=0}\sum^N_{j \neq i} (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}} x_{ij} d_{ij} \leq E_{max}, \label{energy-constraint} \\
+		                             & \sum^N_{i=1, i\neq j} \sigma_i q_i x_{ij} \leq Q, \forall j \in V_a,\label{total-load}                                                                      \\
+		                             & \sum^N_{j=0, i\neq j}\bar{q}_{ji} -  \sum^N_{j=0, i\neq j}\bar{q}_{ij} = \sigma_i q_i, \label{carry-load} \quad \forall i \in V_a,                          \\
+		                             & \bar{q}_{ij} \leq Q x_{ij}, \quad \forall (i,j) \in A, \label{load}                                                                                         \\
+		                             & \sum^N_{i=0, i\neq j} x_{ij} = \sum^N_{j=0,i\neq j} x_{ij} = 1, \quad \forall i,j \in V_a, \label{enter-point}                                              \\
+		                             & \sum^N_{j=1} x_{0j} = \sum^N_{j=1} x_{j0} = 1, \label{start-point}                                                                                          \\
+		                             & x_{ij} \in \{0,1\}, \label{binary-variable}                                                                                                                 \\
+		                             & 1 \leq \sigma_i \leq c_i, \label{area-constraint}                                                                                                           \\
+		                             & \bar{q}_{ij} \geq 0. \label{flight-weight}
 	\end{align}
 	%\end{small}
 \end{subequations}
@@ -437,7 +438,7 @@
 	rm^{i}, h_{gru}^{i} =
 	\left\{
 	\begin{array}{ll}
-		\text{GRU}(h_{0}^{i}, 0)               & i = 0 \\
+		\text{GRU}(h_{0}^{i}, 0)               & i = 0  \\
 		\text{GRU}(h_{i-1}^{i}, h_{gru}^{i-1}) & i > 0,
 	\end{array}
 	\right.
@@ -529,14 +530,14 @@
 
 		\If{$\text{problem\_type} = \text{"grp"}$}
 		\State $A_{repair} \leftarrow \begin{cases}
-				x.\text{总修复面积} & \text{若存在}                 \\
-				-C / \alpha_{r}              & \text{否则（近似值）}
+				x.\text{总修复面积}  & \text{若存在}     \\
+				-C / \alpha_{r} & \text{否则（近似值）}
 			\end{cases}$
 		\EndIf
 
 		\State $(b_v, \mathcal{L}_{b}) \leftarrow \begin{cases}
 				B_{model}.\text{评估}(x, C) & \text{若 } b_v = \text{None} \\
-				(b_v, 0)                    & \text{否则}
+				(b_v, 0)                  & \text{否则}
 			\end{cases}$
 
 		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$
@@ -718,30 +719,30 @@
 
 多无人机协同调度过程可分为以下几个关键步骤：
 
-		1) 初始地图分配：使用 K-means 等聚类方法将待修复区域分配给各无人机，形成初始修复地图 $M_u^0$。
+1) 初始地图分配：使用 K-means 等聚类方法将待修复区域分配给各无人机，形成初始修复地图 $M_u^0$。
 
-		2) 第一次路径规划：各无人机以当前位置为起点，计算最优路径及修复面积：
+2) 第一次路径规划：各无人机以当前位置为起点，计算最优路径及修复面积：
 
-		\begin{equation}
-			(P_u^1, A_u^1) = \arg\max_{P \in \mathcal{P}(M_u)} \sum_{v_i \in P} a_i^{rep},
-		\end{equation}
-		其中，$\mathcal{P}(M_u)$ 表示满足能量约束的所有可行路径集合，$a_i^{rep}$ 为在点 $v_i$ 的修复面积。
+\begin{equation}
+	(P_u^1, A_u^1) = \arg\max_{P \in \mathcal{P}(M_u)} \sum_{v_i \in P} a_i^{rep},
+\end{equation}
+其中，$\mathcal{P}(M_u)$ 表示满足能量约束的所有可行路径集合，$a_i^{rep}$ 为在点 $v_i$ 的修复面积。
 
-		3) 地图动态更新：地面中心根据各无人机当前状态，更新全局修复地图：
+3) 地图动态更新：地面中心根据各无人机当前状态，更新全局修复地图：
 
-		\begin{equation}
-			M_u^{tmp} = \{v_i | v_i \in M^{global}, u = \arg\min_{u' \in U} \Theta(u',v_i)\}
-		\end{equation}
+\begin{equation}
+	M_u^{tmp} = \{v_i | v_i \in M^{global}, u = \arg\min_{u' \in U} \Theta(u',v_i)\}
+\end{equation}
 
-		4) 第二次路径规划：无人机基于更新后的地图再次规划路径，并计算修复面积 $A_u^2$。
+4) 第二次路径规划：无人机基于更新后的地图再次规划路径，并计算修复面积 $A_u^2$。
 
-		5) 地图选择决策：比较两次规划的总修复面积，选择更优方案：
+5) 地图选择决策：比较两次规划的总修复面积，选择更优方案：
 
 \begin{equation}
 	M_u =
 	\begin{cases}
 		M_u^{tmp}, & \text{if } \sum_{u \in U} A_u^2 \geq \sum_{u \in U} A_u^1 \\
-		M_u, & \text{otherwise}
+		M_u,       & \text{otherwise}
 	\end{cases}
 \end{equation}
 
@@ -845,7 +846,7 @@
 \begin{table}[H]
 	\centering
 	\caption{实验硬件配置}
-	\begin{tabular}{ll} % 使用两列左对齐格式
+	\begin{tabular}{cc} % 使用两列左对齐格式
 		\toprule
 		配置      & 描述                                                       \\
 		\midrule
@@ -865,7 +866,9 @@
 \begin{table}[H]
 	\centering
 	\caption{仿真实验实例设置参数表}
-	\begin{tabular}{lll}
+	\setlength{\tabcolsep}{18pt} % Adjust table cell padding
+	\begin{tabular}{ccc}
+		% \begin{tabular}{p{0.08\textwidth}p{0.25\textwidth}p{0.26\textwidth}}
 		\toprule
 		参数  & 描述       & 值                               \\
 		\midrule
@@ -891,7 +894,8 @@
 \begin{table}[H]
 	\centering
 	\caption{实验软件配置}
-	\begin{tabular}{lll} % 三列左对齐格式
+	\setlength{\tabcolsep}{18pt} % Adjust table cell padding
+	\begin{tabular}{ccc} % 三列左对齐格式
 		\toprule
 		参数              & 描述                & 值                   \\
 		\midrule
@@ -952,38 +956,46 @@
 Gap(\%) 计算公式为 $(\text{DRL} - \text{CHAPBILM}) / \text{CHAPBILM} \times 100\%$。路径长度 Gap 为负值表示 DRL 更优，修复面积 Gap 为正值表示 DRL 更优。
 \begin{table}[H]
 	\centering
-	\caption{路径长度与修复面积对比（DRL 与 CHAPBILM ）}
+	\caption{路径长度与修复面积对比（DRL 与 CHAPBILM）}
 	\small
 	\setlength{\tabcolsep}{3.5pt}
-	\begin{tabular}{cccc ccc ccc}
+	\begin{tabular}{ccc c ccc ccc}
 		\toprule
-		区域数                 & 草原边长                 & 无人机数 &  & \multicolumn{3}{c}{路径长度} & \multicolumn{3}{c}{修复面积}                                       \\
-		\cmidrule(lr){5-7} \cmidrule(lr){8-10}
-							&                      &      &  & DRL                      & CHAPBILM                       & Gap(\%) & DRL    & CHAPBILM     & Gap(\%) \\
+		\multirow{2}{*}{区域数} & \multirow{2}{*}{草原边长} & \multirow{2}{*}{无人机数} &  & \multicolumn{3}{c}{路径长度} & \multicolumn{3}{c}{修复面积}} \\
+		\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+		& & & & DRL & CHAPBILM & Gap(\%) & DRL & CHAPBILM & Gap(\%) \\
 		\midrule
-		\multirow{9}{*}{60} & \multirow{3}{*}{500} & 4    &  & 9396.35                  & 12648.21                 & \textbf{-25.68}  & 267.00 & 194.00 & \textbf{37.63}   \\
-							&                      & 6    &  & 21348.69                 & 19110.48                 & 11.71   & 258.00 & 205.00 & \textbf{25.85}   \\
-							&                      & 8    &  & 26118.19                 & 27145.66                 & \textbf{-3.79}   & 304.00 & 218.00 & \textbf{39.45}   \\
+		\multirow{9}{*}{60} 
+		 & \multirow{3}{*}{500} 
+		   & \multirow{1}{*}{4} &  & 9396.35  & 12648.21 & \textbf{-25.68} & 267.00 & 194.00 & \textbf{37.63} \\
+		 &                        & \multirow{1}{*}{6} &  & 21348.69 & 19110.48 & 11.71          & 258.00 & 205.00 & \textbf{25.85} \\
+		 &                        & \multirow{1}{*}{8} &  & 26118.19 & 27145.66 & \textbf{-3.79} & 304.00 & 218.00 & \textbf{39.45} \\
 		\cmidrule(lr){2-10}
-							& \multirow{3}{*}{600} & 4    &  & 13339.68                 & 16255.96                 & \textbf{-17.92}  & 271.00 & 223.00 & \textbf{21.52}   \\
-							&                      & 6    &  & 26523.73                 & 27174.68                 & \textbf{-2.39}   & 294.00 & 206.00 & \textbf{42.72}   \\
-							&                      & 8    &  & 31186.17                 & 31494.13                 & \textbf{-0.98}   & 257.00 & 224.00 & \textbf{14.73}   \\
+		 & \multirow{3}{*}{600} 
+		   & \multirow{1}{*}{4} &  & 13339.68 & 16255.96 & \textbf{-17.92} & 271.00 & 223.00 & \textbf{21.52} \\
+		 &                        & \multirow{1}{*}{6} &  & 26523.73 & 27174.68 & \textbf{-2.39} & 294.00 & 206.00 & \textbf{42.72} \\
+		 &                        & \multirow{1}{*}{8} &  & 31186.17 & 31494.13 & \textbf{-0.98} & 257.00 & 224.00 & \textbf{14.73} \\
 		\cmidrule(lr){2-10}
-							& \multirow{3}{*}{700} & 4    &  & 17622.78                 & 22103.46                 & \textbf{-20.27}  & 282.00 & 291.00 & -3.09   \\
-							&                      & 6    &  & 28252.23                 & 28539.91                 & \textbf{-1.01}   & 270.00 & 218.00 & \textbf{23.85}   \\
-							&                      & 8    &  & 37585.42                 & 36859.35                 & 1.97    & 238.00 & 254.00 & -6.30   \\
+		 & \multirow{3}{*}{700} 
+		   & \multirow{1}{*}{4} &  & 17622.78 & 22103.46 & \textbf{-20.27} & 282.00 & 291.00 & -3.09          \\
+		 &                        & \multirow{1}{*}{6} &  & 28252.23 & 28539.91 & \textbf{-1.01} & 270.00 & 218.00 & \textbf{23.85} \\
+		 &                        & \multirow{1}{*}{8} &  & 37585.42 & 36859.35 & 1.97           & 238.00 & 254.00 & -6.30          \\
 		\midrule
-		\multirow{9}{*}{80} & \multirow{3}{*}{500} & 4    &  & 10221.88                 & 17217.03                 & \textbf{-40.60}  & 370.00 & 315.00 & \textbf{17.46}   \\
-							&                      & 6    &  & 22135.76                 & 25252.45                 & \textbf{-12.37}  & 375.00 & 240.00 & \textbf{56.25}   \\
-							&                      & 8    &  & 30491.72                 & 31922.23                 & \textbf{-4.48}   & 306.00 & 267.00 & \textbf{14.61}   \\
+		\multirow{9}{*}{80} 
+		 & \multirow{3}{*}{500} 
+		   & \multirow{1}{*}{4} &  & 10221.88 & 17217.03 & \textbf{-40.60} & 370.00 & 315.00 & \textbf{17.46} \\
+		 &                        & \multirow{1}{*}{6} &  & 22135.76 & 25252.45 & \textbf{-12.37} & 375.00 & 240.00 & \textbf{56.25} \\
+		 &                        & \multirow{1}{*}{8} &  & 30491.72 & 31922.23 & \textbf{-4.48}  & 306.00 & 267.00 & \textbf{14.61} \\
 		\cmidrule(lr){2-10}
-							& \multirow{3}{*}{600} & 4    &  & 15973.03                 & 22825.91                 & \textbf{-30.02}  & 363.00 & 314.00 & \textbf{15.61}   \\
-							&                      & 6    &  & 29742.35                 & 28044.73                 & 6.05    & 406.00 & 282.00 & \textbf{44.00}   \\
-							&                      & 8    &  & 39943.98                 & 40845.86                 & \textbf{-2.21}   & 399.00 & 269.00 & \textbf{48.33}   \\
+		 & \multirow{3}{*}{600} 
+		   & \multirow{1}{*}{4} &  & 15973.03 & 22825.91 & \textbf{-30.02} & 363.00 & 314.00 & \textbf{15.61} \\
+		 &                        & \multirow{1}{*}{6} &  & 29742.35 & 28044.73 & 6.05           & 406.00 & 282.00 & \textbf{44.00} \\
+		 &                        & \multirow{1}{*}{8} &  & 39943.98 & 40845.86 & \textbf{-2.21} & 399.00 & 269.00 & \textbf{48.33} \\
 		\cmidrule(lr){2-10}
-							& \multirow{3}{*}{700} & 4    &  & 22577.68                 & 26113.54                 & \textbf{-13.56}  & 335.00 & 267.00 & \textbf{25.47}   \\
-							&                      & 6    &  & 33566.63                 & 34738.58                 & \textbf{-3.38}   & 380.00 & 298.00 & \textbf{27.52}   \\
-							&                      & 8    &  & 44308.24                 & 42493.45                 & 4.28    & 355.00 & 311.00 & \textbf{14.14}   \\
+		 & \multirow{3}{*}{700} 
+		   & \multirow{1}{*}{4} &  & 22577.68 & 26113.54 & \textbf{-13.56} & 335.00 & 267.00 & \textbf{25.47} \\
+		 &                        & \multirow{1}{*}{6} &  & 33566.63 & 34738.58 & \textbf{-3.38} & 380.00 & 298.00 & \textbf{27.52} \\
+		 &                        & \multirow{1}{*}{8} &  & 44308.24 & 42493.45 & 4.28           & 355.00 & 311.00 & \textbf{14.14} \\
 		\bottomrule
 	\end{tabular}
 	\label{tab:combined_comparison}

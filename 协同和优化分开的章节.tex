@@ -1,0 +1,488 @@
+% 第三章
+
+
+\chapter{基于强化学习的最优修复方案}
+
+\section{马尔可夫过程建模}
+本文将修复过程中的每架无人机视为一个智能体，将待修复草原视为以欧几里得距离为边权值的无向全联通图。对单架无人机而言，其部分修复过程可视为从某点出发，遍历修复地图并完成相应修复任务，最后返回起点。
+
+在无人机的修复过程中，由于其在两块相邻修复区域间的飞行能耗正比于此时无人机自身重量与路径长度，而自身重量又随着播散种子修复区域的过程动态变化，因而其总飞行能耗与总飞行长度、修复区域的顺序及修复面积均有复杂关系。换言之，作为优化目标的总修复面积由于与无人机耗能而与其飞行路径间接相关，因而二者之间存在复杂的耦合关系，如何解决修复面积的最优化，毫无疑问是一个困难的 $\text{NP-hard}$ 问题。
+
+针对该难题，本文拟采用强化学习方法学习这一复杂的函数关系，具体建模如下：
+
+\subsection{状态}
+
+本文将一个待修复草原实例设为$V=\{v_i\}_{i=0}^n$,其中包含了各个待修复区域的位置、退化程度等各项信息。各点以$v_0$为起始点按照某种策略$\pi$，逐渐完善部分解$\{(v_0,a_0),(v_i,a_i)\}_{i=1}^{uav_{now}}$。其中，编号$i$表示无人机访问各点的次序，$uav_{now}$为无人机已经过的点数量,$a_i$代表按照策略$\pi$在点$v_i$修复的面积。本文将该部分解作为智能体在强化学习中的状态，记作$s(<i),i\in[1,n+1]$。初始状态记作$s(<1)=v_0$，表示无人机处于地面中心；结束状态记作$s(<n+1)=s$，表示无人机已访问全部点。
+
+\subsection{动作}
+
+如上所述，无人机状态是修复过程的部分解，因而本文将动作设置为无人机修复过程某一步的解，即将无人机在状态$s(<i)$时的动作记作$\pi_i=s(i)$,$i\in[1,n+1]$，即可实现强化学习中动作-状态对的自然更新。
+
+\subsection{状态}
+
+转移函数如上所述，在动作选取完毕后无人机新的状态也被唯一确定，因而状态转移函数具有完全确定性，记其为$S(s(<i)|s(i))=s(<i+1)$,$i\in[1,n]$。
+
+\subsection{策略函数}
+
+如上所述，草原修复过程被创建为一个马尔可夫决策过程，因而其策略函数可被链式分解为：$p(\pi|s)=\prod_{i=1}^n p(s(i)|s(<i))$(10)其中，$p(s(i)|s(<i))$表示智能体在状态$s(<i)$下选择动作$s(i)$的概率。
+
+\subsection{奖励函数}
+
+作为强化学习方法的核心之一，奖励函数的设计必须考虑全面，以防止模型难以收敛。经本文实验证明，单纯以最基本的修复面积作为模型的奖励函数会使得模型收敛速度大大减缓，同时考虑到无人机自身能量限制引入的惩罚项，本文最终将一组解的奖励函数设置为：
+\begin{equation}
+	R(\pi|V)=\alpha_{p}*Pel+\alpha_{r}*\sum_{i=1}^{n}(l_i+0.7)*a_{i}
+	\label{eq:11}
+\end{equation}
+
+\begin{equation}
+	Pel=\left\{\begin{array}{ll}
+		d_{n}^{0}+\sum\limits_{i=1}^{n}d_{i}^{i+1} & E_{rest}<0     \\
+		0                                          & E_{rest}\geq 0
+	\end{array}\right. 
+	\label{eq:12}
+\end{equation}
+上式中，$\alpha_p$, $\alpha_r$为修正系数，$l_i$为第$i$个区域的退化程度，$Pel$为控制无人机能量约束的惩罚项。通过引入$(l_i-0.3)$作为权重因子，模型可以优先修复退化程度更高的区域，从而实现对草原生态健康状况的精准干预。同时为了加快模型收敛速度，本文将不符合无人机能量约束时的惩罚项设置为其从起点到返回地面中心经历的路径长度，以确保在模型收敛的前期尽可能获得的解路径长度较短、符合能量约束，并在此前提下进行修复面积的决策。
+
+\section{神经网络模型构建}
+
+对于序列决策问题，编码器-解码器模型\cite{vaswani2017attention}作为最经典的神经网络模型结构之一，取得了优异的效果。本文采用稍加修改的经典的Tranformer作为编码器，指针网络\cite{vinyals2015pointer}作为自回归解码器以实现构造式求解。
+
+\subsection{特征提取与模型架构}
+
+本文对待求解的待修复草原模型提取两部分特征：待修复区域的坐标、退化程度等静态特征，及无人机自身剩余能量、剩余重量等动态特征。模型参数用 $\theta \in \Theta$ 表示，包含编码器和解码器的所有可学习参数。
+
+模型初始化过程如算法\ref{alg:grp_main_training}的第1-2行所示：
+\begin{equation}
+	M_{\theta} \leftarrow \text{InitializeModel}(d_e, d_h, n_{layers}, n_{heads}, \theta),
+\end{equation}
+其中，$d_e$ 为嵌入维度，$d_h$ 为隐藏层维度，$n_{layers}$ 为编码器层数，$n_{heads}$ 为注意力头数量。同时，本文初始化基线模型 $B_{model}$ 用于估计值函数，支持Actor-Critic算法的训练。
+
+\subsection{编码器结构}
+
+参考了Bresson\cite{bresson2021transformer}等人的方法，编码器由 $n_{layers}$ 层Transformer层堆叠而成，采用BatchNorm归一化，表示为：
+
+\begin{equation}
+	h^{l=0} = h^{in} W^{in} \in \mathbb{R}^{n \times d_e}
+	\label{eq:13a}
+\end{equation}
+
+\begin{equation}
+	h_{rc}^{l+1} = \text{BN}\left(\text{MHA}^{l+1}(h^l) + h^l\right)
+	\label{eq:13b}
+\end{equation}
+
+\begin{equation}
+	h^{l+1} = \text{BN}\left(\text{Relu}\left(h_{rc}^{l+1} W_1^{l+1}\right) W_2^{l+1} + h_{rc}^{l+1}\right)
+	\label{eq:13c}
+\end{equation}
+
+编码器同时处理静态环境特征和动态无人机状态特征，生成用于解码器的上下文表示。
+
+\subsection{解码器结构}
+
+自回归解码器通过循环解码逐步构造解决方案。解码器接收编码器的输出，其工作流程为：
+
+\begin{equation}
+	rm^{i}, h_{gru}^{i} =
+	\left\{
+	\begin{array}{ll}
+		\text{GRU}(h_{0}^{i}, 0)               & i = 0  \\
+		\text{GRU}(h_{i-1}^{i}, h_{gru}^{i-1}) & i > 0,
+	\end{array}
+	\right.
+	\label{eq:14}
+\end{equation}
+其中，$0$为全零向量，GRU(gated recurrent unit)为循环神经网络更新解嵌入。解码器通过注意力机制选择下一个待修复区域及修复面积：
+
+\begin{equation}
+	h_{p}^{l=i} = \text{Attention}(\text{static}, \text{dynamic}^{i}, mn^{i})
+	\label{eq:15a}
+\end{equation}
+
+\begin{equation}
+	\mu_{i} =
+	\begin{cases}
+		C \times \text{Tanh}\left((W_{q}h_{p}^{l=i})^{T}(W_{k}h_{p}^{l=i})\right) & x_{i} \notin \pi_{i} \\
+		-\infty                                                                   & \text{otherwise}
+	\end{cases}
+	\label{eq:15b}
+\end{equation}
+
+\begin{equation}
+	p(i|s_{i}) = \text{Softmax}(\mu_{i})
+	\label{eq:15c}
+\end{equation}
+
+在模型前向传播中，如算法\ref{alg:grp_batch_training}第4行所示，解码器生成成本值 $C$ 和对数概率 $\log p$：
+
+\begin{equation}
+	(C, \log p) \leftarrow M_{\theta}(x),
+\end{equation}
+其中 $C$ 表示当前策略的成本（负奖励），$\log p$ 表示选择各动作的对数概率。
+
+\subsection{训练流程}
+\begin{algorithm}[H]
+	\begin{algorithmic}[1]
+		\caption{GRP主训练流程}
+		\label{alg:grp_main_training}
+		\Require $\theta \in \Theta$（模型参数），$d_e \in \mathbb{N}$（嵌入维度），$d_h \in \mathbb{N}$（隐藏层维度），$n_{layers} \in \mathbb{N}$（编码器层数），$n_{heads} \in \mathbb{N}$（注意力头数），$\alpha \in \mathbb{R}^{+}$（学习率），$N_{epoch} \in \mathbb{N}$（训练轮数），$B \in \mathbb{N}$（批次大小），$G_{size} \in \mathbb{N}$（图规模）
+		\Ensure 最优参数 $\theta^* \in \Theta$
+		\State $M_{\theta} \leftarrow \text{初始化模型}(d_e, d_h, n_{layers}, n_{heads}, \theta)$
+		\State $B_{model} \leftarrow \text{初始化基线模型}()$
+		\State $\mathcal{O} \leftarrow \text{Adam优化器}(\{M_{\theta}, B_{model}\}, \alpha)$
+		\State $\mathcal{S} \leftarrow \text{学习率调度器}(\alpha)$
+		\State $\mathcal{D}_{val} \leftarrow \{x_i\}_{i=1}^{val\_size}$ \Comment{生成验证集}
+		\State $R_{best} \leftarrow -\infty$ \Comment{最佳奖励追踪器}
+		\For{$e = 0$ \textbf{到} $N_{epoch} - 1$}
+		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{生成训练集}
+		\State $\{\mathcal{B}_j\}_{j=1}^{n_B} \leftarrow \text{批量划分}(\mathcal{D}_{train}, B)$
+		\State $M_{\theta} \leftarrow M_{\theta}.\text{train}()$ \Comment{设置为训练模式}
+
+		\For{$\mathcal{B} \in \{\mathcal{B}_j\}_{j=1}^{n_B}$}
+		\State $\theta \leftarrow \text{批次训练}(M_{\theta}, B_{model}, \mathcal{O}, \mathcal{B})$ \Comment{见算法2}
+		\EndFor
+
+		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"贪婪"}$
+		\State $M_{\theta} \leftarrow M_{\theta}.\text{eval}()$
+		\State $C_{val} \leftarrow \text{评估}(M_{\theta}, \mathcal{D}_{val})$
+		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{平均奖励}
+
+		\State $B_{model} \leftarrow B_{model}.\text{轮次回调}(M_{\theta}, e)$
+		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{更新学习率}
+
+		\If{$e \bmod k_{save} = 0 \lor e = N_{epoch} - 1$}
+		\State $\text{保存检查点}(\theta, \mathcal{O}, B_{model}, e)$
+		\EndIf
+
+		\If{$e = 0 \lor \bar{r} > R_{best}$}
+		\State $\theta^* \leftarrow \theta$ \Comment{保存最佳模型参数}
+		\State $R_{best} \leftarrow \bar{r}$
+		\EndIf
+		\EndFor
+		\State \Return $\theta^*$
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+	\begin{algorithmic}[1]
+		\caption{GRP批次训练子程序}
+		\label{alg:grp_batch_training}
+		\Require $M_{\theta}$（模型参数集合），$B_{model}$（基线价值模型），$\mathcal{O}$（优化器），$\mathcal{B}$（当前批次数据）
+		\Ensure 更新后的模型参数 $\theta$
+
+		\State $(x, b_v) \leftarrow B_{model}.\text{unwrap\_batch}(\mathcal{B})$ \Comment{解包当前批次数据，获取输入特征和基线值}
+		\State $x \leftarrow x.\text{to}(\text{device})$, $b_v \leftarrow b_v \neq \text{None} ? b_v.\text{to}(\text{device}) : \text{None}$ \Comment{将数据移至计算设备}
+
+		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C \in \mathbb{R}^{B}$：每个样本的成本值，$\log p$：动作的对数概率}
+		\State $r \leftarrow -C$ \Comment{$r \in \mathbb{R}^{B}$：将成本转换为奖励值}
+
+		\If{存在 $x.\text{total\_repair\_area}$}
+			\State $A_{repair} \leftarrow x.\text{total\_repair\_area}$ \Comment{若存在总修复面积属性}
+		\Else
+			\State $A_{repair} \leftarrow -C / \alpha_{r}$ \Comment{否则使用成本值近似计算}
+		\EndIf
+
+		\If{$b_v = \text{None}$}
+			\State $(b_v, \mathcal{L}_{b}) \leftarrow B_{model}.\text{evaluate}(x, C)$ \Comment{计算基线值和基线损失}
+		\Else
+			\State $(b_v, \mathcal{L}_{b}) \leftarrow (b_v, 0)$ \Comment{使用已有基线值}
+		\EndIf
+
+		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$ \Comment{策略梯度损失，$(C_i - b_{v,i})$ 为优势函数}
+		\State $\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}$ \Comment{总损失 = 策略损失 + 基线损失}
+
+		\State $\nabla\theta \leftarrow \mathbf{0}$ \Comment{初始化梯度为零向量}
+		\State $\nabla\theta \leftarrow \nabla_{\theta}\mathcal{L}$ \Comment{计算损失函数关于参数 $\theta$ 的梯度}
+		\State $\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})$ \Comment{梯度裁剪，$g_{max}$ 为最大梯度范数}
+		\State $\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)$ \Comment{使用优化器更新参数 $\theta$}
+		\State \Return $\theta$ \Comment{返回更新后的模型参数}
+	\end{algorithmic}
+\end{algorithm}
+
+% \begin{algorithm}[H]
+% 	\begin{algorithmic}[1]
+% 		\caption{Main Training Procedure for GRP}
+% 		\label{alg:grp_main_training}
+% 		\Require $\theta \in \Theta$ (model parameters), $d_e \in \mathbb{N}$ (embedding dimension), $d_h \in \mathbb{N}$ (hidden dimension), $n_{layers} \in \mathbb{N}$ (encoder layers), $n_{heads} \in \mathbb{N}$ (attention heads), $\alpha \in \mathbb{R}^{+}$ (learning rate), $N_{epoch} \in \mathbb{N}$ (training epochs), $B \in \mathbb{N}$ (batch size), $G_{size} \in \mathbb{N}$ (graph size)
+% 		\Ensure $\theta^* \in \Theta$ (optimal parameters)
+% 		\State $M_{\theta} \leftarrow \text{InitializeModel}(d_e, d_h, n_{layers}, n_{heads}, \theta)$
+% 		\State $B_{model} \leftarrow \text{InitializeBaseline}()$
+% 		\State $\mathcal{O} \leftarrow \text{Adam}(\{M_{\theta}, B_{model}\}, \alpha)$
+% 		\State $\mathcal{S} \leftarrow \text{LRScheduler}(\alpha)$
+% 		\State $\mathcal{D}_{val} \leftarrow \{x_i\}_{i=1}^{val\_size}$ \Comment{生成验证数据集}
+% 		\State $R_{best} \leftarrow -\infty$ \Comment{最佳奖励追踪器}
+% 		\For{$e = 0$ \textbf{to} $N_{epoch} - 1$}
+% 		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{生成训练实例}
+% 		\State $\{\mathcal{B}_j\}_{j=1}^{n_B} \leftarrow \text{BatchSplit}(\mathcal{D}_{train}, B)$
+% 		\State $M_{\theta} \leftarrow M_{\theta}.\text{train}()$ \Comment{设置模型为训练模式}
+
+% 		\For{$\mathcal{B} \in \{\mathcal{B}_j\}_{j=1}^{n_B}$}
+% 		\State $\theta \leftarrow \text{TrainBatch}(M_{\theta}, B_{model}, \mathcal{O}, \mathcal{B})$ \Comment{算法2}
+% 		\EndFor
+
+% 		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"greedy"}$
+% 		\State $M_{\theta} \leftarrow M_{\theta}.\text{eval}()$
+% 		\State $C_{val} \leftarrow \text{Evaluate}(M_{\theta}, \mathcal{D}_{val})$
+% 		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{平均奖励}
+
+% 		\State $B_{model} \leftarrow B_{model}.\text{epoch\_callback}(M_{\theta}, e)$
+% 		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{更新学习率}
+
+% 		\If{$e \bmod k_{save} = 0 \lor e = N_{epoch} - 1$}
+% 		\State $\text{SaveCheckpoint}(\theta, \mathcal{O}, B_{model}, e)$
+% 		\EndIf
+
+% 		\If{$e = 0 \lor \bar{r} > R_{best}$}
+% 		\State $\theta^* \leftarrow \theta$ \Comment{保存最佳模型参数}
+% 		\State $R_{best} \leftarrow \bar{r}$
+% 		\EndIf
+% 		\EndFor
+% 		\State \Return $\theta^*$
+% 	\end{algorithmic}
+% \end{algorithm}
+
+% \begin{algorithm}[H]
+% 	\begin{algorithmic}[1]
+% 		\caption{TrainBatch Subroutine for GRP}
+% 		\label{alg:grp_batch_training}
+% 		\Require $M_{\theta}$ (model), $B_{model}$ (baseline model), $\mathcal{O}$ (optimizer), $\mathcal{B}$ (batch data)
+% 		\Ensure Updated model parameters $\theta$
+
+% 		\State $(x, b_v) \leftarrow B_{model}.\text{unwrap\_batch}(\mathcal{B})$
+% 		\State $x \leftarrow x.\text{to}(\text{device})$, $b_v \leftarrow b_v.\text{to}(\text{device})$ if $b_v \neq \text{None}$ else $\text{None}$
+
+% 		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C$：成本，$\log p$：对数概率}
+% 		\State $r \leftarrow -C$ \Comment{$r \in \mathbb{R}^{B}$：奖励}
+
+% 		\If{$\text{problem\_type} = \text{"grp"}$}
+% 		\State $A_{repair} \leftarrow \begin{cases}
+% 				x.\text{total\_repair\_area} & \text{if exists}                 \\
+% 				-C / \alpha_{r}              & \text{否则（近似值）}
+% 			\end{cases}$
+% 		\EndIf
+
+% 		\State $(b_v, \mathcal{L}_{b}) \leftarrow \begin{cases}
+% 				B_{model}.\text{eval}(x, C) & \text{if } b_v = \text{None} \\
+% 				(b_v, 0)                    & \text{otherwise}
+% 			\end{cases}$
+
+% 		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$
+% 		\State $\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}$ \Comment{总损失}
+
+% 		\State $\nabla\theta \leftarrow \mathbf{0}$ \Comment{梯度清零}
+% 		\State $\nabla\theta \leftarrow \nabla_{\theta}\mathcal{L}$ \Comment{计算梯度}
+% 		\State $\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})$ \Comment{裁剪梯度范数}
+% 		\State $\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)$ \Comment{更新参数}
+% 		\State \Return $\theta$
+% 	\end{algorithmic}
+% \end{algorithm}
+本文采用算法\ref{alg:grp_main_training}和\ref{alg:grp_batch_training}所示的训练流程，将Actor-Critic方法与梯度下降相结合。训练过程中使用Adam优化器，并结合学习率调度器动态调整学习率：
+
+\begin{equation}
+	\mathcal{O} \leftarrow \text{Adam}(\{M_{\theta}, B_{model}\}, \alpha)
+\end{equation}
+
+每个训练周期中，本文生成训练和验证数据集，并进行批次训练。在算法\ref{alg:grp_batch_training}中，策略梯度损失计算如下：
+
+\begin{equation}
+	\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i,
+\end{equation}
+其中，$b_{v,i}$ 为基线模型对状态价值的估计，$(C_i - b_{v,i})$ 构成优势函数，用于指导策略更新方向。总损失函数包括策略梯度损失和基线损失：
+
+\begin{equation}
+	\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}
+\end{equation}
+
+参数更新通过梯度下降完成，并应用梯度裁剪以确保训练稳定性：
+
+\begin{equation}
+	\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})
+\end{equation}
+
+\begin{equation}
+	\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)
+\end{equation}
+
+训练过程中，本文保存性能最佳的模型参数 $\theta^*$，以便后续使用。模型评估采用贪婪解码策略，计算验证集上的平均奖励作为评估指标：
+
+\begin{equation}
+	\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}
+\end{equation}
+
+通过这种训练流程，模型能够逐步学习优化多无人机草原修复的策略，实现修复面积最大化的目标。
+
+\section{本章小结}
+本章介绍了强化学习方法如何应用于草原修复决策，阐述了模型结构与Actor-Critic训练流程，为端到端自动决策奠定了技术基础。
+
+% 第四章
+
+\chapter{多无人机协同调度算法}
+
+\section{协同修复问题描述}
+
+在多无人机协同草原修复问题中，假设各无人机每轮巡航所携带的种子数量相同，表示为：
+
+\begin{equation}
+	Q_u = Q, \quad \forall u \in U,
+\end{equation}
+其中，$U$ 表示无人机集合，$Q$ 为初始携带种子重量。在修复过程中，无人机自身重量因种子播撒而减轻，导致飞行能耗动态变化。每架无人机已知自身修复地图的详细信息，包括退化区域数量、位置坐标、退化程度及待修复面积等信息。任意两点间距离采用二维平面内的欧式距离计算：
+
+\begin{equation}
+	d(v_i, v_j) = \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}.
+\end{equation}
+
+\section{协同调度机制}
+
+本文提出的多无人机协同调度算法通过局部信息与全局信息相结合的方式实现协同。对于每架无人机，本文定义：
+
+\begin{equation}
+	M_u = \{v_1, v_2, ..., v_n\}, \quad \forall u \in U,
+\end{equation}
+其中，$M_u$ 为无人机 $u$ 的修复地图，包含 $n$ 个待修复区域。每个区域 $v_i$ 表示为四元组：
+
+\begin{equation}
+	v_i = (id_i, (x_i, y_i), l_i, a_i), \quad i \in \{1,2,...,n\},
+\end{equation}
+其中，$id_i$ 为区域编号，$(x_i, y_i)$ 为坐标位置，$l_i$ 为退化程度，$a_i$ 为可修复面积。
+
+无人机状态集 $S_u$ 定义为：
+
+\begin{equation}
+	S_u = (p_u, E_u^{rem}, V_u^{vis}, A_u^{rep}), \quad \forall u \in U,
+\end{equation}
+其中，$p_u$ 表示无人机当前位置，$E_u^{rem}$ 为剩余能量，$V_u^{vis}$ 为已访问序列，$A_u^{rep}$ 为已修复面积。
+
+为模拟无人机与地面中心交互顺序，引入信号量 $P_u$ 表示无人机完成首个待修复区域的时间：
+
+\begin{equation}
+	P_u = \frac{d(p_u, v_i^{next})}{v} + \frac{a_i^{rep}}{r},
+\end{equation}
+其中，$v$ 为无人机飞行速度，$r$ 为单位时间内可修复面积，$v_i^{next}$ 为下一个待修复区域。
+
+\section{动态地图更新}
+
+本文设计的多无人机协同算法核心在于动态调整修复地图，通过适应度函数 $\Theta(u,v_i)$ 评估无人机 $u$ 与待修复区域 $v_i$ 的匹配度：
+
+\begin{equation}
+	\Theta(u,v_i) = \alpha \cdot d(p_u, v_i) + \beta \cdot \frac{1}{l_i} + \gamma \cdot \frac{1}{a_i},
+\end{equation}
+其中，$\alpha$、$\beta$、$\gamma$ 为权重系数，分别调节距离、退化程度和修复面积对适应度的影响。
+
+多无人机协同调度过程可分为以下几个关键步骤：
+
+1) 初始地图分配：使用 K-means 等聚类方法将待修复区域分配给各无人机，形成初始修复地图 $M_u^0$。
+
+2) 第一次路径规划：各无人机以当前位置为起点，计算最优路径及修复面积：
+
+\begin{equation}
+	(P_u^1, A_u^1) = \arg\max_{P \in \mathcal{P}(M_u)} \sum_{v_i \in P} a_i^{rep},
+\end{equation}
+其中，$\mathcal{P}(M_u)$ 表示满足能量约束的所有可行路径集合，$a_i^{rep}$ 为在点 $v_i$ 的修复面积。
+
+3) 地图动态更新：地面中心根据各无人机当前状态，更新全局修复地图：
+
+\begin{equation}
+	M_u^{tmp} = \{v_i | v_i \in M^{global}, u = \arg\min_{u' \in U} \Theta(u',v_i)\}
+\end{equation}
+
+4) 第二次路径规划：无人机基于更新后的地图再次规划路径，并计算修复面积 $A_u^2$。
+
+5) 地图选择决策：比较两次规划的总修复面积，选择更优方案：
+
+\begin{equation}
+	M_u =
+	\begin{cases}
+		M_u^{tmp}, & \text{if } \sum_{u \in U} A_u^2 \geq \sum_{u \in U} A_u^1 \\
+		M_u,       & \text{otherwise}.
+	\end{cases}
+\end{equation}
+
+\section{决策与执行流程}
+
+无人机根据信号量优先级依次执行决策。对于信号量最小的无人机 $u^*$：
+
+\begin{equation}
+	u^* = \arg\min_{u \in U} P_u
+\end{equation}
+
+该无人机在当前位置完成修复任务后，前往下一个待修复区域：
+
+\begin{equation}
+	v_i^{next} = \arg\min_{v_i \in M_{u^*}} \Theta(u^*,v_i)
+\end{equation}
+
+同时更新状态信息：
+
+\begin{equation}
+	S_{u^*} = (v_i^{next}, E_{u^*}^{rem} - E_{flight} - E_{repair}, V_{u^*}^{vis} \cup \{v_i^{curr}\}, A_{u^*}^{rep} + a_i^{rep}),
+\end{equation}
+其中，$E_{flight}$ 为飞行能耗，$E_{repair}$ 为修复能耗，$v_i^{curr}$ 为当前位置。
+
+当某架无人机的修复地图为空时，该无人机返回地面中心；当全局修复地图为空时，算法结束。完整的多无人机协同调度算法如算法 \ref{alg:multi_uav_scheduling} 所示。
+
+\begin{algorithm}[H]
+	\caption{多无人机协同调度算法}
+	\label{alg:multi_uav_scheduling}
+	\begin{algorithmic}[1]
+		\Require 参数序列 $Parms$，无人机修复地图集合 $M_u$，无人机状态集合 $S_u$
+		\Ensure 无人机访问的节点序列 $O_p$，无人机修复的面积 $O_a$，无人机剩余能量 $O_e$
+
+		\State $M_u^i \gets \text{初始化}(M_u)$ \Comment{无人机根据初始化方法（如 K-means）分配初始地图}
+		\State $P_u^i \gets \text{初始化}(P_u)$ \Comment{初始化无人机信号量以决定决策优先级}
+
+		\While{$M_u \neq \emptyset$}
+		\State $E_u^{rel} \gets \text{路径规划}(M_u, P_u^{self})$ \Comment{无人机群第一次路径规划}
+		\State $\text{上报中心}(S_u, M_u, E_u^{rel})$ \Comment{无人机第一次上报中心}
+		\State $M_u^{tmp} \gets \text{更新地图}(M^{global}, P_u^{self})$ \Comment{中心更新地图}
+		\State $\text{下发新地图}(M_u^{P_u^{tmp}})$ \Comment{中心给无人机下发新地图}
+		\State $E_u^{r2} \gets \text{路径规划}(M_u^{tmp}, P_u^{self})$ \Comment{无人机群第二次路径规划}
+		\State $\text{上报中心}(E_u^{r2}, Area_u^{r2})$ \Comment{无人机第二次上报中心}
+
+		\If{$\sum_{u=1}^U Area_u^{r2} \geq \sum_{u=1}^U Area_u^{r1}$}
+		\State $\text{下发新地图}(M_u^{tmp})$ \Comment{无人机选择修复面积更多的地图}
+		\State $M_u \gets M_u^{tmp}$
+		\EndIf
+
+		\State $\sigma_u^{max\_p} \gets \text{决策修复面积}(E_u, M_u)$ \Comment{信号量最优先的无人机决策修复面积}
+		\State $\text{执行修复与采集}(\sigma_u^{max\_p}, C_{max\_p}, P_u^{max\_p})$ \Comment{无人机执行修复和信息采集}
+		\State $\text{从地图移除}(M_u, P_u^{max\_p})$
+		\State $P_u^{max\_p} \gets \text{飞往下一个点}(P_u^{benefit})$ \Comment{无人机飞往下个最优点}
+		\State $\text{更新信号量}(P_u^{max\_p})$ \Comment{更新无人机信号量}
+		\EndWhile
+
+		\State $\text{返回起点}(P_u^0)$ \Comment{无人机返回起点}
+	\end{algorithmic}
+\end{algorithm}
+% \begin{algorithm}[H]
+% 	\caption{多无人机协同调度算法}
+% 	\label{alg:multi_uav_scheduling}
+% 	\begin{algorithmic}[1]
+% 		\Require 参数序列 $Parms$，无人机修复地图集合 $M_u$，无人机状态集合 $S_u$
+% 		\Ensure 无人机访问的节点序列 $O_p$，无人机修复的面积 $O_a$，无人机剩余能量 $O_e$
+
+% 		\State $M_u^i \gets \text{Initial}(M_u)$ \Comment{无人机根据初始化方法（如 K-means）分配初始地图}
+% 		\State $P_u^i \gets \text{Initial}(P_u)$ \Comment{初始化无人机信号量以决定决策优先级}
+
+% 		\While{$M_u \neq \emptyset$}
+% 		\State $E_u^{rel} \gets \text{PlaningPath}(M_u, P_u^{self})$ \Comment{无人机群第一次路径规划}
+% 		\State $\text{SendToCenter}(S_u, M_u, E_u^{rel})$ \Comment{无人机第一次上报中心}
+% 		\State $M_u^{tmp} \gets \text{updateMap}(M^{global}, P_u^{self})$ \Comment{中心更新地图}
+% 		\State $\text{RecvToUAV}(M_u^{P_u^{tmp}})$ \Comment{中心给无人机下发新地图}
+% 		\State $E_u^{r2} \gets \text{PlaningPath}(M_u^{tmp}, P_u^{self})$ \Comment{无人机群第二次路径规划}
+% 		\State $\text{SendToCenter}(E_u^{r2}, Area_u^{r2})$ \Comment{无人机第二次上报中心}
+
+% 		\If{$\sum_{u=1}^U Area_u^{r2} \geq \sum_{u=1}^U Area_u^{r1}$}
+% 		\State $\text{RecvToUAV}(M_u^{tmp})$ \Comment{无人机选择修复面积更多的地图}
+% 		\State $M_u \gets M_u^{tmp}$
+% 		\EndIf
+
+% 		\State $\sigma_u^{max\_p} \gets \text{DecideArea}(E_u, M_u)$ \Comment{信号量最优先的无人机决策修复面积}
+% 		\State $\text{ActionUAV}(\sigma_u^{max\_p}, C_{max\_p}, P_u^{max\_p})$ \Comment{无人机执行修复和信息采集}
+% 		\State $\text{DropPointFromMap}(M_u, P_u^{max\_p})$
+% 		\State $P_u^{max\_p} \gets \text{FlyToPoint}(P_u^{benefit})$ \Comment{无人机飞往下个最优点}
+% 		\State $\text{Update}(P_u^{max\_p})$ \Comment{更新无人机信号量}
+% 		\EndWhile
+
+% 		\State $\text{FlyToPoint}(P_u^0)$ \Comment{无人机返回起点}
+% 	\end{algorithmic}
+% \end{algorithm}

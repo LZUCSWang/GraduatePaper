@@ -2971,8 +2971,11 @@
     <bcf:citekey order="40" intorder="1">gann2019international</bcf:citekey>
     <bcf:citekey order="41" intorder="1">dorling2016vehicle</bcf:citekey>
     <bcf:citekey order="42" intorder="1">klaus2017enriching</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">aggarwal2020path</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">JIAO2024108084</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">vaswani2017attention</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">vinyals2015pointer</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">bresson2021transformer</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">aggarwal2020path</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">JIAO2024108084</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

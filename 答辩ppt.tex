@@ -1,0 +1,305 @@
+\documentclass[9pt, aspectratio=169]{beamer}  % 将字体大小改为9pt
+
+\usepackage{ctex}  % 支持中文
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{multirow}  % 支持表格行合并
+\usepackage{booktabs}
+\usepackage{svg}
+\usepackage{subfig}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+% 添加图片序号设置
+\setbeamertemplate{caption}[numbered]
+
+% 修改代码显示的字体大小
+\lstset{
+    language=Python,
+    breaklines=true,
+    showstringspaces=false,
+    tabsize=4,
+    numbers=none,  % 移除行号以节省空间
+    frame=none     % 移除边框以减少视觉干扰
+}
+
+% 调整数学公式字体大小
+\DeclareMathSizes{9}{9}{7}{5}  % 调整为对应9pt的数学字体大小
+
+% 减小标题和段落间距
+\setbeamertemplate{items}[circle]  % 使用更紧凑的项目符号
+\setlength{\parskip}{0.5em}       % 减小段落间距
+
+% 调整页边距以容纳更多内容
+\setbeamersize{
+    text margin left=0.3cm,
+    text margin right=0.3cm
+}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\title{毕业论文答辩}
+\subtitle{模型性能改进}
+\author{王贤义}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+\begin{frame}
+	\frametitle{研究背景与意义}
+	\begin{itemize}
+		\item 草原生态系统在环境保护中的重要性
+		      \begin{itemize}
+			      \item 占全球陆地总面积26\%至40\%
+			      \item 防风固沙、涵养水源、调节气候、维持生物多样性
+		      \end{itemize}
+		\item 草原退化问题
+		      \begin{itemize}
+			      \item 植被覆盖率下降、土壤沙化、水资源减少
+			      \item 传统修复方法效率低、成本高
+		      \end{itemize}
+		\item 无人机技术优势
+		      \begin{itemize}
+			      \item 机动性强、成本低、可远程操作
+			      \item 适用于复杂地形和偏远区域
+		      \end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{研究难点与挑战}
+	\begin{itemize}
+		\item 无人机能源限制
+		      \begin{itemize}
+			      \item 电池续航能力有限
+			      \item 载重能力受限
+		      \end{itemize}
+		\item 修复效率优化
+		      \begin{itemize}
+			      \item 如何在有限能源条件下最大化修复面积
+			      \item 播种负载与能耗之间的复杂关系
+		      \end{itemize}
+		\item 多无人机协同
+		      \begin{itemize}
+			      \item 任务分配与路径规划问题
+			      \item 动态调度与实时决策
+		      \end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{模型构建 - 草原修复问题}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item 草原建模为无向图 $G = (V, E)$
+				      \begin{itemize}
+					      \item $V = \{v_0, v_1, ..., v_N \}$ 表示修复区域
+					      \item $v_0$ 为地面信息融合中心
+					      \item 每个区域有位置、退化度、面积属性
+				      \end{itemize}
+				\item 无人机特性
+				      \begin{itemize}
+					      \item 起飞能量：$E_{max}$
+					      \item 草种重量：$Q$
+					      \item 退化程度范围：[0.3, 0.8]
+				      \end{itemize}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includesvg[width=1\textwidth]{figures/多无人机修复退化区域实例.svg}
+			\captionof{figure}{无人机草原修复区域示意}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\frametitle{无人机能量消耗模型}
+	\begin{align*}
+		P(\bar{q}_{ij}) & = (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}} \quad \text{(功率方程)} \\
+		E_f             & = \sum^N_{i=0}\sum^N_{j \neq i} e^f_{ij} d_{ij} x_{ij} \quad \text{(飞行能耗)}                  \\
+		E_s             & = \sum^N_{i = 1}\sum^N_{j \neq i}\sigma_i e_i x_{ij} \quad \text{(播种能耗)}                    \\
+		E_{ap}          & = e_{ap}\sum^N_{i=1}\sum^N_{j \neq i} x_{ij}\sigma_i \quad \text{(信息采集能耗)}
+	\end{align*}
+	\begin{itemize}
+		\item $M = W + m$：无人机框架与电池重量
+		\item $\bar{q}_{ij}$：无人机当前载荷重量
+		\item $\sigma_i$：在区域$i$修复的单位圆数量
+		\item $x_{ij}$：0-1变量，表示路径选择
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{优化目标与约束条件}
+	\begin{itemize}
+		\item 优化目标：最大化加权修复面积
+		      \begin{equation*}
+			      C = \sum_{i=1}^{N} (l_i + 0.7) \cdot \sigma_i
+		      \end{equation*}
+		\item 核心约束条件
+		      \begin{itemize}
+			      \item 能量约束：总能耗不超过最大能量容量$E_{max}$
+			      \item 载荷约束：携带的草种必须在返回前全部播撒完毕
+			      \item 路径约束：无人机最多进入每个区域一次
+			      \item 面积约束：修复面积不超过区域最大面积
+		      \end{itemize}
+		\item 问题复杂性：多变量组合优化问题，直接求解困难
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{多无人机协同调度算法}
+	\begin{algorithm}[H]
+		\scriptsize % 使用更小的字体
+		\caption{多无人机协同调度算法}
+		\label{alg:multi_uav_scheduling}
+		\begin{algorithmic}[1]
+			\Require 参数序列 $Parms$，无人机修复地图集合 $M_u$，无人机状态集合 $S_u$
+			\Ensure 无人机访问的节点序列 $O_p$，修复面积 $O_a$，剩余能量 $O_e$
+
+			\State $M_u^i \gets \text{初始化}(M_u)$ \Comment{根据初始化方法（如K-means）分配初始地图}
+			\State $P_u^i \gets \text{初始化}(P_u)$ \Comment{初始化无人机信号量以决定优先级}
+
+			\While{$M_u \neq \emptyset$}
+				\State $E_u^{rel} \gets \text{路径规划}(M_u, P_u^{self})$ \Comment{第一次路径规划}
+				\State $\text{上报中心}(S_u, M_u, E_u^{rel})$ \Comment{第一次上报中心}
+				\State $M_u^{tmp} \gets \text{更新地图}(M^{global}, P_u^{self})$
+				\State $\text{下发新地图}(M_u^{P_u^{tmp}})$ \Comment{下发新地图}
+				\State $E_u^{r2} \gets \text{路径规划}(M_u^{tmp}, P_u^{self})$ \Comment{第二次路径规划}
+				\State $\text{上报中心}(E_u^{r2}, Area_u^{r2})$
+
+				\If{$\sum_{u=1}^U Area_u^{r2} \geq \sum_{u=1}^U Area_u^{r1}$}
+					\State $\text{下发新地图}(M_u^{tmp})$ \Comment{选择修复面积更多的地图}
+					\State $M_u \gets M_u^{tmp}$
+				\EndIf
+
+				\State $\sigma_u^{\max\_p} \gets \text{决策修复面积}(E_u, M_u)$ 
+				\State $\text{执行修复与采集}(\sigma_u^{\max\_p}, C_{\max\_p}, P_u^{\max\_p})$
+				\State $\text{从地图移除}(M_u, P_u^{\max\_p})$
+				\State $P_u^{\max\_p} \gets \text{飞往下一个点}(P_u^{benefit})$
+				\State $\text{更新信号量}(P_u^{\max\_p})$
+			\EndWhile
+
+			\State $\text{返回起点}(P_u^0)$ \Comment{无人机返回起点}
+		\end{algorithmic}
+	\end{algorithm}
+\end{frame}
+
+\begin{frame}
+	\frametitle{基于深度强化学习的求解方法}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includesvg[width=0.95\textwidth]{figures/actor_loss_curve.svg}
+			\captionof{figure}{训练过程中修复面积变化}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includesvg[width=0.95\textwidth]{figures/avg_repair_area_curve.svg}
+			\captionof{figure}{训练过程中修复面积变化}
+		\end{column}
+	\end{columns}
+\end{frame}
+\begin{frame}
+	\frametitle{实验结果 - 路径规划可视化}
+	\begin{figure}
+		\centering
+		\subfloat[DRL方法]{\includesvg[width=0.45\textwidth]{figures/DRL/cvrp_60_500_6_multi_route_DRL.svg}}
+		\hfill
+		\subfloat[SA方法]{\includesvg[width=0.45\textwidth]{figures/SA/cvrp_60_500_6_multi_route_SA.svg}}
+
+		\caption{多无人机草原修复路径规划对比}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{实验结果 - 算法性能对比}
+	\begin{table}
+		\centering
+		\caption{路径长度与修复面积对比（DRL 与 CHAPBILM）}
+		\scriptsize
+		\setlength{\tabcolsep}{2pt}
+		\begin{tabular}{ccc c ccc ccc}
+			\toprule
+			\multirow{2}{*}{区域数} & \multirow{2}{*}{草原边长} & \multirow{2}{*}{无人机数} &  & \multicolumn{3}{c}{路径长度} & \multicolumn{3}{c}{修复面积} \\
+			\cmidrule(lr){5-7}\cmidrule(lr){8-10}
+			& & & & DRL & CHAPBILM & Gap(\%) & DRL & CHAPBILM & Gap(\%) \\
+			\midrule
+			\multirow{9}{*}{60} 
+			 & \multirow{3}{*}{500} 
+			   & \multirow{1}{*}{4} &  & 9396.35  & 12648.21 & \textbf{-25.68} & 267.00 & 194.00 & \textbf{37.63} \\
+			 &                        & \multirow{1}{*}{6} &  & 21348.69 & 19110.48 & 11.71          & 258.00 & 205.00 & \textbf{25.85} \\
+			 &                        & \multirow{1}{*}{8} &  & 26118.19 & 27145.66 & \textbf{-3.79} & 304.00 & 218.00 & \textbf{39.45} \\
+			\cmidrule(lr){2-10}
+			 & \multirow{3}{*}{600} 
+			   & \multirow{1}{*}{4} &  & 13339.68 & 16255.96 & \textbf{-17.92} & 271.00 & 223.00 & \textbf{21.52} \\
+			 &                        & \multirow{1}{*}{6} &  & 26523.73 & 27174.68 & \textbf{-2.39} & 294.00 & 206.00 & \textbf{42.72} \\
+			 &                        & \multirow{1}{*}{8} &  & 31186.17 & 31494.13 & \textbf{-0.98} & 257.00 & 224.00 & \textbf{14.73} \\
+			\cmidrule(lr){2-10}
+			 & \multirow{3}{*}{700} 
+			   & \multirow{1}{*}{4} &  & 17622.78 & 22103.46 & \textbf{-20.27} & 282.00 & 291.00 & -3.09          \\
+			 &                        & \multirow{1}{*}{6} &  & 28252.23 & 28539.91 & \textbf{-1.01} & 270.00 & 218.00 & \textbf{23.85} \\
+			 &                        & \multirow{1}{*}{8} &  & 37585.42 & 36859.35 & 1.97           & 238.00 & 254.00 & -6.30          \\
+			\midrule
+			\multirow{9}{*}{80} 
+			 & \multirow{3}{*}{500} 
+			   & \multirow{1}{*}{4} &  & 10221.88 & 17217.03 & \textbf{-40.60} & 370.00 & 315.00 & \textbf{17.46} \\
+			 &                        & \multirow{1}{*}{6} &  & 22135.76 & 25252.45 & \textbf{-12.37} & 375.00 & 240.00 & \textbf{56.25} \\
+			 &                        & \multirow{1}{*}{8} &  & 30491.72 & 31922.23 & \textbf{-4.48}  & 306.00 & 267.00 & \textbf{14.61} \\
+			\cmidrule(lr){2-10}
+			 & \multirow{3}{*}{600} 
+			   & \multirow{1}{*}{4} &  & 15973.03 & 22825.91 & \textbf{-30.02} & 363.00 & 314.00 & \textbf{15.61} \\
+			 &                        & \multirow{1}{*}{6} &  & 29742.35 & 28044.73 & 6.05           & 406.00 & 282.00 & \textbf{44.00} \\
+			 &                        & \multirow{1}{*}{8} &  & 39943.98 & 40845.86 & \textbf{-2.21} & 399.00 & 269.00 & \textbf{48.33} \\
+			\cmidrule(lr){2-10}
+			 & \multirow{3}{*}{700} 
+			   & \multirow{1}{*}{4} &  & 22577.68 & 26113.54 & \textbf{-13.56} & 335.00 & 267.00 & \textbf{25.47} \\
+			 &                        & \multirow{1}{*}{6} &  & 33566.63 & 34738.58 & \textbf{-3.38} & 380.00 & 298.00 & \textbf{27.52} \\
+			 &                        & \multirow{1}{*}{8} &  & 44308.24 & 42493.45 & 4.28           & 355.00 & 311.00 & \textbf{14.14} \\
+			\bottomrule
+		\end{tabular}
+		\label{tab:combined_comparison}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\frametitle{研究结论与展望}
+	\begin{itemize}
+		\item 研究结论
+		      \begin{itemize}
+			      \item 提出基于深度强化学习的多无人机草原修复方法
+			      \item 构建Transformer+指针网络架构，采用Actor-Critic训练
+			      \item 实验验证优于传统方法，修复面积提升最高可达40\%
+		      \end{itemize}
+		      \vspace{0.5em}
+		\item 未来展望
+		      \begin{itemize}
+			      \item 考虑地形、气候等环境因素对无人机性能的影响
+			      \item 进一步探索算法在更复杂环境下的适应性
+			      \item 结合实际场景验证，提高算法实用性
+			      \item 扩展至更多类型的生态修复任务
+		      \end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+		\vspace{2cm}
+		{\Huge \sffamily\bfseries\textcolor{blue!60!black}{Thanks for Listening!}}
+		\vspace{0.5cm}
+
+		{\large \itshape\textcolor{gray}{Questions \& Comments Welcome}}
+	\end{center}
+\end{frame}
+
+\end{document}

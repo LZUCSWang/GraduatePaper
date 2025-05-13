@@ -130,7 +130,7 @@
 	各无人机的状态信息，动态调整修复地图，实现多无人机间的高效协同与任务再分配，从
 	而提升整体修复效率。实验部分在多种规模和分布的草原实例上进行了仿真验证，结果表
 	明，本文提出的算法在修复面积、路径优化和能量利用率等方面均优于传统优化方法，修
-	复面积提升幅度最高可达 40%，展现出良好的泛化能力和实际应用前景。综上，本文为大
+	复面积提升幅度最高可达 40\%，展现出良好的泛化能力和实际应用前景。综上，本文为大
 	规模草原生态修复任务提供了一种高效、智能的技术方案，对无人机协同作业和生态环境
 	治理具有重要的理论意义和应用价值。}{草原生态修复；多无人机协同；Transformer；指针网络；Actor-Critic 算法}
 
@@ -203,7 +203,7 @@
 
 在无人机路径规划研究中，研究者主要关注高效区域覆盖算法以延长无人机作业时间。Vasisht等人\cite{vasisht2017farmbeats}设计了一种新颖的路径规划算法，充分利用风力辅助加速和减速，延长无人机操作时间并最小化覆盖给定区域所需的时间。Palomino等人\cite{palomino2019towards}提出了与路径规划过程相关的自动化工作流算法，该算法不仅能识别工作空间，还能在农业监督活动中处理路径规划。Shivgan等人\cite{shivgan2020energy}研究了无人机在环境传感和测量应用中完成任务的路径规划问题，将问题建模为旅行商问题(TSP)，通过优化无人机能量来处理无人机的飞行时间限制。Rossello等人\cite{rossello2021information}为精准农业开发了一种新型路径规划算法，覆盖大规模区域，考虑了飞行时间约束并最大化系统状态的估计质量，将问题建模为特殊的定向问题(OP)，即混合整数半定规划(MISDP)，通过启发式算法求解。
 
-智能优化算法方面，Feng等人探索了进化优化与迁移学习在复杂路径问题中的应用\cite{feng2015memes}，Rossello等人提出了基于信息驱动的路径规划方法\cite{rossello2021information}。多层次优化方法被用于任务分配与路径优化\cite{colson2007overview}，协同优化与分布式智能算法则应用于大规模组合优化问题\cite{huang2004cooperative}。
+智能优化算法方面，Feng等人探索了进化优化与迁移学习在复杂路径问题中的应用\cite{feng2015memes}，Rossello等人提出了基于信息驱动的路径规划方法\cite{rossello2021information}。多层次优化方法被用于任务分配与路径优化\cite{colson2007overview}，协同优化与分布式智能算法则应用于大规模组合优化问题\cite{huang2004cooperative}。Jiao等人\cite{JIAO2024108084}提出了一种协同优化算法CHAPBILM，专门应对无人机草原修复问题，将问题分解为轨迹设计和修复区域分配两个阶段，并利用两者之间的相互依赖关系同时解决这两个NP难问题，在能量约束条件下实现了修复面积的有效最大化。
 
 在两阶段优化方法研究方面，Shen等人\cite{shen2009two}考虑了大规模生物恐怖主义紧急情况下的两阶段车辆路径问题。Li等人\cite{li2010inexact}开发了一个不精确两阶段水管理模型，用于在不确定条件下规划农业灌溉。Azadeh等人\cite{azadeh2019two}提出了一种两阶段路径优化方法，限制飞行边界并减少轻型飞机运输系统中的变量和约束数量。Maini等人\cite{maini2019cooperative}设计了一种两阶段策略，为覆盖应用中燃料约束下的协同空中-地面车辆路径规划问题寻找高效解决方案。Rajan等人\cite{rajan2022routing}为数据收集任务场景中的无人机路径规划问题制定了两阶段随机规划模型。虽然上述研究主要采用两阶段方法处理路径规划问题，但大多数研究仅根据问题过程将其机械分解为两个单独解决的阶段，而没有考虑它们之间的耦合关系。
 
@@ -256,8 +256,8 @@
 	%\begin{small}
 	x_{ij} =
 	\begin{cases}
-		1, & \mbox{$(v_i,v_j)$ is covered in the tour,} \\
-		0, & \mbox{otherwise}.
+		1, & \mbox{如果 $(v_i,v_j)$ 被包含在无人机路径中,} \\
+		0, & \mbox{否则}.
 	\end{cases}
 	%\end{small}
 \end{equation}
@@ -295,14 +295,14 @@
 
 \subsection{信息采集能耗}
 
-除飞行能耗以外，无人机还在各待修复区域收集修复信息。无人机搭载高光谱相机进行航拍的总能耗可表示为：
+除飞行能耗以外，无人机还在各待修复区域收集修复信息。无人机搭载高光谱相机进行信息采集的总能耗可表示为：
 
 \begin{equation} \label{hyper-spectral-camera-energy}
 	\begin{scriptsize}
 		E_{ap} = e_{ap}\sum^N_{i=1}\sum^N_{j \neq i} x_{ij}\sigma_i,
 	\end{scriptsize}
 \end{equation}
-其中，$e_{ap}$ 表示无人机在 $\sigma_i$ 个被修复的单位圆中航拍所消耗的能量。
+其中，$e_{ap}$ 表示无人机在 $\sigma_i$ 个被修复的单位圆中信息采集所消耗的能量。
 
 \section{优化目标}
 
@@ -346,20 +346,9 @@
 
 \chapter{多无人机协同草原修复优化算法}
 
-\section{协同修复问题描述}
+\section{多无人机协同框架}
 
-在多无人机协同草原修复问题中，假设各无人机每轮巡航所携带的种子数量相同，表示为：
-
-\begin{equation}
-	Q_u = Q, \quad \forall u \in U,
-\end{equation}
-其中，$U$ 表示无人机集合，$Q$ 为初始携带种子重量。在修复过程中，无人机自身重量因种子播撒而减轻，导致飞行能耗动态变化。每架无人机已知自身修复地图的详细信息，包括退化区域数量、位置坐标、退化程度及待修复面积等信息。任意两点间距离采用二维平面内的欧式距离计算：
-
-\begin{equation}
-	d(v_i, v_j) = \sqrt{(x_i - x_j)^2 + (y_i - y_j)^2}.
-\end{equation}
-
-\section{协同调度机制}
+\subsection{协同调度架构}
 
 本文提出的多无人机协同调度算法通过局部信息与全局信息相结合的方式实现协同。对于每架无人机，本文定义：
 
@@ -387,7 +376,7 @@
 \end{equation}
 其中，$v$ 为无人机飞行速度，$r$ 为单位时间内可修复面积，$v_i^{next}$ 为下一个待修复区域。
 
-\section{动态地图更新}
+\subsection{动态地图更新策略}
 
 本文设计的多无人机协同算法核心在于动态调整修复地图，通过适应度函数 $\Theta(u,v_i)$ 评估无人机 $u$ 与待修复区域 $v_i$ 的匹配度：
 
@@ -425,7 +414,7 @@
 	\end{cases}
 \end{equation}
 
-\section{决策与执行流程}
+\subsection{决策与执行流程}
 
 无人机根据信号量优先级依次执行决策。对于信号量最小的无人机 $u^*$：
 
@@ -459,11 +448,11 @@
 		\State $P_u^i \gets \text{初始化}(P_u)$ \Comment{初始化无人机信号量以决定决策优先级}
 
 		\While{$M_u \neq \emptyset$}
-		\State $E_u^{rel} \gets \text{路径规划}(M_u, P_u^{self})$ \Comment{无人机群第一次路径规划}
+		\State $E_u^{rel} \gets \text{路径规划}(M_u, P_u^{self})$ \Comment{使用算法\ref{alg:grp_main_training}训练的模型进行第一次路径规划}
 		\State $\text{上报中心}(S_u, M_u, E_u^{rel})$ \Comment{无人机第一次上报中心}
 		\State $M_u^{tmp} \gets \text{更新地图}(M^{global}, P_u^{self})$ \Comment{中心更新地图}
 		\State $\text{下发新地图}(M_u^{P_u^{tmp}})$ \Comment{中心给无人机下发新地图}
-		\State $E_u^{r2} \gets \text{路径规划}(M_u^{tmp}, P_u^{self})$ \Comment{无人机群第二次路径规划}
+		\State $E_u^{r2} \gets \text{路径规划}(M_u^{tmp}, P_u^{self})$ \Comment{使用算法\ref{alg:grp_main_training}训练的模型进行第二次路径规划}
 		\State $\text{上报中心}(E_u^{r2}, Area_u^{r2})$ \Comment{无人机第二次上报中心}
 
 		\If{$\sum_{u=1}^U Area_u^{r2} \geq \sum_{u=1}^U Area_u^{r1}$}
@@ -482,30 +471,29 @@
 	\end{algorithmic}
 \end{algorithm}
 
-\section{马尔可夫过程建模}
+
+\section{单无人机路径规划和面积分配}
+
+\subsection{马尔可夫过程建模}
 本文将修复过程中的每架无人机视为一个智能体，将待修复草原视为以欧几里得距离为边权值的无向全联通图。对单架无人机而言，其部分修复过程可视为从某点出发，遍历修复地图并完成相应修复任务，最后返回起点。
 
 在无人机的修复过程中，由于其在两块相邻修复区域间的飞行能耗正比于此时无人机自身重量与路径长度，而自身重量又随着播散种子修复区域的过程动态变化，因而其总飞行能耗与总飞行长度、修复区域的顺序及修复面积均有复杂关系。换言之，作为优化目标的总修复面积由于与无人机耗能而与其飞行路径间接相关，因而二者之间存在复杂的耦合关系，如何解决修复面积的最优化，毫无疑问是一个困难的 $\text{NP-hard}$ 问题。
 
 针对该难题，本文拟采用强化学习方法学习这一复杂的函数关系，具体建模如下：
 
-\subsection{状态}
+\subsubsection{状态空间定义}
 
 本文将一个待修复草原实例设为$V=\{v_i\}_{i=0}^n$,其中包含了各个待修复区域的位置、退化程度等各项信息。各点以$v_0$为起始点按照某种策略$\pi$，逐渐完善部分解$\{(v_0,a_0),(v_i,a_i)\}_{i=1}^{uav_{now}}$。其中，编号$i$表示无人机访问各点的次序，$uav_{now}$为无人机已经过的点数量,$a_i$代表按照策略$\pi$在点$v_i$修复的面积。本文将该部分解作为智能体在强化学习中的状态，记作$s(<i),i\in[1,n+1]$。初始状态记作$s(<1)=v_0$，表示无人机处于地面中心；结束状态记作$s(<n+1)=s$，表示无人机已访问全部点。
 
-\subsection{动作}
+\subsubsection{动作空间与状态转移}
 
 如上所述，无人机状态是修复过程的部分解，因而本文将动作设置为无人机修复过程某一步的解，即将无人机在状态$s(<i)$时的动作记作$\pi_i=s(i)$,$i\in[1,n+1]$，即可实现强化学习中动作-状态对的自然更新。
 
-\subsection{状态转移}
-
 转移函数如上所述，在动作选取完毕后无人机新的状态也被唯一确定，因而状态转移函数具有完全确定性，记其为$S(s(<i)|s(i))=s(<i+1)$,$i\in[1,n]$。
 
-\subsection{策略函数}
+\subsubsection{策略函数与奖励设计}
 
 如上所述，草原修复过程被创建为一个马尔可夫决策过程，因而其策略函数可被链式分解为：$p(\pi|s)=\prod_{i=1}^n p(s(i)|s(<i))$(10)其中，$p(s(i)|s(<i))$表示智能体在状态$s(<i)$下选择动作$s(i)$的概率。
-
-\subsection{奖励函数}
 
 作为强化学习方法的核心之一，奖励函数的设计必须考虑全面，以防止模型难以收敛。经本文实验证明，单纯以最基本的修复面积作为模型的奖励函数会使得模型收敛速度大大减缓，同时考虑到无人机自身能量限制引入的惩罚项，本文最终将一组解的奖励函数设置为：
 \begin{equation}
@@ -520,13 +508,13 @@
 	\end{array}\right. 
 	\label{eq:12}
 \end{equation}
-上式中，$\alpha_p$, $\alpha_r$为修正系数，$l_i$为第$i$个区域的退化程度，$Pel$为控制无人机能量约束的惩罚项。通过引入$(l_i-0.3)$作为权重因子，模型可以优先修复退化程度更高的区域，从而实现对草原生态健康状况的精准干预。同时为了加快模型收敛速度，本文将不符合无人机能量约束时的惩罚项设置为其从起点到返回地面中心经历的路径长度，以确保在模型收敛的前期尽可能获得的解路径长度较短、符合能量约束，并在此前提下进行修复面积的决策。
+上式中，$\alpha_p$, $\alpha_r$为修正系数，$l_i$为第$i$个区域的退化程度，$Pel$为控制无人机能量约束的惩罚项。通过引入$(l_i+0.7)$作为权重因子，模型可以优先修复退化程度更高的区域，从而实现对草原生态健康状况的精准干预。同时为了加快模型收敛速度，本文将不符合无人机能量约束时的惩罚项设置为其从起点到返回地面中心经历的路径长度，以确保在模型收敛的前期尽可能获得的解路径长度较短、符合能量约束，并在此前提下进行修复面积的决策。
 
-\section{神经网络模型构建}
+\subsection{神经网络模型构建}
 
 对于序列决策问题，编码器-解码器模型\cite{vaswani2017attention}作为最经典的神经网络模型结构之一，取得了优异的效果。本文采用稍加修改的经典的Tranformer作为编码器，指针网络\cite{vinyals2015pointer}作为自回归解码器以实现构造式求解。
 
-\subsection{特征提取与模型架构}
+\subsubsection{特征提取与模型架构}
 
 本文对待求解的待修复草原模型提取两部分特征：待修复区域的坐标、退化程度等静态特征，及无人机自身剩余能量、剩余重量等动态特征。模型参数用 $\theta \in \Theta$ 表示，包含编码器和解码器的所有可学习参数。
 
@@ -536,7 +524,7 @@
 \end{equation}
 其中，$d_e$ 为嵌入维度，$d_h$ 为隐藏层维度，$n_{layers}$ 为编码器层数，$n_{heads}$ 为注意力头数量。同时，本文初始化基线模型 $B_{model}$ 用于估计值函数，支持Actor-Critic算法的训练。
 
-\subsection{编码器结构}
+\subsubsection{编解码器设计}
 
 参考了Bresson\cite{bresson2021transformer}等人的方法，编码器由 $n_{layers}$ 层Transformer层堆叠而成，采用BatchNorm归一化，表示为：
 
@@ -556,8 +544,6 @@
 \end{equation}
 
 编码器同时处理静态环境特征和动态无人机状态特征，生成用于解码器的上下文表示。
-
-\subsection{解码器结构}
 
 自回归解码器通过循环解码逐步构造解决方案。解码器接收编码器的输出，其工作流程为：
 
@@ -592,14 +578,14 @@
 	\label{eq:15c}
 \end{equation}
 
-在模型前向传播中，如算法\ref{alg:grp_batch_training}第4行所示，解码器生成成本值 $C$ 和对数概率 $\log p$：
+在模型前向传播中，如算法\ref{alg:grp_batch_training}第3行所示，解码器生成成本值 $C$ 和对数概率 $\log p$：
 
 \begin{equation}
 	(C, \log p) \leftarrow M_{\theta}(x),
 \end{equation}
 其中 $C$ 表示当前策略的成本（负奖励），$\log p$ 表示选择各动作的对数概率。
 
-\subsection{训练流程}
+\subsubsection{Actor-Critic训练流程}
 \begin{algorithm}[H]
 	\begin{algorithmic}[1]
 		\caption{GRP主训练流程}
@@ -714,8 +700,7 @@
 通过这种训练流程，模型能够逐步学习优化多无人机草原修复的策略，实现修复面积最大化的目标。
 
 \section{本章小结}
-本章首先介绍了多无人机协同修复问题的描述和协同调度机制，提出了基于动态地图更新的决策执行流程。随后，利用马尔可夫过程对修复问题进行建模，并构建了基于强化学习的神经网络模型，包括编码器-解码器结构和Actor-Critic训练流程，为实现草原修复面积最大化提供了算法保障。
-
+本章首先介绍了多无人机协同调度机制，分析了外部协同架构、动态地图更新策略及基于信号量的决策执行流程。随后深入探讨了单机内部智能规划方法，通过马尔可夫过程建模将修复问题形式化为序列决策问题，并构建了基于Transformer编码器和指针网络解码器的深度神经网络模型。在此基础上，详细阐述了Actor-Critic训练方法及其实现细节，为实现草原修复面积最大化提供了算法框架。这种"外部协同、内部智能"的分层设计思路，既保证了系统的全局最优性，又提升了算法在复杂环境中的适应性与鲁棒性。
 
 \chapter{实验与分析}
 本部分本文展示了一些仿真实验的具体配置与结果。
@@ -819,12 +804,12 @@
 	\subfloat[60点500边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_4_multi_route_DRL.svg}\label{fig:DRL_60_500_4}}
 	\subfloat[60点500边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_6_multi_route_DRL.svg}\label{fig:DRL_60_500_6}} 
 	\subfloat[60点500边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_8_multi_route_DRL.svg}\label{fig:DRL_60_500_8}}\\
-	\subfloat[60点600边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_4_multi_route_DRL.svg}\label{fig:CHAPBILM_60_500_4}}
-	\subfloat[60点600边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_6_multi_route_DRL.svg}\label{fig:CHAPBILM_60_500_6}}
-	\subfloat[60点600边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_8_multi_route_DRL.svg}\label{fig:CHAPBILM_60_500_8}}\\
-	\subfloat[80点700边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_4_multi_route_DRL.svg}\label{fig:DRL_80_500_4}}
-	\subfloat[80点700边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_6_multi_route_DRL.svg}\label{fig:DRL_80_500_6}}
-	\subfloat[80点700边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_8_multi_route_DRL.svg}\label{fig:DRL_80_500_9}}
+	\subfloat[60点600边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_4_multi_route_DRL.svg}\label{fig:DRL_60_600_4}}
+	\subfloat[60点600边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_6_multi_route_DRL.svg}\label{fig:DRL_60_600_6}}
+	\subfloat[60点600边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_8_multi_route_DRL.svg}\label{fig:DRL_60_600_8}}\\
+	\subfloat[60点700边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_4_multi_route_DRL.svg}\label{fig:DRL_60_700_4}}
+	\subfloat[60点700边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_6_multi_route_DRL.svg}\label{fig:DRL_60_700_6}}
+	\subfloat[60点700边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_8_multi_route_DRL.svg}\label{fig:DRL_60_700_8}}
 	\caption{基于深度强化学习方法的多无人机草原修复最优路径规划图}
 	\label{fig:RL_combined_uav_routes}
 \end{figure}
@@ -832,20 +817,20 @@
 
 \begin{figure}[H]
 	\centering
-	\subfloat[60点500边长4机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_500_4_multi_route_SA.svg}\label{fig:DRL_60_500_4}}
-	\subfloat[60点500边长6机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_500_6_multi_route_SA.svg}\label{fig:DRL_60_500_6}} 
-	\subfloat[60点500边长8机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_500_8_multi_route_SA.svg}\label{fig:DRL_60_500_8}}\\
-	\subfloat[60点600边长4机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_600_4_multi_route_SA.svg}\label{fig:CHAPBILM_60_500_4}}
-	\subfloat[60点600边长6机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_600_6_multi_route_SA.svg}\label{fig:CHAPBILM_60_500_6}}
-	\subfloat[60点600边长8机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_600_8_multi_route_SA.svg}\label{fig:CHAPBILM_60_500_8}}\\
-	\subfloat[80点700边长4机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_700_4_multi_route_SA.svg}\label{fig:DRL_80_500_4}}
-	\subfloat[80点700边长6机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_700_6_multi_route_SA.svg}\label{fig:DRL_80_500_6}}
-	\subfloat[80点700边长8机]{\includesvg[width=0.32\textwidth]{figures/SA/cvrp_60_700_8_multi_route_SA.svg}\label{fig:DRL_80_500_9}}
-	\caption{基于迭代局部搜索方法的多无人机草原修复最优路径规划图}
-	\label{fig:ILS_combined_uav_routes}
+	\subfloat[60点500边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_4}}
+	\subfloat[60点500边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_6}} 
+	\subfloat[60点500边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_8}}\\
+	\subfloat[60点600边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_4}}
+	\subfloat[60点600边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_6}}
+	\subfloat[60点600边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_8}}\\
+	\subfloat[60点700边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_4}}
+	\subfloat[60点700边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_6}}
+	\subfloat[60点700边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_8}}
+	\caption{基于协同启发式与概率模型学习算法的多无人机草原修复最优路径规划图}
+	\label{fig:CHAPBILM_combined_uav_routes}
 \end{figure}
 
-图\ref{fig:ILS_combined_uav_routes}为迭代局部搜索方法的多无人机路径规划结果。与深度强化学习方法相比，迭代局部搜索在路径分配上表现出一定局限性，部分无人机路径存在较多长距离飞行和交叉，导致能量消耗增加，任务分配不够灵活。该方法在区域分配上较为机械，难以充分适应区域分布和能耗的动态变化。
+图\ref{fig:CHAPBILM_combined_uav_routes}为协同启发式与概率模型学习算法的多无人机路径规划结果。与深度强化学习方法相比，协同启发式与概率模型学习算法在路径分配上表现出一定局限性，部分无人机路径存在较多长距离飞行和交叉，导致能量消耗增加，任务分配不够灵活。该方法在区域分配上较为机械，难以充分适应区域分布和能耗的动态变化。
 
 Gap(\%) 计算公式为 $(\text{DRL} - \text{CHAPBILM}) / \text{CHAPBILM} \times 100\%$。路径长度 Gap 为负值表示 DRL 更优，修复面积 Gap 为正值表示 DRL 更优。
 \begin{table}[H]
@@ -895,7 +880,7 @@ Gap(\%) 计算公式为 $(\text{DRL} - \text{CHAPBILM}) / \text{CHAPBILM} \times
 	\label{tab:combined_comparison}
 \end{table}
 
-由表~\ref{tab:combined_comparison} 可以看出，深度强化学习（DRL）方法在大多数测试场景下均优于模拟退火（SA）算法。在路径长度方面，DRL 在多数情况下实现了更短的总路径，部分场景下路径长度缩短超过 20\%。在修复面积方面，DRL 也表现出显著提升，提升幅度普遍在 15\% 以上，最高可达 56\%。尤其在无人机数量较少或区域分布密集时，DRL 能更好地协调多无人机任务分配，实现更高的修复效率。总体来看，DRL 在路径优化和面积最大化两个方面均优于传统启发式算法，显示出其在复杂多无人机协同任务中的有效性和优势。
+由表~\ref{tab:combined_comparison} 可以看出，深度强化学习（DRL）方法在大多数测试场景下均优于协同启发式与概率模型学习算法（CHAPBILM）。在路径长度方面，DRL 在多数情况下实现了更短的总路径，部分场景下路径长度缩短超过 20\%。在修复面积方面，DRL 也表现出显著提升，提升幅度普遍在 15\% 以上，最高可达 56\%。尤其在无人机数量较少或区域分布密集时，DRL 能更好地协调多无人机任务分配，实现更高的修复效率。总体来看，DRL 在路径优化和面积最大化两个方面均优于传统启发式算法，显示出其在复杂多无人机协同任务中的有效性和优势。
 
 % Required packages: \usepackage{booktabs}, \usepackage{float}, \usepackage{multirow}
 

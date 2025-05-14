@@ -197,17 +197,15 @@
 
 在无人机辅助草原修复领域，国内外研究主要集中在两方面：无人机技术在生态监测与修复中的应用，以及路径优化与任务分配算法研究。国际上，Nex等人\cite{nex2014uav}综述了无人机在三维地图绘制和环境监测的应用优势，Mohan等人\cite{mohan2021uav}和Sun等人\cite{sun2018unmanned}将无人机技术应用于森林、草原等生态系统监测。Zeng等人\cite{zeng2017energy}针对能量效率问题，研究了基于轨迹优化的无人机通信系统，为能源受限条件下的任务执行提供了新思路。
 
-国内无人机技术在草原修复中也取得一定进展，特别是在播种、喷洒\cite{faiccal2017adaptive}和生态监测等应用场景。路径优化方面，传统方法主要基于旅行商问题和定向问题\cite{shivgan2020energy}，通过最优路径搜索减少飞行距离，提高执行效率。针对无人机巡逻、覆盖等任务，研究者提出了多种优化算法\cite{rajan2022routing,yang2015path,guo2021spraying}。人工智能方法虽在制造系统优化等领域有广泛应用\cite{renzi2014review}，但在草原修复领域的应用尚待深入探索。
+国内无人机技术在草原修复中也取得一定进展，特别是在播种、喷洒\cite{faiccal2017adaptive}和生态监测等应用场景。路径优化方面，传统方法主要基于旅行商问题 (Traveling Salesman Problem, TSP) 和定向问题 (Orienteering Problem, OP)\cite{shivgan2020energy}，通过最优路径搜索减少飞行距离，提高执行效率。针对无人机巡逻、覆盖等任务，研究者提出了多种优化算法\cite{rajan2022routing,yang2015path,guo2021spraying}。人工智能方法虽在制造系统优化等领域有广泛应用\cite{renzi2014review}，但在草原修复领域的应用尚待深入探索。
 
 在无人机播种系统方面，Elliott\cite{elliott2016potential}探索了低成本无人机在热带森林生态系统中通过空中播种实现加速自然再生的可能性。Pedersen等人\cite{pedersen2017robotic}则利用无人机创建再播种地图，而非直接用于作物生产。Huang等人\cite{huang2020design}提出了一种特殊的油菜籽无人机播种系统，采用微型气助式集中计量装置，提高了播种效率与精度。Faiccal等人\cite{faiccal2017adaptive}开发了一种能自适应规划飞行路线的系统，确保精确将农药沉积在目标区域。Guo等人\cite{guo2021spraying}提出了喷洒无人机的喷雾分布模型和覆盖路径规划方法，仿真结果显示了其有效性。然而，这些研究主要基于规则田地地图，且未充分考虑无人机的能量消耗，也很少将路径规划与播种任务结合考虑，可能与实际应用场景存在差异。
 
-在无人机路径规划研究中，研究者主要关注高效区域覆盖算法以延长无人机作业时间。Vasisht等人\cite{vasisht2017farmbeats}设计了一种新颖的路径规划算法，充分利用风力辅助加速和减速，延长无人机操作时间并最小化覆盖给定区域所需的时间。Palomino等人\cite{palomino2019towards}提出了与路径规划过程相关的自动化工作流算法，该算法不仅能识别工作空间，还能在农业监督活动中处理路径规划。Shivgan等人\cite{shivgan2020energy}研究了无人机在环境传感和测量应用中完成任务的路径规划问题，将问题建模为旅行商问题(TSP)，通过优化无人机能量来处理无人机的飞行时间限制。Rossello等人\cite{rossello2021information}为精准农业开发了一种新型路径规划算法，覆盖大规模区域，考虑了飞行时间约束并最大化系统状态的估计质量，将问题建模为特殊的定向问题(OP)，即混合整数半定规划(MISDP)，通过启发式算法求解。
+在无人机路径规划研究中，研究者主要关注高效区域覆盖算法以延长无人机作业时间。Vasisht等人\cite{vasisht2017farmbeats}设计了一种新颖的路径规划算法，充分利用风力辅助加速和减速，延长无人机操作时间并最小化覆盖给定区域所需的时间。Palomino等人\cite{palomino2019towards}提出了与路径规划过程相关的自动化工作流算法，该算法不仅能识别工作空间，还能在农业监督活动中处理路径规划。Shivgan等人\cite{shivgan2020energy}研究了无人机在环境传感和测量应用中完成任务的路径规划问题，将问题建模为旅行商问题，通过优化无人机能量来处理无人机的飞行时间限制。Rossello等人\cite{rossello2021information}为精准农业开发了一种新型路径规划算法，覆盖大规模区域，考虑了飞行时间约束并最大化系统状态的估计质量，将问题建模为特殊的定向问题，即混合整数半定规划 (Mixed Integer Semidefinite Programming, MISDP)，通过启发式算法求解。
 
-智能优化算法方面，Feng等人探索了进化优化与迁移学习在复杂路径问题中的应用\cite{feng2015memes}，Rossello等人提出了基于信息驱动的路径规划方法\cite{rossello2021information}。多层次优化方法被用于任务分配与路径优化\cite{colson2007overview}，协同优化与分布式智能算法则应用于大规模组合优化问题\cite{huang2004cooperative}。Jiao等人\cite{JIAO2024108084}提出了一种协同优化算法CHAPBILM，专门应对无人机草原修复问题，将问题分解为轨迹设计和修复区域分配两个阶段，并利用两者之间的相互依赖关系同时解决这两个NP难问题，在能量约束条件下实现了修复面积的有效最大化。
+智能优化算法方面，Feng等人探索了进化优化与迁移学习在复杂路径问题中的应用\cite{feng2015memes}，Rossello等人提出了基于信息驱动的路径规划方法\cite{rossello2021information}。多层次优化方法被用于任务分配与路径优化\cite{colson2007overview}，协同优化与分布式智能算法则应用于大规模组合优化问题\cite{huang2004cooperative}。Jiao等人\cite{JIAO2024108084}提出了一种协同优化算法 (Collaborative Heuristic Algorithm with Population-Based Incremental Learning Method, CHAPBILM)，专门应对无人机草原修复问题，将问题分解为轨迹设计和修复区域分配两个阶段，并利用两者之间的相互依赖关系同时解决这两个非多项式时间 (Non-deterministic Polynomial-time hard, NP-hard) 问题，在能量约束条件下实现了修复面积的有效最大化。
 
 在两阶段优化方法研究方面，Shen等人\cite{shen2009two}考虑了大规模生物恐怖主义紧急情况下的两阶段车辆路径问题。Li等人\cite{li2010inexact}开发了一个不精确两阶段水管理模型，用于在不确定条件下规划农业灌溉。Azadeh等人\cite{azadeh2019two}提出了一种两阶段路径优化方法，限制飞行边界并减少轻型飞机运输系统中的变量和约束数量。Maini等人\cite{maini2019cooperative}设计了一种两阶段策略，为覆盖应用中燃料约束下的协同空中-地面车辆路径规划问题寻找高效解决方案。Rajan等人\cite{rajan2022routing}为数据收集任务场景中的无人机路径规划问题制定了两阶段随机规划模型。虽然上述研究主要采用两阶段方法处理路径规划问题，但大多数研究仅根据问题过程将其机械分解为两个单独解决的阶段，而没有考虑它们之间的耦合关系。
-
-此外，双层规划问题\cite{colson2007overview}是另一种两阶段优化问题。无人机草原修复问题与双层规划问题相关，它考虑了优化问题两个阶段之间的耦合关系。Angelo等人\cite{angelo2015study}研究了双层生产-分配规划问题。Sinha等人\cite{sinha2017review}全面回顾了从基本原理到解决方案的双层优化，包括经典和进化方法。然而，这些方法难以直接解决本研究中的问题，因为它们未考虑无人机草原修复问题的特定特性。
 
 然而，传统方法在面对动态环境、复杂地形和多目标任务时仍存局限性\cite{gann2019international}，通常基于静态环境优化，而实际应用常受风速、温度、地形等因素影响\cite{blackburn2021monitoring}。单架无人机作业能力有限，难以满足大规模修复需求，因此多无人机协同作业成为提高效率的重要研究方向\cite{dorling2016vehicle,maini2019cooperative}。虽已有研究探索多无人机系统的协同控制\cite{buters2019seed}，但专门针对草原修复的多无人机协同优化研究仍较缺乏，特别是考虑能量约束、播种动态负载变化及修复面积最大化等多重目标的综合优化问题。
 
@@ -234,8 +232,7 @@
 	\label{fig:restored-areas}
 \end{figure}
 
-针对待修复草原实例，本文的目标是在无人机从基站出发并在为每个待修复区域提供服务前耗尽能量的情况下，最大化无人机修复的总面积 (假设仅当无人机飞行至待修复区域时才能进行播种)。由于无人机在播撒草籽修复过程中自身重量不断变化，其飞行能耗又与之直接相关，如何权衡无人机飞行能耗与修复能耗之间的关系时问题的核心所在。在修复过程中，无人机的能量消耗主要包括三个部分：无人机在待修复区域中播种的能量消耗、无人机进行航拍的能量消耗以及无人机在飞行过程中的能量消耗。相应地，这三部分能量消耗可以分别表示为 $E_s$, $E_{ap}$ 和 $E_f$。此外，无人机的能量消耗恒定速度下的载荷重量成正比，Dorling\cite{dorling2016vehicle} 等推导出 $h$ 转子无人机的功耗方程，表示如下：
-
+针对待修复草原实例，本文的目标是在无人机从基站出发并在为每个待修复区域提供服务前耗尽能量的情况下，最大化无人机修复的总面积 (假设仅当无人机飞行至待修复区域时才能进行播种)。由于无人机在播撒草籽修复过程中自身重量不断变化，其飞行能耗又与之直接相关，如何权衡无人机飞行能耗与修复能耗之间的关系时问题的核心所在。在修复过程中，无人机的能量消耗主要包括三个部分：无人机在待修复区域中播种的能量消耗、无人机进行航拍的能量消耗以及无人机在飞行过程中的能量消耗。相应地，这三部分能量消耗可以分别表示为 $E_s$, $E_{ap}$ 和 $E_f$。此外，无人机的能量消耗恒定速度下的载荷重量成正比，Dorling\cite{dorling2016vehicle} 等推导出 $h$ 转子无人机的功耗方程，如式\eqref{approximation-power-consumption}所示：
 
 \begin{equation} \label{approximation-power-consumption}
 	%\begin{small}
@@ -250,9 +247,9 @@
 
 \subsection{飞行能耗}
 
-无人机飞行期间的能耗，即单架无人机从基站出发，根据修复方案遍历带修复区域最后返回基站的飞行路径能耗。本文设 $x_{ij} \in \{0,1\}$ 为 $0$-$1$ 决策变量，定义如下：
+无人机飞行期间的能耗，即单架无人机从基站出发，根据修复方案遍历带修复区域最后返回基站的飞行路径能耗。本文设 $x_{ij} \in \{0,1\}$ 为 $0$-$1$ 决策变量，定义如式\eqref{decision-var}所示：
 
-\begin{equation}
+\begin{equation}\label{decision-var}
 	%\begin{small}
 	x_{ij} =
 	\begin{cases}
@@ -345,6 +342,236 @@
 
 
 \chapter{多无人机协同草原修复优化算法}
+
+本章详细介绍了针对草原修复问题的多无人机协同优化算法。首先介绍了基于强化学习的单无人机决策方法，包括其状态空间设计、策略函数与奖励设计；其次提出了一种多无人机协同框架，通过动态地图更新和决策执行流程实现多机协同。
+
+
+\section{单无人机路径规划和面积分配}
+
+\subsection{马尔可夫过程建模}
+本文将修复过程中的每架无人机视为一个智能体，将待修复草原视为以欧几里得距离为边权值的无向全联通图。对单架无人机而言，其部分修复过程可视为从某点出发，遍历修复地图并完成相应修复任务，最后返回起点。
+
+在无人机的修复过程中，由于其在两块相邻修复区域间的飞行能耗正比于此时无人机自身重量与路径长度，而自身重量又随着播散种子修复区域的过程动态变化，因而其总飞行能耗与总飞行长度、修复区域的顺序及修复面积均有复杂关系。换言之，作为优化目标的总修复面积由于与无人机耗能而与其飞行路径间接相关，因而二者之间存在复杂的耦合关系，如何解决修复面积的最优化，毫无疑问是一个困难的 $\text{NP-hard}$ 问题。
+
+针对该难题，本文拟采用强化学习方法学习这一复杂的函数关系，具体建模如下：
+
+\subsubsection{1）状态空间定义}
+
+本文将一个待修复草原实例设为$V=\{v_i\}_{i=0}^n$,其中包含了各个待修复区域的位置、退化程度等各项信息。各点以$v_0$为起始点按照某种策略$\pi$，逐渐完善部分解$\{(v_0,a_0),(v_i,a_i)\}_{i=1}^{uav_{now}}$。其中，编号$i$表示无人机访问各点的次序，$uav_{now}$为无人机已经过的点数量,$a_i$代表按照策略$\pi$在点$v_i$修复的面积。本文将该部分解作为智能体在强化学习中的状态，记作$s(<i),i\in[1,n+1]$。初始状态记作$s(<1)=v_0$，表示无人机处于地面中心；结束状态记作$s(<n+1)=s$，表示无人机已访问全部点。
+
+\subsubsection{2）动作空间与状态转移}
+
+如上所述，无人机状态是修复过程的部分解，因而本文将动作设置为无人机修复过程某一步的解，即将无人机在状态$s(<i)$时的动作记作$\pi_i=s(i)$,$i\in[1,n+1]$，即可实现强化学习中动作-状态对的自然更新。
+
+转移函数如上所述，在动作选取完毕后无人机新的状态也被唯一确定，因而状态转移函数具有完全确定性，记其为$S(s(<i)|s(i))=s(<i+1)$,$i\in[1,n]$。
+
+\subsubsection{3）策略函数与奖励设计}
+
+如上所述，草原修复过程被创建为一个马尔可夫决策过程，因而其策略函数可被链式分解为：$p(\pi|s)=\prod_{i=1}^n p(s(i)|s(<i))$(10)其中，$p(s(i)|s(<i))$表示智能体在状态$s(<i)$下选择动作$s(i)$的概率。
+
+作为强化学习方法的核心之一，奖励函数的设计必须考虑全面，以防止模型难以收敛。经本文实验证明，单纯以最基本的修复面积作为模型的奖励函数会使得模型收敛速度大大减缓，同时考虑到无人机自身能量限制引入的惩罚项，本文最终将一组解的奖励函数设置为：
+\begin{equation}
+	R(\pi|V)=\alpha_{p}*Pel+\alpha_{r}*\sum_{i=1}^{n}(l_i+0.7)*a_{i}
+	\label{eq:11}
+\end{equation}
+
+\begin{equation}
+	Pel=\left\{\begin{array}{ll}
+		d_{n}^{0}+\sum\limits_{i=1}^{n}d_{i}^{i+1} & E_{rest}<0     \\
+		0                                          & E_{rest}\geq 0
+	\end{array}\right. 
+	\label{eq:12}
+\end{equation}
+在式\eqref{eq:11}中，$\alpha_p$, $\alpha_r$为修正系数，$l_i$为第$i$个区域的退化程度，$Pel$为控制无人机能量约束的惩罚项。通过引入$(l_i+0.7)$作为权重因子，模型可以优先修复退化程度更高的区域，从而实现对草原生态健康状况的精准干预。为了加快模型收敛速度，如式\eqref{eq:12}所示，本文将不符合无人机能量约束时的惩罚项设置为其从起点到返回地面中心经历的路径长度，以确保在模型收敛的前期尽可能获得的解路径长度较短、符合能量约束，并在此前提下进行修复面积的决策。
+
+\subsection{神经网络模型构建}
+
+对于序列决策问题，编码器-解码器模型\cite{vaswani2017attention}作为最经典的神经网络模型结构之一，取得了优异的效果。本文采用稍加修改的经典的Tranformer作为编码器，指针网络\cite{vinyals2015pointer}作为自回归解码器以实现构造式求解。
+
+\subsubsection{1）特征提取与模型架构}
+
+本文对待求解的待修复草原模型提取两部分特征：待修复区域的坐标、退化程度等静态特征，及无人机自身剩余能量、剩余重量等动态特征。模型参数用 $\theta \in \Theta$ 表示，包含编码器和解码器的所有可学习参数。
+
+模型初始化过程如算法\ref{alg:grp_main_training}的第1-2行所示：
+\begin{equation}
+	M_{\theta} \leftarrow \text{InitializeModel}(d_e, d_h, n_{layers}, n_{heads}, \theta),
+\end{equation}
+其中，$d_e$ 为嵌入维度，$d_h$ 为隐藏层维度，$n_{layers}$ 为编码器层数，$n_{heads}$ 为注意力头数量。同时，本文初始化基线模型 $B_{model}$ 用于估计值函数，支持Actor-Critic算法的训练。
+
+\subsubsection{2）编解码器设计}
+
+参考了Bresson\cite{bresson2021transformer}等人的方法，编码器由 $n_{layers}$ 层Transformer层堆叠而成，采用BatchNorm归一化，表示为：
+
+\begin{equation}
+	h^{l=0} = h^{in} W^{in} \in \mathbb{R}^{n \times d_e}
+	\label{eq:13a}
+\end{equation}
+
+\begin{equation}
+	h_{rc}^{l+1} = \text{BN}\left(\text{MHA}^{l+1}(h^l) + h^l\right)
+	\label{eq:13b}
+\end{equation}
+
+\begin{equation}
+	h^{l+1} = \text{BN}\left(\text{Relu}\left(h_{rc}^{l+1} W_1^{l+1}\right) W_2^{l+1} + h_{rc}^{l+1}\right)
+	\label{eq:13c}
+\end{equation}
+
+编码器同时处理静态环境特征和动态无人机状态特征，生成用于解码器的上下文表示。
+
+自回归解码器通过循环解码逐步构造解决方案。解码器接收编码器的输出，其工作流程为：
+
+\begin{equation}
+	rm^{i}, h_{gru}^{i} =
+	\left\{
+	\begin{array}{ll}
+		\text{GRU}(h_{0}^{i}, 0)               & i = 0  \\
+		\text{GRU}(h_{i-1}^{i}, h_{gru}^{i-1}) & i > 0,
+	\end{array}
+	\right.
+	\label{eq:14}
+\end{equation}
+其中，$0$为全零向量，GRU(gated recurrent unit)为循环神经网络更新解嵌入。解码器通过注意力机制选择下一个待修复区域及修复面积：
+
+\begin{equation}
+	h_{p}^{l=i} = \text{Attention}(\text{static}, \text{dynamic}^{i}, mn^{i})
+	\label{eq:15a}
+\end{equation}
+
+\begin{equation}
+	\mu_{i} =
+	\begin{cases}
+		C \times \text{Tanh}\left((W_{q}h_{p}^{l=i})^{T}(W_{k}h_{p}^{l=i})\right) & x_{i} \notin \pi_{i} \\
+		-\infty                                                                   & \text{otherwise}
+	\end{cases}
+	\label{eq:15b}
+\end{equation}
+
+\begin{equation}
+	p(i|s_{i}) = \text{Softmax}(\mu_{i})
+	\label{eq:15c}
+\end{equation}
+
+在模型前向传播中，如算法\ref{alg:grp_batch_training}第3行所示，解码器生成成本值 $C$ 和对数概率 $\log p$：
+
+\begin{equation}
+	(C, \log p) \leftarrow M_{\theta}(x),
+\end{equation}
+其中 $C$ 表示当前策略的成本（负奖励），$\log p$ 表示选择各动作的对数概率。
+
+\subsubsection{3）Actor-Critic训练流程}
+\begin{algorithm}[H]
+	\begin{algorithmic}[1]
+		\caption{GRP主训练流程}
+		\label{alg:grp_main_training}
+		\Require $\theta \in \Theta$（模型参数），$d_e \in \mathbb{N}$（嵌入维度），$d_h \in \mathbb{N}$（隐藏层维度），$n_{layers} \in \mathbb{N}$（编码器层数），$n_{heads} \in \mathbb{N}$（注意力头数），$\alpha \in \mathbb{R}^{+}$（学习率），$N_{epoch} \in \mathbb{N}$（训练轮数），$B \in \mathbb{N}$（批次大小），$G_{size} \in \mathbb{N}$（图规模）
+		\Ensure 最优参数 $\theta^* \in \Theta$
+		\State $M_{\theta} \leftarrow \text{初始化模型}(d_e, d_h, n_{layers}, n_{heads}, \theta)$
+		\State $B_{model} \leftarrow \text{初始化基线模型}()$
+		\State $\mathcal{O} \leftarrow \text{Adam优化器}(\{M_{\theta}, B_{model}\}, \alpha)$
+		\State $\mathcal{S} \leftarrow \text{学习率调度器}(\alpha)$
+		\State $\mathcal{D}_{val} \leftarrow \{x_i\}_{i=1}^{val\_size}$ \Comment{生成验证集}
+		\State $R_{best} \leftarrow -\infty$ \Comment{最佳奖励追踪器}
+		\For{$e = 0$ \textbf{到} $N_{epoch} - 1$}
+		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{生成训练集}
+		\State $\{\mathcal{B}_j\}_{j=1}^{n_B} \leftarrow \text{批量划分}(\mathcal{D}_{train}, B)$
+		\State $M_{\theta} \leftarrow M_{\theta}.\text{train}()$ \Comment{设置为训练模式}
+
+		\For{$\mathcal{B} \in \{\mathcal{B}_j\}_{j=1}^{n_B}$}
+		\State $\theta \leftarrow \text{批次训练}(M_{\theta}, B_{model}, \mathcal{O}, \mathcal{B})$ \Comment{见算法2}
+		\EndFor
+
+		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"贪婪"}$
+		\State $M_{\theta} \leftarrow M_{\theta}.\text{eval}()$
+		\State $C_{val} \leftarrow \text{评估}(M_{\theta}, \mathcal{D}_{val})$
+		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{平均奖励}
+
+		\State $B_{model} \leftarrow B_{model}.\text{轮次回调}(M_{\theta}, e)$
+		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{更新学习率}
+
+		\If{$e \bmod k_{save} = 0 \lor e = N_{epoch} - 1$}
+		\State $\text{保存检查点}(\theta, \mathcal{O}, B_{model}, e)$
+		\EndIf
+
+		\If{$e = 0 \lor \bar{r} > R_{best}$}
+		\State $\theta^* \leftarrow \theta$ \Comment{保存最佳模型参数}
+		\State $R_{best} \leftarrow \bar{r}$
+		\EndIf
+		\EndFor
+		\State \Return $\theta^*$
+	\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+	\begin{algorithmic}[1]
+		\caption{GRP批次训练子程序}
+		\label{alg:grp_batch_training}
+		\Require $M_{\theta}$（模型参数集合），$B_{model}$（基线价值模型），$\mathcal{O}$（优化器），$\mathcal{B}$（当前批次数据）
+		\Ensure 更新后的模型参数 $\theta$
+
+		\State $(x, b_v) \leftarrow B_{model}.\text{unwrap\_batch}(\mathcal{B})$ \Comment{解包当前批次数据，获取输入特征和基线值}
+		\State $x \leftarrow x.\text{to}(\text{device})$, $b_v \leftarrow b_v \neq \text{None} ? b_v.\text{to}(\text{device}) : \text{None}$ \Comment{将数据移至计算设备}
+
+		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C \in \mathbb{R}^{B}$：每个样本的成本值，$\log p$：动作的对数概率}
+		\State $r \leftarrow -C$ \Comment{$r \in \mathbb{R}^{B}$：将成本转换为奖励值}
+
+		\If{存在 $x.\text{total\_repair\_area}$}
+			\State $A_{repair} \leftarrow x.\text{total\_repair\_area}$ \Comment{若存在总修复面积属性}
+		\Else
+			\State $A_{repair} \leftarrow -C / \alpha_{r}$ \Comment{否则使用成本值近似计算}
+		\EndIf
+
+		\If{$b_v = \text{None}$}
+			\State $(b_v, \mathcal{L}_{b}) \leftarrow B_{model}.\text{evaluate}(x, C)$ \Comment{计算基线值和基线损失}
+		\Else
+			\State $(b_v, \mathcal{L}_{b}) \leftarrow (b_v, 0)$ \Comment{使用已有基线值}
+		\EndIf
+
+		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$ \Comment{策略梯度损失，$(C_i - b_{v,i})$ 为优势函数}
+		\State $\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}$ \Comment{总损失 = 策略损失 + 基线损失}
+
+		\State $\nabla\theta \leftarrow \mathbf{0}$ \Comment{初始化梯度为零向量}
+		\State $\nabla\theta \leftarrow \nabla_{\theta}\mathcal{L}$ \Comment{计算损失函数关于参数 $\theta$ 的梯度}
+		\State $\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})$ \Comment{梯度裁剪，$g_{max}$ 为最大梯度范数}
+		\State $\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)$ \Comment{使用优化器更新参数 $\theta$}
+		\State \Return $\theta$ \Comment{返回更新后的模型参数}
+	\end{algorithmic}
+\end{algorithm}
+
+本文采用算法\ref{alg:grp_main_training}和\ref{alg:grp_batch_training}所示的训练流程，将Actor-Critic方法与梯度下降相结合。训练过程中使用Adam优化器，并结合学习率调度器动态调整学习率：
+
+\begin{equation}
+	\mathcal{O} \leftarrow \text{Adam}(\{M_{\theta}, B_{model}\}, \alpha)
+\end{equation}
+
+每个训练周期中，本文生成训练和验证数据集，并进行批次训练。在公式\ref{app:decision}中，策略梯度损失计算如式\eqref{policy_grad_loss}所示：
+
+\begin{equation}\label{policy_grad_loss}  
+	\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i,
+\end{equation}
+其中，$b_{v,i}$ 为基线模型对状态价值的估计，$(C_i - b_{v,i})$ 构成优势函数，用于指导策略更新方向。总损失函数包括策略梯度损失和基线损失：
+
+\begin{equation}
+	\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}
+\end{equation}
+
+参数更新通过梯度下降完成，并应用梯度裁剪以确保训练稳定性：
+
+\begin{equation}
+	\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})
+\end{equation}
+
+\begin{equation}
+	\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)
+\end{equation}
+
+训练过程中，本文保存性能最佳的模型参数 $\theta^*$，以便后续使用。模型评估采用贪婪解码策略，计算验证集上的平均奖励作为评估指标：
+
+\begin{equation}
+	\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}
+\end{equation}
+
+通过这种训练流程，模型能够逐步学习优化多无人机草原修复的策略，实现修复面积最大化的目标。
 
 \section{多无人机协同框架}
 
@@ -448,11 +675,11 @@
 		\State $P_u^i \gets \text{初始化}(P_u)$ \Comment{初始化无人机信号量以决定决策优先级}
 
 		\While{$M_u \neq \emptyset$}
-		\State $E_u^{rel} \gets \text{路径规划}(M_u, P_u^{self})$ \Comment{使用算法\ref{alg:grp_main_training}训练的模型进行第一次路径规划}
+		\State $E_u^{rel} \gets \text{使用算法\ref{alg:grp_main_training}训练的模型进行第一次路径规划}(M_u, P_u^{self})$ 
 		\State $\text{上报中心}(S_u, M_u, E_u^{rel})$ \Comment{无人机第一次上报中心}
 		\State $M_u^{tmp} \gets \text{更新地图}(M^{global}, P_u^{self})$ \Comment{中心更新地图}
 		\State $\text{下发新地图}(M_u^{P_u^{tmp}})$ \Comment{中心给无人机下发新地图}
-		\State $E_u^{r2} \gets \text{路径规划}(M_u^{tmp}, P_u^{self})$ \Comment{使用算法\ref{alg:grp_main_training}训练的模型进行第二次路径规划}
+		\State $E_u^{r2} \gets \text{使用算法\ref{alg:grp_main_training}训练的模型进行第二次路径规划}(M_u^{tmp}, P_u^{self})$
 		\State $\text{上报中心}(E_u^{r2}, Area_u^{r2})$ \Comment{无人机第二次上报中心}
 
 		\If{$\sum_{u=1}^U Area_u^{r2} \geq \sum_{u=1}^U Area_u^{r1}$}
@@ -471,241 +698,15 @@
 	\end{algorithmic}
 \end{algorithm}
 
-
-\section{单无人机路径规划和面积分配}
-
-\subsection{马尔可夫过程建模}
-本文将修复过程中的每架无人机视为一个智能体，将待修复草原视为以欧几里得距离为边权值的无向全联通图。对单架无人机而言，其部分修复过程可视为从某点出发，遍历修复地图并完成相应修复任务，最后返回起点。
-
-在无人机的修复过程中，由于其在两块相邻修复区域间的飞行能耗正比于此时无人机自身重量与路径长度，而自身重量又随着播散种子修复区域的过程动态变化，因而其总飞行能耗与总飞行长度、修复区域的顺序及修复面积均有复杂关系。换言之，作为优化目标的总修复面积由于与无人机耗能而与其飞行路径间接相关，因而二者之间存在复杂的耦合关系，如何解决修复面积的最优化，毫无疑问是一个困难的 $\text{NP-hard}$ 问题。
-
-针对该难题，本文拟采用强化学习方法学习这一复杂的函数关系，具体建模如下：
-
-\subsubsection{状态空间定义}
-
-本文将一个待修复草原实例设为$V=\{v_i\}_{i=0}^n$,其中包含了各个待修复区域的位置、退化程度等各项信息。各点以$v_0$为起始点按照某种策略$\pi$，逐渐完善部分解$\{(v_0,a_0),(v_i,a_i)\}_{i=1}^{uav_{now}}$。其中，编号$i$表示无人机访问各点的次序，$uav_{now}$为无人机已经过的点数量,$a_i$代表按照策略$\pi$在点$v_i$修复的面积。本文将该部分解作为智能体在强化学习中的状态，记作$s(<i),i\in[1,n+1]$。初始状态记作$s(<1)=v_0$，表示无人机处于地面中心；结束状态记作$s(<n+1)=s$，表示无人机已访问全部点。
-
-\subsubsection{动作空间与状态转移}
-
-如上所述，无人机状态是修复过程的部分解，因而本文将动作设置为无人机修复过程某一步的解，即将无人机在状态$s(<i)$时的动作记作$\pi_i=s(i)$,$i\in[1,n+1]$，即可实现强化学习中动作-状态对的自然更新。
-
-转移函数如上所述，在动作选取完毕后无人机新的状态也被唯一确定，因而状态转移函数具有完全确定性，记其为$S(s(<i)|s(i))=s(<i+1)$,$i\in[1,n]$。
-
-\subsubsection{策略函数与奖励设计}
-
-如上所述，草原修复过程被创建为一个马尔可夫决策过程，因而其策略函数可被链式分解为：$p(\pi|s)=\prod_{i=1}^n p(s(i)|s(<i))$(10)其中，$p(s(i)|s(<i))$表示智能体在状态$s(<i)$下选择动作$s(i)$的概率。
-
-作为强化学习方法的核心之一，奖励函数的设计必须考虑全面，以防止模型难以收敛。经本文实验证明，单纯以最基本的修复面积作为模型的奖励函数会使得模型收敛速度大大减缓，同时考虑到无人机自身能量限制引入的惩罚项，本文最终将一组解的奖励函数设置为：
-\begin{equation}
-	R(\pi|V)=\alpha_{p}*Pel+\alpha_{r}*\sum_{i=1}^{n}(l_i+0.7)*a_{i}
-	\label{eq:11}
-\end{equation}
-
-\begin{equation}
-	Pel=\left\{\begin{array}{ll}
-		d_{n}^{0}+\sum\limits_{i=1}^{n}d_{i}^{i+1} & E_{rest}<0     \\
-		0                                          & E_{rest}\geq 0
-	\end{array}\right. 
-	\label{eq:12}
-\end{equation}
-上式中，$\alpha_p$, $\alpha_r$为修正系数，$l_i$为第$i$个区域的退化程度，$Pel$为控制无人机能量约束的惩罚项。通过引入$(l_i+0.7)$作为权重因子，模型可以优先修复退化程度更高的区域，从而实现对草原生态健康状况的精准干预。同时为了加快模型收敛速度，本文将不符合无人机能量约束时的惩罚项设置为其从起点到返回地面中心经历的路径长度，以确保在模型收敛的前期尽可能获得的解路径长度较短、符合能量约束，并在此前提下进行修复面积的决策。
-
-\subsection{神经网络模型构建}
-
-对于序列决策问题，编码器-解码器模型\cite{vaswani2017attention}作为最经典的神经网络模型结构之一，取得了优异的效果。本文采用稍加修改的经典的Tranformer作为编码器，指针网络\cite{vinyals2015pointer}作为自回归解码器以实现构造式求解。
-
-\subsubsection{特征提取与模型架构}
-
-本文对待求解的待修复草原模型提取两部分特征：待修复区域的坐标、退化程度等静态特征，及无人机自身剩余能量、剩余重量等动态特征。模型参数用 $\theta \in \Theta$ 表示，包含编码器和解码器的所有可学习参数。
-
-模型初始化过程如算法\ref{alg:grp_main_training}的第1-2行所示：
-\begin{equation}
-	M_{\theta} \leftarrow \text{InitializeModel}(d_e, d_h, n_{layers}, n_{heads}, \theta),
-\end{equation}
-其中，$d_e$ 为嵌入维度，$d_h$ 为隐藏层维度，$n_{layers}$ 为编码器层数，$n_{heads}$ 为注意力头数量。同时，本文初始化基线模型 $B_{model}$ 用于估计值函数，支持Actor-Critic算法的训练。
-
-\subsubsection{编解码器设计}
-
-参考了Bresson\cite{bresson2021transformer}等人的方法，编码器由 $n_{layers}$ 层Transformer层堆叠而成，采用BatchNorm归一化，表示为：
-
-\begin{equation}
-	h^{l=0} = h^{in} W^{in} \in \mathbb{R}^{n \times d_e}
-	\label{eq:13a}
-\end{equation}
-
-\begin{equation}
-	h_{rc}^{l+1} = \text{BN}\left(\text{MHA}^{l+1}(h^l) + h^l\right)
-	\label{eq:13b}
-\end{equation}
-
-\begin{equation}
-	h^{l+1} = \text{BN}\left(\text{Relu}\left(h_{rc}^{l+1} W_1^{l+1}\right) W_2^{l+1} + h_{rc}^{l+1}\right)
-	\label{eq:13c}
-\end{equation}
-
-编码器同时处理静态环境特征和动态无人机状态特征，生成用于解码器的上下文表示。
-
-自回归解码器通过循环解码逐步构造解决方案。解码器接收编码器的输出，其工作流程为：
-
-\begin{equation}
-	rm^{i}, h_{gru}^{i} =
-	\left\{
-	\begin{array}{ll}
-		\text{GRU}(h_{0}^{i}, 0)               & i = 0  \\
-		\text{GRU}(h_{i-1}^{i}, h_{gru}^{i-1}) & i > 0,
-	\end{array}
-	\right.
-	\label{eq:14}
-\end{equation}
-其中，$0$为全零向量，GRU(gated recurrent unit)为循环神经网络更新解嵌入。解码器通过注意力机制选择下一个待修复区域及修复面积：
-
-\begin{equation}
-	h_{p}^{l=i} = \text{Attention}(\text{static}, \text{dynamic}^{i}, mn^{i})
-	\label{eq:15a}
-\end{equation}
-
-\begin{equation}
-	\mu_{i} =
-	\begin{cases}
-		C \times \text{Tanh}\left((W_{q}h_{p}^{l=i})^{T}(W_{k}h_{p}^{l=i})\right) & x_{i} \notin \pi_{i} \\
-		-\infty                                                                   & \text{otherwise}
-	\end{cases}
-	\label{eq:15b}
-\end{equation}
-
-\begin{equation}
-	p(i|s_{i}) = \text{Softmax}(\mu_{i})
-	\label{eq:15c}
-\end{equation}
-
-在模型前向传播中，如算法\ref{alg:grp_batch_training}第3行所示，解码器生成成本值 $C$ 和对数概率 $\log p$：
-
-\begin{equation}
-	(C, \log p) \leftarrow M_{\theta}(x),
-\end{equation}
-其中 $C$ 表示当前策略的成本（负奖励），$\log p$ 表示选择各动作的对数概率。
-
-\subsubsection{Actor-Critic训练流程}
-\begin{algorithm}[H]
-	\begin{algorithmic}[1]
-		\caption{GRP主训练流程}
-		\label{alg:grp_main_training}
-		\Require $\theta \in \Theta$（模型参数），$d_e \in \mathbb{N}$（嵌入维度），$d_h \in \mathbb{N}$（隐藏层维度），$n_{layers} \in \mathbb{N}$（编码器层数），$n_{heads} \in \mathbb{N}$（注意力头数），$\alpha \in \mathbb{R}^{+}$（学习率），$N_{epoch} \in \mathbb{N}$（训练轮数），$B \in \mathbb{N}$（批次大小），$G_{size} \in \mathbb{N}$（图规模）
-		\Ensure 最优参数 $\theta^* \in \Theta$
-		\State $M_{\theta} \leftarrow \text{初始化模型}(d_e, d_h, n_{layers}, n_{heads}, \theta)$
-		\State $B_{model} \leftarrow \text{初始化基线模型}()$
-		\State $\mathcal{O} \leftarrow \text{Adam优化器}(\{M_{\theta}, B_{model}\}, \alpha)$
-		\State $\mathcal{S} \leftarrow \text{学习率调度器}(\alpha)$
-		\State $\mathcal{D}_{val} \leftarrow \{x_i\}_{i=1}^{val\_size}$ \Comment{生成验证集}
-		\State $R_{best} \leftarrow -\infty$ \Comment{最佳奖励追踪器}
-		\For{$e = 0$ \textbf{到} $N_{epoch} - 1$}
-		\State $\mathcal{D}_{train} \leftarrow \{x_i\}_{i=1}^{epoch\_size}$ \Comment{生成训练集}
-		\State $\{\mathcal{B}_j\}_{j=1}^{n_B} \leftarrow \text{批量划分}(\mathcal{D}_{train}, B)$
-		\State $M_{\theta} \leftarrow M_{\theta}.\text{train}()$ \Comment{设置为训练模式}
-
-		\For{$\mathcal{B} \in \{\mathcal{B}_j\}_{j=1}^{n_B}$}
-		\State $\theta \leftarrow \text{批次训练}(M_{\theta}, B_{model}, \mathcal{O}, \mathcal{B})$ \Comment{见算法2}
-		\EndFor
-
-		\State $M_{\theta}.\text{decode\_type} \leftarrow \text{"贪婪"}$
-		\State $M_{\theta} \leftarrow M_{\theta}.\text{eval}()$
-		\State $C_{val} \leftarrow \text{评估}(M_{\theta}, \mathcal{D}_{val})$
-		\State $\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}$ \Comment{平均奖励}
-
-		\State $B_{model} \leftarrow B_{model}.\text{轮次回调}(M_{\theta}, e)$
-		\State $\alpha \leftarrow \mathcal{S}(\alpha)$ \Comment{更新学习率}
-
-		\If{$e \bmod k_{save} = 0 \lor e = N_{epoch} - 1$}
-		\State $\text{保存检查点}(\theta, \mathcal{O}, B_{model}, e)$
-		\EndIf
-
-		\If{$e = 0 \lor \bar{r} > R_{best}$}
-		\State $\theta^* \leftarrow \theta$ \Comment{保存最佳模型参数}
-		\State $R_{best} \leftarrow \bar{r}$
-		\EndIf
-		\EndFor
-		\State \Return $\theta^*$
-	\end{algorithmic}
-\end{algorithm}
-
-\begin{algorithm}[H]
-	\begin{algorithmic}[1]
-		\caption{GRP批次训练子程序}
-		\label{alg:grp_batch_training}
-		\Require $M_{\theta}$（模型参数集合），$B_{model}$（基线价值模型），$\mathcal{O}$（优化器），$\mathcal{B}$（当前批次数据）
-		\Ensure 更新后的模型参数 $\theta$
-
-		\State $(x, b_v) \leftarrow B_{model}.\text{unwrap\_batch}(\mathcal{B})$ \Comment{解包当前批次数据，获取输入特征和基线值}
-		\State $x \leftarrow x.\text{to}(\text{device})$, $b_v \leftarrow b_v \neq \text{None} ? b_v.\text{to}(\text{device}) : \text{None}$ \Comment{将数据移至计算设备}
-
-		\State $(C, \log p) \leftarrow M_{\theta}(x)$ \Comment{$C \in \mathbb{R}^{B}$：每个样本的成本值，$\log p$：动作的对数概率}
-		\State $r \leftarrow -C$ \Comment{$r \in \mathbb{R}^{B}$：将成本转换为奖励值}
-
-		\If{存在 $x.\text{total\_repair\_area}$}
-			\State $A_{repair} \leftarrow x.\text{total\_repair\_area}$ \Comment{若存在总修复面积属性}
-		\Else
-			\State $A_{repair} \leftarrow -C / \alpha_{r}$ \Comment{否则使用成本值近似计算}
-		\EndIf
-
-		\If{$b_v = \text{None}$}
-			\State $(b_v, \mathcal{L}_{b}) \leftarrow B_{model}.\text{evaluate}(x, C)$ \Comment{计算基线值和基线损失}
-		\Else
-			\State $(b_v, \mathcal{L}_{b}) \leftarrow (b_v, 0)$ \Comment{使用已有基线值}
-		\EndIf
-
-		\State $\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i$ \Comment{策略梯度损失，$(C_i - b_{v,i})$ 为优势函数}
-		\State $\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}$ \Comment{总损失 = 策略损失 + 基线损失}
-
-		\State $\nabla\theta \leftarrow \mathbf{0}$ \Comment{初始化梯度为零向量}
-		\State $\nabla\theta \leftarrow \nabla_{\theta}\mathcal{L}$ \Comment{计算损失函数关于参数 $\theta$ 的梯度}
-		\State $\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})$ \Comment{梯度裁剪，$g_{max}$ 为最大梯度范数}
-		\State $\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)$ \Comment{使用优化器更新参数 $\theta$}
-		\State \Return $\theta$ \Comment{返回更新后的模型参数}
-	\end{algorithmic}
-\end{algorithm}
-
-本文采用算法\ref{alg:grp_main_training}和\ref{alg:grp_batch_training}所示的训练流程，将Actor-Critic方法与梯度下降相结合。训练过程中使用Adam优化器，并结合学习率调度器动态调整学习率：
-
-\begin{equation}
-	\mathcal{O} \leftarrow \text{Adam}(\{M_{\theta}, B_{model}\}, \alpha)
-\end{equation}
-
-每个训练周期中，本文生成训练和验证数据集，并进行批次训练。在算法\ref{alg:grp_batch_training}中，策略梯度损失计算如下：
-
-\begin{equation}
-	\mathcal{L}_{R} \leftarrow \frac{1}{B}\sum_{i=1}^{B}(C_i - b_{v,i}) \cdot \log p_i,
-\end{equation}
-其中，$b_{v,i}$ 为基线模型对状态价值的估计，$(C_i - b_{v,i})$ 构成优势函数，用于指导策略更新方向。总损失函数包括策略梯度损失和基线损失：
-
-\begin{equation}
-	\mathcal{L} \leftarrow \mathcal{L}_{R} + \mathcal{L}_{b}
-\end{equation}
-
-参数更新通过梯度下降完成，并应用梯度裁剪以确保训练稳定性：
-
-\begin{equation}
-	\|\nabla\theta\|_2 \leftarrow \min(\|\nabla\theta\|_2, g_{max})
-\end{equation}
-
-\begin{equation}
-	\theta \leftarrow \mathcal{O}(\theta, \nabla\theta)
-\end{equation}
-
-训练过程中，本文保存性能最佳的模型参数 $\theta^*$，以便后续使用。模型评估采用贪婪解码策略，计算验证集上的平均奖励作为评估指标：
-
-\begin{equation}
-	\bar{r} \leftarrow -\frac{1}{|\mathcal{D}_{val}|}\sum_{i=1}^{|\mathcal{D}_{val}|} C_{val,i}
-\end{equation}
-
-通过这种训练流程，模型能够逐步学习优化多无人机草原修复的策略，实现修复面积最大化的目标。
-
 \section{本章小结}
 本章首先介绍了多无人机协同调度机制，分析了外部协同架构、动态地图更新策略及基于信号量的决策执行流程。随后深入探讨了单机内部智能规划方法，通过马尔可夫过程建模将修复问题形式化为序列决策问题，并构建了基于Transformer编码器和指针网络解码器的深度神经网络模型。在此基础上，详细阐述了Actor-Critic训练方法及其实现细节，为实现草原修复面积最大化提供了算法框架。这种"外部协同、内部智能"的分层设计思路，既保证了系统的全局最优性，又提升了算法在复杂环境中的适应性与鲁棒性。
 
 \chapter{实验与分析}
-本部分本文展示了一些仿真实验的具体配置与结果。
+本章通过仿真实验验证所提出多无人机协同草原修复方法的有效性。首先介绍实验环境与参数设置，然后从训练过程、路径规划和修复面积角度分析结果，并与传统算法进行对比，评估本文方法在复杂环境下的优势与适用性。
 \label{sub:实验配置表格}
+
 \section{仿真配置}
+本文的实验在高性能计算平台上进行，以保证深度强化学习模型训练和多无人机协同优化算法的高效运行。具体的硬件与软件配置如表\ref{tbl_hardware_config}所示：
 \begin{table}[H]
 	\centering
 	\caption{实验硬件配置}
@@ -718,11 +719,12 @@
 		RAM     & ADATA 192GB-DDR4                                         \\
 		OS      & Ubuntu Server 22.04.3 LTS                                \\
 		Python  & Python 3.9                                               \\
-		PyTorch & version 1.12.1+cu113                                     \\
+		PyTorch & version 1.12.1 + cu113                                     \\
 		\bottomrule
 	\end{tabular}
 	\label{tbl_hardware_config}
 \end{table}
+
 \section{实例设置}
 为验证所提出模型与算法的有效性，本文在六种不同规模的草原实例上进行了仿真，草原区域边长分别为 $500$ 到 $1000$，步长为 $100$。所有实例均在二维空间内定义，任意两个待修复区域 $v_i$ 与 $v_j$ 之间的距离采用欧氏距离计算。每组实例中，待修复区域数量 $N$ 分别设置为 $60, 80, 100, 120, 140, 160$，无人机数量 $U$ 设置为 $4, 6, 8$，单架无人机的活动范围 $L$ 与草原边长一致。所有待修复区域的坐标均在对应草原区域内随机生成，退化程度 $l_i$ 服从 $[0.3, 0.8]$ 的均匀分布，基站均位于 $(0,0)$。每个待修复区域的最大可修复单位圆数量 $\sigma_i$ 随区域面积变化，范围为 $10$ 到 $35$，步长为 $5$。无人机初始能量 $E_{max}$ 与草原规模对应，具体参数如表\ref{tbl_instance_setting} 所示。
 
@@ -750,8 +752,9 @@
 \textbf{协同启发式与概率模型学习算法（CHAPBILM）\cite{JIAO2024108084}}：该方法将问题分解为两阶段，第一阶段采用启发式算法（如2-opt、or-opt等）优化无人机的访问顺序，第二阶段利用概率模型学习（PBIL）动态分配各区域的修复面积，并结合最大剩余能量局部搜索（MRELS）进一步提升解的质量。该方法通过协同优化路径和修复面积，充分考虑了两者的耦合关系，提升了整体修复效果。
 
 该算法可与多无人机协同调度算法结合，进一步验证本文提出方法的有效性和优越性。
+
 \section{参数设置}
-实验仿真具体参数如下。
+为确保仿真实验的可靠性与真实性，本文根据相关文献及实际无人机性能参数进行设置。实验仿真具体参数见表~\ref{tbl_drone_parameters}。
 
 \label{sub:无人机参数表格}
 \begin{table}[H]
@@ -797,36 +800,36 @@
 	\label{fig:training_reward_curve}
 \end{figure}
 
-如图\ref{fig:training_loss_curve}所示，该图展示了深度强化学习模型在训练过程中的损失函数随迭代轮数的变化趋势，可以看出损失值整体呈下降趋势，表明模型逐步收敛。从曲线可观察到，当训练步数达到约500000步后，损失函数趋于稳定，波动范围显著减小，表明模型已基本收敛。图\ref{fig:training_reward_curve}展示了训练过程中平均修复面积的变化曲线，随着训练的进行，平均修复面积逐步提升，说明模型的决策能力不断增强，能够获得更优的修复方案。同样，在约500000步后，修复面积也达到相对稳定状态，进一步证实了模型的有效收敛。这两个图共同验证了所提出深度强化学习方法在多无人机草原修复任务中的有效性和收敛性。
+如图\ref{fig:training_loss_curve}所示，该图展示了深度强化学习模型在训练过程中的损失函数随迭代轮数的变化趋势，可以看出损失值整体呈下降趋势，表明模型逐步收敛。从曲线可观察到，当训练步数达到约 $5 \times 10^5$ 步后，损失函数趋于稳定，波动范围显著减小，表明模型已基本收敛。图\ref{fig:training_reward_curve}展示了训练过程中平均修复面积的变化曲线，随着训练的进行，平均修复面积逐步提升，说明模型的决策能力不断增强，能够获得更优的修复方案。同样，在约 $5 \times 10^5$ 步后，修复面积也达到相对稳定状态，进一步证实了模型的有效收敛。这两个图共同验证了所提出深度强化学习方法在多无人机草原修复任务中的有效性和收敛性。
 
 \begin{figure}[H]
 	\centering
-	\subfloat[60点500边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_4_multi_route_DRL.svg}\label{fig:DRL_60_500_4}}
-	\subfloat[60点500边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_6_multi_route_DRL.svg}\label{fig:DRL_60_500_6}} 
-	\subfloat[60点500边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_8_multi_route_DRL.svg}\label{fig:DRL_60_500_8}}\\
-	\subfloat[60点600边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_4_multi_route_DRL.svg}\label{fig:DRL_60_600_4}}
-	\subfloat[60点600边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_6_multi_route_DRL.svg}\label{fig:DRL_60_600_6}}
-	\subfloat[60点600边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_8_multi_route_DRL.svg}\label{fig:DRL_60_600_8}}\\
-	\subfloat[60点700边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_4_multi_route_DRL.svg}\label{fig:DRL_60_700_4}}
-	\subfloat[60点700边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_6_multi_route_DRL.svg}\label{fig:DRL_60_700_6}}
-	\subfloat[60点700边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_8_multi_route_DRL.svg}\label{fig:DRL_60_700_8}}
-	\caption{基于深度强化学习方法的多无人机草原修复最优路径规划图}
+	\subfloat[500边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_4_multi_route_DRL.svg}\label{fig:DRL_60_500_4}}
+	\subfloat[500边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_6_multi_route_DRL.svg}\label{fig:DRL_60_500_6}} 
+	\subfloat[500边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_500_8_multi_route_DRL.svg}\label{fig:DRL_60_500_8}}\\
+	\subfloat[600边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_4_multi_route_DRL.svg}\label{fig:DRL_60_600_4}}
+	\subfloat[600边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_6_multi_route_DRL.svg}\label{fig:DRL_60_600_6}}
+	\subfloat[600边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_600_8_multi_route_DRL.svg}\label{fig:DRL_60_600_8}}\\
+	\subfloat[700边长4机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_4_multi_route_DRL.svg}\label{fig:DRL_60_700_4}}
+	\subfloat[700边长6机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_6_multi_route_DRL.svg}\label{fig:DRL_60_700_6}}
+	\subfloat[700边长8机]{\includesvg[width=0.32\textwidth]{figures/DRL/cvrp_60_700_8_multi_route_DRL.svg}\label{fig:DRL_60_700_8}}
+	\caption{基于深度强化学习方法在60个待修复区域多无人机草原修复最优路径规划图}
 	\label{fig:RL_combined_uav_routes}
 \end{figure}
 图\ref{fig:RL_combined_uav_routes}展示了基于深度强化学习方法的多无人机草原修复路径规划结果。可以看到，深度强化学习方法能够为每架无人机分配合理的修复区域，路径交叉较少，任务分配均衡，有效减少了无人机间的干扰。尤其在待修复区域分布密集时，算法能够根据能量约束和区域分布动态优化任务分配，使各无人机负载更为均衡。
 
 \begin{figure}[H]
 	\centering
-	\subfloat[60点500边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_4}}
-	\subfloat[60点500边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_6}} 
-	\subfloat[60点500边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_8}}\\
-	\subfloat[60点600边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_4}}
-	\subfloat[60点600边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_6}}
-	\subfloat[60点600边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_8}}\\
-	\subfloat[60点700边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_4}}
-	\subfloat[60点700边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_6}}
-	\subfloat[60点700边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_8}}
-	\caption{基于协同启发式与概率模型学习算法的多无人机草原修复最优路径规划图}
+	\subfloat[500边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_4}}
+	\subfloat[500边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_6}} 
+	\subfloat[500边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_500_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_500_8}}\\
+	\subfloat[500边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_4}}
+	\subfloat[500边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_6}}
+	\subfloat[500边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_600_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_600_8}}\\
+	\subfloat[500边长4机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_4_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_4}}
+	\subfloat[500边长6机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_6_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_6}}
+	\subfloat[500边长8机]{\includesvg[width=0.32\textwidth]{figures/CHAPBILM/cvrp_60_700_8_multi_route_CHAPBILM.svg}\label{fig:ILS_60_700_8}}
+	\caption{基于协同启发式与概率模型学习方法在60个待修复区域多无人机草原修复最优路径规划图}
 	\label{fig:CHAPBILM_combined_uav_routes}
 \end{figure}
 

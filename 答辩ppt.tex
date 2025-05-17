@@ -1,16 +1,20 @@
-\documentclass[9pt, aspectratio=169]{beamer}  % 将字体大小改为9pt
+% 这是一个基于XeLaTeX的beamer幻灯片
+\documentclass[10pt, aspectratio=169]{beamer}  % 将字体大小改为10pt
 
-\usepackage{ctex}  % 支持中文
+% 中文支持
+\usepackage[UTF8]{ctex}
+\usepackage{svg} % SVG图像支持
+
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{booktabs}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning, calc} % ADDED THIS LINE for flowchart
 \usepackage{hyperref}
 \usepackage{listings}
 \usepackage{multirow}  % 支持表格行合并
 \usepackage{booktabs}
-\usepackage{svg}
 \usepackage{subfig}
 \usepackage{algorithm}
 \usepackage{algorithmicx}
@@ -25,11 +29,11 @@
     showstringspaces=false,
     tabsize=4,
     numbers=none,  % 移除行号以节省空间
-    frame=none     % 移除边框以减少视觉干扰
+    frame=none     % 秽除边框以减少视觉干扰
 }
 
 % 调整数学公式字体大小
-\DeclareMathSizes{9}{9}{7}{5}  % 调整为对应9pt的数学字体大小
+\DeclareMathSizes{10}{10}{8}{6}  % 调整为对应10pt的数学字体大小
 
 % 减小标题和段落间距
 \setbeamertemplate{items}[circle]  % 使用更紧凑的项目符号
@@ -37,268 +41,422 @@
 
 % 调整页边距以容纳更多内容
 \setbeamersize{
-    text margin left=0.3cm,
-    text margin right=0.3cm
+    text margin left=0.5cm,
+    text margin right=0.5cm
 }
 
 \usetheme{Madrid}
 \usecolortheme{default}
+\usepackage{NJUPT} % 加载NJUPT样式文件
 
-\title{毕业论文答辩}
-\subtitle{模型性能改进}
+\title{面向草原生态修复的多无人机协同\\路径规划与面积分配方法研究}
+\subtitle{本科毕业论文答辩}
 \author{王贤义}
+\institute{兰州大学信息科学与工程学院}
 \date{\today}
+
+% 在标题页后添加目录
+\AtBeginDocument{
+  \frame{\titlepage}
+  \begin{frame}{目录}
+    \tableofcontents[sectionstyle=show, subsectionstyle=hide]
+  \end{frame}
+}
 
 \begin{document}
 
+\section{引言与背景}
 \begin{frame}
-	\titlepage
-\end{frame}
-\begin{frame}
-	\frametitle{研究背景与意义}
-	\begin{itemize}
-		\item 草原生态系统在环境保护中的重要性
-		      \begin{itemize}
-			      \item 占全球陆地总面积26\%至40\%
-			      \item 防风固沙、涵养水源、调节气候、维持生物多样性
-		      \end{itemize}
-		\item 草原退化问题
-		      \begin{itemize}
-			      \item 植被覆盖率下降、土壤沙化、水资源减少
-			      \item 传统修复方法效率低、成本高
-		      \end{itemize}
-		\item 无人机技术优势
-		      \begin{itemize}
-			      \item 机动性强、成本低、可远程操作
-			      \item 适用于复杂地形和偏远区域
-		      \end{itemize}
-	\end{itemize}
+	\centering % 水平居中
+	{\Huge \sffamily\bfseries\textcolor{njupt}{引言与背景}}
+	\par % 换行
+	\vspace{0.5cm} % 调整间距
+	{\large \itshape{本部分将介绍研究的背景、意义及主要内容。}} % 修改后的引言
+	% \vfill % 移除垂直居中
 \end{frame}
 
+\subsection{研究背景、意义与主要研究内容}
 \begin{frame}
-	\frametitle{研究难点与挑战}
-	\begin{itemize}
-		\item 无人机能源限制
-		      \begin{itemize}
-			      \item 电池续航能力有限
-			      \item 载重能力受限
-		      \end{itemize}
-		\item 修复效率优化
-		      \begin{itemize}
-			      \item 如何在有限能源条件下最大化修复面积
-			      \item 播种负载与能耗之间的复杂关系
-		      \end{itemize}
-		\item 多无人机协同
-		      \begin{itemize}
-			      \item 任务分配与路径规划问题
-			      \item 动态调度与实时决策
-		      \end{itemize}
-	\end{itemize}
+    \frametitle{研究背景、意义与主要研究内容}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth} % Left column for 研究背景与意义
+            \footnotesize % Reduce font size for this column
+            \textbf{研究背景与意义}
+            \begin{itemize}
+                \item \textbf{草原生态系统：}全球重要（占陆地26\%--40\%），具防风固沙、涵养水源、调节气候、维系生物多样性等关键功能。
+                \item \textbf{草原退化挑战：}面临植被减少、土壤沙化、水土流失等问题，受人类活动与气候变化双重压力。
+                \item \textbf{传统修复局限：}人工与机械修复效率低，大范围复杂地形下成本高、难度大。
+                \item \textbf{无人机新机遇：}凭借机动、远程、低成本优势，多无人机协同为草原修复提供新途径。
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth} % Right column for 主要研究内容
+            \footnotesize % Reduce font size for this column
+            \textbf{主要研究内容}
+            \begin{itemize}
+                \item 构建多无人机协同修复数学模型（修复面积最大化）。
+                \item 研发基于深度强化学习的路径规划与面积分配算法。
+                \item 设计多无人机协同调度架构及决策执行流程。
+                \item 仿真实验验证与性能对比。
+                \item 技术核心：Transformer编码器 + 指针网络解码器，Actor--Critic训练。
+            \end{itemize}
+        \end{column}
+    \end{columns}
 \end{frame}
 
+\section{核心方法与模型}
 \begin{frame}
-	\frametitle{模型构建 - 草原修复问题}
+	\centering % 水平居中
+	{\Huge \sffamily\bfseries\textcolor{njupt}{核心方法与模型}}
+	\par % 换行
+	\vspace{0.5cm} % 调整间距
+	{\large \itshape{本章将详细阐述问题建模、能量消耗模型及所提出的深度神经网络模型。}} % 修改后的引言
+	% \vfill % 移除垂直居中
+\end{frame}
+
+\subsection{草原修复问题建模}
+\begin{frame}
+	\frametitle{草原修复问题建模}
 	\begin{columns}
-		\begin{column}{0.5\textwidth}
+		\begin{column}{0.4\textwidth}
 			\begin{itemize}
-				\item 草原建模为无向图 $G = (V, E)$
+				\item 将草原建模为无向图 $G = (V, E)$
 				      \begin{itemize}
-					      \item $V = \{v_0, v_1, ..., v_N \}$ 表示修复区域
+					      \item $V = \{v_0, v_1, ..., v_N \}$ 表示待修复区域
 					      \item $v_0$ 为地面信息融合中心
-					      \item 每个区域有位置、退化度、面积属性
+					      \item 每个区域具有位置、退化度、面积等属性
 				      \end{itemize}
 				\item 无人机特性
 				      \begin{itemize}
-					      \item 起飞能量：$E_{max}$
-					      \item 草种重量：$Q$
+					      \item 初始能量：$E_{max}$
+					      \item 携带草种重量：$Q$
 					      \item 退化程度范围：[0.3, 0.8]
+				      \end{itemize}
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.6\textwidth}
+			\centering
+			\includesvg[width=1\textwidth]{figures/多无人机修复退化区域实例.svg}
+			\captionof{figure}{多无人机协同草原退化区域示意图}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{无人机能量消耗模型}
+\begin{frame}
+	\frametitle{无人机能量消耗模型}
+	\begin{columns}
+		\begin{column}{0.55\textwidth}
+			无人机在飞行过程中功率消耗：
+			\begin{equation*}
+				P(\bar{q}_{ij}) = (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}}
+			\end{equation*}
+
+			\textbf{三种能量消耗：}
+			\begin{align*}
+				E_f    & = \sum^N_{i=0}\sum^N_{j \neq i} e^f_{ij} d_{ij} x_{ij} \quad \text{(飞行能耗)} \\
+				E_s    & = \sum^N_{i = 1}\sum^N_{j \neq i}\sigma_i e_i x_{ij} \quad \text{(播种能耗)}   \\
+				E_{ap} & = e_{ap}\sum^N_{i=1}\sum^N_{j \neq i} x_{ij}\sigma_i \quad \text{(信息采集能耗)}
+			\end{align*}
+		\end{column}
+		\begin{column}{0.45\textwidth}
+			\begin{itemize}
+				\item $M = W + m$：无人机自重
+				\item $\bar{q}_{ij}$：当前草种重量
+				\item $\sigma_i$：修复的单位圆数量
+				\item $x_{ij}$：路径选择变量
+				\item $e_i = \eta q_i$：单位面积播种能耗
+				\item $q_i = (1 + l_i) \gamma$：单位面积草种重量
+				\item $e_{ap}$：信息采集能耗系数
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{优化目标与约束条件}
+\begin{frame}
+	\frametitle{优化目标与约束条件}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\textbf{优化目标：加权修复面积最大化}
+			\begin{equation*}
+				\max_{x_{ij}, \sigma_i} \sum_{i=1}^{N} (l_i + 0.7) \cdot \sigma_i
+			\end{equation*}
+
+			\textbf{核心约束条件：}
+			\begin{itemize}
+				\item 能量约束：$E_s + E_{ap} + E_f \leq E_{max}$
+				\item 载荷约束：草种重量平衡与不超限
+				\item 路径约束：每个区域最多访问一次
+				\item 面积约束：$1 \leq \sigma_i \leq c_i$
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\textbf{马尔可夫决策过程建模：}
+			\begin{itemize}
+				\item 状态 $s(<i)$：部分修复解
+				\item 动作 $\pi_i=s(i)$：下一步修复决策
+				\item 策略函数：$p(\pi|s)=\prod_{i=1}^n p(s(i)|s(<i))$
+				\item 奖励函数：
+				      \begin{equation*}
+					      R(\pi|V)=\alpha_{p}*Pel+\alpha_{r}*\sum_{i=1}^{n}(l_i+0.7)*a_{i}
+				      \end{equation*}
+			\end{itemize}
+		\end{column}
+	\end{columns}
+	\vspace{0.3cm}
+	\textbf{模型特点：}多变量组合优化问题、NP-hard难度、非线性约束
+\end{frame}
+
+\subsection{深度神经网络模型构建}
+\begin{frame}
+	\frametitle{深度神经网络模型构建}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\footnotesize
+			\textbf{Actor-Critic 数据流程说明：}
+
+			模型采用 Actor-Critic 架构 (如右图)：
+			\begin{itemize}
+				\item \textbf{输入与编码：} 当前\textbf{状态 $s_t$} 输入\textbf{编码器 (Encoder)} (Transformer)，提取特征 $h_t$ 供 Actor 和 Critic 使用。
+				      \textit{编码器数学表示：}
+				      \begin{align*}
+					      h^{l=0} & = h^{in} W^{in}                                                           \\
+					      h^{l+1} & = \text{BN}(\text{Relu}(h_{rc}^{l+1} W_1^{l+1}) W_2^{l+1} + h_{rc}^{l+1})
+				      \end{align*}
+
+				\item \textbf{Actor (策略网络)：} \textbf{解码器 (Decoder)} (指针网络)据 $h_t$ 和 $V(s_t)$ 生成\textbf{动作 $a_t$}。
+
+				\item \textbf{Critic (价值网络)：} 据 $h_t$ 输出\textbf{状态值 $V(s_t)$}，指导 Actor 学习。
+
+				\item \textbf{训练与优化：}
+				      Actor-Critic 协同训练。$V(s_t)$ 助算优势以更新 Actor；$a_t$ 和环境反馈更新 Critic。
+				      \textit{损失函数：}
+				      \begin{itemize}
+					      \item Actor: $\mathcal{L}_{R} = \frac{1}{B}\sum (C_i - b_{v,i}) \log p_i$
+					      \item Critic: $\mathcal{L}_{b}$
+					      \item 总损失: $\mathcal{L} = \mathcal{L}_{R} + \mathcal{L}_{b}$
 				      \end{itemize}
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.5\textwidth}
 			\centering
-			\includesvg[width=1\textwidth]{figures/多无人机修复退化区域实例.svg}
-			\captionof{figure}{无人机草原修复区域示意}
+			\resizebox{\textwidth}{!}{%
+				\begin{tikzpicture}[node distance=1.2cm and 0.8cm, >=stealth', every node/.style={draw, rectangle, rounded corners, minimum height=0.8cm, text width=2.5cm, align=center, font=\footnotesize}]
+					% 定义节点
+					\node (input) [ellipse, fill=blue!20] {输入 (状态 $s_t$)};
+					\node (encoder) [below=of input, fill=green!20] {编码器 (Transformer)};
+					\node (decoder) [below=of encoder, fill=green!20] {解码器 (指针网络)};
+					\node (action) [below=of decoder, ellipse, fill=blue!20] {输出 (动作 $a_t$)};
+					\node (critic) [right=of encoder, xshift=1.5cm, fill=orange!20] {Critic网络};
+					\node (value) [below=of critic, ellipse, fill=blue!20] {状态值 $V(s_t)$};
+
+					% 定义箭头
+					\draw[->] (input) -- (encoder);
+					\draw[->] (encoder) -- (decoder);
+					\draw[->] (decoder) -- (action);
+					\draw[->] (encoder) -- (critic);
+					\draw[->] (critic) -- (value);
+					% Simplified dashed lines - direct connection for value to decoder
+					\draw[->, dashed] (value.west) -- (decoder.east); % Direct connection from value's left to decoder's right
+					% \draw[->, dashed] (action.east) -- ($(action.east -| critic.east) + (0.4cm,0)$) coordinate (intermediate_for_action_critic) -- (intermediate_for_action_critic |- critic.east) -- (critic.east); % Previous attempt
+					\draw[->, dashed] (action.east) -- ($(action.east -| critic.east) + (1.0cm,0)$) coordinate (intermediate_for_action_critic) -- (intermediate_for_action_critic |- critic.east) -- (critic.east);
+				\end{tikzpicture}%
+			}
+			\captionof{figure}{Actor-Critic 数据流程}
 		\end{column}
 	\end{columns}
 \end{frame}
 
+\subsection{多无人机协同调度算法}
 \begin{frame}
-	\frametitle{无人机能量消耗模型}
-	\begin{align*}
-		P(\bar{q}_{ij}) & = (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}} \quad \text{(功率方程)} \\
-		E_f             & = \sum^N_{i=0}\sum^N_{j \neq i} e^f_{ij} d_{ij} x_{ij} \quad \text{(飞行能耗)}                  \\
-		E_s             & = \sum^N_{i = 1}\sum^N_{j \neq i}\sigma_i e_i x_{ij} \quad \text{(播种能耗)}                    \\
-		E_{ap}          & = e_{ap}\sum^N_{i=1}\sum^N_{j \neq i} x_{ij}\sigma_i \quad \text{(信息采集能耗)}
-	\end{align*}
-	\begin{itemize}
-		\item $M = W + m$：无人机框架与电池重量
-		\item $\bar{q}_{ij}$：无人机当前载荷重量
-		\item $\sigma_i$：在区域$i$修复的单位圆数量
-		\item $x_{ij}$：0-1变量，表示路径选择
-	\end{itemize}
+    \frametitle{多无人机协同调度算法}
+    \begin{columns}[T]
+        \begin{column}{0.5\textwidth}
+            \footnotesize
+            \textbf{多无人机协同调度算法流程：}
+
+            本算法通过分布式决策与中心协调相结合的方式，优化多无人机执行草原修复任务的效率。主要步骤包括：
+            \begin{itemize}
+                \item \textbf{初始化：} 无人机分配初始区域并确定决策优先级。
+                \item \textbf{两阶段路径规划：}
+                \begin{enumerate}
+                    \item 无人机基于自身地图进行初步规划并上报。
+                    \item 中心整合信息，更新并下发全局优化地图。
+                    \item 无人机进行二次规划，选择更优方案。
+                \end{enumerate}
+                \item \textbf{协同决策与执行：} 优先级最高的无人机根据当前状态决策修复区域和面积，执行任务。
+                \item \textbf{动态调整：} 实时更新地图、无人机状态和优先级，直至所有任务完成。
+            \end{itemize}
+            该方法旨在提高总修复面积并有效利用无人机资源。
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \centering
+            \resizebox{0.8\columnwidth}{!}{%
+                \begin{tikzpicture}[node distance=0.6cm and 1.5cm, >=stealth', % Adjusted node distance for vertical and horizontal spread
+                    main_node/.style={draw, rectangle, rounded corners, minimum height=0.8cm, text width=3.2cm, align=center, font=\footnotesize, fill=green!20},
+                    cond_node/.style={draw, diamond, aspect=1.5, minimum height=0.8cm, text width=2.2cm, align=center, font=\footnotesize, fill=orange!20},
+                    io_node/.style={draw, ellipse, minimum height=0.7cm, text width=1.8cm, align=center, font=\footnotesize, fill=blue!20}
+                ]
+                    % Nodes
+                    \node (start) [io_node] {开始};
+                    \node (init) [main_node, below=of start, yshift=-0.1cm] {初始化:\\分配区域,\\定优先级};
+                    \node (loop_cond) [cond_node, below=of init, yshift=-0.1cm] {所有任务\\完成?};
+
+                    \node (plan1) [main_node, below=of loop_cond, yshift=-0.2cm] {阶段1: 无人机\\初步规划与上报};
+                    \node (center_update) [main_node, right=of plan1, xshift=1.5cm] {阶段2: 中心整合\\与下发优化地图};
+                    \node (plan2) [main_node, below=of center_update, yshift=-0.2cm] {阶段3: 无人机\\二次规划选优};
+                    \node (collab_exec) [main_node, left=of plan2, xshift=-1.5cm] {协同决策与执行:\\高优先级无人机\\决策并执行}; % Moved left of plan2
+                    \node (dynamic_adjust) [main_node, below=of collab_exec, yshift=-0.2cm] {动态调整:\\更新地图、状态、\\优先级}; % Moved below new collab_exec
+
+                    \node (end) [io_node, right=of loop_cond, xshift=2.5cm] {结束};
+
+                    % Connections
+                    \draw[->] (start) -- (init);
+                    \draw[->] (init) -- (loop_cond);
+
+                    \draw[->] (loop_cond.south) -- node[left, pos=0.3, font=\tiny] {否} (plan1);
+                    \draw[->] (plan1) -- (center_update);
+                    \draw[->] (center_update) -- (plan2);
+                    \draw[->] (plan2) -- (collab_exec); % Arrow from plan2 to new collab_exec position
+                    \draw[->] (collab_exec) -- (dynamic_adjust); % Arrow from new collab_exec to new dynamic_adjust position
+
+                    % Loop back from dynamic_adjust to loop_cond
+                    % \draw[->] (dynamic_adjust.north) |- (loop_cond.west); % Previous polyline loop back
+                    \draw[->] (dynamic_adjust.south) -- ++(0,-0.4cm) -- ++(-2.5cm,0) |- (loop_cond.west);
+
+                    % "Yes" branch from loop_cond to end
+                    \draw[->] (loop_cond.east) -- node[above, pos=0.5, font=\tiny] {是} (end);
+                \end{tikzpicture}%
+            }
+            \captionof{figure}{多无人机协同调度算法流程图} % Updated caption
+        \end{column}
+    \end{columns}
 \end{frame}
 
+\section{实验与结论}
 \begin{frame}
-	\frametitle{优化目标与约束条件}
-	\begin{itemize}
-		\item 优化目标：最大化加权修复面积
-		      \begin{equation*}
-			      C = \sum_{i=1}^{N} (l_i + 0.7) \cdot \sigma_i
-		      \end{equation*}
-		\item 核心约束条件
-		      \begin{itemize}
-			      \item 能量约束：总能耗不超过最大能量容量$E_{max}$
-			      \item 载荷约束：携带的草种必须在返回前全部播撒完毕
-			      \item 路径约束：无人机最多进入每个区域一次
-			      \item 面积约束：修复面积不超过区域最大面积
-		      \end{itemize}
-		\item 问题复杂性：多变量组合优化问题，直接求解困难
-	\end{itemize}
+	\centering % 水平居中
+	{\Huge \sffamily\bfseries\textcolor{njupt}{实验与结论}}
+	\par % 换行
+	\vspace{0.5cm} % 调整间距
+	{\large \itshape{本章将展示仿真实验结果并对研究工作进行总结与展望。}} % 修改后的引言
+	% \vfill % 移除垂直居中
 \end{frame}
 
-\begin{frame}
-	\frametitle{多无人机协同调度算法}
-	\begin{algorithm}[H]
-		\scriptsize % 使用更小的字体
-		\caption{多无人机协同调度算法}
-		\label{alg:multi_uav_scheduling}
-		\begin{algorithmic}[1]
-			\Require 参数序列 $Parms$，无人机修复地图集合 $M_u$，无人机状态集合 $S_u$
-			\Ensure 无人机访问的节点序列 $O_p$，修复面积 $O_a$，剩余能量 $O_e$
-
-			\State $M_u^i \gets \text{初始化}(M_u)$ \Comment{根据初始化方法（如K-means）分配初始地图}
-			\State $P_u^i \gets \text{初始化}(P_u)$ \Comment{初始化无人机信号量以决定优先级}
-
-			\While{$M_u \neq \emptyset$}
-				\State $E_u^{rel} \gets \text{路径规划}(M_u, P_u^{self})$ \Comment{第一次路径规划}
-				\State $\text{上报中心}(S_u, M_u, E_u^{rel})$ \Comment{第一次上报中心}
-				\State $M_u^{tmp} \gets \text{更新地图}(M^{global}, P_u^{self})$
-				\State $\text{下发新地图}(M_u^{P_u^{tmp}})$ \Comment{下发新地图}
-				\State $E_u^{r2} \gets \text{路径规划}(M_u^{tmp}, P_u^{self})$ \Comment{第二次路径规划}
-				\State $\text{上报中心}(E_u^{r2}, Area_u^{r2})$
-
-				\If{$\sum_{u=1}^U Area_u^{r2} \geq \sum_{u=1}^U Area_u^{r1}$}
-					\State $\text{下发新地图}(M_u^{tmp})$ \Comment{选择修复面积更多的地图}
-					\State $M_u \gets M_u^{tmp}$
-				\EndIf
-
-				\State $\sigma_u^{\max\_p} \gets \text{决策修复面积}(E_u, M_u)$ 
-				\State $\text{执行修复与采集}(\sigma_u^{\max\_p}, C_{\max\_p}, P_u^{\max\_p})$
-				\State $\text{从地图移除}(M_u, P_u^{\max\_p})$
-				\State $P_u^{\max\_p} \gets \text{飞往下一个点}(P_u^{benefit})$
-				\State $\text{更新信号量}(P_u^{\max\_p})$
-			\EndWhile
-
-			\State $\text{返回起点}(P_u^0)$ \Comment{无人机返回起点}
-		\end{algorithmic}
-	\end{algorithm}
-\end{frame}
-
+\subsection{基于深度强化学习的求解方法}
 \begin{frame}
 	\frametitle{基于深度强化学习的求解方法}
 	\begin{columns}
 		\begin{column}{0.5\textwidth}
 			\centering
 			\includesvg[width=0.95\textwidth]{figures/actor_loss_curve.svg}
-			\captionof{figure}{训练过程中修复面积变化}
+			\captionof{figure}{训练过程中修复面积变化 (Actor Loss)}
 		\end{column}
 		\begin{column}{0.5\textwidth}
 			\centering
 			\includesvg[width=0.95\textwidth]{figures/avg_repair_area_curve.svg}
-			\captionof{figure}{训练过程中修复面积变化}
+			\captionof{figure}{训练过程中修复面积变化 (Avg. Repair Area)}
 		\end{column}
 	\end{columns}
 \end{frame}
+
+\subsection{实验结果 - 路径规划可视化}
 \begin{frame}
 	\frametitle{实验结果 - 路径规划可视化}
-	\begin{figure}
-		\centering
-		\subfloat[DRL方法]{\includesvg[width=0.45\textwidth]{figures/DRL/cvrp_60_500_6_multi_route_DRL.svg}}
-		\hfill
-		\subfloat[SA方法]{\includesvg[width=0.45\textwidth]{figures/SA/cvrp_60_500_6_multi_route_SA.svg}}
-
-		\caption{多无人机草原修复路径规划对比}
+	\begin{figure} % 将columns和caption包裹在figure环境中
+		\begin{columns}[T] % Align columns at the top
+			\begin{column}{0.48\textwidth}
+				\centering
+				\textbf{CHAPBILM 方法}\par\vspace{1mm}
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_500_4_multi_route_CHAPBILM.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_500_6_multi_route_CHAPBILM.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_500_8_multi_route_CHAPBILM.svg}\par\vspace{0.5mm}
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_600_4_multi_route_CHAPBILM.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_600_6_multi_route_CHAPBILM.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_600_8_multi_route_CHAPBILM.svg}\par\vspace{0.5mm}
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_700_4_multi_route_CHAPBILM.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_700_6_multi_route_CHAPBILM.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/CHAPBILM/cvrp_60_700_8_multi_route_CHAPBILM.svg}
+			\end{column}
+			\hfill
+			\begin{column}{0.48\textwidth}
+				\centering
+				\textbf{DRL 方法}\par\vspace{1mm}
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_500_4_multi_route_DRL.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_500_6_multi_route_DRL.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_500_8_multi_route_DRL.svg}\par\vspace{0.5mm}
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_600_4_multi_route_DRL.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_600_6_multi_route_DRL.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_600_8_multi_route_DRL.svg}\par\vspace{0.5mm}
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_700_4_multi_route_DRL.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_700_6_multi_route_DRL.svg}\hfill
+				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_700_8_multi_route_DRL.svg}
+			\end{column}
+		\end{columns}
+		\captionof{figure}{路径规划结果对比 60个待修复区域} % 使用 captionof 替代 caption
 	\end{figure}
 \end{frame}
 
+\subsection{实验结果 - 算法性能对比}
 \begin{frame}
 	\frametitle{实验结果 - 算法性能对比}
 	\begin{table}
 		\centering
 		\caption{路径长度与修复面积对比（DRL 与 CHAPBILM）}
-		\scriptsize
-		\setlength{\tabcolsep}{2pt}
-		\begin{tabular}{ccc c ccc ccc}
+		\small % 使用更大的字体
+		\setlength{\tabcolsep}{3pt}
+		\begin{tabular}{ccc ccc ccc}
 			\toprule
-			\multirow{2}{*}{区域数} & \multirow{2}{*}{草原边长} & \multirow{2}{*}{无人机数} &  & \multicolumn{3}{c}{路径长度} & \multicolumn{3}{c}{修复面积} \\
-			\cmidrule(lr){5-7}\cmidrule(lr){8-10}
-			& & & & DRL & CHAPBILM & Gap(\%) & DRL & CHAPBILM & Gap(\%) \\
+			\multirow{2}{*}{区域数} & \multirow{2}{*}{草原边长} & \multirow{2}{*}{ 无人机数} & \multicolumn{3}{c}{路径长度} & \multicolumn{3}{c}{修复面积}                                                        \\
+			\cmidrule(lr){4-6}\cmidrule(lr){7-9}
+			                     &                       &                        & DRL                      & CHAPBILM                 & Gap(\%)         & DRL    & CHAPBILM & Gap(\%)        \\
 			\midrule
-			\multirow{9}{*}{60} 
-			 & \multirow{3}{*}{500} 
-			   & \multirow{1}{*}{4} &  & 9396.35  & 12648.21 & \textbf{-25.68} & 267.00 & 194.00 & \textbf{37.63} \\
-			 &                        & \multirow{1}{*}{6} &  & 21348.69 & 19110.48 & 11.71          & 258.00 & 205.00 & \textbf{25.85} \\
-			 &                        & \multirow{1}{*}{8} &  & 26118.19 & 27145.66 & \textbf{-3.79} & 304.00 & 218.00 & \textbf{39.45} \\
-			\cmidrule(lr){2-10}
-			 & \multirow{3}{*}{600} 
-			   & \multirow{1}{*}{4} &  & 13339.68 & 16255.96 & \textbf{-17.92} & 271.00 & 223.00 & \textbf{21.52} \\
-			 &                        & \multirow{1}{*}{6} &  & 26523.73 & 27174.68 & \textbf{-2.39} & 294.00 & 206.00 & \textbf{42.72} \\
-			 &                        & \multirow{1}{*}{8} &  & 31186.17 & 31494.13 & \textbf{-0.98} & 257.00 & 224.00 & \textbf{14.73} \\
-			\cmidrule(lr){2-10}
-			 & \multirow{3}{*}{700} 
-			   & \multirow{1}{*}{4} &  & 17622.78 & 22103.46 & \textbf{-20.27} & 282.00 & 291.00 & -3.09          \\
-			 &                        & \multirow{1}{*}{6} &  & 28252.23 & 28539.91 & \textbf{-1.01} & 270.00 & 218.00 & \textbf{23.85} \\
-			 &                        & \multirow{1}{*}{8} &  & 37585.42 & 36859.35 & 1.97           & 238.00 & 254.00 & -6.30          \\
+			\multirow{3}{*}{60}
+			                     & 500                   & 4                      & 9396.35                  & 12648.21                 & \textbf{-25.68} & 267.00 & 194.00   & \textbf{37.63} \\
+			                     & 600                   & 6                      & 26523.73                 & 27174.68                 & \textbf{-2.39}  & 294.00 & 206.00   & \textbf{42.72} \\
+			                     & 700                   & 8                      & 37585.42                 & 36859.35                 & 1.97            & 238.00 & 254.00   & -6.30          \\
 			\midrule
-			\multirow{9}{*}{80} 
-			 & \multirow{3}{*}{500} 
-			   & \multirow{1}{*}{4} &  & 10221.88 & 17217.03 & \textbf{-40.60} & 370.00 & 315.00 & \textbf{17.46} \\
-			 &                        & \multirow{1}{*}{6} &  & 22135.76 & 25252.45 & \textbf{-12.37} & 375.00 & 240.00 & \textbf{56.25} \\
-			 &                        & \multirow{1}{*}{8} &  & 30491.72 & 31922.23 & \textbf{-4.48}  & 306.00 & 267.00 & \textbf{14.61} \\
-			\cmidrule(lr){2-10}
-			 & \multirow{3}{*}{600} 
-			   & \multirow{1}{*}{4} &  & 15973.03 & 22825.91 & \textbf{-30.02} & 363.00 & 314.00 & \textbf{15.61} \\
-			 &                        & \multirow{1}{*}{6} &  & 29742.35 & 28044.73 & 6.05           & 406.00 & 282.00 & \textbf{44.00} \\
-			 &                        & \multirow{1}{*}{8} &  & 39943.98 & 40845.86 & \textbf{-2.21} & 399.00 & 269.00 & \textbf{48.33} \\
-			\cmidrule(lr){2-10}
-			 & \multirow{3}{*}{700} 
-			   & \multirow{1}{*}{4} &  & 22577.68 & 26113.54 & \textbf{-13.56} & 335.00 & 267.00 & \textbf{25.47} \\
-			 &                        & \multirow{1}{*}{6} &  & 33566.63 & 34738.58 & \textbf{-3.38} & 380.00 & 298.00 & \textbf{27.52} \\
-			 &                        & \multirow{1}{*}{8} &  & 44308.24 & 42493.45 & 4.28           & 355.00 & 311.00 & \textbf{14.14} \\
+			\multirow{3}{*}{80}
+			                     & 500                   & 4                      & 10221.88                 & 17217.03                 & \textbf{-40.60} & 370.00 & 315.00   & \textbf{17.46} \\
+			                     & 600                   & 6                      & 29742.35                 & 28044.73                 & 6.05            & 406.00 & 282.00   & \textbf{44.00} \\
+			                     & 700                   & 8                      & 44308.24                 & 42493.45                 & 4.28            & 355.00 & 311.00   & \textbf{14.14} \\
 			\bottomrule
 		\end{tabular}
 		\label{tab:combined_comparison}
 	\end{table}
 \end{frame}
 
+\subsection{研究结论与展望}
 \begin{frame}
 	\frametitle{研究结论与展望}
-	\begin{itemize}
-		\item 研究结论
-		      \begin{itemize}
-			      \item 提出基于深度强化学习的多无人机草原修复方法
-			      \item 构建Transformer+指针网络架构，采用Actor-Critic训练
-			      \item 实验验证优于传统方法，修复面积提升最高可达40\%
-		      \end{itemize}
-		      \vspace{0.5em}
-		\item 未来展望
-		      \begin{itemize}
-			      \item 考虑地形、气候等环境因素对无人机性能的影响
-			      \item 进一步探索算法在更复杂环境下的适应性
-			      \item 结合实际场景验证，提高算法实用性
-			      \item 扩展至更多类型的生态修复任务
-		      \end{itemize}
-	\end{itemize}
+	\begin{columns}[T] % T选项可以使两栏顶部对齐
+		\begin{column}{0.5\textwidth}
+			\textbf{研究结论}
+			\begin{itemize}
+				\item 提出基于深度强化学习的多无人机草原修复方法
+				\item 构建Transformer+指针网络架构，采用Actor-Critic训练
+				\item 实验验证优于传统方法，修复面积提升最高可达40\%
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\textbf{未来展望}
+			\begin{itemize}
+				\item 考虑地形、气候等环境因素对无人机性能的影响
+				\item 进一步探索算法在更复杂环境下的适应性
+				\item 结合实际场景验证，提高算法实用性
+				\item 扩展至更多类型的生态修复任务
+			\end{itemize}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}
 	\begin{center}
 		\vspace{2cm}
-		{\Huge \sffamily\bfseries\textcolor{blue!60!black}{Thanks for Listening!}}
+		{\Huge \sffamily\bfseries\textcolor{njupt}{恳请各位老师批评指正！}} % 使用主题色 njupt
 		\vspace{0.5cm}
 
-		{\large \itshape\textcolor{gray}{Questions \& Comments Welcome}}
+		{\large \itshape\textcolor{gray}{Thanks}}
 	\end{center}
 \end{frame}
 

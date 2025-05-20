@@ -1,5 +1,5 @@
 % 这是一个基于XeLaTeX的beamer幻灯片
-\documentclass[10pt, aspectratio=169]{beamer}  % 将字体大小改为10pt
+\documentclass[11pt, aspectratio=169]{beamer}  % 将字体大小改为11pt
 
 % 中文支持
 \usepackage[UTF8]{ctex}
@@ -33,7 +33,7 @@
 }
 
 % 调整数学公式字体大小
-\DeclareMathSizes{10}{10}{8}{6}  % 调整为对应10pt的数学字体大小
+\DeclareMathSizes{11}{11}{9}{7}  % 调整为对应11pt的数学字体大小
 
 % 减小标题和段落间距
 \setbeamertemplate{items}[circle]  % 使用更紧凑的项目符号
@@ -66,7 +66,7 @@
 \subtitle{本科毕业论文答辩}
 \author{王贤义}
 \institute{兰州大学信息科学与工程学院}
-\date{\today}
+\date{2025年5月19日}
 
 % 在标题页后添加目录
 \AtBeginDocument{
@@ -93,7 +93,8 @@
 	\frametitle{研究背景、意义与主要研究内容}
 	\begin{columns}[T]
 		\begin{column}{0.5\textwidth} % Left column for 研究背景与意义
-			\footnotesize % Reduce font size for this column
+			% \footnotesize % Remove footnotesize
+			\small % Change to small
 			\textbf{研究背景与意义}
 			\begin{itemize}
 				\item \textbf{草原生态系统：}全球重要（占陆地26\%--40\%），具防风固沙、涵养水源、调节气候、维系生物多样性等关键功能。
@@ -103,7 +104,8 @@
 			\end{itemize}
 		\end{column}
 		\begin{column}{0.5\textwidth} % Right column for 主要研究内容
-			\footnotesize % Reduce font size for this column
+			% \footnotesize % Remove footnotesize
+			\small % Change to small
 			\textbf{主要研究内容}
 			\begin{itemize}
 				\item 构建多无人机协同修复数学模型（修复面积最大化）。
@@ -131,6 +133,7 @@
 	\frametitle{草原修复问题建模}
 	\begin{columns}
 		\begin{column}{0.4\textwidth}
+			\small % Add \small here
 			\begin{itemize}
 				\item 将草原建模为无向图 $G = (V, E)$
 				      \begin{itemize}
@@ -163,9 +166,10 @@
 			\begin{equation*}
 				P(\bar{q}_{ij}) = (M + \bar{q}_{ij})^{\frac{3}{2}}\sqrt{\frac{g^3}{2 \rho \varsigma h}}
 			\end{equation*}
-
 			\textbf{三种能量消耗：}
+			\small
 			\begin{align*}
+				\small
 				E_f    & = \sum^N_{i=0}\sum^N_{j \neq i} e^f_{ij} d_{ij} x_{ij} \quad \text{(飞行能耗)} \\
 				E_s    & = \sum^N_{i = 1}\sum^N_{j \neq i}\sigma_i e_i x_{ij} \quad \text{(播种能耗)}   \\
 				E_{ap} & = e_{ap}\sum^N_{i=1}\sum^N_{j \neq i} x_{ij}\sigma_i \quad \text{(信息采集能耗)}
@@ -353,7 +357,7 @@
 		\begin{column}{0.5\textwidth}
 			\centering
 			\includesvg[width=0.95\textwidth]{figures/avg_repair_area_curve.svg}
-			\captionof{figure}{训练过程中修复面积变化 (Avg. Repair Area)}
+			\captionof{figure}{训练过程中修复面积变化 (Avg Repair Area)}
 		\end{column}
 	\end{columns}
 \end{frame}
@@ -362,7 +366,7 @@
 
 \subsection{实验结果 - 算法性能对比}
 \begin{frame}
-	\frametitle{实验结果 - 算法性能对比\footnote{DRL (Deep Reinforcement Learning) 是我们的算法，CHAPBILM (Construction Heuristic Algorithm for Path Planning and Balanced Iterated Local Search for Mission) 是我们用于对比的算法。}}
+	\frametitle{实验结果 - 算法性能对比\footnote{DRL: Deep Reinforcement Learning，本文提出的方法；CHAPBILM: Construction Heuristic Algorithm for Path Planning and Balanced Iterated Local Search for Mission，对比基准算法。}}
 	\begin{table}
 		\centering
 		\caption{路径长度与修复面积对比（DRL 与 CHAPBILM）}
@@ -421,7 +425,8 @@
 				\includesvg[width=0.3\linewidth]{figures/DRL/cvrp_60_700_8_multi_route_DRL.svg}
 			\end{column}
 		\end{columns}
-		\captionof{figure}{路径规划结果对比 60个待修复区域} % 使用 captionof 替代 caption
+		\small
+		\captionof{figure}{路径规划结果对比 60个待修复区域} % Moved \scriptsize inside
 	\end{figure}
 \end{frame}
 \subsection{研究结论与展望}

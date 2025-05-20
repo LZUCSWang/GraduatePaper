@@ -1142,7 +1142,7 @@
 \def\@odfn#1[#2]#3{%
   \@ifundefined{c@#2}{\@nocounterr{#2}}%
     {\expandafter\@ifdefinable\csname #1\endcsname
-    {\global\@namedef{the#1}{\@nameuse{the#2}}
+    {\global\@namedef{the#1}{\@nameuse{the#2}}%
   \global\@namedef{#1}{\@dfn{#2}{#3}}%
   \global\@namedef{end#1}{\@enddefinition}}}}
 \def\@dfn#1#2{%

@@ -156,11 +156,10 @@
 % 3.公式。毕业论文（设计）中的公式应另起一行，并缩格书写。如有两个以上公式，应用从“1”开始的阿拉伯数字进行编号，并将编号置于括号内，如“（1）”。公式需要转行时，应尽可能在“＝”、“+”、“－”、“×”、“/”等记号处转行。编号及标题字体为宋体，五号。
 \RequirePackage{chngcntr}
 % 设置公式编号格式为连续的阿拉伯数字
-\renewcommand{\theequation}{\arabic{equation}}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 
-
-% 确保公式编号在整个文档中连续
-\counterwithout{equation}{chapter}
+% 确保公式编号在章节中重置
+\@addtoreset{equation}{chapter}
 
 \RequirePackage{graphicx}
 \graphicspath{{figures/}{figure/}{pictures/}
